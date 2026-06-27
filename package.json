@@ -1,0 +1,27 @@
+{
+  "name": "terrax-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --project=chromium --headed --workers=1",
+    "test:debug": "playwright test --project=chromium --debug --workers=1",
+    "test:ui": "playwright test --ui",
+    "test:chromium": "playwright test --project=chromium --workers=1",
+    "test:smoke": "playwright test --project=chromium --grep @smoke --workers=1",
+    "report": "playwright show-report",
+    "codegen": "playwright codegen http://20.6.73.65/signin",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.0.1",
+    "dotenv": "^17.4.2",
+    "typescript": "^6.0.3"
+  }
+}

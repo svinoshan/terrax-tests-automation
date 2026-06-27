@@ -1,0 +1,30 @@
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+
+# Environment files
+.env
+.env.*
+
+cmd.txt
+html/
+logs/
+
+# Playwright artifacts
+test-results/
+playwright-report/
+blob-report/
+
+# Auth/session state
+auth/storageState.json
+
+# Downloads/reports generated during tests
+downloads/*
+reports/*
+!downloads/.gitkeep
+!reports/.gitkeep

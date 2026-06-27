@@ -1,0 +1,50 @@
+import { test as base, expect } from '@playwright/test';
+import { LoginPage } from '@pages/auth/LoginPage';
+import { DashboardPage } from '@pages/dashboard/DashboardPage';
+import { AppShell } from '@pages/common/AppShell';
+import { FarmerListPage } from '@pages/farmer/FarmerListPage';
+import { FarmerProfilePage } from '@pages/farmer/FarmerProfilePage';
+import { CropsListPage } from '@pages/crops/CropsListPage';
+import { CreateCropPage } from '@pages/crops/CreateCropPage';
+
+type PageFixtures = {
+  loginPage: LoginPage;
+  dashboardPage: DashboardPage;
+  appShell: AppShell;
+  farmerListPage: FarmerListPage;
+  farmerProfilePage: FarmerProfilePage;
+  cropsListPage: CropsListPage;
+  createCropPage: CreateCropPage;
+};
+
+export const test = base.extend<PageFixtures>({
+  loginPage: async ({ page }, use) => {
+    await use(new LoginPage(page));
+  },
+
+  dashboardPage: async ({ page }, use) => {
+    await use(new DashboardPage(page));
+  },
+
+  appShell: async ({ page }, use) => {
+    await use(new AppShell(page));
+  },
+
+  farmerListPage: async ({ page }, use) => {
+    await use(new FarmerListPage(page));
+  },
+
+  farmerProfilePage: async ({ page }, use) => {
+    await use(new FarmerProfilePage(page));
+  },
+
+  cropsListPage: async ({ page }, use) => {
+    await use(new CropsListPage(page));
+  },
+
+  createCropPage: async ({ page }, use) => {
+    await use(new CreateCropPage(page));
+  },
+});
+
+export { expect };
