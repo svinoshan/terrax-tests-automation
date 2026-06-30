@@ -21,7 +21,8 @@ test.describe('@regression Create Crop - full flow', () => {
 
       await createCropPage.fillCreateCropForm(cropData);
       await createCropPage.save();
-
+      await createCropPage.expectCropCreatedToast();
+      
       // Preferred path: app redirects to All Crops after successful save.
       try {
         await cropsListPage.expectLoaded();

@@ -43,10 +43,30 @@ export class CropsListPage extends BasePage {
 
   async search(value: string): Promise<void> {
     await this.expectLoaded();
+    await this.searchInput.fill('');
     await this.searchInput.fill(value);
   }
 
   async expectCropVisible(cropName: string): Promise<void> {
     await expect(this.page.getByText(cropName).first()).toBeVisible({ timeout: 30000 });
+  }
+
+  async getCropRow(cropName: string): Promise<Locator> {
+    const row = this.page.getByRole('row').filter({ hasText: cropName }).first();
+    await expect(row).toBeVisible({ timeout: 30000 });
+    return row;
+  }
+
+  async expectCropRowContains(cropName: string, expectedText: string | RegExp): Promise<void> {
+    const row = await this.getCropRow(cropName);
+    await expect(row).toContainText(expectedText);
+  }
+
+  async clickEditForCrop(cropName: string): Promise<void> {
+    const row = await this.getCropRow(cropName);
+
+    // Current app edit icon is captured by codegen as ".me-2.p-2".
+    // Keep this selector inside the page object so tests stay clean.
+    await row.locator('.me-2.p-2').first().click();
   }
 }
