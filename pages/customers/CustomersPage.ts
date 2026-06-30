@@ -36,6 +36,8 @@ export class CustomersPage extends BasePage {
       timeout: 30000,
     });
     await expect(this.addNewButton).toBeVisible({ timeout: 30000 });
+    await expect(this.page.getByText(/Customer name/i).first()).toBeVisible();
+    await expect(this.page.getByText(/Customer address/i).first()).toBeVisible();
   }
 
   async clickAddNew(): Promise<void> {
@@ -52,6 +54,10 @@ export class CustomersPage extends BasePage {
     await expect(this.page.getByText(customerName).first()).toBeVisible({ timeout: 30000 });
   }
 
+  async expectCustomerNotVisible(customerName: string): Promise<void> {
+    await expect(this.page.getByText(customerName).first()).toBeHidden({ timeout: 30000 });
+  }
+
   async getCustomerRow(customerName: string): Promise<Locator> {
     const row = this.page.getByRole('row').filter({ hasText: customerName }).first();
     await expect(row).toBeVisible({ timeout: 30000 });
@@ -61,5 +67,30 @@ export class CustomersPage extends BasePage {
   async expectCustomerRowContains(customerName: string, expectedText: string | RegExp): Promise<void> {
     const row = await this.getCustomerRow(customerName);
     await expect(row).toContainText(expectedText);
+  }
+
+  async clickEditForCustomer(customerName: string): Promise<void> {
+    const row = await this.getCustomerRow(customerName);
+
+    // Action cell has two links: first = edit, second = delete.
+    await row.locator('td').last().locator('a').nth(0).click();
+  }
+
+  async clickDeleteForCustomer(customerName: string): Promise<void> {
+    const row = await this.getCustomerRow(customerName);
+
+    // Action cell has two links: first = edit, second = delete.
+    await row.locator('td').last().locator('a').nth(1).click();
+  }
+
+  async confirmDelete(): Promise<void> {
+    await this.page.getByRole('button', { name: /Yes, delete it!/i }).click();
+    await this.page.waitForLoadState('networkidle', { timeout: 30000 }).catch(() => {});
+  }
+
+  async expectSuccessToast(): Promise<void> {
+    await expect(this.page.getByText(/Success|success|deleted|Delete/i).first()).toBeVisible({
+      timeout: 10000,
+    });
   }
 }

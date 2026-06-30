@@ -16,7 +16,9 @@ export class CreateCustomerPage extends BasePage {
   constructor(page: Page) {
     super(page);
 
-    this.pageTitle = page.getByRole('heading', { name: /create customer|update customer/i });
+    this.pageTitle = page.getByRole('heading', {
+      name: /create customer|update customer/i,
+    });
 
     this.customerNameInput = page.locator('[formcontrolname="cusName"]');
     this.customerTpInput = page.locator('[formcontrolname="cusTP"]');
@@ -36,6 +38,18 @@ export class CreateCustomerPage extends BasePage {
 
   async expectLoaded(): Promise<void> {
     await expect(this.pageTitle).toBeVisible({ timeout: 30000 });
+  }
+
+  async expectCreateLoaded(): Promise<void> {
+    await expect(
+      this.page.getByRole('heading', { name: /create customer/i }),
+    ).toBeVisible({ timeout: 30000 });
+  }
+
+  async expectUpdateLoaded(): Promise<void> {
+    await expect(
+      this.page.getByRole('heading', { name: /update customer/i }),
+    ).toBeVisible({ timeout: 30000 });
   }
 
   async isLoaded(): Promise<boolean> {
@@ -59,16 +73,12 @@ export class CreateCustomerPage extends BasePage {
     await this.customerTpInput.fill(data.customerTp);
     await this.customerAddressInput.fill(data.customerAddress);
 
-    const isChecked = await this.activeSwitch.isChecked();
-
-    if (data.active !== isChecked) {
-      await this.activeSwitch.click();
-    }
+    await this.setActive(data.active);
   }
 
   async fillCustomerFormExcept(
     data: CustomerTestData,
-    missingFields: CustomerRequiredField[]
+    missingFields: CustomerRequiredField[],
   ): Promise<void> {
     if (!missingFields.includes('customerName')) {
       await this.customerNameInput.fill(data.customerName);
@@ -80,14 +90,51 @@ export class CreateCustomerPage extends BasePage {
       await this.customerAddressInput.fill(data.customerAddress);
     }
 
+    await this.setActive(data.active);
+  }
+
+  async updateCustomerAddress(customerAddress: string): Promise<void> {
+    await this.customerAddressInput.click();
+    await this.customerAddressInput.fill('');
+    await this.customerAddressInput.fill(customerAddress);
+
+    // Diagnostic assertion: confirms Playwright actually edited the field
+    // before clicking Update.
+    await expect(this.customerAddressInput).toHaveValue(customerAddress);
+  }
+
+  async expectCustomerAddressValue(customerAddress: string): Promise<void> {
+    await expect(this.customerAddressInput).toHaveValue(customerAddress, {
+      timeout: 10000,
+    });
+  }
+
+  async updateCustomerForm(data: CustomerTestData): Promise<void> {
+    await this.customerNameInput.fill(data.customerName);
+    await this.customerTpInput.fill(data.customerTp);
+    await this.customerAddressInput.fill(data.customerAddress);
+
+    await expect(this.customerNameInput).toHaveValue(data.customerName);
+    await expect(this.customerTpInput).toHaveValue(data.customerTp);
+    await expect(this.customerAddressInput).toHaveValue(data.customerAddress);
+
+    await this.setActive(data.active);
+  }
+
+  async setActive(active: boolean): Promise<void> {
     const isChecked = await this.activeSwitch.isChecked();
 
-    if (data.active !== isChecked) {
+    if (active !== isChecked) {
       await this.activeSwitch.click();
     }
   }
 
   async save(): Promise<void> {
+    await this.submitButton.click();
+    await this.page.waitForLoadState('networkidle', { timeout: 30000 }).catch(() => {});
+  }
+
+  async update(): Promise<void> {
     await this.submitButton.click();
     await this.page.waitForLoadState('networkidle', { timeout: 30000 }).catch(() => {});
   }
@@ -122,7 +169,13 @@ export class CreateCustomerPage extends BasePage {
 
   async expectCustomerSavedToast(): Promise<void> {
     await expect(
-      this.page.getByText(/Success|Customer Created|Created|success/i).first()
+      this.page.getByText(/Success|Customer Created|Created|success/i).first(),
+    ).toBeVisible({ timeout: 10000 });
+  }
+
+  async expectCustomerUpdatedToast(): Promise<void> {
+    await expect(
+      this.page.getByText(/Success|Updated|update|success/i).first(),
     ).toBeVisible({ timeout: 10000 });
   }
 }
