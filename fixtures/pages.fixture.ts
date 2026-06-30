@@ -6,6 +6,8 @@ import { FarmerListPage } from '@pages/farmer/FarmerListPage';
 import { FarmerProfilePage } from '@pages/farmer/FarmerProfilePage';
 import { CropsListPage } from '@pages/crops/CropsListPage';
 import { CreateCropPage } from '@pages/crops/CreateCropPage';
+import { CustomersPage } from '@pages/customers/CustomersPage';
+import { CreateCustomerPage } from '@pages/customers/CreateCustomerPage';
 
 type PageFixtures = {
   loginPage: LoginPage;
@@ -15,6 +17,8 @@ type PageFixtures = {
   farmerProfilePage: FarmerProfilePage;
   cropsListPage: CropsListPage;
   createCropPage: CreateCropPage;
+  customersPage: CustomersPage;
+  createCustomerPage: CreateCustomerPage;
 };
 
 export const test = base.extend<PageFixtures>({
@@ -44,6 +48,14 @@ export const test = base.extend<PageFixtures>({
 
   createCropPage: async ({ page }, use) => {
     await use(new CreateCropPage(page));
+  },
+
+  customersPage: async ({ page }, use) => {
+    await use(new CustomersPage(page));
+  },
+
+  createCustomerPage: async ({ page }, use) => {
+    await use(new CreateCustomerPage(page));
   },
 });
 

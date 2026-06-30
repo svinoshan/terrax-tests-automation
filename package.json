@@ -12,7 +12,10 @@
     "test:smoke": "playwright test --project=chromium --grep @smoke --workers=1",
     "report": "playwright show-report",
     "codegen": "playwright codegen http://20.6.73.65/signin",
-    "typecheck": "tsc -p tsconfig.json --noEmit"
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test:customers": "playwright test tests/customers --project=chromium --workers=1",
+    "test:customers:headed": "playwright test tests/customers --project=chromium --headed --workers=1",
+    "test:customers:log": "playwright test tests/customers --project=chromium --workers=1 2>&1 | tee logs/customers.log"
   },
   "keywords": [],
   "author": "",
