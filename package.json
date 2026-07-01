@@ -15,7 +15,10 @@
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test:customers": "playwright test tests/customers --project=chromium --workers=1",
     "test:customers:headed": "playwright test tests/customers --project=chromium --headed --workers=1",
-    "test:customers:log": "playwright test tests/customers --project=chromium --workers=1 2>&1 | tee logs/customers.log"
+    "test:customers:log": "playwright test tests/customers --project=chromium --workers=1 2>&1 | tee logs/customers.log",
+    "test:unit-info": "playwright test tests/unit-info --project=chromium --workers=1",
+    "test:unit-info:headed": "playwright test tests/unit-info --project=chromium --headed --workers=1",
+    "test:unit-info:log": "playwright test tests/unit-info --project=chromium --workers=1 2>&1 | tee logs/unit-info.log"
   },
   "keywords": [],
   "author": "",

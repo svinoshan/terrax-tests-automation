@@ -1,4 +1,4 @@
-import { expect, Locator, Page } from '@playwright/test';
+import { expect, Locator, Page } from "@playwright/test";
 
 export class AppShell {
   readonly dashboardLink: Locator;
@@ -8,6 +8,7 @@ export class AppShell {
   readonly dispatchMenu: Locator;
   readonly auditMenu: Locator;
   readonly customersMenu: Locator;
+  readonly unitInfoMenu: Locator;
   readonly locationAccessOkButton: Locator;
 
   constructor(private readonly page: Page) {
@@ -18,10 +19,11 @@ export class AppShell {
     this.dispatchMenu = this.page.getByText(/^Dispatch$/i).first();
     this.auditMenu = this.page.getByText(/^Audit$/i).first();
     this.customersMenu = this.page.getByText(/^Customers$/i).first();
+    this.unitInfoMenu = this.page.getByText(/^Unit Info$/i).first();
 
     this.locationAccessOkButton = this.page
-      .getByRole('button', { name: /^ok$/i })
-      .or(this.page.locator('button').filter({ hasText: /^ok$/i }));
+      .getByRole("button", { name: /^ok$/i })
+      .or(this.page.locator("button").filter({ hasText: /^ok$/i }));
   }
 
   async expectLoaded(): Promise<void> {
@@ -30,11 +32,11 @@ export class AppShell {
 
   async dismissLocationAccessPopupIfVisible(): Promise<void> {
     const popupText = this.page.getByText(
-      /To enable location access, go to your browser settings and allow location for this site/i
+      /To enable location access, go to your browser settings and allow location for this site/i,
     );
 
     try {
-      await popupText.waitFor({ state: 'visible', timeout: 3000 });
+      await popupText.waitFor({ state: "visible", timeout: 3000 });
       await this.locationAccessOkButton.click();
       await expect(popupText).toBeHidden({ timeout: 5000 });
     } catch {
@@ -50,7 +52,10 @@ export class AppShell {
   async openFarmerProfile(): Promise<void> {
     await this.dismissLocationAccessPopupIfVisible();
     await this.farmerMenu.click();
-    await this.page.getByText(/^Profile$/i).first().click();
+    await this.page
+      .getByText(/^Profile$/i)
+      .first()
+      .click();
   }
 
   async openCropsInfo(): Promise<void> {
@@ -61,5 +66,34 @@ export class AppShell {
   async openCustomers(): Promise<void> {
     await this.dismissLocationAccessPopupIfVisible();
     await this.customersMenu.click();
+  }
+
+  async openMainUnit(): Promise<void> {
+    await this.dismissLocationAccessPopupIfVisible();
+    await this.unitInfoMenu.click();
+    await this.page.getByRole("link", { name: /Main Unit/i }).click();
+    await this.dismissLocationAccessPopupIfVisible();
+  }
+
+  // async openSubUnit(): Promise<void> {
+  //   await this.dismissLocationAccessPopupIfVisible();
+  //   await this.unitInfoMenu.click();
+  //   await this.page.getByRole('link', { name: /Sub Unit/i }).click();
+  //   await this.dismissLocationAccessPopupIfVisible();
+  // }
+  async openSubUnit(): Promise<void> {
+    await this.dismissLocationAccessPopupIfVisible();
+
+    await this.unitInfoMenu.click();
+
+    const subUnitLink = this.page.getByRole("link", { name: /Sub Unit/i });
+
+    if (!(await subUnitLink.isVisible().catch(() => false))) {
+      await this.unitInfoMenu.hover();
+      await this.unitInfoMenu.click();
+    }
+
+    await subUnitLink.click();
+    await this.dismissLocationAccessPopupIfVisible();
   }
 }
