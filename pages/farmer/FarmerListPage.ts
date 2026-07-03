@@ -67,6 +67,14 @@ export class FarmerListPage extends BasePage {
     });
   }
 
+  async expectFarmerRowContains(
+    farmerCodeOrName: string,
+    expectedText: string | RegExp,
+  ): Promise<void> {
+    const row = await this.getFarmerRow(farmerCodeOrName);
+    await expect(row).toContainText(expectedText);
+  }
+
   async clickEditForFarmer(farmerCodeOrName: string): Promise<void> {
     const row = await this.getFarmerRow(farmerCodeOrName);
     await row.locator('td').last().locator('a').first().click();

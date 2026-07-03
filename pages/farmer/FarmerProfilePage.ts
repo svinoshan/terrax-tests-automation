@@ -254,6 +254,12 @@ export class FarmerProfilePage extends BasePage {
       .catch(() => {});
   }
 
+  async expectFarmerSavedToast(): Promise<void> {
+    await expect(
+      this.page.getByText(/Success|success|Farmer Created|Created/i).first(),
+    ).toBeVisible({ timeout: 10000 });
+  }
+
   async back(): Promise<void> {
     await this.page
       .locator(".ngx-spinner-overlay")
