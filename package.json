@@ -19,9 +19,9 @@
     "test:unit-info": "playwright test tests/unit-info --project=chromium --workers=1",
     "test:unit-info:headed": "playwright test tests/unit-info --project=chromium --headed --workers=1",
     "test:unit-info:log": "playwright test tests/unit-info --project=chromium --workers=1 2>&1 | tee logs/unit-info.log",
-    "test:modules": "playwright test tests/crops tests/customers tests/unit-info --project=chromium --workers=1",
-    "test:modules:headed": "playwright test tests/crops tests/customers tests/unit-info --project=chromium --headed --workers=1",
-    "test:modules:log": "playwright test tests/crops tests/customers tests/unit-info --project=chromium --workers=1 2>&1 | tee logs/modules.log",
+    "test:modules": "playwright test tests/crops tests/customers tests/unit-info tests/farmer --project=chromium --workers=1",
+    "test:modules:headed": "playwright test tests/crops tests/customers tests/unit-info tests/farmer --project=chromium --headed --workers=1",
+    "test:modules:log": "playwright test tests/crops tests/customers tests/unit-info tests/farmer --project=chromium --workers=1 2>&1 | tee logs/modules.log",
     "test:farmer": "playwright test tests/farmer --project=chromium --workers=1",
     "test:farmer:headed": "playwright test tests/farmer --project=chromium --headed --workers=1",
     "test:farmer:log": "playwright test tests/farmer --project=chromium --workers=1 2>&1 | tee logs/farmer.log"

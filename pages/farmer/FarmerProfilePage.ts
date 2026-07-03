@@ -42,6 +42,7 @@ export class FarmerProfilePage extends BasePage {
   readonly cropsTab: Locator;
   readonly euNopJasTab: Locator;
 
+  readonly applicationDateInput: Locator;
   readonly mainUnitInput: Locator;
   readonly subUnitInput: Locator;
   readonly farmerCodeEUJASInput: Locator;
@@ -51,6 +52,7 @@ export class FarmerProfilePage extends BasePage {
   readonly riskStatusSelect: Locator;
 
   readonly saveButton: Locator;
+  readonly updateButton: Locator;
   readonly backButton: Locator;
 
   constructor(page: Page) {
@@ -81,6 +83,9 @@ export class FarmerProfilePage extends BasePage {
     this.cropsTab = page.getByRole("tab", { name: /crops/i });
     this.euNopJasTab = page.getByRole("tab", { name: /eu\/nop\/jas/i });
 
+    this.applicationDateInput = page.locator(
+      '[formcontrolname="applicationDate"]',
+    );
     this.mainUnitInput = page.locator('[formcontrolname="fUnit"]');
     this.subUnitInput = page.locator('[formcontrolname="bUnit"]');
     this.farmerCodeEUJASInput = page.locator(
@@ -95,6 +100,12 @@ export class FarmerProfilePage extends BasePage {
       .locator("button")
       .filter({ hasText: /save/i })
       .first();
+
+    this.updateButton = page
+      .locator("button")
+      .filter({ hasText: /update/i })
+      .first();
+
     this.backButton = page
       .locator("button")
       .filter({ hasText: /back/i })
@@ -226,6 +237,9 @@ export class FarmerProfilePage extends BasePage {
   ): Promise<void> {
     await this.organizationalTab.click();
 
+    await this.applicationDateInput.fill(data.applicationDate);
+    await this.applicationDateInput.blur();
+
     if (!missingFields.includes("mainUnit")) {
       await this.selectAutocomplete(this.mainUnitInput, data.mainUnit);
     }
@@ -247,6 +261,16 @@ export class FarmerProfilePage extends BasePage {
     }
   }
 
+  async getSupplierTypeText(): Promise<string> {
+    return (await this.supplierTypeSelect.innerText()).trim();
+  }
+
+  async expectSupplierTypeValue(expectedSupplierType: string): Promise<void> {
+    const supplierTypeText = await this.getSupplierTypeText();
+
+    expect(supplierTypeText).toContain(expectedSupplierType);
+  }
+
   async save(): Promise<void> {
     await this.saveButton.click();
     await this.page
@@ -257,6 +281,69 @@ export class FarmerProfilePage extends BasePage {
   async expectFarmerSavedToast(): Promise<void> {
     await expect(
       this.page.getByText(/Success|success|Farmer Created|Created/i).first(),
+    ).toBeVisible({ timeout: 10000 });
+  }
+
+  // async updateBasicFarmerInfo(
+  //   nameWithInitials: string,
+  //   contactPersonPhone: string,
+  // ): Promise<void> {
+  //   await this.nameWithInitialsInput.fill(nameWithInitials);
+  //   await this.contactPersonPhoneInput.fill(contactPersonPhone);
+
+  //   await expect(this.nameWithInitialsInput).toHaveValue(nameWithInitials);
+  //   await expect(this.contactPersonPhoneInput).toHaveValue(contactPersonPhone);
+  // }
+  async updateBasicFarmerInfo(
+    nameWithInitials: string,
+    contactPersonPhone: string,
+  ): Promise<void> {
+    await this.nameWithInitialsInput.click();
+    await this.nameWithInitialsInput.press(
+      process.platform === "darwin" ? "Meta+A" : "Control+A",
+    );
+    await this.nameWithInitialsInput.press("Backspace");
+    await this.nameWithInitialsInput.fill(nameWithInitials);
+
+    await this.contactPersonPhoneInput.click();
+    await this.contactPersonPhoneInput.press(
+      process.platform === "darwin" ? "Meta+A" : "Control+A",
+    );
+    await this.contactPersonPhoneInput.press("Backspace");
+    await this.contactPersonPhoneInput.fill(contactPersonPhone);
+
+    await expect(this.nameWithInitialsInput).toHaveValue(nameWithInitials, {
+      timeout: 10000,
+    });
+
+    await expect(this.contactPersonPhoneInput).toHaveValue(contactPersonPhone, {
+      timeout: 10000,
+    });
+  }
+
+  async expectBasicFarmerInfoValues(
+    nameWithInitials: string,
+    contactPersonPhone: string,
+  ): Promise<void> {
+    await expect(this.nameWithInitialsInput).toHaveValue(nameWithInitials, {
+      timeout: 10000,
+    });
+
+    await expect(this.contactPersonPhoneInput).toHaveValue(contactPersonPhone, {
+      timeout: 10000,
+    });
+  }
+
+  async update(): Promise<void> {
+    await this.updateButton.click();
+    await this.page
+      .waitForLoadState("networkidle", { timeout: 30000 })
+      .catch(() => {});
+  }
+
+  async expectFarmerUpdatedToast(): Promise<void> {
+    await expect(
+      this.page.getByText(/Success|success|Updated|update/i).first(),
     ).toBeVisible({ timeout: 10000 });
   }
 
@@ -320,5 +407,240 @@ export class FarmerProfilePage extends BasePage {
     }
 
     await expect(fieldLocatorMap[field]).toHaveClass(/ng-invalid/);
+  }
+
+  // async getMatSelectDisplayedText(selectControl: Locator): Promise<string> {
+  //   const selectedValue = selectControl
+  //     .locator(".mat-mdc-select-value-text")
+  //     .first();
+
+  //   if (await selectedValue.isVisible().catch(() => false)) {
+  //     return (await selectedValue.innerText()).trim();
+  //   }
+
+  //   return (await selectControl.innerText()).trim();
+  // }
+
+  // async expectMatSelectSelectedValue(
+  //   selectControl: Locator,
+  //   expectedValue: string,
+  // ): Promise<void> {
+  //   const selectedValue = selectControl
+  //     .locator(".mat-mdc-select-value-text")
+  //     .first();
+
+  //   await expect(selectedValue).toBeVisible({ timeout: 10000 });
+  //   await expect(selectedValue).toContainText(expectedValue, {
+  //     timeout: 10000,
+  //   });
+  // }
+
+  async getMatSelectDisplayedText(selectControl: Locator): Promise<string> {
+    const selectedText = selectControl
+      .locator(".mat-mdc-select-value-text")
+      .first();
+
+    if (
+      (await selectedText.count()) > 0 &&
+      (await selectedText.isVisible().catch(() => false))
+    ) {
+      return (await selectedText.innerText()).replace(/\s+/g, " ").trim();
+    }
+
+    const placeholder = selectControl
+      .locator(".mat-mdc-select-placeholder")
+      .first();
+
+    if (
+      (await placeholder.count()) > 0 &&
+      (await placeholder.isVisible().catch(() => false))
+    ) {
+      return (await placeholder.innerText()).replace(/\s+/g, " ").trim();
+    }
+
+    return (await selectControl.innerText()).replace(/\s+/g, " ").trim();
+  }
+
+  // async expectMatSelectSelectedValue(
+  //   selectControl: Locator,
+  //   expectedValue: string,
+  // ): Promise<void> {
+  //   await expect
+  //     .poll(async () => await this.getMatSelectDisplayedText(selectControl), {
+  //       timeout: 10000,
+  //       message: `Expected mat-select value to contain "${expectedValue}"`,
+  //     })
+  //     .toContain(expectedValue);
+  // }
+
+  async expectMatSelectSelectedValue(
+    selectControl: Locator,
+    expectedValue: string,
+  ): Promise<void> {
+    await expect
+      .poll(async () => await this.getMatSelectDisplayedText(selectControl), {
+        timeout: 10000,
+        message: `Expected mat-select value to equal "${expectedValue}"`,
+      })
+      .toBe(expectedValue);
+  }
+
+  async expectCreatedFarmerCommonInfoPersisted(
+    data: FarmerProfileTestData,
+  ): Promise<void> {
+    await expect(this.nameWithInitialsInput).toHaveValue(data.nameWithInitials);
+    await expect(this.fullNameInput).toHaveValue(data.fullName);
+    await expect(this.fixedPhoneInput).toHaveValue(data.fixedPhone);
+    await expect(this.mobilePhoneInput).toHaveValue(data.mobilePhone);
+    await expect(this.nicInput).toHaveValue(data.nic);
+    await expect(this.addressInput).toHaveValue(data.address);
+    await expect(this.countryInput).toHaveValue(data.country);
+    await expect(this.cityInput).toHaveValue(data.city);
+    await expect(this.fieldOfficerInput).toHaveValue(data.fieldOfficer);
+    await expect(this.contactPersonInput).toHaveValue(data.contactPerson);
+    await expect(this.contactPersonPhoneInput).toHaveValue(
+      data.contactPersonPhone,
+    );
+
+    await this.expectMatSelectSelectedValue(this.genderSelect, data.gender);
+    await this.expectMatSelectSelectedValue(
+      this.supplierTypeSelect,
+      data.supplierType,
+    );
+  }
+
+  async expectCreatedFarmerOrganizationalInfoPersisted(
+    data: FarmerOrganizationalTestData,
+  ): Promise<void> {
+    await this.organizationalTab.click();
+
+    await expect(this.applicationDateInput).toHaveValue(data.applicationDate);
+    await expect(this.mainUnitInput).toHaveValue(data.mainUnit);
+    await expect(this.subUnitInput).toHaveValue(data.subUnit);
+    await expect(this.farmerCodeEUJASInput).toHaveValue(data.farmerCodeEUJAS);
+    await expect(this.farmerCodeNOPInput).toHaveValue(data.farmerCodeNOP);
+    await expect(this.cbRefNoInput).toHaveValue(data.cbRefNo);
+    await expect(this.remarkInput).toHaveValue(data.remark);
+
+    await this.expectMatSelectSelectedValue(
+      this.riskStatusSelect,
+      data.riskStatus,
+    );
+  }
+
+  async collectCreatedFarmerPersistenceMismatches(
+    profileData: FarmerProfileTestData,
+    orgData: FarmerOrganizationalTestData,
+  ): Promise<string[]> {
+    const mismatches: string[] = [];
+
+    const normalize = (value: string): string =>
+      value.replace(/\s+/g, " ").trim();
+
+    const checkInput = async (
+      label: string,
+      locator: Locator,
+      expectedValue: string,
+    ): Promise<void> => {
+      const actualValue = normalize(await locator.inputValue());
+
+      if (actualValue !== expectedValue) {
+        mismatches.push(
+          `${label}: expected "${expectedValue}", actual "${actualValue}"`,
+        );
+      }
+    };
+
+    const checkSelect = async (
+      label: string,
+      locator: Locator,
+      expectedValue: string,
+    ): Promise<void> => {
+      const actualValue = normalize(
+        await this.getMatSelectDisplayedText(locator),
+      );
+
+      // if (!actualValue.includes(expectedValue)) {
+      //   mismatches.push(
+      //     `${label}: expected "${expectedValue}", actual "${actualValue}"`,
+      //   );
+      // }
+
+      if (actualValue !== expectedValue) {
+        mismatches.push(
+          `${label}: expected "${expectedValue}", actual "${actualValue}"`,
+        );
+      }
+    };
+
+    await checkInput(
+      "Name with initials",
+      this.nameWithInitialsInput,
+      profileData.nameWithInitials,
+    );
+
+    await checkInput("Full name", this.fullNameInput, profileData.fullName);
+    await checkInput(
+      "Fixed phone",
+      this.fixedPhoneInput,
+      profileData.fixedPhone,
+    );
+    await checkInput(
+      "Mobile phone",
+      this.mobilePhoneInput,
+      profileData.mobilePhone,
+    );
+    await checkInput("NIC/passport", this.nicInput, profileData.nic);
+    await checkInput("Address", this.addressInput, profileData.address);
+    await checkInput("Country", this.countryInput, profileData.country);
+    await checkInput("City", this.cityInput, profileData.city);
+    await checkInput(
+      "Field officer",
+      this.fieldOfficerInput,
+      profileData.fieldOfficer,
+    );
+    await checkInput(
+      "Contact person",
+      this.contactPersonInput,
+      profileData.contactPerson,
+    );
+    await checkInput(
+      "Contact person phone",
+      this.contactPersonPhoneInput,
+      profileData.contactPersonPhone,
+    );
+
+    await checkSelect("Gender", this.genderSelect, profileData.gender);
+    await checkSelect(
+      "Supplier type",
+      this.supplierTypeSelect,
+      profileData.supplierType,
+    );
+
+    await this.organizationalTab.click();
+
+    await checkInput(
+      "Application date",
+      this.applicationDateInput,
+      orgData.applicationDate,
+    );
+    await checkInput("Main unit", this.mainUnitInput, orgData.mainUnit);
+    await checkInput("Sub unit", this.subUnitInput, orgData.subUnit);
+    await checkInput(
+      "Farmer code",
+      this.farmerCodeEUJASInput,
+      orgData.farmerCodeEUJAS,
+    );
+    await checkInput(
+      "Farmer code NOP",
+      this.farmerCodeNOPInput,
+      orgData.farmerCodeNOP,
+    );
+    await checkInput("CB ref no", this.cbRefNoInput, orgData.cbRefNo);
+    await checkInput("Remark", this.remarkInput, orgData.remark);
+
+    await checkSelect("Risk status", this.riskStatusSelect, orgData.riskStatus);
+
+    return mismatches;
   }
 }

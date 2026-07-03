@@ -15,6 +15,7 @@ export type FarmerProfileTestData = {
 };
 
 export type FarmerOrganizationalTestData = {
+  applicationDate: string;
   mainUnit: string;
   subUnit: string;
   farmerCodeEUJAS: string;
@@ -23,6 +24,13 @@ export type FarmerOrganizationalTestData = {
   remark: string;
   riskStatus: string;
 };
+
+export const supplierTypeOptions = ['Farmer', 'Collector', 'Supplier'] as const;
+export const riskStatusOptions = ['Normal', 'Marginal', 'High'] as const;
+
+export function randomItem<T>(items: readonly T[]): T {
+  return items[Math.floor(Math.random() * items.length)];
+}
 
 export function uniqueFarmerSuffix(): string {
   return new Date()
@@ -47,7 +55,7 @@ export function createFarmerProfileData(): FarmerProfileTestData {
     gender: 'Male',
     contactPerson: 'A. Perera',
     contactPersonPhone: '0702571945',
-    supplierType: 'Farmer',
+    supplierType: randomItem(supplierTypeOptions),
   };
 }
 
@@ -55,12 +63,13 @@ export function createFarmerOrganizationalData(): FarmerOrganizationalTestData {
   const suffix = uniqueFarmerSuffix();
 
   return {
+    applicationDate: '2026-06-01',
     mainUnit: 'F1307',
     subUnit: 'G0001',
     farmerCodeEUJAS: `FRM-E2E-${suffix}`,
     farmerCodeNOP: `NOP-E2E-${suffix}`,
     cbRefNo: `CB-E2E-${suffix}`,
     remark: `Automation remark E2E-${suffix}`,
-    riskStatus: 'Normal',
+    riskStatus: randomItem(riskStatusOptions),
   };
 }
