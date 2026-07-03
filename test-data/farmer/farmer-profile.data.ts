@@ -14,11 +14,25 @@ export type FarmerProfileTestData = {
   supplierType: string;
 };
 
-export function createFarmerProfileData(): FarmerProfileTestData {
-  const suffix = new Date()
+export type FarmerOrganizationalTestData = {
+  mainUnit: string;
+  subUnit: string;
+  farmerCodeEUJAS: string;
+  farmerCodeNOP: string;
+  cbRefNo: string;
+  remark: string;
+  riskStatus: string;
+};
+
+export function uniqueFarmerSuffix(): string {
+  return new Date()
     .toISOString()
     .replace(/[-:.TZ]/g, '')
     .slice(8, 14);
+}
+
+export function createFarmerProfileData(): FarmerProfileTestData {
+  const suffix = uniqueFarmerSuffix();
 
   return {
     nameWithInitials: `K.M. Silva E2E-${suffix}`,
@@ -34,5 +48,19 @@ export function createFarmerProfileData(): FarmerProfileTestData {
     contactPerson: 'A. Perera',
     contactPersonPhone: '0702571945',
     supplierType: 'Farmer',
+  };
+}
+
+export function createFarmerOrganizationalData(): FarmerOrganizationalTestData {
+  const suffix = uniqueFarmerSuffix();
+
+  return {
+    mainUnit: 'F1307',
+    subUnit: 'G0001',
+    farmerCodeEUJAS: `FRM-E2E-${suffix}`,
+    farmerCodeNOP: `NOP-E2E-${suffix}`,
+    cbRefNo: `CB-E2E-${suffix}`,
+    remark: `Automation remark E2E-${suffix}`,
+    riskStatus: 'Normal',
   };
 }
