@@ -96,4 +96,9 @@ export class AppShell {
     await subUnitLink.click();
     await this.dismissLocationAccessPopupIfVisible();
   }
+
+  async openPurchase(): Promise<void> {
+    await this.dismissLocationAccessPopupIfVisible();
+    await this.purchaseMenu.click();
+  }
 }

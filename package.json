@@ -24,7 +24,10 @@
     "test:modules:log": "playwright test tests/crops tests/customers tests/unit-info tests/farmer --project=chromium --workers=1 2>&1 | tee logs/modules.log",
     "test:farmer": "playwright test tests/farmer --project=chromium --workers=1",
     "test:farmer:headed": "playwright test tests/farmer --project=chromium --headed --workers=1",
-    "test:farmer:log": "playwright test tests/farmer --project=chromium --workers=1 2>&1 | tee logs/farmer.log"
+    "test:farmer:log": "playwright test tests/farmer --project=chromium --workers=1 2>&1 | tee logs/farmer.log",
+    "test:purchase": "playwright test tests/purchase --project=chromium --workers=1",
+    "test:purchase:headed": "playwright test tests/purchase --project=chromium --headed --workers=1",
+    "test:purchase:log": "playwright test tests/purchase --project=chromium --workers=1 2>&1 | tee logs/purchase.log"
   },
   "keywords": [],
   "author": "",

@@ -1,15 +1,17 @@
-import { test as base, expect } from '@playwright/test';
-import { LoginPage } from '@pages/auth/LoginPage';
-import { DashboardPage } from '@pages/dashboard/DashboardPage';
-import { AppShell } from '@pages/common/AppShell';
-import { FarmerListPage } from '@pages/farmer/FarmerListPage';
-import { FarmerProfilePage } from '@pages/farmer/FarmerProfilePage';
-import { CropsListPage } from '@pages/crops/CropsListPage';
-import { CreateCropPage } from '@pages/crops/CreateCropPage';
-import { CustomersPage } from '@pages/customers/CustomersPage';
-import { CreateCustomerPage } from '@pages/customers/CreateCustomerPage';
-import { MainUnitPage } from '@pages/unit-info/MainUnitPage';
-import { SubUnitPage } from '@pages/unit-info/SubUnitPage';
+import { test as base, expect } from "@playwright/test";
+import { LoginPage } from "@pages/auth/LoginPage";
+import { DashboardPage } from "@pages/dashboard/DashboardPage";
+import { AppShell } from "@pages/common/AppShell";
+import { FarmerListPage } from "@pages/farmer/FarmerListPage";
+import { FarmerProfilePage } from "@pages/farmer/FarmerProfilePage";
+import { CropsListPage } from "@pages/crops/CropsListPage";
+import { CreateCropPage } from "@pages/crops/CreateCropPage";
+import { CustomersPage } from "@pages/customers/CustomersPage";
+import { CreateCustomerPage } from "@pages/customers/CreateCustomerPage";
+import { MainUnitPage } from "@pages/unit-info/MainUnitPage";
+import { SubUnitPage } from "@pages/unit-info/SubUnitPage";
+import { PurchaseListPage } from "@pages/purchase/PurchaseListPage";
+import { CreatePurchasePage } from "@pages/purchase/CreatePurchasePage";
 
 type PageFixtures = {
   loginPage: LoginPage;
@@ -23,6 +25,8 @@ type PageFixtures = {
   createCustomerPage: CreateCustomerPage;
   mainUnitPage: MainUnitPage;
   subUnitPage: SubUnitPage;
+  purchaseListPage: PurchaseListPage;
+  createPurchasePage: CreatePurchasePage;
 };
 
 export const test = base.extend<PageFixtures>({
@@ -68,6 +72,14 @@ export const test = base.extend<PageFixtures>({
 
   subUnitPage: async ({ page }, use) => {
     await use(new SubUnitPage(page));
+  },
+
+  purchaseListPage: async ({ page }, use) => {
+    await use(new PurchaseListPage(page));
+  },
+
+  createPurchasePage: async ({ page }, use) => {
+    await use(new CreatePurchasePage(page));
   },
 });
 
