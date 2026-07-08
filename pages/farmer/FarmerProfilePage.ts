@@ -3,6 +3,10 @@ import { BasePage } from "../common/BasePage";
 import {
   FarmerOrganizationalTestData,
   FarmerProfileTestData,
+  FarmerCropTestData,
+  FarmerEuNopJasTestData,
+  FarmerLandTestData,
+  FarmerDossierTestData,
 } from "@data/farmer/farmer-profile.data";
 
 export type FarmerCommonRequiredField =
@@ -54,6 +58,7 @@ export class FarmerProfilePage extends BasePage {
   readonly saveButton: Locator;
   readonly updateButton: Locator;
   readonly backButton: Locator;
+  readonly inactiveSwitch: Locator;
 
   constructor(page: Page) {
     super(page);
@@ -110,10 +115,50 @@ export class FarmerProfilePage extends BasePage {
       .locator("button")
       .filter({ hasText: /back/i })
       .first();
+
+    this.inactiveSwitch = page.locator("#flexSwitchCheckDefault");
   }
 
   async expectLoaded(): Promise<void> {
     await expect(this.pageTitle).toBeVisible({ timeout: 30000 });
+  }
+
+  // async ensureFarmerActive(): Promise<void> {
+  //   if (await this.inactiveSwitch.isChecked().catch(() => false)) {
+  //     await this.inactiveSwitch.uncheck();
+  //   }
+
+  //   await expect(this.inactiveSwitch).not.toBeChecked();
+  // }
+  async ensureFarmerActive(): Promise<void> {
+    await expect(this.inactiveSwitch).toBeVisible({ timeout: 10000 });
+
+    // In this app:
+    // unchecked = Inactive
+    // checked = Active
+    if (!(await this.inactiveSwitch.isChecked())) {
+      await this.inactiveSwitch.check();
+    }
+
+    await expect(this.inactiveSwitch).toBeChecked();
+
+    await expect(
+      this.page.locator('label[for="flexSwitchCheckDefault"]'),
+    ).toContainText(/Active/i);
+  }
+
+  async ensureFarmerInactive(): Promise<void> {
+    await expect(this.inactiveSwitch).toBeVisible({ timeout: 10000 });
+
+    if (await this.inactiveSwitch.isChecked()) {
+      await this.inactiveSwitch.uncheck();
+    }
+
+    await expect(this.inactiveSwitch).not.toBeChecked();
+
+    await expect(
+      this.page.locator('label[for="flexSwitchCheckDefault"]'),
+    ).toContainText(/Inactive/i);
   }
 
   async expectCommonInfoFieldsVisible(): Promise<void> {
@@ -642,5 +687,319 @@ export class FarmerProfilePage extends BasePage {
     await checkSelect("Risk status", this.riskStatusSelect, orgData.riskStatus);
 
     return mismatches;
+  }
+
+  private async selectMatOptionInScope(
+    scope: Locator,
+    selectControl: Locator,
+    optionName: string,
+  ): Promise<void> {
+    await selectControl.click();
+
+    const option = this.page.getByRole("option", {
+      name: optionName,
+      exact: true,
+    });
+
+    await expect(option).toBeVisible({ timeout: 10000 });
+    await option.click();
+
+    await expect(scope).toBeVisible();
+  }
+
+  private async selectMultiMatOptionsInScope(
+    scope: Locator,
+    selectControl: Locator,
+    optionNames: string[],
+  ): Promise<void> {
+    await selectControl.click();
+
+    for (const optionName of optionNames) {
+      const option = this.page
+        .getByRole("option")
+        .filter({ hasText: optionName })
+        .first();
+
+      await expect(option).toBeVisible({ timeout: 10000 });
+      await option.click();
+    }
+
+    await this.page
+      .locator(".cdk-overlay-backdrop")
+      .click()
+      .catch(() => {});
+    await expect(scope).toBeVisible();
+  }
+
+  private async selectAutocompleteInScope(
+    input: Locator,
+    value: string,
+  ): Promise<void> {
+    await input.click();
+    await input.fill(value);
+
+    const option = this.page.getByText(value, { exact: true }).first();
+
+    try {
+      await option.waitFor({ state: "visible", timeout: 5000 });
+      await option.click();
+    } catch {
+      await input.press("Enter").catch(() => {});
+    }
+  }
+
+  private async refreshPlotCodeOptions(scope: Locator): Promise<void> {
+    const refreshButton = scope
+      .locator('button:has(i.fa-rotate-right), button:has(i[class*="rotate"])')
+      .first();
+
+    if (await refreshButton.isVisible({ timeout: 3000 }).catch(() => false)) {
+      await refreshButton.click();
+
+      await this.page
+        .waitForLoadState("networkidle", { timeout: 10000 })
+        .catch(() => {});
+
+      await this.page.waitForTimeout(750);
+    }
+  }
+
+  async addLandRecord(data: FarmerLandTestData): Promise<void> {
+    await this.landTab.click();
+
+    const landTab = this.page.locator("app-land-tab");
+
+    const plotTypeSelect = landTab.locator('[formcontrolname="plotType"]');
+    const plotCodeSelect = landTab.locator('[formcontrolname="plotCode"]');
+    const landNameInput = landTab.locator('[formcontrolname="landName"]');
+    const landExtendInput = landTab.locator('[formcontrolname="landExtend"]');
+    const purchaseStatusSelect = landTab.locator(
+      '[formcontrolname="perchaseActive"]',
+    );
+    const certificationsSelect = landTab.locator(
+      '[formcontrolname="certifications"]',
+    );
+    const landDocsAvailableSelect = landTab.locator(
+      '[formcontrolname="landDocsAvailable"]',
+    );
+    // const landDocumentationSelect = landTab.locator(
+    //   '[formcontrolname="landDocs"]',
+    // );
+
+    const landDocumentationSelect = landTab
+      .locator("mat-select")
+      .filter({
+        hasText: /Select option|Land ownership|Right for agricultural use/i,
+      })
+      .first();
+
+    const refNumberInput = landTab.locator('[formcontrolname="refNumber"]');
+    const extraEvidenceInput = landTab.locator(
+      '[formcontrolname="extraEvidence"]',
+    );
+
+    await expect(landTab).toBeVisible({ timeout: 10000 });
+
+    await this.selectMatOptionInScope(landTab, plotTypeSelect, data.plotType);
+    await this.selectMatOptionInScope(landTab, plotCodeSelect, data.plotCode);
+
+    await landNameInput.fill(data.landName);
+    await landExtendInput.fill(data.landExtend);
+
+    await this.selectMatOptionInScope(
+      landTab,
+      purchaseStatusSelect,
+      data.purchaseStatus,
+    );
+
+    await this.selectMultiMatOptionsInScope(
+      landTab,
+      certificationsSelect,
+      data.certifications,
+    );
+
+    await this.selectMatOptionInScope(
+      landTab,
+      landDocsAvailableSelect,
+      data.landDocsAvailable,
+    );
+
+    await this.selectMatOptionInScope(
+      landTab,
+      landDocumentationSelect,
+      data.landDocumentation,
+    );
+
+    await refNumberInput.fill(data.refNumber);
+    await extraEvidenceInput.fill(data.extraEvidence);
+
+    await landTab.locator("button.btn-success").last().click();
+    // await landTab
+    //   .locator("button.btn-success")
+    //   .filter({ has: landTab.locator("i.feather.icon-plus") })
+    //   .click();
+
+    await expect(
+      landTab.getByRole("cell", { name: data.plotCode }).first(),
+    ).toBeVisible({
+      timeout: 10000,
+    });
+
+    await expect(landTab.getByText(data.landName).first()).toBeVisible({
+      timeout: 10000,
+    });
+  }
+
+  async addCropRecord(data: FarmerCropTestData): Promise<void> {
+    await this.cropsTab.click();
+
+    const cropsTab = this.page.locator("app-crops-tab");
+
+    const plotCodeSelect = cropsTab.locator('[formcontrolname="plotCode"]');
+    const cropNameInput = cropsTab.locator('[formcontrolname="cropName"]');
+    const noOfPlantsInput = cropsTab.locator('[formcontrolname="noOfPlant"]');
+
+    await expect(cropsTab).toBeVisible({ timeout: 10000 });
+
+    // Plot codes may not load immediately after adding Land.
+    // Refresh is required before selecting the new plot code.
+    await this.refreshPlotCodeOptions(cropsTab);
+
+    await this.selectMatOptionInScope(cropsTab, plotCodeSelect, data.plotCode);
+    await this.selectAutocompleteInScope(cropNameInput, data.cropName);
+    await noOfPlantsInput.fill(data.noOfPlants);
+
+    await cropsTab.locator("button.btn-success").last().click();
+
+    await expect(
+      cropsTab.getByRole("cell", { name: data.plotCode }).first(),
+    ).toBeVisible({
+      timeout: 10000,
+    });
+
+    await expect(cropsTab.getByText(data.cropName).first()).toBeVisible({
+      timeout: 10000,
+    });
+  }
+
+  async addEuNopJasRecord(data: FarmerEuNopJasTestData): Promise<void> {
+    await this.euNopJasTab.click();
+
+    const euTab = this.page.locator("app-eu-nop-jas-tab");
+
+    const plotCodeSelect = euTab.locator('[formcontrolname="plotCode"]');
+    const startDateOrgInput = euTab.locator('[formcontrolname="startDateOrg"]');
+    const startDateConvInput = euTab.locator(
+      '[formcontrolname="startDateConv"]',
+    );
+    const fieldStatusEujasSelect = euTab.locator(
+      '[formcontrolname="fieldStatusEujas"]',
+    );
+    const fieldStatusNopSelect = euTab.locator(
+      '[formcontrolname="fieldStatusNop"]',
+    );
+    const fertilizerTypeUsedInput = euTab.locator(
+      '[formcontrolname="fertilizerTypUse"]',
+    );
+    const harvestStatusEujasSelect = euTab.locator(
+      '[formcontrolname="harvestStatusEujas"]',
+    );
+    const harvestStatusNopSelect = euTab.locator(
+      '[formcontrolname="harvestStatusNop"]',
+    );
+    const lastDateUseInput = euTab.locator('[formcontrolname="lastdateUse"]');
+
+    await expect(euTab).toBeVisible({ timeout: 10000 });
+
+    // Plot codes may not load immediately after adding Land/Crops.
+    // Refresh is required before selecting the plot code.
+    await this.refreshPlotCodeOptions(euTab);
+
+    await this.selectMatOptionInScope(euTab, plotCodeSelect, data.plotCode);
+
+    await startDateOrgInput.fill(data.startDateOrg);
+    await startDateOrgInput.blur();
+
+    await startDateConvInput.fill(data.startDateConv);
+    await startDateConvInput.blur();
+
+    await this.selectMatOptionInScope(
+      euTab,
+      fieldStatusEujasSelect,
+      data.fieldStatusEujas,
+    );
+
+    await this.selectMatOptionInScope(
+      euTab,
+      fieldStatusNopSelect,
+      data.fieldStatusNop,
+    );
+
+    await fertilizerTypeUsedInput.fill(data.fertilizerTypeUsed);
+
+    await this.selectMatOptionInScope(
+      euTab,
+      harvestStatusEujasSelect,
+      data.harvestStatusEujas,
+    );
+
+    await this.selectMatOptionInScope(
+      euTab,
+      harvestStatusNopSelect,
+      data.harvestStatusNop,
+    );
+
+    await lastDateUseInput.fill(data.lastDateUse);
+    await lastDateUseInput.blur();
+
+    await euTab.locator("button.btn-success").last().click();
+
+    await expect(
+      euTab.getByRole("cell", { name: data.plotCode }).first(),
+    ).toBeVisible({
+      timeout: 10000,
+    });
+
+    await expect(euTab.getByText(data.fieldStatusEujas).first()).toBeVisible({
+      timeout: 10000,
+    });
+  }
+
+  async addDossierDocument(data: FarmerDossierTestData): Promise<void> {
+    await this.page.getByRole("tab", { name: /dossier/i }).click();
+
+    const dossierTab = this.page.locator("app-dossier-tab");
+
+    const plotCodeSelect = dossierTab.locator('[formcontrolname="plotCode"]');
+    const documentNameInput = dossierTab.locator('[formcontrolname="name"]');
+    const fileInput = dossierTab.locator('input[type="file"]');
+
+    await expect(dossierTab).toBeVisible({ timeout: 10000 });
+
+    // Plot codes may not load immediately after adding land.
+    await this.refreshPlotCodeOptions(dossierTab);
+
+    await this.selectMatOptionInScope(
+      dossierTab,
+      plotCodeSelect,
+      data.plotCode,
+    );
+
+    await documentNameInput.fill(data.documentName);
+    await expect(documentNameInput).toHaveValue(data.documentName);
+
+    await fileInput.setInputFiles(data.filePath);
+
+    await dossierTab.locator("button.btn-success").last().click();
+
+    await expect(dossierTab.getByText(data.documentName).first()).toBeVisible({
+      timeout: 10000,
+    });
+
+    await expect(
+      dossierTab.getByRole("cell", { name: data.plotCode }).first(),
+    ).toBeVisible({
+      timeout: 10000,
+    });
   }
 }

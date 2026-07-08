@@ -28,3 +28,8 @@ downloads/*
 reports/*
 !downloads/.gitkeep
 !reports/.gitkeep
+
+# Ignore real/local uploaded test documents
+test-data/files/*
+!test-data/files/.gitkeep
+!test-data/files/dummy_land_certificate_10_pages.pdf
