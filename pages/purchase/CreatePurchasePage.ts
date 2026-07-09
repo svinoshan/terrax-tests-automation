@@ -24,6 +24,13 @@ export class CreatePurchasePage extends BasePage {
   readonly backButton: Locator;
   readonly addLineButton: Locator;
 
+  readonly updateButton: Locator;
+  readonly updateAndAuthorizedButton: Locator;
+  readonly reportButton: Locator;
+
+  readonly cancelButton: Locator;
+  readonly confirmCancelButton: Locator;
+
   readonly addLineDialog: Locator;
   readonly itemInput: Locator;
   readonly purchaseQtyInput: Locator;
@@ -63,6 +70,32 @@ export class CreatePurchasePage extends BasePage {
       .locator(".page-header button.btn-primary")
       .filter({ hasText: /Save & Authorized/i })
       .first();
+
+    this.updateButton = page
+      .locator(".page-header button.btn-success")
+      .filter({ hasText: /Update/i })
+      .first();
+
+    this.updateAndAuthorizedButton = page
+      .locator(
+        ".page-header button.btn-success, .page-header button.btn-primary",
+      )
+      .filter({ hasText: /Update & Authorized/i })
+      .first();
+
+    this.reportButton = page
+      .locator(".page-header button")
+      .filter({ hasText: /Report/i })
+      .first();
+
+    this.cancelButton = page
+      .locator(".page-header button")
+      .filter({ hasText: /Cancel/i })
+      .first();
+
+    this.confirmCancelButton = page.getByRole("button", {
+      name: /Yes,\s*Cancel it!|Yes/i,
+    });
 
     this.backButton = page.getByRole("button", { name: /back/i });
 
@@ -340,5 +373,105 @@ export class CreatePurchasePage extends BasePage {
     ).toBeVisible({
       timeout: 10000,
     });
+  }
+
+  async expectUpdateLoaded(): Promise<void> {
+    await expect(
+      this.page.getByRole("heading", { name: /update purchase note/i }),
+    ).toBeVisible({ timeout: 30000 });
+
+    await expect(this.noteInput).toBeVisible();
+  }
+
+  async updateNote(note: string): Promise<void> {
+    await this.noteInput.fill(note);
+    await expect(this.noteInput).toHaveValue(note);
+  }
+
+  async editFirstPurchaseLine(
+    purchaseQty: string,
+    unitPrice: string,
+  ): Promise<void> {
+    const firstLineRow = this.page
+      .getByRole("row")
+      .filter({ hasText: /Banana|Pepper Green|Kg/i })
+      .first();
+
+    await firstLineRow.locator(".me-2.p-2, a, button").first().click();
+
+    await expect(this.addLineDialog).toBeVisible({ timeout: 10000 });
+
+    await this.purchaseQtyInput.fill(purchaseQty);
+    await this.unitPriceInput.fill(unitPrice);
+
+    await this.modalSaveButton.click();
+
+    await expect(this.addLineDialog).toBeHidden({ timeout: 10000 });
+  }
+
+  async update(): Promise<void> {
+    await expect(this.updateButton).toBeVisible({ timeout: 10000 });
+    await this.updateButton.click();
+
+    await this.page
+      .waitForLoadState("networkidle", { timeout: 30000 })
+      .catch(() => {});
+  }
+
+  async updateAndAuthorize(): Promise<void> {
+    await expect(this.updateAndAuthorizedButton).toBeVisible({
+      timeout: 10000,
+    });
+    await this.updateAndAuthorizedButton.click();
+
+    await this.page
+      .waitForLoadState("networkidle", { timeout: 30000 })
+      .catch(() => {});
+  }
+
+  async expectViewLoaded(): Promise<void> {
+    await expect(
+      this.page.getByRole("heading", {
+        name: /view purchase note|formMode\.VIEW purchase note/i,
+      }),
+    ).toBeVisible({ timeout: 30000 });
+
+    await expect(this.reportButton).toBeVisible({ timeout: 10000 });
+    await expect(this.backButton).toBeVisible({ timeout: 10000 });
+  }
+
+  async expectNoUpdateActionsVisible(): Promise<void> {
+    await expect(this.updateButton).toBeHidden({ timeout: 10000 });
+    await expect(this.updateAndAuthorizedButton).toBeHidden({ timeout: 10000 });
+  }
+
+  async expectUpdatedPurchaseValues(
+    expectedNote: string,
+    expectedQty: string,
+    expectedUnitPrice: string,
+  ): Promise<void> {
+    await expect(this.noteInput).toHaveValue(expectedNote, {
+      timeout: 10000,
+    });
+
+    await expect(
+      this.page.getByRole("row").filter({ hasText: expectedQty }).first(),
+    ).toBeVisible({ timeout: 10000 });
+
+    await expect(
+      this.page.getByRole("row").filter({ hasText: expectedUnitPrice }).first(),
+    ).toBeVisible({ timeout: 10000 });
+  }
+
+  async cancelPurchase(): Promise<void> {
+    await expect(this.cancelButton).toBeVisible({ timeout: 10000 });
+    await this.cancelButton.click();
+
+    await expect(this.confirmCancelButton).toBeVisible({ timeout: 10000 });
+    await this.confirmCancelButton.click();
+
+    await this.page
+      .waitForLoadState("networkidle", { timeout: 30000 })
+      .catch(() => {});
   }
 }
