@@ -69,11 +69,24 @@ export function randomItem<T>(items: readonly T[]): T {
   return items[Math.floor(Math.random() * items.length)];
 }
 
+// export function uniqueFarmerSuffix(): string {
+//   return new Date()
+//     .toISOString()
+//     .replace(/[-:.TZ]/g, "")
+//     .slice(8, 14);
+// }
+
 export function uniqueFarmerSuffix(): string {
-  return new Date()
+  const timestamp = new Date()
     .toISOString()
     .replace(/[-:.TZ]/g, "")
-    .slice(8, 14);
+    .slice(8, 17);
+
+  const random = Math.floor(Math.random() * 1000)
+    .toString()
+    .padStart(3, "0");
+
+  return `${timestamp}${random}`;
 }
 
 export function createFarmerProfileData(): FarmerProfileTestData {
@@ -84,7 +97,8 @@ export function createFarmerProfileData(): FarmerProfileTestData {
     fullName: `Kamal Malinda Silva E2E-${suffix}`,
     fixedPhone: "0252772246",
     mobilePhone: "0712458591",
-    nic: `728078${suffix.slice(-3)}V`,
+    //nic: `728078${suffix.slice(-3)}V`,
+    nic: `9${Date.now().toString().slice(-8)}V`,
     address: `No. 9, Temple Road, Mihintale E2E-${suffix}`,
     country: "Sri Lanka",
     city: "Anuradhapura",
@@ -152,12 +166,12 @@ export function createFarmerEuNopJasData(
   };
 }
 
-export function createFarmerDossierData(plotCode = 'A'): FarmerDossierTestData {
+export function createFarmerDossierData(plotCode = "A"): FarmerDossierTestData {
   const suffix = uniqueFarmerSuffix();
 
   return {
     plotCode,
     documentName: `Land Certificate E2E-${suffix}`,
-    filePath: 'test-data/files/dummy_land_certificate_10_pages.pdf',
+    filePath: "test-data/files/dummy_land_certificate_10_pages.pdf",
   };
 }

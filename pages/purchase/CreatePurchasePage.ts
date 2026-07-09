@@ -2,6 +2,14 @@ import { expect, Locator, Page } from "@playwright/test";
 import { BasePage } from "../common/BasePage";
 import { PurchaseNoteTestData } from "@data/purchase/purchase.data";
 
+export type PurchaseHeaderRequiredField =
+  | "farmer"
+  | "purchasingOfficer"
+  | "plotCode"
+  | "purchaseDate";
+
+export type PurchaseLineRequiredField = "item" | "purchaseQty" | "unitPrice";
+
 export class CreatePurchasePage extends BasePage {
   readonly pageTitle: Locator;
 
@@ -213,6 +221,123 @@ export class CreatePurchasePage extends BasePage {
 
   async expectPurchaseSavedToast(): Promise<void> {
     await expect(this.page.getByText(/Success|success/i).first()).toBeVisible({
+      timeout: 10000,
+    });
+  }
+
+  async fillHeaderExcept(
+    farmerSearchText: string,
+    plotCode: string,
+    data: PurchaseNoteTestData,
+    missingFields: PurchaseHeaderRequiredField[],
+  ): Promise<void> {
+    if (!missingFields.includes("farmer")) {
+      await this.selectAutocomplete(this.farmerInput, farmerSearchText);
+    }
+
+    if (!missingFields.includes("purchasingOfficer")) {
+      await this.selectFirstAutocompleteOption(
+        this.purchasingOfficerInput,
+        "a",
+      );
+    }
+
+    if (
+      !missingFields.includes("plotCode") &&
+      !missingFields.includes("farmer")
+    ) {
+      await this.selectAutocomplete(this.plotCodeInput, plotCode);
+    }
+
+    if (!missingFields.includes("purchaseDate")) {
+      await this.purchaseDateInput.fill(data.purchaseDate);
+      await this.purchaseDateInput.blur();
+    }
+
+    await this.noteInput.fill(data.note);
+  }
+
+  async clickSaveExpectValidation(): Promise<void> {
+    await expect(this.saveButton).toBeVisible({ timeout: 10000 });
+    await this.saveButton.click();
+
+    // Let Angular validation messages render.
+    await this.page.waitForTimeout(500);
+  }
+
+  async expectHeaderValidationMessage(
+    field: PurchaseHeaderRequiredField,
+  ): Promise<void> {
+    const messageMap: Record<PurchaseHeaderRequiredField, RegExp> = {
+      farmer:
+        /Farmer Is required|Farmer is required|not selected from the list/i,
+      purchasingOfficer:
+        /Purchasing officer Is required|Purchasing officer is required/i,
+      plotCode: /Plot code Is required|Plot code is required/i,
+      purchaseDate:
+        /Date is required|Purchase date Is required|Purchase date is required/i,
+    };
+
+    await expect(this.page.getByText(messageMap[field]).first()).toBeVisible({
+      timeout: 10000,
+    });
+  }
+
+  async openAddLineDialogAfterValidHeader(): Promise<void> {
+    await this.openAddLineDialog();
+    await expect(this.addLineDialog).toBeVisible({ timeout: 10000 });
+  }
+
+  async selectFirstPurchaseItem(): Promise<void> {
+    await this.itemInput.click();
+
+    const firstOption = this.page.getByRole("option").first();
+
+    await expect(firstOption).toBeVisible({ timeout: 10000 });
+    await firstOption.click();
+
+    await expect
+      .poll(async () => (await this.itemInput.inputValue()).trim(), {
+        timeout: 10000,
+        message: "Expected item input to have selected value",
+      })
+      .not.toBe("");
+  }
+
+  async fillPurchaseLineExcept(
+    data: PurchaseNoteTestData,
+    missingFields: PurchaseLineRequiredField[],
+  ): Promise<void> {
+    if (!missingFields.includes("item")) {
+      await this.selectFirstPurchaseItem();
+    }
+
+    if (!missingFields.includes("purchaseQty")) {
+      await this.purchaseQtyInput.fill(data.purchaseQty);
+    }
+
+    if (!missingFields.includes("unitPrice")) {
+      await this.unitPriceInput.fill(data.unitPrice);
+    }
+  }
+
+  async clickModalSaveExpectValidation(): Promise<void> {
+    await this.modalSaveButton.click();
+    await this.page.waitForTimeout(500);
+  }
+
+  async expectLineValidationMessage(
+    field: PurchaseLineRequiredField,
+  ): Promise<void> {
+    const messageMap: Record<PurchaseLineRequiredField, RegExp> = {
+      item: /Item Is required|Item is required|not selected from the list/i,
+      purchaseQty: /Purchase qty Is required|Purchase qty is required/i,
+      unitPrice: /Unit price Is required|Unit price is required/i,
+    };
+
+    await expect(
+      this.addLineDialog.getByText(messageMap[field]).first(),
+    ).toBeVisible({
       timeout: 10000,
     });
   }
