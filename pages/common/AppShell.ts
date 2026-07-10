@@ -101,4 +101,9 @@ export class AppShell {
     await this.dismissLocationAccessPopupIfVisible();
     await this.purchaseMenu.click();
   }
+
+  async openDispatch(): Promise<void> {
+    await this.dismissLocationAccessPopupIfVisible();
+    await this.dispatchMenu.click();
+  }
 }

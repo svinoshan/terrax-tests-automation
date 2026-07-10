@@ -12,6 +12,8 @@ import { MainUnitPage } from "@pages/unit-info/MainUnitPage";
 import { SubUnitPage } from "@pages/unit-info/SubUnitPage";
 import { PurchaseListPage } from "@pages/purchase/PurchaseListPage";
 import { CreatePurchasePage } from "@pages/purchase/CreatePurchasePage";
+import { DispatchListPage } from "@pages/dispatch/DispatchListPage";
+import { CreateDispatchPage } from "@pages/dispatch/CreateDispatchPage";
 
 type PageFixtures = {
   loginPage: LoginPage;
@@ -27,6 +29,8 @@ type PageFixtures = {
   subUnitPage: SubUnitPage;
   purchaseListPage: PurchaseListPage;
   createPurchasePage: CreatePurchasePage;
+  dispatchListPage: DispatchListPage;
+  createDispatchPage: CreateDispatchPage;
 };
 
 export const test = base.extend<PageFixtures>({
@@ -80,6 +84,14 @@ export const test = base.extend<PageFixtures>({
 
   createPurchasePage: async ({ page }, use) => {
     await use(new CreatePurchasePage(page));
+  },
+
+  dispatchListPage: async ({ page }, use) => {
+    await use(new DispatchListPage(page));
+  },
+
+  createDispatchPage: async ({ page }, use) => {
+    await use(new CreateDispatchPage(page));
   },
 });
 
