@@ -474,4 +474,24 @@ export class CreatePurchasePage extends BasePage {
       .waitForLoadState("networkidle", { timeout: 30000 })
       .catch(() => {});
   }
+
+  async openReportPopup(): Promise<Page | null> {
+    await expect(this.reportButton).toBeVisible({ timeout: 10000 });
+
+    const popupPromise = this.page
+      .waitForEvent("popup", { timeout: 15000 })
+      .catch(() => null);
+
+    await this.reportButton.click();
+
+    const popup = await popupPromise;
+
+    if (popup) {
+      await popup
+        .waitForLoadState("domcontentloaded", { timeout: 30000 })
+        .catch(() => {});
+    }
+
+    return popup;
+  }
 }

@@ -29,6 +29,7 @@ export class CreateDispatchPage extends BasePage {
   readonly updateAndAuthorizedButton: Locator;
   readonly cancelButton: Locator;
   readonly confirmCancelButton: Locator;
+  readonly reportButton: Locator;
 
   readonly purchaseDetailsDialog: Locator;
   readonly addItemsButton: Locator;
@@ -87,6 +88,8 @@ export class CreateDispatchPage extends BasePage {
     this.confirmCancelButton = page.getByRole("button", {
       name: /Yes,\s*Cancel it!/i,
     });
+
+    this.reportButton = page.getByRole("button", { name: /Report/i }).first();
 
     this.purchaseDetailsDialog = page
       .locator(".modal, .cdk-overlay-pane, .mat-mdc-dialog-container")
@@ -1193,5 +1196,25 @@ export class CreateDispatchPage extends BasePage {
     throw new Error(
       "No selectable purchase detail row with positive balance found for Dispatch after modal became ready.",
     );
+  }
+
+  async openReportPopup(): Promise<Page | null> {
+    await expect(this.reportButton).toBeVisible({ timeout: 10000 });
+
+    const popupPromise = this.page
+      .waitForEvent("popup", { timeout: 15000 })
+      .catch(() => null);
+
+    await this.reportButton.click();
+
+    const popup = await popupPromise;
+
+    if (popup) {
+      await popup
+        .waitForLoadState("domcontentloaded", { timeout: 30000 })
+        .catch(() => {});
+    }
+
+    return popup;
   }
 }

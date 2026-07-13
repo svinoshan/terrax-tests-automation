@@ -125,4 +125,15 @@ export class DispatchListPage extends BasePage {
     // at least confirm the row still exists.
     await expect(row).toBeVisible();
   }
+
+  async clickFirstDispatchAction(): Promise<void> {
+    await this.expectLoaded();
+
+    const firstAction = this.page
+      .locator("tbody tr .me-2.p-2, tbody tr a, tbody tr button")
+      .first();
+
+    await expect(firstAction).toBeVisible({ timeout: 10000 });
+    await firstAction.click();
+  }
 }

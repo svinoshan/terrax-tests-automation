@@ -108,4 +108,15 @@ export class PurchaseListPage extends BasePage {
     // Most TerraX cancelled rows use a class containing "cancel".
     await expect(row).toHaveClass(/cancel/i, { timeout: 10000 });
   }
+
+  async clickFirstPurchaseAction(): Promise<void> {
+    await this.expectLoaded();
+
+    const firstAction = this.page
+      .locator("tbody tr .me-2.p-2, tbody tr a, tbody tr button")
+      .first();
+
+    await expect(firstAction).toBeVisible({ timeout: 10000 });
+    await firstAction.click();
+  }
 }
