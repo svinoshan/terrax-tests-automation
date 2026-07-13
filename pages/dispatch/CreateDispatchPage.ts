@@ -736,4 +736,129 @@ export class CreateDispatchPage extends BasePage {
     await expect(this.updateButton).toBeHidden({ timeout: 10000 });
     await expect(this.updateAndAuthorizedButton).toBeHidden({ timeout: 10000 });
   }
+
+  async getFirstDispatchLineNumbers(): Promise<{
+    grnNo: string;
+    balanceQty: number;
+    dispatchQty: number;
+    dispatchPrice: number;
+  }> {
+    const firstItemRow = this.page
+      .getByRole("row")
+      .filter({ has: this.page.getByRole("spinbutton").first() })
+      .first();
+
+    await expect(firstItemRow).toBeVisible({ timeout: 10000 });
+
+    const cells = firstItemRow.locator("td");
+
+    const parseNumber = (value: string): number =>
+      Number(value.replace(/,/g, "").trim());
+
+    const grnNo = (await cells.nth(4).innerText()).trim();
+    const balanceQty = parseNumber(await cells.nth(6).innerText());
+
+    const dispatchQty = parseNumber(
+      await firstItemRow.getByRole("spinbutton").first().inputValue(),
+    );
+
+    const dispatchPrice = parseNumber(
+      await firstItemRow.getByRole("spinbutton").nth(1).inputValue(),
+    );
+
+    return {
+      grnNo,
+      balanceQty,
+      dispatchQty,
+      dispatchPrice,
+    };
+  }
+
+  async expectFirstDispatchLineBalance(expectedBalance: number): Promise<void> {
+    const line = await this.getFirstDispatchLineNumbers();
+
+    expect(line.balanceQty).toBeCloseTo(expectedBalance, 2);
+  }
+
+  // async getAvailablePurchaseDetailBalanceByGrn(grnNo: string): Promise<number> {
+  //   await this.openPurchaseDetailsDialog();
+
+  //   const row = this.page.getByRole("row").filter({ hasText: grnNo }).first();
+
+  //   await expect(row).toBeVisible({ timeout: 15000 });
+
+  //   const cells = await row.locator("td").allInnerTexts();
+
+  //   const numericValues = cells
+  //     .map((cell) => Number(cell.replace(/,/g, "").trim()))
+  //     .filter((value) => Number.isFinite(value));
+
+  //   if (numericValues.length === 0) {
+  //     throw new Error(
+  //       `Could not find numeric balance values for GRN "${grnNo}".`,
+  //     );
+  //   }
+
+  //   // In the Add line table, balance qty is normally one of the visible numeric cells.
+  //   // Use the largest positive quantity-like number as the available balance.
+  //   const balanceQty = Math.max(...numericValues);
+
+  //   await this.page.getByRole("button", { name: /^Cancel$/i }).click();
+
+  //   return balanceQty;
+  // }
+  async getAvailablePurchaseDetailBalanceByGrn(grnNo: string): Promise<number> {
+    await this.openPurchaseDetailsDialog();
+
+    const table = this.page
+      .getByRole("table")
+      .filter({ hasText: grnNo })
+      .first();
+
+    await expect(table).toBeVisible({ timeout: 15000 });
+
+    const headers = table.getByRole("columnheader");
+    const headerCount = await headers.count();
+
+    let balanceColumnIndex = -1;
+
+    for (let index = 0; index < headerCount; index += 1) {
+      const headerText = (await headers.nth(index).innerText())
+        .replace(/\s+/g, " ")
+        .trim();
+
+      if (/Balance qty/i.test(headerText)) {
+        balanceColumnIndex = index;
+        break;
+      }
+    }
+
+    if (balanceColumnIndex === -1) {
+      throw new Error(`Could not find Balance qty column for GRN "${grnNo}".`);
+    }
+
+    const row = table.getByRole("row").filter({ hasText: grnNo }).first();
+
+    await expect(row).toBeVisible({ timeout: 15000 });
+
+    const balanceText = await row
+      .locator("td")
+      .nth(balanceColumnIndex)
+      .innerText();
+
+    const balanceQty = Number(balanceText.replace(/,/g, "").trim());
+
+    if (!Number.isFinite(balanceQty)) {
+      throw new Error(
+        `Could not parse Balance qty "${balanceText}" for GRN "${grnNo}".`,
+      );
+    }
+
+    await this.page
+      .getByRole("button", { name: /^Cancel$/i })
+      .click()
+      .catch(() => {});
+
+    return balanceQty;
+  }
 }

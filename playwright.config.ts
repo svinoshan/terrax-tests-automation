@@ -1,14 +1,14 @@
-import { defineConfig, devices } from '@playwright/test';
-import dotenv from 'dotenv';
-import { getEnvironment } from './config/environments';
-import { testOptions } from './config/test-options';
+import { defineConfig, devices } from "@playwright/test";
+import dotenv from "dotenv";
+import { getEnvironment } from "./config/environments";
+import { testOptions } from "./config/test-options";
 
 dotenv.config();
 
 const environment = getEnvironment();
 
 export default defineConfig({
-  testDir: './tests',
+  testDir: "./tests",
   timeout: 60_000,
   expect: {
     timeout: testOptions.defaultTimeout,
@@ -20,17 +20,17 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
 
   reporter: [
-    ['list'],
-    ['html', { outputFolder: 'playwright-report', open: 'never' }],
+    ["list"],
+    ["html", { outputFolder: "playwright-report", open: "never" }],
   ],
 
-  outputDir: 'test-results',
+  outputDir: "test-results",
 
   use: {
     baseURL: environment.baseURL,
-    trace: 'on-first-retry',
-    screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
+    trace: "on-first-retry",
+    screenshot: "only-on-failure",
+    video: "retain-on-failure",
     actionTimeout: 15_000,
     navigationTimeout: 30_000,
     ignoreHTTPSErrors: true,
@@ -38,9 +38,20 @@ export default defineConfig({
 
   projects: [
     {
-      name: 'chromium',
+      name: "chromium",
       use: {
-        ...devices['Desktop Chrome'],
+        ...devices["Desktop Chrome"],
+      },
+    },
+
+    {
+      name: "chromium-debug",
+      use: {
+        browserName: "chromium",
+        headless: false,
+        launchOptions: {
+          slowMo: 300,
+        },
       },
     },
 
