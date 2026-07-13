@@ -861,4 +861,31 @@ export class CreateDispatchPage extends BasePage {
 
     return balanceQty;
   }
+
+  async updateFirstDispatchLineToSpecificQty(dispatchQty: string): Promise<{
+    dispatchQty: string;
+    dispatchPrice: string;
+  }> {
+    const firstItemRow = this.page
+      .getByRole("row")
+      .filter({ has: this.page.getByRole("spinbutton").first() })
+      .first();
+
+    await expect(firstItemRow).toBeVisible({ timeout: 10000 });
+
+    const dispatchQtyInput = firstItemRow.getByRole("spinbutton").first();
+    const dispatchPriceInput = firstItemRow.getByRole("spinbutton").nth(1);
+
+    const currentDispatchPrice = await dispatchPriceInput.inputValue();
+
+    await dispatchQtyInput.fill(dispatchQty);
+
+    await expect(dispatchQtyInput).toHaveValue(dispatchQty);
+    await expect(dispatchPriceInput).toHaveValue(currentDispatchPrice);
+
+    return {
+      dispatchQty,
+      dispatchPrice: currentDispatchPrice,
+    };
+  }
 }
