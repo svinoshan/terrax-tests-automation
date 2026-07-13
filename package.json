@@ -32,7 +32,9 @@
     "test:dispatch:headed": "playwright test tests/dispatch --project=chromium --headed --workers=1",
     "test:dispatch:log": "playwright test tests/dispatch --project=chromium --workers=1 2>&1 | tee logs/dispatch.log",
     "test:reports": "playwright test tests/reports --project=chromium --workers=1",
-    "test:reports:headed": "playwright test tests/reports --project=chromium --headed --workers=1"
+    "test:reports:headed": "playwright test tests/reports --project=chromium --headed --workers=1",
+    "test:audit": "playwright test tests/audit --project=chromium --workers=1",
+    "test:audit:headed": "playwright test tests/audit --project=chromium --headed --workers=1"
   },
   "keywords": [],
   "author": "",
