@@ -933,4 +933,265 @@ export class CreateDispatchPage extends BasePage {
 
     await this.expectNoDispatchLines();
   }
+
+  async getDispatchItemRowCount(): Promise<number> {
+    return await this.page
+      .getByRole("row")
+      .filter({ has: this.page.getByRole("spinbutton") })
+      .count();
+  }
+
+  async expectDispatchLineCount(expectedCount: number): Promise<void> {
+    await expect(
+      this.page.getByRole("row").filter({
+        has: this.page.getByRole("spinbutton"),
+      }),
+    ).toHaveCount(expectedCount, { timeout: 10000 });
+  }
+
+  async setDispatchLineValuesWithinAvailableByIndex(
+    lineIndex: number,
+    options?: DispatchLineValueOptions,
+  ): Promise<{
+    dispatchQty: string;
+    dispatchPrice: string;
+  }> {
+    const itemRows = this.page
+      .getByRole("row")
+      .filter({ has: this.page.getByRole("spinbutton") });
+
+    const itemRow = itemRows.nth(lineIndex);
+
+    await expect(itemRow).toBeVisible({ timeout: 10000 });
+
+    const balanceText = await itemRow.locator("td").nth(6).innerText();
+    const balanceQty = this.parseNumber(balanceText);
+
+    const purchasePriceText = await itemRow.locator("td").nth(7).innerText();
+    const purchasePrice = this.parseNumber(purchasePriceText);
+
+    const safeQty = this.calculateSafeDispatchQty(balanceQty, options);
+    const safePrice = this.calculateSafeDispatchPrice(purchasePrice, options);
+
+    const dispatchQtyInput = itemRow.getByRole("spinbutton").first();
+    const dispatchPriceInput = itemRow.getByRole("spinbutton").nth(1);
+
+    await dispatchQtyInput.fill(safeQty);
+    await dispatchPriceInput.fill(safePrice);
+
+    await expect(dispatchQtyInput).toHaveValue(safeQty);
+    await expect(dispatchPriceInput).toHaveValue(safePrice);
+
+    return {
+      dispatchQty: safeQty,
+      dispatchPrice: safePrice,
+    };
+  }
+
+  async getDispatchTotals(): Promise<{
+    totalQty: number;
+    totalPrice: number;
+  }> {
+    const totalRow = this.page
+      .getByRole("row")
+      .filter({ hasText: /Total\s*:/i })
+      .last();
+
+    await expect(totalRow).toBeVisible({ timeout: 10000 });
+
+    const totalRowText = await totalRow.innerText();
+
+    const numericValues = Array.from(
+      totalRowText.matchAll(/\d[\d,]*(?:\.\d+)?/g),
+    ).map((match) => this.parseNumber(match[0]));
+
+    if (numericValues.length < 2) {
+      throw new Error(
+        `Could not parse dispatch totals from row text: "${totalRowText}"`,
+      );
+    }
+
+    return {
+      totalQty: numericValues[0],
+      totalPrice: numericValues[1],
+    };
+  }
+
+  async expectDispatchTotals(
+    expectedTotalQty: number,
+    expectedTotalPrice: number,
+  ): Promise<void> {
+    await expect
+      .poll(
+        async () => {
+          const totals = await this.getDispatchTotals();
+          return totals.totalQty;
+        },
+        {
+          timeout: 10000,
+          message: "Expected dispatch total quantity to match row quantities",
+        },
+      )
+      .toBeCloseTo(expectedTotalQty, 2);
+
+    await expect
+      .poll(
+        async () => {
+          const totals = await this.getDispatchTotals();
+          return totals.totalPrice;
+        },
+        {
+          timeout: 10000,
+          message: "Expected dispatch total price to match row total price",
+        },
+      )
+      .toBeCloseTo(expectedTotalPrice, 2);
+  }
+
+  async getCurrentDispatchLineGrns(): Promise<string[]> {
+    const itemRows = this.page
+      .getByRole("row")
+      .filter({ has: this.page.getByRole("spinbutton") });
+
+    const rowCount = await itemRows.count();
+    const grns: string[] = [];
+
+    for (let index = 0; index < rowCount; index += 1) {
+      const row = itemRows.nth(index);
+
+      // Dispatch item table columns:
+      // 0 Farmer code
+      // 1 Farmer name
+      // 2 Plot code
+      // 3 Crop name
+      // 4 Grn no
+      const grn = (await row.locator("td").nth(4).innerText()).trim();
+
+      if (grn) {
+        grns.push(grn);
+      }
+    }
+
+    return grns;
+  }
+
+  async addNextAvailablePurchaseDetail(): Promise<string> {
+    const existingLineCount = await this.getDispatchItemRowCount();
+    const existingGrns = new Set(await this.getCurrentDispatchLineGrns());
+
+    await this.openPurchaseDetailsDialog();
+
+    const dialog = this.page.locator("app-dispatch-farmer-details").first();
+
+    await expect(dialog).toBeVisible({ timeout: 15000 });
+
+    // Wait until modal data is usable. The dialog may show rows while still loading,
+    // and row checkboxes/buttons may not be interactive yet.
+    await expect
+      .poll(
+        async () => {
+          const rows = dialog.locator("tbody tr").filter({ hasText: /REC\// });
+          const rowCount = await rows.count();
+
+          let enabledCheckboxCount = 0;
+
+          for (let index = 0; index < rowCount; index += 1) {
+            const checkbox = rows
+              .nth(index)
+              .locator('input[type="checkbox"]')
+              .first();
+
+            if ((await checkbox.count()) === 0) {
+              continue;
+            }
+
+            const isDisabled = await checkbox.evaluate(
+              (element) => (element as HTMLInputElement).disabled,
+            );
+
+            if (!isDisabled) {
+              enabledCheckboxCount += 1;
+            }
+          }
+
+          return enabledCheckboxCount;
+        },
+        {
+          timeout: 15000,
+          message:
+            "Expected Farmer purchase details modal to have selectable rows",
+        },
+      )
+      .toBeGreaterThan(0);
+
+    const purchaseRows = dialog
+      .locator("tbody tr")
+      .filter({ hasText: /REC\// });
+    const rowCount = await purchaseRows.count();
+
+    for (let index = 0; index < rowCount; index += 1) {
+      const row = purchaseRows.nth(index);
+      const cells = row.locator("td");
+
+      const grnNo = (await cells.nth(1).innerText()).trim();
+
+      if (existingGrns.has(grnNo)) {
+        continue;
+      }
+
+      const checkbox = row.locator('input[type="checkbox"]').first();
+
+      if ((await checkbox.count()) === 0) {
+        continue;
+      }
+
+      const isDisabled = await checkbox.evaluate(
+        (element) => (element as HTMLInputElement).disabled,
+      );
+
+      if (isDisabled) {
+        continue;
+      }
+
+      const balanceText = await cells.nth(8).innerText();
+      const balanceQty = this.parseNumber(balanceText);
+
+      if (!Number.isFinite(balanceQty) || balanceQty <= 0) {
+        continue;
+      }
+
+      // Prefer normal checkbox click. If the styled input does not react,
+      // fall back to clicking the first cell, matching the real user/codegen behavior.
+      try {
+        await checkbox.click({ timeout: 3000 });
+      } catch {
+        await cells.first().click({ timeout: 3000 });
+      }
+
+      const addItemsEnabled = await this.addItemsButton
+        .isEnabled({ timeout: 3000 })
+        .catch(() => false);
+
+      if (!addItemsEnabled) {
+        // Row did not activate selection. Try another row.
+        continue;
+      }
+
+      await this.addItemsButton.click();
+
+      await expect
+        .poll(async () => await this.getDispatchItemRowCount(), {
+          timeout: 10000,
+          message:
+            "Expected dispatch item row count to increase after Add items",
+        })
+        .toBe(existingLineCount + 1);
+
+      return grnNo;
+    }
+
+    throw new Error(
+      "No selectable purchase detail row with positive balance found for Dispatch after modal became ready.",
+    );
+  }
 }
