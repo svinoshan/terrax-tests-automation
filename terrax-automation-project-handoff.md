@@ -252,6 +252,9 @@ Track as issue if business confirms Unit price must be mandatory.
 ✓ Cancel authorized Dispatch
 ✓ Dispatch balance lifecycle tests
 ✓ Dispatch line delete/re-add before save
+✓ Dispatch multiple line totals calculation
+✓ Purchase report smoke
+✓ Dispatch report smoke
 ```
 
 ### Known Dispatch validation bug
@@ -424,11 +427,9 @@ DISPATCH_LINE_002 - add multiple dispatch lines and verify totals calculate corr
 ### Later optional flows
 
 ```text
-Dispatch report opens
-Purchase report opens
 Audit module
 EUDR module
-Reports module
+Reports module deeper checks
 Dispatch no-stock validation
 Zero balance item cannot be dispatched
 Decimal balance quantity edge cases
@@ -442,6 +443,7 @@ Decimal balance quantity edge cases
 npm run typecheck
 npm run test:purchase:headed
 npm run test:dispatch:headed
+npm run test:reports:headed
 npx playwright test tests/crops tests/customers tests/unit-info tests/farmer tests/purchase tests/dispatch --project=chromium --headed --workers=1
 ```
 
@@ -458,6 +460,7 @@ Complete Purchase create validation update authorize and cancel tests
 Add Dispatch create validation update authorize and cancel tests
 Add Dispatch balance lifecycle tests
 Add Dispatch balance and line management tests
+Add Purchase and Dispatch report smoke tests
 ```
 
 ---
