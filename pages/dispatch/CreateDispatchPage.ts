@@ -888,4 +888,49 @@ export class CreateDispatchPage extends BasePage {
       dispatchPrice: currentDispatchPrice,
     };
   }
+
+  async expectAtLeastOneDispatchLine(): Promise<void> {
+    await expect(
+      this.page
+        .getByRole("row")
+        .filter({
+          has: this.page.getByRole("spinbutton").first(),
+        })
+        .first(),
+    ).toBeVisible({ timeout: 10000 });
+  }
+
+  async expectNoDispatchLines(): Promise<void> {
+    await expect(
+      this.page.getByRole("row").filter({
+        has: this.page.getByRole("spinbutton"),
+      }),
+    ).toHaveCount(0, { timeout: 10000 });
+  }
+
+  async deleteFirstDispatchLine(): Promise<void> {
+    const firstItemRow = this.page
+      .getByRole("row")
+      .filter({ has: this.page.getByRole("spinbutton").first() })
+      .first();
+
+    await expect(firstItemRow).toBeVisible({ timeout: 10000 });
+
+    await firstItemRow
+      .locator("td")
+      .last()
+      .locator("button, a, .me-2")
+      .first()
+      .click();
+
+    await this.page
+      .getByRole("button", { name: /Yes,\s*delete it!/i })
+      .click({ timeout: 10000 });
+
+    await this.page
+      .waitForLoadState("networkidle", { timeout: 30000 })
+      .catch(() => {});
+
+    await this.expectNoDispatchLines();
+  }
 }
