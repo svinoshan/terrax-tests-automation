@@ -17,6 +17,7 @@ import { CreateDispatchPage } from "@pages/dispatch/CreateDispatchPage";
 import { AuditListPage } from "@pages/audit/AuditListPage";
 import { CreateAuditPage } from "@pages/audit/CreateAuditPage";
 import { AuditSubModulePage } from "@pages/audit/AuditSubModulePage";
+import { CheckListPage } from "@pages/audit/CheckListPage";
 
 type PageFixtures = {
   loginPage: LoginPage;
@@ -37,6 +38,7 @@ type PageFixtures = {
   auditListPage: AuditListPage;
   createAuditPage: CreateAuditPage;
   auditSubModulePage: AuditSubModulePage;
+  checkListPage: CheckListPage;
 };
 
 export const test = base.extend<PageFixtures>({
@@ -110,6 +112,10 @@ export const test = base.extend<PageFixtures>({
 
   auditSubModulePage: async ({ page }, use) => {
     await use(new AuditSubModulePage(page));
+  },
+
+  checkListPage: async ({ page }, use) => {
+    await use(new CheckListPage(page));
   },
 });
 
