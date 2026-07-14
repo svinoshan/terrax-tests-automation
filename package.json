@@ -34,7 +34,9 @@
     "test:reports": "playwright test tests/reports --project=chromium --workers=1",
     "test:reports:headed": "playwright test tests/reports --project=chromium --headed --workers=1",
     "test:audit": "playwright test tests/audit --project=chromium --workers=1",
-    "test:audit:headed": "playwright test tests/audit --project=chromium --headed --workers=1"
+    "test:audit:headed": "playwright test tests/audit --project=chromium --headed --workers=1",
+    "test:eudr": "playwright test tests/eudr --project=chromium --workers=1",
+    "test:eudr:headed": "playwright test tests/eudr --project=chromium --headed --workers=1"
   },
   "keywords": [],
   "author": "",

@@ -20,6 +20,8 @@ import { AuditSubModulePage } from "@pages/audit/AuditSubModulePage";
 import { CheckListPage } from "@pages/audit/CheckListPage";
 import { AuditResultPage } from "@pages/audit/AuditResultPage";
 import { AuditResultSummaryPage } from "@pages/audit/AuditResultSummaryPage";
+import { OperatorsListPage } from "@pages/eudr/OperatorsListPage";
+import { OperatorFormPage } from "@pages/eudr/OperatorFormPage";
 
 type PageFixtures = {
   loginPage: LoginPage;
@@ -43,6 +45,8 @@ type PageFixtures = {
   checkListPage: CheckListPage;
   auditResultPage: AuditResultPage;
   auditResultSummaryPage: AuditResultSummaryPage;
+  operatorsListPage: OperatorsListPage;
+  operatorFormPage: OperatorFormPage;
 };
 
 export const test = base.extend<PageFixtures>({
@@ -128,6 +132,14 @@ export const test = base.extend<PageFixtures>({
 
   auditResultSummaryPage: async ({ page }, use) => {
     await use(new AuditResultSummaryPage(page));
+  },
+
+  operatorsListPage: async ({ page }, use) => {
+    await use(new OperatorsListPage(page));
+  },
+
+  operatorFormPage: async ({ page }, use) => {
+    await use(new OperatorFormPage(page));
   },
 });
 

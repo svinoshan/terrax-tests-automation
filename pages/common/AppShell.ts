@@ -144,4 +144,32 @@ export class AppShell {
       .getByRole("link", { name: /Audit Result Summary/i })
       .click();
   }
+
+  async openEudrMenu(): Promise<void> {
+    await this.dismissLocationAccessPopupIfVisible();
+
+    const eudrMenu = this.page.getByRole("link", { name: /EUDR/i }).first();
+
+    await eudrMenu.click();
+  }
+
+  async openEudrOperators(): Promise<void> {
+    await this.openEudrMenu();
+
+    await this.page.getByRole("link", { name: /Operators/i }).click();
+  }
+
+  async openEudrDeforestationAnalysis(): Promise<void> {
+    await this.openEudrMenu();
+
+    await this.page
+      .getByRole("link", { name: /Deforestation Analysis/i })
+      .click();
+  }
+
+  async openEudrDdsReports(): Promise<void> {
+    await this.openEudrMenu();
+
+    await this.page.getByRole("link", { name: /DDS Reports/i }).click();
+  }
 }
