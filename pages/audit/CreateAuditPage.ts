@@ -2,6 +2,12 @@ import { expect, Locator, Page } from "@playwright/test";
 import { BasePage } from "../common/BasePage";
 import { AuditTestData } from "@data/audit/audit.data";
 
+export type AuditRequiredField =
+  | "fieldOfficer"
+  | "planDate"
+  | "auditNumber"
+  | "farmerRows";
+
 export class CreateAuditPage extends BasePage {
   readonly pageTitle: Locator;
 
@@ -11,6 +17,9 @@ export class CreateAuditPage extends BasePage {
   readonly saveButton: Locator;
   readonly clearButton: Locator;
   readonly closeButton: Locator;
+  readonly updateButton: Locator;
+  readonly cancelButton: Locator;
+  readonly confirmCancelButton: Locator;
 
   readonly farmerSearchInput: Locator;
 
@@ -32,6 +41,14 @@ export class CreateAuditPage extends BasePage {
     this.saveButton = page.getByRole("button", { name: /Save/i }).first();
     this.clearButton = page.getByRole("button", { name: /Clear/i }).first();
     this.closeButton = page.getByRole("button", { name: /Close/i }).first();
+
+    this.updateButton = page.getByRole("button", { name: /Update/i }).first();
+
+    this.cancelButton = page.getByRole("button", { name: /Cancel/i }).first();
+
+    this.confirmCancelButton = page.getByRole("button", {
+      name: /Yes,\s*Cancel it!/i,
+    });
 
     this.farmerSearchInput = page
       .getByRole("searchbox")
@@ -311,5 +328,119 @@ export class CreateAuditPage extends BasePage {
     await expect(this.page.getByText(/Success|success/i).first()).toBeVisible({
       timeout: 10000,
     });
+  }
+
+  async fillFormExcept(
+    data: AuditTestData,
+    missingFields: AuditRequiredField[],
+  ): Promise<{
+    selectedFieldOfficer?: string;
+  }> {
+    let selectedFieldOfficer: string | undefined;
+
+    if (!missingFields.includes("fieldOfficer")) {
+      selectedFieldOfficer = await this.selectFieldOfficerWithFarmerRows(
+        data.fieldOfficer,
+      );
+    }
+
+    if (!missingFields.includes("planDate")) {
+      await this.setPlanDate(data.planDate);
+    }
+
+    if (!missingFields.includes("auditNumber")) {
+      await this.fillAuditNumber(data.auditNumber);
+    }
+
+    if (
+      !missingFields.includes("farmerRows") &&
+      !missingFields.includes("fieldOfficer")
+    ) {
+      await this.selectFarmerRows(data.farmerRowsToSelect);
+    }
+
+    return {
+      selectedFieldOfficer,
+    };
+  }
+
+  async clickSaveExpectValidation(): Promise<void> {
+    await expect(this.saveButton).toBeVisible({ timeout: 10000 });
+    await this.saveButton.click();
+
+    await this.page.waitForTimeout(500);
+  }
+
+  async expectValidationMessage(field: AuditRequiredField): Promise<void> {
+    const messageMap: Record<AuditRequiredField, RegExp> = {
+      fieldOfficer:
+        /Field officer Is required|Field officer is required|Field officer.*required/i,
+      planDate: /Plan date Is required|Plan date is required|Date is required/i,
+      auditNumber:
+        /Audit number Is required|Audit number is required|Audit number.*required/i,
+      farmerRows:
+        /Select at least one farmer|Farmer.*required|Please select.*farmer|Select farmer/i,
+    };
+
+    await expect(this.page.getByText(messageMap[field]).first()).toBeVisible({
+      timeout: 10000,
+    });
+  }
+
+  async expectUpdateLoaded(): Promise<void> {
+    await expect(
+      this.page.getByRole("heading", { name: /Create Audit|Update Audit/i }),
+    ).toBeVisible({ timeout: 30000 });
+
+    await expect(this.auditNumberInput).toBeVisible({ timeout: 10000 });
+    await expect(this.planDateInput).toBeVisible({ timeout: 10000 });
+  }
+
+  async updateAuditNumber(auditNumber: string): Promise<void> {
+    await this.auditNumberInput.click();
+    await this.auditNumberInput.press(
+      process.platform === "darwin" ? "Meta+A" : "Control+A",
+    );
+    await this.auditNumberInput.press("Backspace");
+    await this.auditNumberInput.fill(auditNumber);
+
+    await expect(this.auditNumberInput).toHaveValue(auditNumber, {
+      timeout: 10000,
+    });
+  }
+
+  async updatePlanDate(planDate: string): Promise<void> {
+    await this.planDateInput.click();
+    await this.planDateInput.press(
+      process.platform === "darwin" ? "Meta+A" : "Control+A",
+    );
+    await this.planDateInput.press("Backspace");
+    await this.planDateInput.fill(planDate);
+    await this.planDateInput.blur();
+
+    await expect(this.planDateInput).toHaveValue(planDate, {
+      timeout: 10000,
+    });
+  }
+
+  async update(): Promise<void> {
+    await expect(this.updateButton).toBeVisible({ timeout: 10000 });
+    await this.updateButton.click();
+
+    await this.page
+      .waitForLoadState("networkidle", { timeout: 30000 })
+      .catch(() => {});
+  }
+
+  async cancelAudit(): Promise<void> {
+    await expect(this.cancelButton).toBeVisible({ timeout: 10000 });
+    await this.cancelButton.click();
+
+    await expect(this.confirmCancelButton).toBeVisible({ timeout: 10000 });
+    await this.confirmCancelButton.click();
+
+    await this.page
+      .waitForLoadState("networkidle", { timeout: 30000 })
+      .catch(() => {});
   }
 }

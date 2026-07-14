@@ -116,4 +116,32 @@ export class AppShell {
     await this.openAudit();
     await this.page.getByRole("link", { name: /Create Audit/i }).click();
   }
+
+  // async openAuditMenu(): Promise<void> {
+  //   await this.dismissLocationAccessPopupIfVisible();
+
+  //   const auditMenu = this.page.getByRole("link", { name: /Audit/i }).first();
+
+  //   await auditMenu.click();
+  // }
+
+  async openAuditCheckList(): Promise<void> {
+    await this.openAudit();
+
+    await this.page.getByRole("link", { name: /Check List/i }).click();
+  }
+
+  async openAuditResult(): Promise<void> {
+    await this.openAudit();
+
+    await this.page.getByRole("link", { name: /^Audit Result$/i }).click();
+  }
+
+  async openAuditResultSummary(): Promise<void> {
+    await this.openAudit();
+
+    await this.page
+      .getByRole("link", { name: /Audit Result Summary/i })
+      .click();
+  }
 }
