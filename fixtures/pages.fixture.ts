@@ -23,6 +23,8 @@ import { AuditResultSummaryPage } from "@pages/audit/AuditResultSummaryPage";
 import { OperatorsListPage } from "@pages/eudr/OperatorsListPage";
 import { OperatorFormPage } from "@pages/eudr/OperatorFormPage";
 import { DeforestationAnalysisPage } from "@pages/eudr/DeforestationAnalysisPage";
+import { DdsReportsPage } from "@pages/eudr/DdsReportsPage";
+import { DdsReportFormPage } from "@pages/eudr/DdsReportFormPage";
 
 type PageFixtures = {
   loginPage: LoginPage;
@@ -49,6 +51,8 @@ type PageFixtures = {
   operatorsListPage: OperatorsListPage;
   operatorFormPage: OperatorFormPage;
   deforestationAnalysisPage: DeforestationAnalysisPage;
+  ddsReportsPage: DdsReportsPage;
+  ddsReportFormPage: DdsReportFormPage;
 };
 
 export const test = base.extend<PageFixtures>({
@@ -146,6 +150,14 @@ export const test = base.extend<PageFixtures>({
 
   deforestationAnalysisPage: async ({ page }, use) => {
     await use(new DeforestationAnalysisPage(page));
+  },
+
+  ddsReportsPage: async ({ page }, use) => {
+    await use(new DdsReportsPage(page));
+  } ,
+
+  ddsReportFormPage: async ({ page }, use) => {
+    await use(new DdsReportFormPage(page));
   },
 });
 
