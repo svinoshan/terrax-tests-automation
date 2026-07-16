@@ -25,6 +25,9 @@ import { OperatorFormPage } from "@pages/eudr/OperatorFormPage";
 import { DeforestationAnalysisPage } from "@pages/eudr/DeforestationAnalysisPage";
 import { DdsReportsPage } from "@pages/eudr/DdsReportsPage";
 import { DdsReportFormPage } from "@pages/eudr/DdsReportFormPage";
+import { StockReportPage } from "@pages/reports/StockReportPage";
+import { MassBalanceReportPage } from "@pages/reports/MassBalanceReportPage";
+import { PurchaseSummaryReportPage } from "@pages/reports/PurchaseSummaryReportPage";
 
 type PageFixtures = {
   loginPage: LoginPage;
@@ -53,6 +56,9 @@ type PageFixtures = {
   deforestationAnalysisPage: DeforestationAnalysisPage;
   ddsReportsPage: DdsReportsPage;
   ddsReportFormPage: DdsReportFormPage;
+  stockReportPage: StockReportPage;
+  massBalanceReportPage: MassBalanceReportPage;
+  purchaseSummaryReportPage: PurchaseSummaryReportPage;
 };
 
 export const test = base.extend<PageFixtures>({
@@ -154,10 +160,22 @@ export const test = base.extend<PageFixtures>({
 
   ddsReportsPage: async ({ page }, use) => {
     await use(new DdsReportsPage(page));
-  } ,
+  },
 
   ddsReportFormPage: async ({ page }, use) => {
     await use(new DdsReportFormPage(page));
+  },
+
+  stockReportPage: async ({ page }, use) => {
+    await use(new StockReportPage(page));
+  },
+
+  massBalanceReportPage: async ({ page }, use) => {
+    await use(new MassBalanceReportPage(page));
+  },
+
+  purchaseSummaryReportPage: async ({ page }, use) => {
+    await use(new PurchaseSummaryReportPage(page));
   },
 });
 

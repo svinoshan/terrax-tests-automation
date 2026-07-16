@@ -172,4 +172,28 @@ export class AppShell {
 
     await this.page.getByRole("link", { name: /DDS Reports/i }).click();
   }
+
+  async openReportsMenu(): Promise<void> {
+    await this.dismissLocationAccessPopupIfVisible();
+
+    await this.page.getByRole("link", { name: /Reports/i }).click();
+  }
+
+  async openStockReport(): Promise<void> {
+    await this.openReportsMenu();
+
+    await this.page.getByRole("link", { name: /Stock report/i }).click();
+  }
+
+  async openMassBalanceReport(): Promise<void> {
+    await this.openReportsMenu();
+
+    await this.page.getByRole("link", { name: /Mass balance/i }).click();
+  }
+
+  async openPurchaseSummaryReport(): Promise<void> {
+    await this.openReportsMenu();
+
+    await this.page.getByRole("link", { name: /Purchase Summary/i }).click();
+  }
 }
