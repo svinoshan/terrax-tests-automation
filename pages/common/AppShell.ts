@@ -196,4 +196,10 @@ export class AppShell {
 
     await this.page.getByRole("link", { name: /Purchase Summary/i }).click();
   }
+
+  async openDispatchSummaryReport(): Promise<void> {
+    await this.openReportsMenu();
+
+    await this.page.getByRole("link", { name: /Dispatch Summary/i }).click();
+  }
 }
