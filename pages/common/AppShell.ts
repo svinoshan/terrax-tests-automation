@@ -202,4 +202,10 @@ export class AppShell {
 
     await this.page.getByRole("link", { name: /Dispatch Summary/i }).click();
   }
+
+  async openUserManagement(): Promise<void> {
+    await this.dismissLocationAccessPopupIfVisible();
+
+    await this.page.getByRole("link", { name: /User Management/i }).click();
+  }
 }

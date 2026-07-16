@@ -29,6 +29,8 @@ import { StockReportPage } from "@pages/reports/StockReportPage";
 import { MassBalanceReportPage } from "@pages/reports/MassBalanceReportPage";
 import { PurchaseSummaryReportPage } from "@pages/reports/PurchaseSummaryReportPage";
 import { DispatchSummaryReportPage } from "@pages/reports/DispatchSummaryReportPage";
+import { UserManagementListPage } from "@pages/user-management/UserManagementListPage";
+import { UserManagementFormPage } from "@pages/user-management/UserManagementFormPage";
 
 type PageFixtures = {
   loginPage: LoginPage;
@@ -61,6 +63,8 @@ type PageFixtures = {
   massBalanceReportPage: MassBalanceReportPage;
   purchaseSummaryReportPage: PurchaseSummaryReportPage;
   dispatchSummaryReportPage: DispatchSummaryReportPage;
+  userManagementListPage: UserManagementListPage;
+  userManagementFormPage: UserManagementFormPage;
 };
 
 export const test = base.extend<PageFixtures>({
@@ -182,6 +186,14 @@ export const test = base.extend<PageFixtures>({
 
   dispatchSummaryReportPage: async ({ page }, use) => {
     await use(new DispatchSummaryReportPage(page));
+  },
+
+  userManagementListPage: async ({ page }, use) => {
+    await use(new UserManagementListPage(page));
+  },
+
+  userManagementFormPage: async ({ page }, use) => {
+    await use(new UserManagementFormPage(page));
   },
 });
 
