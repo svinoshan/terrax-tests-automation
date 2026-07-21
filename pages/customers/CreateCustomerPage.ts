@@ -1,8 +1,8 @@
-import { expect, Locator, Page } from '@playwright/test';
-import { BasePage } from '../common/BasePage';
-import { CustomerTestData } from '@data/customers/create-customer.data';
+import { expect, Locator, Page } from "@playwright/test";
+import { BasePage } from "../common/BasePage";
+import { CustomerTestData } from "@data/customers/create-customer.data";
 
-export type CustomerRequiredField = 'customerName' | 'customerAddress';
+export type CustomerRequiredField = "customerName" | "customerAddress";
 
 export class CreateCustomerPage extends BasePage {
   readonly pageTitle: Locator;
@@ -16,7 +16,7 @@ export class CreateCustomerPage extends BasePage {
   constructor(page: Page) {
     super(page);
 
-    this.pageTitle = page.getByRole('heading', {
+    this.pageTitle = page.getByRole("heading", {
       name: /create customer|update customer/i,
     });
 
@@ -26,13 +26,13 @@ export class CreateCustomerPage extends BasePage {
     this.activeSwitch = page.locator('[formcontrolname="active"]');
 
     this.submitButton = page
-      .getByRole('button', { name: /\+?\s*save|update/i })
-      .or(page.locator('button').filter({ hasText: /save|update/i }))
+      .getByRole("button", { name: /\+?\s*save|update/i })
+      .or(page.locator("button").filter({ hasText: /save|update/i }))
       .first();
 
     this.backButton = page
-      .getByRole('button', { name: /back/i })
-      .or(page.locator('button').filter({ hasText: /back/i }))
+      .getByRole("button", { name: /back/i })
+      .or(page.locator("button").filter({ hasText: /back/i }))
       .first();
   }
 
@@ -42,13 +42,13 @@ export class CreateCustomerPage extends BasePage {
 
   async expectCreateLoaded(): Promise<void> {
     await expect(
-      this.page.getByRole('heading', { name: /create customer/i }),
+      this.page.getByRole("heading", { name: /create customer/i }),
     ).toBeVisible({ timeout: 30000 });
   }
 
   async expectUpdateLoaded(): Promise<void> {
     await expect(
-      this.page.getByRole('heading', { name: /update customer/i }),
+      this.page.getByRole("heading", { name: /update customer/i }),
     ).toBeVisible({ timeout: 30000 });
   }
 
@@ -80,13 +80,13 @@ export class CreateCustomerPage extends BasePage {
     data: CustomerTestData,
     missingFields: CustomerRequiredField[],
   ): Promise<void> {
-    if (!missingFields.includes('customerName')) {
+    if (!missingFields.includes("customerName")) {
       await this.customerNameInput.fill(data.customerName);
     }
 
     await this.customerTpInput.fill(data.customerTp);
 
-    if (!missingFields.includes('customerAddress')) {
+    if (!missingFields.includes("customerAddress")) {
       await this.customerAddressInput.fill(data.customerAddress);
     }
 
@@ -95,7 +95,7 @@ export class CreateCustomerPage extends BasePage {
 
   async updateCustomerAddress(customerAddress: string): Promise<void> {
     await this.customerAddressInput.click();
-    await this.customerAddressInput.fill('');
+    await this.customerAddressInput.fill("");
     await this.customerAddressInput.fill(customerAddress);
 
     // Diagnostic assertion: confirms Playwright actually edited the field
@@ -131,21 +131,36 @@ export class CreateCustomerPage extends BasePage {
 
   async save(): Promise<void> {
     await this.submitButton.click();
-    await this.page.waitForLoadState('networkidle', { timeout: 30000 }).catch(() => {});
+    await this.page
+      .waitForLoadState("networkidle", { timeout: 30000 })
+      .catch(() => {});
   }
 
   async update(): Promise<void> {
     await this.submitButton.click();
-    await this.page.waitForLoadState('networkidle', { timeout: 30000 }).catch(() => {});
+    await this.page
+      .waitForLoadState("networkidle", { timeout: 30000 })
+      .catch(() => {});
   }
 
-  async back(): Promise<void> {
-    await this.page
-      .locator('.ngx-spinner-overlay')
-      .waitFor({ state: 'hidden', timeout: 30000 })
-      .catch(() => {});
+  // async back(): Promise<void> {
+  //   await this.page
+  //     .locator('.ngx-spinner-overlay')
+  //     .waitFor({ state: 'hidden', timeout: 30000 })
+  //     .catch(() => {});
 
-    await this.backButton.click();
+  //   await this.backButton.click();
+  // }
+  async back(): Promise<void> {
+    await expect(this.backButton).toBeVisible({ timeout: 15000 });
+
+    await this.backButton.scrollIntoViewIfNeeded();
+
+    try {
+      await this.backButton.click({ timeout: 5000 });
+    } catch {
+      await this.backButton.click({ force: true });
+    }
   }
 
   async expectRequiredControlsInvalid(): Promise<void> {
@@ -163,8 +178,12 @@ export class CreateCustomerPage extends BasePage {
   }
 
   async expectRequiredMessagesVisible(): Promise<void> {
-    await expect(this.page.getByText(/Customer name Is required/i)).toBeVisible();
-    await expect(this.page.getByText(/Customer address Is required/i)).toBeVisible();
+    await expect(
+      this.page.getByText(/Customer name Is required/i),
+    ).toBeVisible();
+    await expect(
+      this.page.getByText(/Customer address Is required/i),
+    ).toBeVisible();
   }
 
   async expectCustomerSavedToast(): Promise<void> {

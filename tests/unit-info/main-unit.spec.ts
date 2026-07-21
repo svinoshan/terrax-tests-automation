@@ -6,10 +6,12 @@ test.describe('@regression Main Unit', () => {
     authenticatedUser,
     mainUnitPage,
   }) => {
+    void authenticatedUser;
+
     const mainUnit = createMainUnitData();
     const updatedDescription = `${mainUnit.description} Updated`;
 
-    await mainUnitPage.open();
+    await mainUnitPage.openCreateForm();
 
     await mainUnitPage.fillForm(mainUnit);
     await mainUnitPage.save();
@@ -20,11 +22,17 @@ test.describe('@regression Main Unit', () => {
       // Some builds may show short-lived/generic toast.
     }
 
+    await mainUnitPage.expectListLoaded();
+
     await mainUnitPage.search(mainUnit.mainUnitCode);
     await mainUnitPage.expectMainUnitVisible(mainUnit.mainUnitCode);
-    await mainUnitPage.expectRowContains(mainUnit.mainUnitCode, mainUnit.description);
+    await mainUnitPage.expectRowContains(
+      mainUnit.mainUnitCode,
+      mainUnit.description,
+    );
 
     await mainUnitPage.clickEdit(mainUnit.mainUnitCode);
+
     await mainUnitPage.updateDescription(updatedDescription);
     await mainUnitPage.update();
 
@@ -34,7 +42,12 @@ test.describe('@regression Main Unit', () => {
       // Some builds may show short-lived/generic toast.
     }
 
+    await mainUnitPage.expectListLoaded();
+
     await mainUnitPage.search(mainUnit.mainUnitCode);
-    await mainUnitPage.expectRowContains(mainUnit.mainUnitCode, updatedDescription);
+    await mainUnitPage.expectRowContains(
+      mainUnit.mainUnitCode,
+      updatedDescription,
+    );
   });
 });

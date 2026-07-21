@@ -45,7 +45,12 @@ export class CreateCropPage extends BasePage {
       .locator('button[type="submit"]')
       .filter({ hasText: /save|update/i });
     this.resetButton = page.locator("button").filter({ hasText: /reset/i });
-    this.backButton = page.locator("button").filter({ hasText: /back/i });
+    //this.backButton = page.locator("button").filter({ hasText: /back/i });
+    this.backButton = page
+      .getByRole("button", { name: /Cancel|Back/i })
+      .or(page.locator("button").filter({ hasText: /Cancel|Back/i }))
+      .or(page.locator("a").filter({ hasText: /Cancel|Back/i }))
+      .first();
   }
 
   async expectLoaded(): Promise<void> {
@@ -269,13 +274,29 @@ export class CreateCropPage extends BasePage {
     await this.resetButton.click();
   }
 
-  async back(): Promise<void> {
-    await this.page
-      .locator(".ngx-spinner-overlay")
-      .waitFor({ state: "hidden", timeout: 30000 })
-      .catch(() => {});
+  // async back(): Promise<void> {
+  //   await this.page
+  //     .locator(".ngx-spinner-overlay")
+  //     .waitFor({ state: "hidden", timeout: 30000 })
+  //     .catch(() => {});
 
-    await this.backButton.click();
+  //   await this.backButton.click();
+  // }
+
+  // async back(): Promise<void> {
+  //   await expect(this.backButton).toBeVisible({ timeout: 15000 });
+  //   await this.backButton.scrollIntoViewIfNeeded();
+  //   await this.backButton.click({ force: true });
+  // }
+  async back(): Promise<void> {
+    await expect(this.backButton).toBeVisible({ timeout: 15000 });
+    await this.backButton.scrollIntoViewIfNeeded();
+
+    try {
+      await this.backButton.click({ timeout: 5000 });
+    } catch {
+      await this.backButton.click({ force: true });
+    }
   }
 
   async expectTextFieldsCleared(): Promise<void> {

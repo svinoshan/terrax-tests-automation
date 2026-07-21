@@ -111,9 +111,13 @@ export class CreatePurchasePage extends BasePage {
     this.unitPriceInput = this.addLineDialog.locator(
       '[formcontrolname="unitPrice"]',
     );
-    this.modalSaveButton = this.addLineDialog.getByRole("button", {
-      name: /^Save$/i,
-    });
+    // this.modalSaveButton = this.addLineDialog.getByRole("button", {
+    //   name: /^Save$/i,
+    // });
+    this.modalSaveButton = page
+      .locator("app-purchase-note-add")
+      .getByRole("button", { name: /Save/i })
+      .last();
   }
 
   async expectLoaded(): Promise<void> {
@@ -354,7 +358,12 @@ export class CreatePurchasePage extends BasePage {
     }
   }
 
+  // async clickModalSaveExpectValidation(): Promise<void> {
+  //   await this.modalSaveButton.click();
+  //   await this.page.waitForTimeout(500);
+  // }
   async clickModalSaveExpectValidation(): Promise<void> {
+    await expect(this.modalSaveButton).toBeVisible({ timeout: 15000 });
     await this.modalSaveButton.click();
     await this.page.waitForTimeout(500);
   }

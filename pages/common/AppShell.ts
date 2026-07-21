@@ -22,8 +22,9 @@ export class AppShell {
     this.unitInfoMenu = this.page.getByText(/^Unit Info$/i).first();
 
     this.locationAccessOkButton = this.page
-      .getByRole("button", { name: /^ok$/i })
-      .or(this.page.locator("button").filter({ hasText: /^ok$/i }));
+      .getByRole("button", { name: /^(Ok|common\.ok)$/i })
+      .or(this.page.locator("button").filter({ hasText: /^(Ok|common\.ok)$/i }))
+      .first();
   }
 
   async expectLoaded(): Promise<void> {
