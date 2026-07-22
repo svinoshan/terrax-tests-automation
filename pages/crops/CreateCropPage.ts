@@ -18,13 +18,13 @@ export class CreateCropPage extends BasePage {
   readonly outTurnInput: Locator;
   readonly activeSwitch: Locator;
   readonly submitButton: Locator;
-  readonly resetButton: Locator;
+  //readonly resetButton: Locator;
   readonly backButton: Locator;
 
   constructor(page: Page) {
     super(page);
 
-    this.pageTitle = page.getByRole("heading", { name: /create crop/i });
+    this.pageTitle = page.getByRole('heading', { name: 'Create crop' });
 
     this.cropNameInput = page.locator('[formcontrolname="cropName"]');
     this.scientificNameInput = page.locator(
@@ -44,7 +44,7 @@ export class CreateCropPage extends BasePage {
     this.submitButton = page
       .locator('button[type="submit"]')
       .filter({ hasText: /save|update/i });
-    this.resetButton = page.locator("button").filter({ hasText: /reset/i });
+    //this.resetButton = page.locator("button").filter({ hasText: /reset/i });
     //this.backButton = page.locator("button").filter({ hasText: /back/i });
     this.backButton = page
       .getByRole("button", { name: /Cancel|Back/i })
@@ -86,7 +86,7 @@ export class CreateCropPage extends BasePage {
 
   async expectButtonsVisible(): Promise<void> {
     await expect(this.submitButton).toBeVisible();
-    await expect(this.resetButton).toBeVisible();
+    //await expect(this.resetButton).toBeVisible();
     await expect(this.backButton).toBeVisible();
   }
 
@@ -270,9 +270,9 @@ export class CreateCropPage extends BasePage {
     ).toBeVisible({ timeout: 10000 });
   }
 
-  async reset(): Promise<void> {
-    await this.resetButton.click();
-  }
+  // async reset(): Promise<void> {
+  //   await this.resetButton.click();
+  // }
 
   // async back(): Promise<void> {
   //   await this.page

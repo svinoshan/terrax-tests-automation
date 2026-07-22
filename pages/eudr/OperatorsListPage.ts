@@ -61,7 +61,7 @@ export class OperatorsListPage extends BasePage {
     ).toBeVisible();
 
     await expect(
-      this.page.getByRole("columnheader", { name: /Active/i }),
+      this.page.getByRole("columnheader", { name: 'Status' }),
     ).toBeVisible();
 
     await expect(

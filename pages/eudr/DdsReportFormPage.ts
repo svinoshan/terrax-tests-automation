@@ -36,9 +36,7 @@ export class DdsReportFormPage extends BasePage {
       name: /Enter trading company/i,
     });
 
-    this.ddsDateInput = page.getByRole("textbox", {
-      name: /Pickup date/i,
-    });
+    this.ddsDateInput = page.getByRole("textbox", { name: 'Select date' });
 
     // DDS header combobox order:
     // 0 = Operator
@@ -79,7 +77,7 @@ export class DdsReportFormPage extends BasePage {
 
   async expectUpdateLoaded(): Promise<void> {
     await expect(
-      this.page.getByRole("heading", { name: /Update DDS Report/i }),
+      this.page.getByRole('heading', { name: 'Update DDS Report' }),
     ).toBeVisible({ timeout: 30000 });
 
     await expect(this.operatorInput).toBeVisible({ timeout: 10000 });

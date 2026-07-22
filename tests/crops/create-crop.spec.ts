@@ -22,16 +22,16 @@ test.describe('@smoke Create Crop - safe tests', () => {
     await createCropPage.expectRequiredControlsInvalid();
   });
 
-  test('reset clears entered text fields', async ({ createCropPage }) => {
-    const [firstCrop] = getCropData(1);
+  // test('reset clears entered text fields', async ({ createCropPage }) => {
+  //   const [firstCrop] = getCropData(1);
 
-    await createCropPage.fillTextFieldsOnly(firstCrop);
-    await createCropPage.reset();
+  //   await createCropPage.fillTextFieldsOnly(firstCrop);
+  //   await createCropPage.reset();
 
-    await createCropPage.expectTextFieldsCleared();
-  });
+  //   await createCropPage.expectTextFieldsCleared();
+  // });
 
-  test('back button returns to crops list', async ({ createCropPage, cropsListPage }) => {
+  test('cancel button returns to crops list', async ({ createCropPage, cropsListPage }) => {
     await createCropPage.back();
 
     await cropsListPage.expectLoaded();

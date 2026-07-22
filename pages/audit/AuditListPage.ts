@@ -16,8 +16,9 @@ export class AuditListPage extends BasePage {
 
     this.pageTitle = page.getByRole("heading", { name: /All audit/i });
 
-    this.addNewButton = page.getByRole("button", { name: /Add new/i }).first();
-
+    //this.addNewButton = page.getByRole("button", { name: /Add new/i }).first();
+    this.addNewButton = page.getByText('Add new');
+    
     this.searchInput = page
       .getByRole("searchbox")
       .or(page.getByPlaceholder("Search"))

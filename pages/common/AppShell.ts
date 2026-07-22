@@ -110,7 +110,8 @@ export class AppShell {
 
   async openAudit(): Promise<void> {
     await this.dismissLocationAccessPopupIfVisible();
-    await this.page.getByRole("link", { name: /Audit/i }).click();
+    //await this.page.getByRole("link", { name: /Audit/i }).click();
+     await this.page.getByRole('link', { name: ' Audit' }).click();
   }
 
   async openCreateAudit(): Promise<void> {

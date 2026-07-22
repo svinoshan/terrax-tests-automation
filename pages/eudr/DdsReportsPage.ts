@@ -14,7 +14,7 @@ export class DdsReportsPage extends BasePage {
 
     this.appShell = new AppShell(page);
 
-    this.pageTitle = page.getByRole("heading", { name: /DDS Reports/i });
+    this.pageTitle = page.getByRole('heading', { name: 'DDS Reports' });
 
     this.addNewButton = page.getByRole("button", { name: /Add new/i }).first();
 

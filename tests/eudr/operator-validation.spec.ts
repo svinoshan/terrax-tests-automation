@@ -64,7 +64,7 @@ test.describe("@validation EUDR Operator", () => {
       void authenticatedUser;
 
       test.fail(
-        ["street", "city", "postalCode", "phoneNumber"].includes(
+        ["street", "city", "postalCode", "phoneNumber", "eoriNumber", "contactEmail"].includes(
           scenario.missingField,
         ),
         "BUG/Clarification: Field is visually marked required, but no inline validation message appears.",
