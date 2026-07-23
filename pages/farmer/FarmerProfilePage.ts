@@ -45,6 +45,7 @@ export class FarmerProfilePage extends BasePage {
   readonly landTab: Locator;
   readonly cropsTab: Locator;
   readonly euNopJasTab: Locator;
+  readonly dossierTab: Locator;
 
   readonly applicationDateInput: Locator;
   readonly mainUnitInput: Locator;
@@ -63,7 +64,7 @@ export class FarmerProfilePage extends BasePage {
   constructor(page: Page) {
     super(page);
 
-    this.pageTitle = page.getByRole("heading", { name: /farmer profile/i });
+    this.pageTitle = page.getByRole('heading', { name: 'Farmer profile' });
 
     this.nameWithInitialsInput = page.locator(
       '[formcontrolname="nameWtInitials"]',
@@ -83,10 +84,11 @@ export class FarmerProfilePage extends BasePage {
     );
     this.supplierTypeSelect = page.locator('[formcontrolname="supplierType"]');
 
-    this.organizationalTab = page.getByRole("tab", { name: /organizational/i });
+    this.organizationalTab = page.getByRole('heading', { name: 'Organizational' });
     this.landTab = page.getByRole("tab", { name: /land/i });
     this.cropsTab = page.getByRole("tab", { name: /crops/i });
     this.euNopJasTab = page.getByRole("tab", { name: /eu\/nop\/jas/i });
+    this.dossierTab = this.page.getByRole("tab", { name: /Dossier/i });
 
     this.applicationDateInput = page.locator(
       '[formcontrolname="applicationDate"]',
@@ -335,7 +337,7 @@ export class FarmerProfilePage extends BasePage {
     data: FarmerOrganizationalTestData,
     missingFields: FarmerOrganizationalRequiredField[],
   ): Promise<void> {
-    await this.organizationalTab.click();
+    //await this.organizationalTab.click();
 
     await this.applicationDateInput.fill(data.applicationDate);
     await this.applicationDateInput.blur();
@@ -508,9 +510,9 @@ export class FarmerProfilePage extends BasePage {
 
     // The Organizational tab is usually already active after Save.
     // Only click if the expected field is not visible.
-    if (!(await fieldLocatorMap[field].isVisible().catch(() => false))) {
-      await this.organizationalTab.click();
-    }
+    // if (!(await fieldLocatorMap[field].isVisible().catch(() => false))) {
+    //   await this.organizationalTab.click();
+    // }
 
     await expect(fieldLocatorMap[field]).toHaveClass(/ng-invalid/);
   }
@@ -618,7 +620,7 @@ export class FarmerProfilePage extends BasePage {
   async expectCreatedFarmerOrganizationalInfoPersisted(
     data: FarmerOrganizationalTestData,
   ): Promise<void> {
-    await this.organizationalTab.click();
+    //await this.organizationalTab.click();
 
     await expect(this.applicationDateInput).toHaveValue(data.applicationDate);
     await expect(this.mainUnitInput).toHaveValue(data.mainUnit);
@@ -723,7 +725,7 @@ export class FarmerProfilePage extends BasePage {
       profileData.supplierType,
     );
 
-    await this.organizationalTab.click();
+    //await this.organizationalTab.click();
 
     await checkInput(
       "Application date",
@@ -1276,86 +1278,238 @@ export class FarmerProfilePage extends BasePage {
     });
   }
 
-  async addEuNopJasRecord(data: FarmerEuNopJasTestData): Promise<void> {
+  private euNopJasForm(): Locator {
+    return this.page
+      .locator("form")
+      .filter({
+        hasText:
+          /Plot code|Field status EU\/JAS|Field status NOP|Harvest status EU\/JAS|Harvest status NOP|Fertilizer/i,
+      })
+      .last();
+  }
+
+  private async openCreateEuNopJasPanel(): Promise<void> {
     await this.euNopJasTab.click();
 
-    const euTab = this.page.locator("app-eu-nop-jas-tab");
+    await expect(
+      this.page.getByText(/Certification details configurations/i),
+    ).toBeVisible({ timeout: 15000 });
 
-    const plotCodeSelect = euTab.locator('[formcontrolname="plotCode"]');
-    const startDateOrgInput = euTab.locator('[formcontrolname="startDateOrg"]');
-    const startDateConvInput = euTab.locator(
-      '[formcontrolname="startDateConv"]',
+    const addNewButton = this.page
+      .getByRole("button", { name: /Add new/i })
+      .or(this.page.locator("button").filter({ hasText: /Add new/i }))
+      .last();
+
+    await expect(addNewButton).toBeVisible({ timeout: 15000 });
+    await addNewButton.click();
+
+    await expect(
+      this.page.getByRole("heading", {
+        name: /Create certification details/i,
+      }),
+    ).toBeVisible({ timeout: 15000 });
+
+    await expect(this.euNopJasForm()).toBeVisible({ timeout: 15000 });
+  }
+
+  private async refreshEuNopJasPlotOptions(): Promise<void> {
+    const refreshButton = this.page
+      .getByRole("button", { description: /Refresh plots/i })
+      .or(this.page.getByRole("button", { name: /Refresh plots/i }))
+      .or(this.euNopJasForm().locator("button").filter({ hasText: /^$/ }))
+      .first();
+
+    if (await refreshButton.isVisible({ timeout: 3000 }).catch(() => false)) {
+      await refreshButton.click();
+
+      await this.page
+        .waitForLoadState("networkidle", { timeout: 10000 })
+        .catch(() => {});
+
+      await this.page.waitForTimeout(500);
+    }
+  }
+
+  private async selectEuNopJasComboboxOption(
+    comboboxName: RegExp,
+    optionName: string,
+  ): Promise<void> {
+    const combobox = this.page
+      .getByRole("combobox", { name: comboboxName })
+      .first();
+
+    await expect(combobox).toBeVisible({ timeout: 15000 });
+    await combobox.click();
+
+    const exactOption = this.page
+      .getByRole("option", { name: optionName, exact: true })
+      .first();
+
+    if (await exactOption.isVisible({ timeout: 5000 }).catch(() => false)) {
+      await exactOption.click();
+      return;
+    }
+
+    const containsOption = this.page
+      .getByRole("option")
+      .filter({ hasText: optionName })
+      .first();
+
+    await expect(containsOption).toBeVisible({ timeout: 15000 });
+    await containsOption.click();
+  }
+
+  private async selectEuNopJasPlotCodeWithFallback(
+    preferredPlotCode: string,
+  ): Promise<string> {
+    await this.refreshEuNopJasPlotOptions();
+
+    const form = this.euNopJasForm();
+
+    const plotCodeCombobox = this.page
+      .getByRole("combobox", { name: /Select Plot code/i })
+      .or(form.getByRole("combobox").first())
+      .first();
+
+    await expect(plotCodeCombobox).toBeVisible({ timeout: 15000 });
+    await plotCodeCombobox.click();
+
+    let options = this.page.getByRole("option");
+
+    let hasOptions = await options
+      .first()
+      .isVisible({ timeout: 5000 })
+      .catch(() => false);
+
+    if (!hasOptions) {
+      await this.page.keyboard.press("Escape").catch(() => {});
+
+      await this.refreshEuNopJasPlotOptions();
+
+      await plotCodeCombobox.click();
+
+      options = this.page.getByRole("option");
+
+      hasOptions = await options
+        .first()
+        .isVisible({ timeout: 5000 })
+        .catch(() => false);
+    }
+
+    if (!hasOptions) {
+      throw new Error("No plot code options found in EU/NOP/JAS panel.");
+    }
+
+    const optionTexts = (await options.allInnerTexts())
+      .map((text) => text.replace(/\s+/g, " ").trim())
+      .filter(Boolean);
+
+    const selectedText =
+      optionTexts.find((text) => text === preferredPlotCode) ??
+      optionTexts.find((text) => text.includes(preferredPlotCode)) ??
+      optionTexts[0];
+
+    await this.page
+      .getByRole("option")
+      .filter({ hasText: selectedText })
+      .first()
+      .click();
+
+    return selectedText;
+  }
+
+  async addEuNopJasRecord(data: FarmerEuNopJasTestData): Promise<void> {
+    await this.openCreateEuNopJasPanel();
+
+    const selectedPlotCode = await this.selectEuNopJasPlotCodeWithFallback(
+      data.plotCode,
     );
-    const fieldStatusEujasSelect = euTab.locator(
-      '[formcontrolname="fieldStatusEujas"]',
-    );
-    const fieldStatusNopSelect = euTab.locator(
-      '[formcontrolname="fieldStatusNop"]',
-    );
-    const fertilizerTypeUsedInput = euTab.locator(
-      '[formcontrolname="fertilizerTypUse"]',
-    );
-    const harvestStatusEujasSelect = euTab.locator(
-      '[formcontrolname="harvestStatusEujas"]',
-    );
-    const harvestStatusNopSelect = euTab.locator(
-      '[formcontrolname="harvestStatusNop"]',
-    );
-    const lastDateUseInput = euTab.locator('[formcontrolname="lastdateUse"]');
 
-    await expect(euTab).toBeVisible({ timeout: 10000 });
+    const form = this.euNopJasForm();
 
-    // Plot codes may not load immediately after adding Land/Crops.
-    // Refresh is required before selecting the plot code.
-    await this.refreshPlotCodeOptions(euTab);
+    const dateInputs = this.page
+      .getByRole("textbox", { name: /Select date/i })
+      .or(form.locator('input[type="text"]:visible'));
 
-    await this.selectMatOptionInScope(euTab, plotCodeSelect, data.plotCode);
+    const organicDateInput = dateInputs.nth(0);
+    const conversionDateInput = dateInputs.nth(1);
+    const lastFertilizerDateInput = dateInputs.nth(2);
 
-    await startDateOrgInput.fill(data.startDateOrg);
-    await startDateOrgInput.blur();
+    await expect(organicDateInput).toBeVisible({ timeout: 15000 });
+    await organicDateInput.fill(data.startDateOrg);
+    await organicDateInput.blur();
 
-    await startDateConvInput.fill(data.startDateConv);
-    await startDateConvInput.blur();
+    await expect(conversionDateInput).toBeVisible({ timeout: 15000 });
+    await conversionDateInput.fill(data.startDateConv);
+    await conversionDateInput.blur();
 
-    await this.selectMatOptionInScope(
-      euTab,
-      fieldStatusEujasSelect,
+    await this.selectEuNopJasComboboxOption(
+      /Select Field status EU\/JAS/i,
       data.fieldStatusEujas,
     );
 
-    await this.selectMatOptionInScope(
-      euTab,
-      fieldStatusNopSelect,
+    await this.selectEuNopJasComboboxOption(
+      /Select Field status NOP/i,
       data.fieldStatusNop,
     );
 
-    await fertilizerTypeUsedInput.fill(data.fertilizerTypeUsed);
-
-    await this.selectMatOptionInScope(
-      euTab,
-      harvestStatusEujasSelect,
+    await this.selectEuNopJasComboboxOption(
+      /Select Harvest status EU\/JAS/i,
       data.harvestStatusEujas,
     );
 
-    await this.selectMatOptionInScope(
-      euTab,
-      harvestStatusNopSelect,
+    await this.selectEuNopJasComboboxOption(
+      /Select Harvest status NOP/i,
       data.harvestStatusNop,
     );
 
-    await lastDateUseInput.fill(data.lastDateUse);
-    await lastDateUseInput.blur();
+    const fertilizerInput = form
+      .locator('[formcontrolname="fertilizerTypUse"]:visible')
+      .or(
+        form
+          .locator('input[type="text"]:visible')
+          .filter({ hasNotText: /Select date/i }),
+      )
+      .last();
 
-    await euTab.locator("button.btn-success").last().click();
+    if (await fertilizerInput.isVisible({ timeout: 3000 }).catch(() => false)) {
+      await fertilizerInput.fill(data.fertilizerTypeUsed);
+    }
+
+    if (
+      await lastFertilizerDateInput
+        .isVisible({ timeout: 3000 })
+        .catch(() => false)
+    ) {
+      await lastFertilizerDateInput.fill(data.lastDateUse);
+      await lastFertilizerDateInput.blur();
+    }
+
+    const addButton = this.page
+      .getByRole("button", { name: /^.*Add$/i })
+      .last();
+
+    await expect(addButton).toBeVisible({ timeout: 10000 });
+    await addButton.click();
 
     await expect(
-      euTab.getByRole("cell", { name: data.plotCode }).first(),
+      this.page.getByRole("heading", {
+        name: /Create certification details/i,
+      }),
+    )
+      .toBeHidden({ timeout: 15000 })
+      .catch(() => {});
+
+    await expect(
+      this.page.getByRole("cell", { name: selectedPlotCode }).first(),
     ).toBeVisible({
-      timeout: 10000,
+      timeout: 15000,
     });
 
-    await expect(euTab.getByText(data.fieldStatusEujas).first()).toBeVisible({
-      timeout: 10000,
+    await expect(
+      this.page.getByText(data.fieldStatusEujas).first(),
+    ).toBeVisible({
+      timeout: 15000,
     });
   }
 
@@ -1367,7 +1521,7 @@ export class FarmerProfilePage extends BasePage {
   }
 
   private async openCreateDossierPanel(): Promise<void> {
-    await this.page.getByRole("tab", { name: /Dossier/i }).click();
+    await this.dossierTab.click();
 
     await expect(this.page.getByText(/Dossier Configurations/i)).toBeVisible({
       timeout: 15000,

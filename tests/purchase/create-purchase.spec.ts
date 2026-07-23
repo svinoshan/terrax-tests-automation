@@ -56,7 +56,7 @@ test.describe('@regression Create Purchase', () => {
 
     await farmerListPage.search(orgData.farmerCodeEUJAS);
     await farmerListPage.expectFarmerVisible(orgData.farmerCodeEUJAS);
-    await farmerListPage.expectFarmerRowContains(orgData.farmerCodeEUJAS, /Active/i);
+    await farmerListPage.expectFarmerCreatedStatus(orgData.farmerCodeEUJAS);
 
     // Act: create purchase note.
     await purchaseListPage.open();

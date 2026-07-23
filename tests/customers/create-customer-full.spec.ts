@@ -29,7 +29,7 @@ test.describe('@regression Create Customer - full flow', () => {
       await customersPage.expectLoaded();
     } catch {
       if (await createCustomerPage.isLoaded()) {
-        await createCustomerPage.back();
+        await createCustomerPage.cancel();
       }
 
       await customersPage.expectLoaded();

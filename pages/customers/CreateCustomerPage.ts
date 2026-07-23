@@ -11,7 +11,7 @@ export class CreateCustomerPage extends BasePage {
   readonly customerAddressInput: Locator;
   readonly activeSwitch: Locator;
   readonly submitButton: Locator;
-  readonly backButton: Locator;
+  readonly cancelButton: Locator;
 
   constructor(page: Page) {
     super(page);
@@ -30,9 +30,9 @@ export class CreateCustomerPage extends BasePage {
       .or(page.locator("button").filter({ hasText: /save|update/i }))
       .first();
 
-    this.backButton = page
-      .getByRole("button", { name: /back/i })
-      .or(page.locator("button").filter({ hasText: /back/i }))
+    this.cancelButton = page
+      .getByRole("button", { name: /close/i })
+      .or(page.locator("button").filter({ hasText: /close/i }))
       .first();
   }
 
@@ -65,7 +65,7 @@ export class CreateCustomerPage extends BasePage {
 
   async expectButtonsVisible(): Promise<void> {
     await expect(this.submitButton).toBeVisible();
-    await expect(this.backButton).toBeVisible();
+    await expect(this.cancelButton).toBeVisible();
   }
 
   async fillCustomerForm(data: CustomerTestData): Promise<void> {
@@ -151,15 +151,15 @@ export class CreateCustomerPage extends BasePage {
 
   //   await this.backButton.click();
   // }
-  async back(): Promise<void> {
-    await expect(this.backButton).toBeVisible({ timeout: 15000 });
+  async cancel(): Promise<void> {
+    await expect(this.cancelButton).toBeVisible({ timeout: 15000 });
 
-    await this.backButton.scrollIntoViewIfNeeded();
+    await this.cancelButton.scrollIntoViewIfNeeded();
 
     try {
-      await this.backButton.click({ timeout: 5000 });
+      await this.cancelButton.click({ timeout: 5000 });
     } catch {
-      await this.backButton.click({ force: true });
+      await this.cancelButton.click({ force: true });
     }
   }
 

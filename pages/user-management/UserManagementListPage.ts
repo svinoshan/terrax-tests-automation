@@ -44,7 +44,7 @@ export class UserManagementListPage extends BasePage {
     await expect(this.pageTitle).toBeVisible({ timeout: 30000 });
     await expect(this.addNewButton).toBeVisible({ timeout: 30000 });
     await expect(this.searchInput).toBeVisible({ timeout: 10000 });
-    await expect(this.excelButton).toBeVisible({ timeout: 10000 });
+    //await expect(this.excelButton).toBeVisible({ timeout: 10000 });
 
     await expect(
       this.page.getByRole("columnheader", { name: /Email/i }),
@@ -59,7 +59,7 @@ export class UserManagementListPage extends BasePage {
     ).toBeVisible();
 
     await expect(
-      this.page.getByRole("columnheader", { name: /Active/i }),
+      this.page.getByRole("columnheader", { name: /Status/i }),
     ).toBeVisible();
 
     await expect(

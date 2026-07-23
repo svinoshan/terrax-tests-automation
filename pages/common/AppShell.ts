@@ -178,7 +178,8 @@ export class AppShell {
   async openReportsMenu(): Promise<void> {
     await this.dismissLocationAccessPopupIfVisible();
 
-    await this.page.getByRole("link", { name: /Reports/i }).click();
+    //await this.page.getByRole("link", { name: /Reports/i }).click();
+    await this.page.getByRole('link', { name: ' Reports' }).click();
   }
 
   async openStockReport(): Promise<void> {

@@ -30,7 +30,7 @@ test.describe('@regression Update Customer', () => {
       await customersPage.expectLoaded();
     } catch {
       if (await createCustomerPage.isLoaded()) {
-        await createCustomerPage.back();
+        await createCustomerPage.cancel();
       }
 
       await customersPage.expectLoaded();
@@ -61,7 +61,7 @@ test.describe('@regression Update Customer', () => {
       await customersPage.expectLoaded();
     } catch {
       if (await createCustomerPage.isLoaded()) {
-        await createCustomerPage.back();
+        await createCustomerPage.cancel();
       }
 
       await customersPage.expectLoaded();

@@ -21,8 +21,8 @@ test.describe('@smoke Create Customer - safe tests', () => {
     await createCustomerPage.expectRequiredMessagesVisible();
   });
 
-  test('back button returns to customers list', async ({ createCustomerPage, customersPage }) => {
-    await createCustomerPage.back();
+  test('cancel button returns to customers list', async ({ createCustomerPage, customersPage }) => {
+    await createCustomerPage.cancel();
 
     await customersPage.expectLoaded();
   });

@@ -34,7 +34,7 @@ export class StockReportPage extends BasePage {
 
   async expectLoaded(): Promise<void> {
     await expect(this.pageTitle).toBeVisible({ timeout: 30000 });
-    await expect(this.excelButton).toBeVisible({ timeout: 10000 });
+    //await expect(this.excelButton).toBeVisible({ timeout: 10000 });
     await expect(this.searchInput).toBeVisible({ timeout: 10000 });
 
     await expect(

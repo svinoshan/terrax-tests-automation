@@ -1,11 +1,11 @@
-import { test } from '@fixtures/auth.fixture';
+import { test } from "@fixtures/auth.fixture";
 import {
   createFarmerOrganizationalData,
   createFarmerProfileData,
-} from '@data/farmer/farmer-profile.data';
+} from "@data/farmer/farmer-profile.data";
 
-test.describe('@regression Create Farmer - full flow', () => {
-  test('user can create farmer with profile and organizational information', async ({
+test.describe("@regression Create Farmer - full flow", () => {
+  test("user can create farmer with profile and organizational information", async ({
     authenticatedUser,
     farmerListPage,
     farmerProfilePage,
@@ -59,9 +59,8 @@ test.describe('@regression Create Farmer - full flow', () => {
       profileData.city,
     );
 
-    await farmerListPage.expectFarmerRowContains(
+    await farmerListPage.expectFarmerCreatedStatus(
       orgData.farmerCodeEUJAS,
-      /Active/i,
     );
   });
 });

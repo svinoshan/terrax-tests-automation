@@ -56,32 +56,33 @@ export class CreatePurchasePage extends BasePage {
     this.purchaseDateInput = page.locator('[formcontrolname="date"]');
     this.noteInput = page.locator('[formcontrolname="note"]');
 
-    //this.saveButton = page.getByRole("button", { name: /^Save$/i });
+    this.saveButton = page.getByRole('button', { name: ' Save' });
 
-    this.saveButton = page
-      .locator(".page-header button.btn-success")
-      .filter({ hasText: /Save/i })
-      .first();
+    // this.saveButton = page
+    //   .locator(".page-header button.btn-success")
+    //   .filter({ hasText: /Save/i })
+    //   .first();
 
-    // this.saveAndAuthorizedButton = page.getByRole("button", {
-    //   name: /save.*authorized/i,
-    // });
-    this.saveAndAuthorizedButton = page
-      .locator(".page-header button.btn-primary")
-      .filter({ hasText: /Save & Authorized/i })
-      .first();
+    this.saveAndAuthorizedButton = page.getByRole("button", { name: ' Save & Authorized' });
+    // this.saveAndAuthorizedButton = page
+    //   .locator(".page-header button.btn-primary")
+    //   .filter({ hasText: /Save & Authorized/i })
+    //   .first();
 
-    this.updateButton = page
-      .locator(".page-header button.btn-success")
-      .filter({ hasText: /Update/i })
-      .first();
+    // this.updateButton = page
+    //   .locator(".page-header button.btn-success")
+    //   .filter({ hasText: /Update/i })
+    //   .first();
+    this.updateButton = page.getByRole("button", { name: ' Update' });
 
-    this.updateAndAuthorizedButton = page
-      .locator(
-        ".page-header button.btn-success, .page-header button.btn-primary",
-      )
-      .filter({ hasText: /Update & Authorized/i })
-      .first();
+    this.updateAndAuthorizedButton = page.getByRole("button", { name: ' Update & Authorized' });
+
+    // this.updateAndAuthorizedButton = page
+    //   .locator(
+    //     ".page-header button.btn-success, .page-header button.btn-primary",
+    //   )
+    //   .filter({ hasText: /Update & Authorized/i })
+    //   .first();
 
     this.reportButton = page
       .locator(".page-header button")

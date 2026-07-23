@@ -31,7 +31,7 @@ test.describe("@regression Delete Customer", () => {
       await customersPage.expectLoaded();
     } catch {
       if (await createCustomerPage.isLoaded()) {
-        await createCustomerPage.back();
+        await createCustomerPage.cancel();
       }
 
       await customersPage.expectLoaded();

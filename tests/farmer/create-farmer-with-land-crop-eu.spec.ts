@@ -63,9 +63,8 @@ test.describe("@regression Create Farmer with full supporting records", () => {
       orgData.subUnit,
     );
 
-    await farmerListPage.expectFarmerRowContains(
+    await farmerListPage.expectFarmerCreatedStatus(
       orgData.farmerCodeEUJAS,
-      /Active/i,
     );
   });
 });

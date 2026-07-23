@@ -106,7 +106,8 @@ export class PurchaseListPage extends BasePage {
     const row = await this.getPurchaseRow(expectedText);
 
     // Most TerraX cancelled rows use a class containing "cancel".
-    await expect(row).toHaveClass(/cancel/i, { timeout: 10000 });
+    //await expect(row).toHaveClass(/cancel/i, { timeout: 10000 });
+     await expect(row).toContainText(/\bCancel\b/i, { timeout: 10000 });
   }
 
   async clickFirstPurchaseAction(): Promise<void> {
