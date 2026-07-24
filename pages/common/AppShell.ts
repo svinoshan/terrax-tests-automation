@@ -59,6 +59,67 @@ export class AppShell {
       .click();
   }
 
+  // async openFarmerRiskAnalysis(): Promise<void> {
+  //   await this.dismissLocationAccessPopupIfVisible();
+
+  //   await this.page
+  //     .locator(".ngx-spinner-overlay")
+  //     .waitFor({ state: "hidden", timeout: 30000 })
+  //     .catch(() => {});
+
+  //   await expect(this.farmerMenu).toBeVisible({ timeout: 15000 });
+
+  //   try {
+  //     await this.farmerMenu.click({ timeout: 5000 });
+  //   } catch {
+  //     await this.farmerMenu.click({ force: true });
+  //   }
+
+  //   const riskAnalysisLink = this.page
+  //     .getByRole("link", { name: /^Risk Analysis$/i })
+  //     .first();
+
+  //   if (
+  //     !(await riskAnalysisLink.isVisible({ timeout: 3000 }).catch(() => false))
+  //   ) {
+  //     await this.farmerMenu.hover().catch(() => {});
+  //     await this.farmerMenu.click({ force: true }).catch(() => {});
+  //   }
+
+  //   await expect(riskAnalysisLink).toBeVisible({ timeout: 15000 });
+
+  //   try {
+  //     await riskAnalysisLink.click({ timeout: 5000 });
+  //   } catch {
+  //     await riskAnalysisLink.click({ force: true });
+  //   }
+
+  //   await this.page
+  //     .locator(".ngx-spinner-overlay")
+  //     .waitFor({ state: "hidden", timeout: 30000 })
+  //     .catch(() => {});
+
+  //   await expect(
+  //     this.page.getByRole("heading", {
+  //       name: /Risk analysis result|Risk analysis/i,
+  //     }),
+  //   ).toBeVisible({ timeout: 30000 });
+
+  //   await this.dismissLocationAccessPopupIfVisible();
+  // }
+  async openFarmerRiskAnalysis(): Promise<void> {
+    await this.dismissLocationAccessPopupIfVisible();
+
+    await this.farmerMenu.click();
+
+    const riskAnalysisLink = this.page
+      .getByRole("link", { name: /^Risk Analysis$/i })
+      .first();
+
+    await expect(riskAnalysisLink).toBeVisible({ timeout: 10000 });
+    await riskAnalysisLink.click();
+  }
+
   async openCropsInfo(): Promise<void> {
     await this.dismissLocationAccessPopupIfVisible();
     await this.cropsInfoMenu.click();
@@ -111,7 +172,7 @@ export class AppShell {
   async openAudit(): Promise<void> {
     await this.dismissLocationAccessPopupIfVisible();
     //await this.page.getByRole("link", { name: /Audit/i }).click();
-     await this.page.getByRole('link', { name: ' Audit' }).click();
+    await this.page.getByRole("link", { name: " Audit" }).click();
   }
 
   async openCreateAudit(): Promise<void> {
@@ -179,7 +240,7 @@ export class AppShell {
     await this.dismissLocationAccessPopupIfVisible();
 
     //await this.page.getByRole("link", { name: /Reports/i }).click();
-    await this.page.getByRole('link', { name: ' Reports' }).click();
+    await this.page.getByRole("link", { name: " Reports" }).click();
   }
 
   async openStockReport(): Promise<void> {
