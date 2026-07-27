@@ -120,6 +120,21 @@ export class AppShell {
     await riskAnalysisLink.click();
   }
 
+  async openFarmerRiskAnalysisTemplate(): Promise<void> {
+    await this.dismissLocationAccessPopupIfVisible();
+
+    await this.farmerMenu.click();
+
+    const templateLink = this.page
+      .getByRole("link", { name: /^Risk Analysis Template$/i })
+      .first();
+
+    await expect(templateLink).toBeVisible({ timeout: 10000 });
+    await templateLink.click();
+
+    await this.dismissLocationAccessPopupIfVisible();
+  }
+
   async openCropsInfo(): Promise<void> {
     await this.dismissLocationAccessPopupIfVisible();
     await this.cropsInfoMenu.click();
