@@ -40,10 +40,11 @@ export class CheckListPage extends BasePage {
     this.saveButton = page.getByRole("button", { name: /\+?\s*Save/i }).first();
 
     // Checklist buttons are icon-only. The visible plus comes from <i class="fa fa-plus">.
-    this.addCheckListButton = page
-      .locator("button.action-square-btn")
-      .filter({ has: page.locator("i.fa-plus, .fa-plus") })
-      .first();
+    // this.addCheckListButton = page
+    //   .locator("button.action-square-btn")
+    //   .filter({ has: page.locator("i.fa-plus, .fa-plus") })
+    //   .first();
+    this.addCheckListButton = page.getByRole("button", { name: "+ Add new" });
 
     this.editCheckListButton = page
       .locator("button.action-square-btn")
@@ -155,70 +156,23 @@ export class CheckListPage extends BasePage {
   }
 
   private async clickRightMostVisiblePlusButton(): Promise<void> {
-    const plusButtons = this.page
-      .locator("button.action-square-btn")
-      .filter({ has: this.page.locator("i.fa-plus, .fa-plus") });
+    const addControlPointButton = this.page
+      .getByRole("button", { name: /\+?\s*Add control point/i })
+      .or(this.page.locator("button").filter({ hasText: /Add control point/i }))
+      .first();
 
-    await expect
-      .poll(
-        async () => {
-          const count = await plusButtons.count();
-          let visibleCount = 0;
-
-          for (let index = 0; index < count; index += 1) {
-            if (
-              await plusButtons
-                .nth(index)
-                .isVisible()
-                .catch(() => false)
-            ) {
-              visibleCount += 1;
-            }
-          }
-
-          return visibleCount;
-        },
-        {
-          timeout: 10000,
-          message:
-            "Expected checklist add and control-point add plus buttons to be visible",
-        },
-      )
-      .toBeGreaterThan(1);
-
-    const count = await plusButtons.count();
-
-    let rightMostButton: Locator | null = null;
-    let rightMostX = -Infinity;
-
-    for (let index = 0; index < count; index += 1) {
-      const button = plusButtons.nth(index);
-
-      if (!(await button.isVisible().catch(() => false))) {
-        continue;
-      }
-
-      const box = await button.boundingBox();
-
-      if (!box) {
-        continue;
-      }
-
-      if (box.x > rightMostX) {
-        rightMostX = box.x;
-        rightMostButton = button;
-      }
-    }
-
-    if (!rightMostButton) {
-      throw new Error("Could not find visible rightmost plus button.");
-    }
-
-    await rightMostButton.click();
+    await expect(addControlPointButton).toBeVisible({ timeout: 15000 });
+    await addControlPointButton.click();
   }
 
   async openAddControlPointDialog(): Promise<void> {
-    await this.clickRightMostVisiblePlusButton();
+    const addControlPointButton = this.page
+      .getByRole("button", { name: /\+?\s*Add control point/i })
+      .or(this.page.locator("button").filter({ hasText: /Add control point/i }))
+      .first();
+
+    await expect(addControlPointButton).toBeVisible({ timeout: 15000 });
+    await addControlPointButton.click();
 
     await expect(this.cpNoInput).toBeVisible({ timeout: 10000 });
     await expect(this.controlPointInput).toBeVisible({ timeout: 10000 });

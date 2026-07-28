@@ -1,8 +1,8 @@
-import { test } from '@fixtures/auth.fixture';
-import { createAuditData } from '@data/audit/audit.data';
+import { test } from "@fixtures/auth.fixture";
+import { createAuditData } from "@data/audit/audit.data";
 
-test.describe('@regression Update Audit', () => {
-  test('AUDIT_UPDATE_001 - user can update planned audit', async ({
+test.describe("@regression Update Audit", () => {
+  test("AUDIT_UPDATE_001 - user can update planned audit", async ({
     authenticatedUser,
     auditListPage,
     createAuditPage,
@@ -20,6 +20,13 @@ test.describe('@regression Update Audit', () => {
 
     const auditFormResult = await createAuditPage.fillForm(auditData);
 
+    await createAuditPage.configureSelectedFarmerRows({
+      auditDate: auditData.auditDate,
+      auditType: auditData.auditType,
+      note: auditData.note,
+      count: auditData.farmerRowsToSelect,
+    });
+
     await createAuditPage.save();
 
     try {
@@ -32,6 +39,7 @@ test.describe('@regression Update Audit', () => {
 
     await auditListPage.search(auditData.auditNumber);
     await auditListPage.expectAuditVisible(auditData.auditNumber);
+    await auditListPage.expectAuditStatus(auditData.auditNumber, /Pending/i);
 
     await auditListPage.clickEditForAudit(auditData.auditNumber);
 

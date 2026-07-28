@@ -17,17 +17,59 @@ export class AuditListPage extends BasePage {
     this.pageTitle = page.getByRole("heading", { name: /All audit/i });
 
     //this.addNewButton = page.getByRole("button", { name: /Add new/i }).first();
-    this.addNewButton = page.getByText('Add new');
-    
+    this.addNewButton = page.getByText("Add new");
+    //this.addNewButton = page.getByText(/^Add new$/i).first();
+
     this.searchInput = page
       .getByRole("searchbox")
       .or(page.getByPlaceholder("Search"))
       .first();
   }
 
+  // async open(): Promise<void> {
+  //   await this.appShell.openCreateAudit();
+  //   await this.expectLoaded();
+  // }
   async open(): Promise<void> {
     await this.appShell.openCreateAudit();
+
+    const isListVisible = await this.pageTitle
+      .isVisible({ timeout: 5000 })
+      .catch(() => false);
+
+    if (!isListVisible) {
+      await this.returnToListIfOnForm();
+    }
+
     await this.expectLoaded();
+  }
+
+  private async returnToListIfOnForm(): Promise<void> {
+    const formHeading = this.page
+      .getByRole("heading", { name: /Create Audit|Update Audit/i })
+      .first();
+
+    if (!(await formHeading.isVisible({ timeout: 3000 }).catch(() => false))) {
+      return;
+    }
+
+    const backButton = this.page
+      .getByRole("button", { name: /Back/i })
+      .or(this.page.locator("button").filter({ hasText: /Back/i }))
+      .first();
+
+    await expect(backButton).toBeVisible({ timeout: 10000 });
+
+    try {
+      await backButton.click({ timeout: 5000 });
+    } catch {
+      await backButton.click({ force: true });
+    }
+
+    await this.page
+      .locator(".ngx-spinner-overlay")
+      .waitFor({ state: "hidden", timeout: 30000 })
+      .catch(() => {});
   }
 
   async expectLoaded(): Promise<void> {
@@ -59,7 +101,11 @@ export class AuditListPage extends BasePage {
     ).toBeVisible();
   }
 
+  // async clickAddNew(): Promise<void> {
+  //   await this.addNewButton.click();
+  // }
   async clickAddNew(): Promise<void> {
+    await expect(this.addNewButton).toBeVisible({ timeout: 15000 });
     await this.addNewButton.click();
   }
 
@@ -148,5 +194,16 @@ export class AuditListPage extends BasePage {
   async expectAuditCancelled(expectedText: string): Promise<void> {
     const row = await this.getAuditRow(expectedText);
     await expect(row).toContainText(/Cancel/i);
+  }
+
+  async expectAuditStatus(
+    expectedText: string,
+    expectedStatus: string | RegExp,
+  ): Promise<void> {
+    const row = await this.getAuditRow(expectedText);
+
+    await expect(row).toContainText(expectedStatus, {
+      timeout: 15000,
+    });
   }
 }

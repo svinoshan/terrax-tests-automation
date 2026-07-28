@@ -1,8 +1,9 @@
-import { test } from '@fixtures/auth.fixture';
-import { createAuditData } from '@data/audit/audit.data';
+import { test } from "@fixtures/auth.fixture";
+import { createAuditData } from "@data/audit/audit.data";
+import { count } from "console";
 
-test.describe('@regression Cancel Audit', () => {
-  test('AUDIT_CANCEL_001 - user can cancel planned audit from list action', async ({
+test.describe("@regression Cancel Audit", () => {
+  test("AUDIT_CANCEL_001 - user can cancel planned audit from list action", async ({
     authenticatedUser,
     auditListPage,
     createAuditPage,
@@ -17,6 +18,13 @@ test.describe('@regression Cancel Audit', () => {
     await createAuditPage.expectLoaded();
 
     const auditFormResult = await createAuditPage.fillForm(auditData);
+
+    await createAuditPage.configureSelectedFarmerRows({
+      auditDate: auditData.auditDate,
+      auditType: auditData.auditType,
+      note: auditData.note,
+      count: auditData.farmerRowsToSelect,
+    });
 
     await createAuditPage.save();
 
@@ -34,6 +42,11 @@ test.describe('@regression Cancel Audit', () => {
     await auditListPage.expectAuditRowContains(
       auditData.auditNumber,
       auditFormResult.selectedFieldOfficer,
+    );
+
+    await auditListPage.expectAuditStatus(
+      auditData.auditNumber,
+      /Pending/i,
     );
 
     // Cancel is done from Audit list row action, not from Update Audit form.

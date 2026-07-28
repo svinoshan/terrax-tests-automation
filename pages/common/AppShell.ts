@@ -37,7 +37,10 @@ export class AppShell {
     );
 
     try {
-      await popupText.waitFor({ state: "visible", timeout: 3000 });
+      await popupText.waitFor({ state: "visible", timeout: 8000 });
+      await expect(this.locationAccessOkButton).toBeVisible({
+        timeout: 5000,
+      });
       await this.locationAccessOkButton.click();
       await expect(popupText).toBeHidden({ timeout: 5000 });
     } catch {

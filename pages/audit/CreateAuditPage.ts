@@ -202,6 +202,200 @@ export class CreateAuditPage extends BasePage {
     }
   }
 
+  async selectFirstFarmerAndConfigureAudit(data: {
+    farmerSearch?: string;
+    auditDate: string;
+    auditType: string;
+    note?: string;
+  }): Promise<string> {
+    if (data.farmerSearch) {
+      const searchInput = this.page
+        .getByRole("searchbox", { name: /Search/i })
+        .or(
+          this.page
+            .locator('input[type="search"], input[placeholder*="Search"]')
+            .first(),
+        );
+
+      await expect(searchInput).toBeVisible({ timeout: 15000 });
+      await searchInput.fill("");
+      await searchInput.fill(data.farmerSearch);
+      await this.page.waitForTimeout(500);
+    }
+
+    const firstDataRow = this.page
+      .locator("tbody tr")
+      .filter({ has: this.page.locator('input[type="checkbox"]') })
+      .first();
+
+    await expect(firstDataRow).toBeVisible({ timeout: 30000 });
+
+    const farmerCode = (await firstDataRow.getByRole("cell").nth(0).innerText())
+      .replace(/\s+/g, " ")
+      .trim();
+
+    const checkbox = firstDataRow.getByRole("checkbox").first();
+
+    if (!(await checkbox.isChecked().catch(() => false))) {
+      await checkbox.check({ force: true });
+    }
+
+    await expect(checkbox).toBeChecked();
+
+    await this.openConfigAuditForRow(firstDataRow);
+
+    await this.fillConfigAuditModal({
+      auditDate: data.auditDate,
+      auditType: data.auditType,
+      note: data.note,
+    });
+
+    return farmerCode;
+  }
+
+  private async openConfigAuditForRow(row: Locator): Promise<void> {
+    const actionCell = row.getByRole("cell").last();
+
+    const configAction = actionCell
+      .locator(".me-2.p-2, button, a, .mat-mdc-tooltip-trigger")
+      .first();
+
+    await expect(configAction).toBeVisible({ timeout: 15000 });
+
+    try {
+      await configAction.click({ timeout: 5000 });
+    } catch {
+      await configAction.click({ force: true });
+    }
+
+    await expect(
+      this.page.getByRole("heading", { name: /Config Audit/i }),
+    ).toBeVisible({ timeout: 15000 });
+  }
+
+  private async fillConfigAuditModal(data: {
+    auditDate: string;
+    auditType: string;
+    note?: string;
+  }): Promise<void> {
+    await expect(
+      this.page.getByRole("heading", { name: /Config Audit/i }),
+    ).toBeVisible({ timeout: 15000 });
+
+    const auditDateInput = this.page
+      .getByRole("textbox", { name: /Enter date/i })
+      .last();
+
+    await expect(auditDateInput).toBeVisible({ timeout: 15000 });
+
+    await auditDateInput.fill(data.auditDate);
+    await auditDateInput.blur();
+
+    const auditTypeCombobox = this.page.getByRole("combobox", {
+      name: /Audit Type/i,
+    });
+
+    await expect(auditTypeCombobox).toBeVisible({ timeout: 15000 });
+    await auditTypeCombobox.click();
+
+    const auditTypeOption = this.page
+      .getByRole("option", {
+        name: data.auditType,
+        exact: true,
+      })
+      .first();
+
+    await expect(auditTypeOption).toBeVisible({ timeout: 15000 });
+    await auditTypeOption.click();
+
+    if (data.note) {
+      const noteInput = this.page
+        .locator("textarea:visible")
+        .or(this.page.getByRole("textbox").last())
+        .last();
+
+      if (await noteInput.isVisible({ timeout: 3000 }).catch(() => false)) {
+        await noteInput.fill(data.note);
+      }
+    }
+
+    const saveAuditButton = this.page.getByRole("button", {
+      name: /^Save$/i,
+    });
+
+    await expect(saveAuditButton).toBeVisible({ timeout: 15000 });
+    await saveAuditButton.click();
+
+    await expect(this.page.getByRole("heading", { name: /Config Audit/i }))
+      .toBeHidden({ timeout: 15000 })
+      .catch(() => {});
+  }
+
+  async configureSelectedFarmerRows(data: {
+    auditDate: string;
+    auditType: string;
+    note?: string;
+    count?: number;
+  }): Promise<void> {
+    const rows = this.page
+      .locator("tbody tr")
+      .filter({ has: this.page.locator('input[type="checkbox"]') });
+
+    await expect
+      .poll(
+        async () => {
+          const rowCount = await rows.count();
+          let checkedCount = 0;
+
+          for (let index = 0; index < rowCount; index += 1) {
+            const checkbox = rows.nth(index).getByRole("checkbox").first();
+
+            if (await checkbox.isChecked().catch(() => false)) {
+              checkedCount += 1;
+            }
+          }
+
+          return checkedCount;
+        },
+        {
+          timeout: 15000,
+          message: "Expected selected farmer rows before audit configuration",
+        },
+      )
+      .toBeGreaterThan(0);
+
+    const rowCount = await rows.count();
+    let configuredCount = 0;
+    const targetCount = data.count ?? 1;
+
+    for (let index = 0; index < rowCount; index += 1) {
+      const row = rows.nth(index);
+      const checkbox = row.getByRole("checkbox").first();
+
+      if (!(await checkbox.isChecked().catch(() => false))) {
+        continue;
+      }
+
+      await this.openConfigAuditForRow(row);
+
+      await this.fillConfigAuditModal({
+        auditDate: data.auditDate,
+        auditType: data.auditType,
+        note: data.note,
+      });
+
+      configuredCount += 1;
+
+      if (configuredCount >= targetCount) {
+        break;
+      }
+    }
+
+    if (configuredCount === 0) {
+      throw new Error("No selected farmer rows were configured.");
+    }
+  }
+
   async openFieldOfficerOptions(searchText?: string): Promise<Locator[]> {
     await this.fieldOfficerInput.click();
 

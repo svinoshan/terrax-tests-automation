@@ -19,6 +19,13 @@ test.describe("@regression Create Audit", () => {
     //await createAuditPage.fillForm(auditData);
     const auditFormResult = await createAuditPage.fillForm(auditData);
 
+    await createAuditPage.configureSelectedFarmerRows({
+      auditDate: auditData.auditDate,
+      auditType: auditData.auditType,
+      note: auditData.note,
+      count: auditData.farmerRowsToSelect,
+    });
+
     await createAuditPage.save();
 
     try {
@@ -37,9 +44,13 @@ test.describe("@regression Create Audit", () => {
       auditFormResult.selectedFieldOfficer,
     );
 
-    await auditListPage.expectAuditRowContains(
+    // await auditListPage.expectAuditRowContains(
+    //   auditData.auditNumber,
+    //   /Pending|Completed|Cancel/i,
+    // );
+    await auditListPage.expectAuditStatus(
       auditData.auditNumber,
-      /Pending|Completed|Cancel/i,
-    );
+      /Pending/i,
+    );  
   });
 });
