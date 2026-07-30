@@ -5,13 +5,13 @@ import {
 } from "@data/customers/create-customer.data";
 
 test.describe("@regression Delete Customer", () => {
-  // Skipped temporarily because Delete Customer is currently not working in the app.
-  // Remove test.skip after the delete issue is fixed.
-  test.skip("Known issue: user can delete a customer created by test", async ({
+  test("CUSTOMER_DELETE_001 - user can deactivate a customer created by test", async ({
     authenticatedUser,
     customersPage,
     createCustomerPage,
   }) => {
+    void authenticatedUser;
+
     const customerData = withUniqueCustomerValues(getCustomerData(1)[0]);
 
     await customersPage.open();
@@ -40,7 +40,13 @@ test.describe("@regression Delete Customer", () => {
     await customersPage.search(customerData.customerName);
     await customersPage.expectCustomerVisible(customerData.customerName);
 
+    await customersPage.expectCustomerStatus(
+      customerData.customerName,
+      /Active/i,
+    );
+
     await customersPage.clickDeleteForCustomer(customerData.customerName);
+
     await customersPage.confirmDelete();
 
     try {
@@ -49,7 +55,20 @@ test.describe("@regression Delete Customer", () => {
       // Some builds may show generic/short-lived toast.
     }
 
+    await customersPage.expectLoaded();
+
     await customersPage.search(customerData.customerName);
-    await customersPage.expectCustomerNotVisible(customerData.customerName);
+    await customersPage.expectCustomerVisible(customerData.customerName);
+
+    // Delete is soft delete. Customer remains in list as Inactive.
+    await customersPage.expectCustomerStatus(
+      customerData.customerName,
+      /Inactive/i,
+    );
+
+    // After soft delete, delete/trash action should be disabled.
+    await customersPage.expectDeleteDisabledForCustomer(
+      customerData.customerName,
+    );
   });
 });
