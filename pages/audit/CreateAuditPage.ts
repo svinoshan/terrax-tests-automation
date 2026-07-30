@@ -565,15 +565,42 @@ export class CreateAuditPage extends BasePage {
     await this.page.waitForTimeout(500);
   }
 
+  // async expectValidationMessage(field: AuditRequiredField): Promise<void> {
+  //   const messageMap: Record<AuditRequiredField, RegExp> = {
+  //     fieldOfficer:
+  //       /Field officer Is required|Field officer is required|Field officer.*required/i,
+  //     planDate: /Plan date Is required|Plan date is required|Date is required/i,
+  //     auditNumber:
+  //       /Audit number Is required|Audit number is required|Audit number.*required/i,
+  //     farmerRows:
+  //       /Audit details cannot be empty|Select at least one farmer|Farmer.*required|Please select.*farmer|Select farmer/i,
+  //   };
+
+  //   await expect(this.page.getByText(messageMap[field]).first()).toBeVisible({
+  //     timeout: 10000,
+  //   });
+  // }
+
   async expectValidationMessage(field: AuditRequiredField): Promise<void> {
-    const messageMap: Record<AuditRequiredField, RegExp> = {
+    if (field === "farmerRows") {
+      await expect(
+        this.page.getByText(/Audit details cannot be empty/i).first(),
+      ).toBeVisible({ timeout: 10000 });
+
+      return;
+    }
+
+    const messageMap: Record<
+      Exclude<AuditRequiredField, "farmerRows">,
+      RegExp
+    > = {
       fieldOfficer:
         /Field officer Is required|Field officer is required|Field officer.*required/i,
+
       planDate: /Plan date Is required|Plan date is required|Date is required/i,
+
       auditNumber:
         /Audit number Is required|Audit number is required|Audit number.*required/i,
-      farmerRows:
-        /Select at least one farmer|Farmer.*required|Please select.*farmer|Select farmer/i,
     };
 
     await expect(this.page.getByText(messageMap[field]).first()).toBeVisible({

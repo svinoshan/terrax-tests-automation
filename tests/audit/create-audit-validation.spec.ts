@@ -38,11 +38,6 @@ test.describe("@validation Create Audit", () => {
     }) => {
       void authenticatedUser;
 
-      test.fail(
-        scenario.missingField === "farmerRows",
-        "BUG/Clarification: Audit can be saved without selected farmer rows. Confirm whether farmer row selection is mandatory.",
-      );
-
       const auditData = createAuditData();
 
       await auditListPage.open();
