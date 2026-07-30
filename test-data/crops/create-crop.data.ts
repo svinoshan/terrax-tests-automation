@@ -1,4 +1,4 @@
-export type CropExpectedStatus = 'pass' | 'known-bug';
+//export type CropExpectedStatus = 'pass' | 'known-bug';
 
 export type CropTestData = {
   testCaseId: string;
@@ -13,46 +13,48 @@ export type CropTestData = {
   plantedUom: string;
   motherCrop: string;
   hsCode: string;
+  expQtyPerYear?: string;
   outTurn?: string;
   active: boolean;
-  expectedStatus: CropExpectedStatus;
-  bugNote?: string;
+  // expectedStatus: CropExpectedStatus;
+  // bugNote?: string;
 };
 
 export const cropTestData: CropTestData[] = [
   {
-    testCaseId: 'CROP_001',
-    scenario: 'Create crop with existing mother crop and out turn',
-    cropName: 'White Pepper',
-    scientificName: 'Piper nigrum processed',
-    productForm: 'Finished goods',
-    description: 'White pepper crop test data',
-    purchaseUom: 'Kg',
-    typeOfCrop: 'Perennial',
-    category: 'Spice',
-    plantedUom: 'Vine',
-    motherCrop: 'Green Pepper',
-    hsCode: 'HS-WP',
-    outTurn: '70',
+    testCaseId: "CROP_001",
+    scenario: "Create crop with existing mother crop and out turn",
+    cropName: "White Pepper",
+    scientificName: "Piper nigrum processed",
+    productForm: "Finished goods",
+    description: "White pepper crop test data",
+    purchaseUom: "Kg",
+    typeOfCrop: "Perennial",
+    category: "Spice",
+    plantedUom: "Vine",
+    motherCrop: "Green Pepper",
+    hsCode: "HS-WP",
+    outTurn: "70",
     active: true,
-    expectedStatus: 'pass',
+    //expectedStatus: 'pass',
   },
   {
-    testCaseId: 'CROP_002',
-    scenario: 'Create crop with default mother crop and without out turn',
-    cropName: 'Black Pepper',
-    scientificName: 'Piper nigrum',
-    productForm: 'Raw material',
-    description: 'Black pepper crop test data',
-    purchaseUom: 'Kg',
-    typeOfCrop: 'Annual',
-    category: 'Spice',
-    plantedUom: 'Vine',
-    motherCrop: 'Default',
-    hsCode: 'HS-BP',
+    testCaseId: "CROP_002",
+    scenario: "Create crop with default mother crop and expected yearly quantity",
+    cropName: "Black Pepper",
+    scientificName: "Piper nigrum",
+    productForm: "Raw material",
+    description: "Black pepper crop test data",
+    purchaseUom: "Kg",
+    typeOfCrop: "Annual",
+    category: "Spice",
+    plantedUom: "Vine",
+    motherCrop: "Default",
+    hsCode: "HS-BP",
+    expQtyPerYear: "1000",
     active: true,
-    expectedStatus: 'known-bug',
-    bugNote: 'Application currently appears unable to save when Mother Crop is Default and Out turn is not filled/enabled.',
+    // expectedStatus: 'known-bug',
+    // bugNote: 'Application currently appears unable to save when Mother Crop is Default and Out turn is not filled/enabled.',
   },
 ];
 
@@ -67,26 +69,29 @@ export function getCropData(limit?: number): CropTestData[] {
   return cropTestData.slice(0, resolvedLimit);
 }
 
+// export function getCreatableCropData(limit?: number): CropTestData[] {
+//   const data = cropTestData.filter((crop) => crop.expectedStatus === 'pass');
+//   const envLimit = Number(process.env.TEST_DATA_LIMIT || 0);
+//   const resolvedLimit = limit || envLimit;
+
+//   if (!resolvedLimit) {
+//     return data;
+//   }
+
+//   return data.slice(0, resolvedLimit);
+// }
 export function getCreatableCropData(limit?: number): CropTestData[] {
-  const data = cropTestData.filter((crop) => crop.expectedStatus === 'pass');
-  const envLimit = Number(process.env.TEST_DATA_LIMIT || 0);
-  const resolvedLimit = limit || envLimit;
-
-  if (!resolvedLimit) {
-    return data;
-  }
-
-  return data.slice(0, resolvedLimit);
+  return getCropData(limit);
 }
 
-export function getKnownBugCropData(): CropTestData[] {
-  return cropTestData.filter((crop) => crop.expectedStatus === 'known-bug');
-}
+// export function getKnownBugCropData(): CropTestData[] {
+//   return cropTestData.filter((crop) => crop.expectedStatus === "known-bug");
+// }
 
 export function withUniqueCropValues(data: CropTestData): CropTestData {
   const uniqueSuffix = new Date()
     .toISOString()
-    .replace(/[-:.TZ]/g, '')
+    .replace(/[-:.TZ]/g, "")
     .slice(0, 14);
 
   const e2eSuffix = `E2E-${uniqueSuffix}`;

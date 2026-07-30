@@ -14,6 +14,7 @@ export class CreateCropPage extends BasePage {
   readonly categoryInput: Locator;
   readonly plantedUomSelect: Locator;
   readonly motherCropInput: Locator;
+  readonly expQtyPerYearInput: Locator;
   readonly hsCodeInput: Locator;
   readonly outTurnInput: Locator;
   readonly activeSwitch: Locator;
@@ -24,7 +25,7 @@ export class CreateCropPage extends BasePage {
   constructor(page: Page) {
     super(page);
 
-    this.pageTitle = page.getByRole('heading', { name: 'Create crop' });
+    this.pageTitle = page.getByRole("heading", { name: "Create crop" });
 
     this.cropNameInput = page.locator('[formcontrolname="cropName"]');
     this.scientificNameInput = page.locator(
@@ -37,6 +38,7 @@ export class CreateCropPage extends BasePage {
     this.categoryInput = page.locator('[formcontrolname="category"]');
     this.plantedUomSelect = page.locator('[formcontrolname="plant"]');
     this.motherCropInput = page.locator('[formcontrolname="motherCrop"]');
+    this.expQtyPerYearInput = page.locator('[formcontrolname="expQty"]');
     this.hsCodeInput = page.locator('[formcontrolname="hsCode"]');
     this.outTurnInput = page.locator('[formcontrolname="outTurn"]');
     this.activeSwitch = page.locator('[formcontrolname="active"]');
@@ -183,11 +185,20 @@ export class CreateCropPage extends BasePage {
       await this.fillAutocomplete(this.motherCropInput, data.motherCrop);
     }
 
+    if (!isMissing("expQtyPerYear") && data.expQtyPerYear) {
+      await expect(this.expQtyPerYearInput).toBeVisible({ timeout: 10000 });
+
+      if (await this.expQtyPerYearInput.isEnabled().catch(() => false)) {
+        await this.expQtyPerYearInput.fill(data.expQtyPerYear);
+        await expect(this.expQtyPerYearInput).toHaveValue(data.expQtyPerYear);
+      }
+    }
+
     if (!isMissing("hsCode")) {
       await this.hsCodeInput.fill(data.hsCode);
     }
 
-    if (data.outTurn) {
+    if (!isMissing("outTurn") && data.outTurn) {
       await this.fillOutTurnIfEnabled(data.outTurn);
     }
 
@@ -213,6 +224,15 @@ export class CreateCropPage extends BasePage {
     // Skipped for now due to known issue in update mode:
     // await this.fillAutocomplete(this.categoryInput, data.category);
     // await this.fillAutocomplete(this.motherCropInput, data.motherCrop);
+
+    if (data.expQtyPerYear) {
+      await expect(this.expQtyPerYearInput).toBeVisible({ timeout: 10000 });
+
+      if (await this.expQtyPerYearInput.isEnabled().catch(() => false)) {
+        await this.expQtyPerYearInput.fill(data.expQtyPerYear);
+        await expect(this.expQtyPerYearInput).toHaveValue(data.expQtyPerYear);
+      }
+    }
 
     if (data.outTurn) {
       await this.fillOutTurnIfEnabled(data.outTurn);
@@ -317,6 +337,14 @@ export class CreateCropPage extends BasePage {
     await expect(this.categoryInput).toHaveClass(/ng-invalid/);
     await expect(this.plantedUomSelect).toHaveClass(/ng-invalid/);
     await expect(this.hsCodeInput).toHaveClass(/ng-invalid/);
+
+    if (
+      await this.expQtyPerYearInput
+        .isEnabled({ timeout: 1000 })
+        .catch(() => false)
+    ) {
+      await expect(this.expQtyPerYearInput).toHaveClass(/ng-invalid/);
+    }
   }
 
   async expectFieldInvalid(field: CreateCropRequiredField): Promise<void> {
@@ -330,8 +358,18 @@ export class CreateCropPage extends BasePage {
       category: this.categoryInput,
       plantedUom: this.plantedUomSelect,
       hsCode: this.hsCodeInput,
+      expQtyPerYear: this.expQtyPerYearInput,
+      outTurn: this.outTurnInput,
     };
 
-    await expect(fieldLocatorMap[field]).toHaveClass(/ng-invalid/);
+    //await expect(fieldLocatorMap[field]).toHaveClass(/ng-invalid/);
+    const targetField = fieldLocatorMap[field];
+    await expect(targetField).toBeVisible({ timeout: 10000 });
+    if (field === "outTurn") {
+      await expect(targetField).toBeEnabled({ timeout: 10000 });
+    }
+    await expect(targetField).toHaveClass(/ng-invalid/, {
+      timeout: 10000,
+    });
   }
 }

@@ -1,18 +1,23 @@
-import { test } from '@fixtures/auth.fixture';
+import { test } from "@fixtures/auth.fixture";
 import {
+  createCropDefaultMotherValidationBaseData,
   createCropValidationBaseData,
   createCropValidationScenarios,
-} from '@data/crops/create-crop-validation.data';
-import { withUniqueCropValues } from '@data/crops/create-crop.data';
+} from "@data/crops/create-crop-validation.data";
+import { withUniqueCropValues } from "@data/crops/create-crop.data";
 
-test.describe('@validation Create Crop - required fields', () => {
-  test.beforeEach(async ({ authenticatedUser, cropsListPage, createCropPage }) => {
-    await cropsListPage.open();
-    await cropsListPage.clickAddNew();
-    await createCropPage.expectLoaded();
-  });
+test.describe("@validation Create Crop - required fields", () => {
+  test.beforeEach(
+    async ({ authenticatedUser, cropsListPage, createCropPage }) => {
+      void authenticatedUser;
 
-  test('empty form cannot be submitted', async ({ createCropPage }) => {
+      await cropsListPage.open();
+      await cropsListPage.clickAddNew();
+      await createCropPage.expectLoaded();
+    },
+  );
+
+  test("empty form cannot be submitted", async ({ createCropPage }) => {
     await createCropPage.save();
 
     await createCropPage.expectLoaded();
@@ -20,10 +25,19 @@ test.describe('@validation Create Crop - required fields', () => {
   });
 
   for (const scenario of createCropValidationScenarios) {
-    test(`${scenario.testCaseId} - ${scenario.scenario}`, async ({ createCropPage }) => {
-      const cropData = withUniqueCropValues(createCropValidationBaseData);
+    test(`${scenario.testCaseId} - ${scenario.scenario}`, async ({
+      createCropPage,
+    }) => {
+      const baseData =
+        scenario.dataVariant === "defaultMotherCrop"
+          ? createCropDefaultMotherValidationBaseData
+          : createCropValidationBaseData;
+      
+      const cropData = withUniqueCropValues(baseData);
 
-      await createCropPage.fillCreateCropFormExcept(cropData, [scenario.missingField]);
+      await createCropPage.fillCreateCropFormExcept(cropData, [
+        scenario.missingField,
+      ]);
       await createCropPage.save();
 
       await createCropPage.expectLoaded();
