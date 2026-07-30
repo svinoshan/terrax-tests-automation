@@ -6,7 +6,7 @@ import {
 } from "@data/farmer/farmer-profile.data";
 
 test.describe("@regression Farmer Create Persistence", () => {
-  test.fail("Bug: not all entered farmer profile and organizational values persist after save", async ({
+  test("All entered farmer profile and organizational values persist after save", async ({
     authenticatedUser,
     farmerListPage,
     farmerProfilePage,

@@ -44,7 +44,7 @@ export class RiskAnalysisPage extends BasePage {
       name: /Risk Analysis Checklist/i,
     });
 
-    this.submitButton = page.getByRole("button", { name: /^Submit$/i });
+    this.submitButton = page.getByRole("button", { name: /^(Submit|Update)$/i });
 
     this.backButton = page
       .getByRole("button", { name: /Back/i })
@@ -93,6 +93,38 @@ export class RiskAnalysisPage extends BasePage {
     ).toBeVisible({ timeout: 15000 });
   }
 
+  // async selectFirstAvailableFarmer(): Promise<string> {
+  //   await expect(this.selectedFarmersTab).toBeVisible({ timeout: 15000 });
+
+  //   const farmerTable = this.page
+  //     .locator("table")
+  //     .filter({
+  //       has: this.page.getByRole("columnheader", { name: /Farmer code/i }),
+  //     })
+  //     .first();
+
+  //   const firstDataRow = farmerTable
+  //     .locator("tbody tr")
+  //     .filter({ has: this.page.locator('input[type="checkbox"]') })
+  //     .first();
+
+  //   await expect(firstDataRow).toBeVisible({ timeout: 30000 });
+
+  //   const farmerCode = (await firstDataRow.getByRole("cell").nth(1).innerText())
+  //     .replace(/\s+/g, " ")
+  //     .trim();
+
+  //   const checkbox = firstDataRow.getByRole("checkbox").first();
+
+  //   if (!(await checkbox.isChecked().catch(() => false))) {
+  //     await checkbox.check({ force: true });
+  //   }
+
+  //   await expect(checkbox).toBeChecked();
+
+  //   return farmerCode;
+  // }
+
   async selectFirstAvailableFarmer(): Promise<string> {
     await expect(this.selectedFarmersTab).toBeVisible({ timeout: 15000 });
 
@@ -103,26 +135,71 @@ export class RiskAnalysisPage extends BasePage {
       })
       .first();
 
-    const firstDataRow = farmerTable
+    const rows = farmerTable
       .locator("tbody tr")
-      .filter({ has: this.page.locator('input[type="checkbox"]') })
-      .first();
+      .filter({ has: this.page.locator('input[type="checkbox"]') });
 
-    await expect(firstDataRow).toBeVisible({ timeout: 30000 });
+    await expect(rows.first()).toBeVisible({ timeout: 30000 });
 
-    const farmerCode = (await firstDataRow.getByRole("cell").nth(1).innerText())
-      .replace(/\s+/g, " ")
-      .trim();
+    const rowCount = await rows.count();
 
-    const checkbox = firstDataRow.getByRole("checkbox").first();
+    const escapeRegExp = (value: string): string =>
+      value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
-    if (!(await checkbox.isChecked().catch(() => false))) {
-      await checkbox.check({ force: true });
+    for (let index = 0; index < rowCount; index += 1) {
+      const row = rows.nth(index);
+
+      const farmerCode = (await row.getByRole("cell").nth(1).innerText())
+        .replace(/\s+/g, " ")
+        .trim();
+
+      if (!farmerCode) {
+        continue;
+      }
+
+      const checkbox = row.getByRole("checkbox").first();
+
+      const selectedChip = this.page
+        .getByText(new RegExp(`${escapeRegExp(farmerCode)}\\s*\\|`, "i"))
+        .first();
+
+      if (
+        (await checkbox.isChecked().catch(() => false)) ||
+        (await selectedChip.isVisible({ timeout: 500 }).catch(() => false))
+      ) {
+        return farmerCode;
+      }
+
+      // Try native checkbox first.
+      try {
+        await checkbox.check({ timeout: 3000 });
+      } catch {
+        // Some Angular/custom checkboxes do not toggle through native check().
+      }
+
+      if (
+        (await checkbox.isChecked().catch(() => false)) ||
+        (await selectedChip.isVisible({ timeout: 1000 }).catch(() => false))
+      ) {
+        return farmerCode;
+      }
+
+      // Fallback: click the select cell / row area.
+      try {
+        await row.getByRole("cell").first().click({ timeout: 3000 });
+      } catch {
+        await row.click({ force: true });
+      }
+
+      if (
+        (await checkbox.isChecked().catch(() => false)) ||
+        (await selectedChip.isVisible({ timeout: 2000 }).catch(() => false))
+      ) {
+        return farmerCode;
+      }
     }
 
-    await expect(checkbox).toBeChecked();
-
-    return farmerCode;
+    throw new Error("Could not select any farmer row for risk analysis.");
   }
 
   async openChecklistTab(): Promise<void> {
@@ -418,7 +495,9 @@ export class RiskAnalysisPage extends BasePage {
 
   async expectCreateRiskAnalysisLoaded(): Promise<void> {
     await expect(
-      this.page.getByRole("heading", { name: /Create Risk analysis|Update Risk analysis/i }),
+      this.page.getByRole("heading", {
+        name: /Create Risk analysis|Update Risk analysis/i,
+      }),
     ).toBeVisible({ timeout: 30000 });
 
     await expect(
@@ -448,7 +527,7 @@ export class RiskAnalysisPage extends BasePage {
 
     // Toast error shown after submit.
     await expect(
-        this.page.getByRole("alert", { name: /Checklist not complete/i }),
+      this.page.getByRole("alert", { name: /Checklist not complete/i }),
     ).toBeVisible({ timeout: 15000 });
 
     await expect(
@@ -466,11 +545,11 @@ export class RiskAnalysisPage extends BasePage {
   }
 
   async expectResultContainsUpdatedValues(): Promise<void> {
-    await expect(this.page.getByText(/Before over roll risk/i)).toBeVisible({
+    await expect(this.page.getByText(/Before overall risk/i)).toBeVisible({
       timeout: 15000,
     });
 
-    await expect(this.page.getByText(/After over roll risk/i)).toBeVisible({
+    await expect(this.page.getByText(/After overall risk/i)).toBeVisible({
       timeout: 15000,
     });
 

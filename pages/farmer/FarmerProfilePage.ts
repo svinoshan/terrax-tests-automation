@@ -64,7 +64,7 @@ export class FarmerProfilePage extends BasePage {
   constructor(page: Page) {
     super(page);
 
-    this.pageTitle = page.getByRole('heading', { name: 'Farmer profile' });
+    this.pageTitle = page.getByRole("heading", { name: "Farmer profile" });
 
     this.nameWithInitialsInput = page.locator(
       '[formcontrolname="nameWtInitials"]',
@@ -84,7 +84,9 @@ export class FarmerProfilePage extends BasePage {
     );
     this.supplierTypeSelect = page.locator('[formcontrolname="supplierType"]');
 
-    this.organizationalTab = page.getByRole('heading', { name: 'Organizational' });
+    this.organizationalTab = page.getByRole("heading", {
+      name: "Organizational",
+    });
     this.landTab = page.getByRole("tab", { name: /land/i });
     this.cropsTab = page.getByRole("tab", { name: /crops/i });
     this.euNopJasTab = page.getByRole("tab", { name: /eu\/nop\/jas/i });
@@ -636,6 +638,187 @@ export class FarmerProfilePage extends BasePage {
     );
   }
 
+  // async collectCreatedFarmerPersistenceMismatches(
+  //   profileData: FarmerProfileTestData,
+  //   orgData: FarmerOrganizationalTestData,
+  // ): Promise<string[]> {
+  //   const mismatches: string[] = [];
+
+  //   const normalize = (value: string): string =>
+  //     value.replace(/\s+/g, " ").trim();
+
+  //   const checkInput = async (
+  //     label: string,
+  //     locator: Locator,
+  //     expectedValue: string,
+  //   ): Promise<void> => {
+  //     const actualValue = normalize(await locator.inputValue());
+
+  //     if (actualValue !== expectedValue) {
+  //       mismatches.push(
+  //         `${label}: expected "${expectedValue}", actual "${actualValue}"`,
+  //       );
+  //     }
+  //   };
+
+  //   const checkSelect = async (
+  //     label: string,
+  //     locator: Locator,
+  //     expectedValue: string,
+  //   ): Promise<void> => {
+  //     const actualValue = normalize(
+  //       await this.getMatSelectDisplayedText(locator),
+  //     );
+
+  //     // if (!actualValue.includes(expectedValue)) {
+  //     //   mismatches.push(
+  //     //     `${label}: expected "${expectedValue}", actual "${actualValue}"`,
+  //     //   );
+  //     // }
+
+  //     if (actualValue !== expectedValue) {
+  //       mismatches.push(
+  //         `${label}: expected "${expectedValue}", actual "${actualValue}"`,
+  //       );
+  //     }
+  //   };
+
+  //   await checkInput(
+  //     "Name with initials",
+  //     this.nameWithInitialsInput,
+  //     profileData.nameWithInitials,
+  //   );
+
+  //   await checkInput("Full name", this.fullNameInput, profileData.fullName);
+  //   await checkInput(
+  //     "Fixed phone",
+  //     this.fixedPhoneInput,
+  //     profileData.fixedPhone,
+  //   );
+  //   await checkInput(
+  //     "Mobile phone",
+  //     this.mobilePhoneInput,
+  //     profileData.mobilePhone,
+  //   );
+  //   await checkInput("NIC/passport", this.nicInput, profileData.nic);
+  //   await checkInput("Address", this.addressInput, profileData.address);
+  //   await checkInput("Country", this.countryInput, profileData.country);
+  //   await checkInput("City", this.cityInput, profileData.city);
+  //   await checkInput(
+  //     "Field officer",
+  //     this.fieldOfficerInput,
+  //     profileData.fieldOfficer,
+  //   );
+  //   await checkInput(
+  //     "Contact person",
+  //     this.contactPersonInput,
+  //     profileData.contactPerson,
+  //   );
+  //   await checkInput(
+  //     "Contact person phone",
+  //     this.contactPersonPhoneInput,
+  //     profileData.contactPersonPhone,
+  //   );
+
+  //   await checkSelect("Gender", this.genderSelect, profileData.gender);
+  //   await checkSelect(
+  //     "Supplier type",
+  //     this.supplierTypeSelect,
+  //     profileData.supplierType,
+  //   );
+
+  //   //await this.organizationalTab.click();
+
+  //   await checkInput(
+  //     "Application date",
+  //     this.applicationDateInput,
+  //     orgData.applicationDate,
+  //   );
+  //   await checkInput("Main unit", this.mainUnitInput, orgData.mainUnit);
+  //   await checkInput("Sub unit", this.subUnitInput, orgData.subUnit);
+  //   await checkInput(
+  //     "Farmer code",
+  //     this.farmerCodeEUJASInput,
+  //     orgData.farmerCodeEUJAS,
+  //   );
+  //   await checkInput(
+  //     "Farmer code NOP",
+  //     this.farmerCodeNOPInput,
+  //     orgData.farmerCodeNOP,
+  //   );
+  //   await checkInput("CB ref no", this.cbRefNoInput, orgData.cbRefNo);
+  //   await checkInput("Remark", this.remarkInput, orgData.remark);
+
+  //   await checkSelect("Risk status", this.riskStatusSelect, orgData.riskStatus);
+
+  //   return mismatches;
+  // }
+  private async getVisibleControlValue(locator: Locator): Promise<string> {
+    const normalize = (value: string): string =>
+      value.replace(/\s+/g, " ").trim();
+
+    const count = await locator.count();
+
+    for (let index = 0; index < count; index += 1) {
+      const candidate = locator.nth(index);
+
+      const isVisible = await candidate.isVisible().catch(() => false);
+
+      if (!isVisible) {
+        continue;
+      }
+
+      const tagName = await candidate
+        .evaluate((element) => element.tagName.toLowerCase())
+        .catch(() => "");
+
+      if (tagName === "input" || tagName === "textarea") {
+        const value = await candidate.inputValue().catch(() => "");
+
+        if (normalize(value)) {
+          return normalize(value);
+        }
+      }
+
+      const text = await candidate
+        .innerText()
+        .catch(async () => await candidate.textContent().catch(() => ""));
+
+      if (normalize(text ?? "")) {
+        return normalize(text ?? "");
+      }
+    }
+
+    return "";
+  }
+
+  private async getVisibleMatSelectText(locator: Locator): Promise<string> {
+    const normalize = (value: string): string =>
+      value.replace(/\s+/g, " ").trim();
+
+    const count = await locator.count();
+
+    for (let index = 0; index < count; index += 1) {
+      const candidate = locator.nth(index);
+
+      const isVisible = await candidate.isVisible().catch(() => false);
+
+      if (!isVisible) {
+        continue;
+      }
+
+      const matSelectText = await this.getMatSelectDisplayedText(
+        candidate,
+      ).catch(async () => await this.getVisibleControlValue(candidate));
+
+      if (normalize(matSelectText)) {
+        return normalize(matSelectText);
+      }
+    }
+
+    return "";
+  }
+
   async collectCreatedFarmerPersistenceMismatches(
     profileData: FarmerProfileTestData,
     orgData: FarmerOrganizationalTestData,
@@ -650,11 +833,12 @@ export class FarmerProfilePage extends BasePage {
       locator: Locator,
       expectedValue: string,
     ): Promise<void> => {
-      const actualValue = normalize(await locator.inputValue());
+      const actualValue = normalize(await this.getVisibleControlValue(locator));
+      const expected = normalize(expectedValue);
 
-      if (actualValue !== expectedValue) {
+      if (actualValue !== expected) {
         mismatches.push(
-          `${label}: expected "${expectedValue}", actual "${actualValue}"`,
+          `${label}: expected "${expected}", actual "${actualValue}"`,
         );
       }
     };
@@ -665,21 +849,35 @@ export class FarmerProfilePage extends BasePage {
       expectedValue: string,
     ): Promise<void> => {
       const actualValue = normalize(
-        await this.getMatSelectDisplayedText(locator),
+        await this.getVisibleMatSelectText(locator),
       );
+      const expected = normalize(expectedValue);
 
-      // if (!actualValue.includes(expectedValue)) {
-      //   mismatches.push(
-      //     `${label}: expected "${expectedValue}", actual "${actualValue}"`,
-      //   );
-      // }
-
-      if (actualValue !== expectedValue) {
+      if (actualValue !== expected) {
         mismatches.push(
-          `${label}: expected "${expectedValue}", actual "${actualValue}"`,
+          `${label}: expected "${expected}", actual "${actualValue}"`,
         );
       }
     };
+
+    await expect(
+      this.page.getByRole("heading", { name: /Farmer profile/i }),
+    ).toBeVisible({ timeout: 30000 });
+
+    await expect(this.nameWithInitialsInput.first()).toBeVisible({
+      timeout: 15000,
+    });
+
+    await expect
+      .poll(
+        async () =>
+          await this.getVisibleControlValue(this.nameWithInitialsInput),
+        {
+          timeout: 15000,
+          message: "Expected saved farmer profile values to be loaded",
+        },
+      )
+      .toBe(profileData.nameWithInitials);
 
     await checkInput(
       "Name with initials",
@@ -688,30 +886,39 @@ export class FarmerProfilePage extends BasePage {
     );
 
     await checkInput("Full name", this.fullNameInput, profileData.fullName);
+
     await checkInput(
       "Fixed phone",
       this.fixedPhoneInput,
       profileData.fixedPhone,
     );
+
     await checkInput(
       "Mobile phone",
       this.mobilePhoneInput,
       profileData.mobilePhone,
     );
+
     await checkInput("NIC/passport", this.nicInput, profileData.nic);
+
     await checkInput("Address", this.addressInput, profileData.address);
+
     await checkInput("Country", this.countryInput, profileData.country);
+
     await checkInput("City", this.cityInput, profileData.city);
+
     await checkInput(
       "Field officer",
       this.fieldOfficerInput,
       profileData.fieldOfficer,
     );
+
     await checkInput(
       "Contact person",
       this.contactPersonInput,
       profileData.contactPerson,
     );
+
     await checkInput(
       "Contact person phone",
       this.contactPersonPhoneInput,
@@ -719,32 +926,37 @@ export class FarmerProfilePage extends BasePage {
     );
 
     await checkSelect("Gender", this.genderSelect, profileData.gender);
+
     await checkSelect(
       "Supplier type",
       this.supplierTypeSelect,
       profileData.supplierType,
     );
 
-    //await this.organizationalTab.click();
-
     await checkInput(
       "Application date",
       this.applicationDateInput,
       orgData.applicationDate,
     );
+
     await checkInput("Main unit", this.mainUnitInput, orgData.mainUnit);
+
     await checkInput("Sub unit", this.subUnitInput, orgData.subUnit);
+
     await checkInput(
       "Farmer code",
       this.farmerCodeEUJASInput,
       orgData.farmerCodeEUJAS,
     );
+
     await checkInput(
       "Farmer code NOP",
       this.farmerCodeNOPInput,
       orgData.farmerCodeNOP,
     );
+
     await checkInput("CB ref no", this.cbRefNoInput, orgData.cbRefNo);
+
     await checkInput("Remark", this.remarkInput, orgData.remark);
 
     await checkSelect("Risk status", this.riskStatusSelect, orgData.riskStatus);
