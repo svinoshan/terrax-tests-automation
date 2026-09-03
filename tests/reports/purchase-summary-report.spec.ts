@@ -1,7 +1,7 @@
 import { test } from '@fixtures/auth.fixture';
 
 test.describe('@regression Reports - Purchase summary', () => {
-  test.fail('REPORT_PURCHASE_SUMMARY_001 - Show summary completes without generic error popup', async ({
+  test('REPORT_PURCHASE_SUMMARY_001 - Show summary completes without generic error popup', async ({
     authenticatedUser,
     purchaseSummaryReportPage,
   }) => {
@@ -16,7 +16,7 @@ test.describe('@regression Reports - Purchase summary', () => {
     await purchaseSummaryReportPage.expectReportCompletedWithRowsOrEmptyState();
   });
 
-  test.fail('REPORT_PURCHASE_SUMMARY_002 - Show details completes without generic error popup', async ({
+  test('REPORT_PURCHASE_SUMMARY_002 - Show details completes without generic error popup', async ({
     authenticatedUser,
     purchaseSummaryReportPage,
   }) => {

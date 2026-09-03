@@ -49,7 +49,7 @@ export class DispatchListPage extends BasePage {
     ).toBeVisible();
 
     await expect(
-      this.page.getByRole("columnheader", { name: /User name/i }),
+      this.page.getByRole("columnheader", { name: /Last update by/i }),
     ).toBeVisible();
 
     await expect(

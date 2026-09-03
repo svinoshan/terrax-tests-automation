@@ -9,10 +9,10 @@ test.describe("@regression User Management", () => {
   }) => {
     void authenticatedUser;
 
-    test.fail(
-      true,
-      "BUG/Clarification: User is created, but app shows email already exists popup for a unique generated email.",
-    );
+    // test.fail(
+    //   true,
+    //   "BUG/Clarification: User is created, but app shows email already exists popup for a unique generated email.",
+    // );
 
     const userData = createUserManagementData();
 
