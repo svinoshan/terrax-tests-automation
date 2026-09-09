@@ -1,0 +1,202 @@
+[
+  {
+    "testCaseId": "LOCATION_NEG_001",
+    "scenario": "missing-facility-name",
+    "expectedSource": "inline",
+    "expectedMessage": "Facility name Is required",
+    "expectedField": "facilityName",
+    "data": {
+      "testCaseId": "LOCATION_001",
+      "facilityName": "",
+      "locationType": "FACTORY",
+      "phoneNumber": "0112000000",
+      "address": "No. 12, Union Place, Colombo 02",
+      "status": true,
+      "updates": {
+        "phoneNumber": "0112900000",
+        "address": "No. 18, Union Place, Colombo 02",
+        "status": false
+      }
+    }
+  },
+  {
+    "testCaseId": "LOCATION_NEG_002",
+    "scenario": "facility-name-whitespace-only",
+    "expectedSource": "validation-dialog",
+    "expectedMessage": "Name is required",
+    "expectedField": "facilityName",
+    "data": {
+      "testCaseId": "LOCATION_001",
+      "facilityName": "   ",
+      "locationType": "FACTORY",
+      "phoneNumber": "0112000000",
+      "address": "No. 12, Union Place, Colombo 02",
+      "status": true,
+      "updates": {
+        "phoneNumber": "0112900000",
+        "address": "No. 18, Union Place, Colombo 02",
+        "status": false
+      }
+    }
+  },
+  {
+    "testCaseId": "LOCATION_NEG_003",
+    "scenario": "missing-location-type",
+    "expectedSource": "inline",
+    "expectedMessage": "Location type Is required",
+    "expectedField": "locationType",
+    "data": {
+      "testCaseId": "LOCATION_001",
+      "facilityName": "Colombo North Production Factory",
+      "locationType": null,
+      "phoneNumber": "0112000000",
+      "address": "No. 12, Union Place, Colombo 02",
+      "status": true,
+      "updates": {
+        "phoneNumber": "0112900000",
+        "address": "No. 18, Union Place, Colombo 02",
+        "status": false
+      }
+    }
+  },
+  {
+    "testCaseId": "LOCATION_NEG_004",
+    "scenario": "missing-phone-number",
+    "expectedSource": "inline",
+    "expectedMessage": "Phone number Is required",
+    "expectedField": "phoneNumber",
+    "data": {
+      "testCaseId": "LOCATION_001",
+      "facilityName": "Colombo North Production Factory",
+      "locationType": "FACTORY",
+      "phoneNumber": "",
+      "address": "No. 12, Union Place, Colombo 02",
+      "status": true,
+      "updates": {
+        "phoneNumber": "0112900000",
+        "address": "No. 18, Union Place, Colombo 02",
+        "status": false
+      }
+    }
+  },
+  {
+    "testCaseId": "LOCATION_NEG_005",
+    "scenario": "missing-address",
+    "expectedSource": "inline",
+    "expectedMessage": "Address Is required",
+    "expectedField": "address",
+    "data": {
+      "testCaseId": "LOCATION_001",
+      "facilityName": "Colombo North Production Factory",
+      "locationType": "FACTORY",
+      "phoneNumber": "0112000000",
+      "address": "",
+      "status": true,
+      "updates": {
+        "phoneNumber": "0112900000",
+        "address": "No. 18, Union Place, Colombo 02",
+        "status": false
+      }
+    }
+  },
+  {
+    "testCaseId": "LOCATION_NEG_006",
+    "scenario": "address-whitespace-only",
+    "expectedSource": "validation-dialog",
+    "expectedMessage": "Address is required",
+    "expectedField": "address",
+    "data": {
+      "testCaseId": "LOCATION_001",
+      "facilityName": "Colombo North Production Factory",
+      "locationType": "FACTORY",
+      "phoneNumber": "0112000000",
+      "address": "   ",
+      "status": true,
+      "updates": {
+        "phoneNumber": "0112900000",
+        "address": "No. 18, Union Place, Colombo 02",
+        "status": false
+      }
+    }
+  },
+  {
+    "testCaseId": "LOCATION_NEG_007",
+    "scenario": "facility-name-unsafe-characters",
+    "expectedSource": "inline",
+    "expectedMessage": "Customer name pattern error",
+    "expectedField": "facilityName",
+    "data": {
+      "testCaseId": "LOCATION_001",
+      "facilityName": "Warehouse <script>",
+      "locationType": "FACTORY",
+      "phoneNumber": "0112000000",
+      "address": "No. 12, Union Place, Colombo 02",
+      "status": true,
+      "updates": {
+        "phoneNumber": "0112900000",
+        "address": "No. 18, Union Place, Colombo 02",
+        "status": false
+      }
+    }
+  },
+  {
+    "testCaseId": "LOCATION_NEG_008",
+    "scenario": "facility-name-too-long",
+    "expectedSource": "validation-dialog",
+    "expectedMessage": "Facility name must not exceed 200 characters",
+    "expectedField": "facilityName",
+    "data": {
+      "testCaseId": "LOCATION_001",
+      "facilityName": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+      "locationType": "FACTORY",
+      "phoneNumber": "0112000000",
+      "address": "No. 12, Union Place, Colombo 02",
+      "status": true,
+      "updates": {
+        "phoneNumber": "0112900000",
+        "address": "No. 18, Union Place, Colombo 02",
+        "status": false
+      }
+    }
+  },
+  {
+    "testCaseId": "LOCATION_NEG_009",
+    "scenario": "address-too-long",
+    "expectedSource": "validation-dialog",
+    "expectedMessage": "Address must not exceed 1000 characters",
+    "expectedField": "address",
+    "data": {
+      "testCaseId": "LOCATION_001",
+      "facilityName": "Colombo North Production Factory",
+      "locationType": "FACTORY",
+      "phoneNumber": "0112000000",
+      "address": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "status": true,
+      "updates": {
+        "phoneNumber": "0112900000",
+        "address": "No. 18, Union Place, Colombo 02",
+        "status": false
+      }
+    }
+  },
+  {
+    "testCaseId": "LOCATION_NEG_010",
+    "scenario": "phone-number-too-long",
+    "expectedSource": "validation-dialog",
+    "expectedMessage": "Phone number must not exceed 255 characters",
+    "expectedField": "phoneNumber",
+    "data": {
+      "testCaseId": "LOCATION_001",
+      "facilityName": "Colombo North Production Factory",
+      "locationType": "FACTORY",
+      "phoneNumber": "1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+      "address": "No. 12, Union Place, Colombo 02",
+      "status": true,
+      "updates": {
+        "phoneNumber": "0112900000",
+        "address": "No. 18, Union Place, Colombo 02",
+        "status": false
+      }
+    }
+  }
+]

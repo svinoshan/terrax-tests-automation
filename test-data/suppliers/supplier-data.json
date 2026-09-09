@@ -1,0 +1,3902 @@
+[
+  {
+    "testCaseId": "SUPPLIER_001",
+    "supplierCode": "SUP-LK-001",
+    "supplierName": "Lanka Agri Produce (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Nimal Perera",
+    "phone": "0711000000",
+    "email": "nimal.perera.001@example.com",
+    "address": "No. 10, Union Place, Colombo 02",
+    "registrationNo": "PV-200137",
+    "taxNo": "TIN-100200413",
+    "description": "Agricultural produce supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Colombo Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0112000000",
+        "address": "No. 15, Union Place, Colombo 02",
+        "coordinates": "6.927079, 79.861244",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Lahiru Wijesinghe",
+      "phone": "0751900000",
+      "email": "lahiru.wijesinghe.001.updated@example.com",
+      "address": "No. 20, Union Place, Colombo 02",
+      "description": "Updated agricultural produce supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0112900000",
+        "address": "No. 25, Union Place, Colombo 02",
+        "coordinates": "6.928000, 79.862165"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_002",
+    "supplierCode": "SUP-LK-002",
+    "supplierName": "Ceylon Agri Produce (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Kasun Bandara",
+    "phone": "0721007919",
+    "email": "kasun.bandara.002@example.com",
+    "address": "No. 29, Kandy Road, Kadawatha",
+    "registrationNo": "PV-200274",
+    "taxNo": "TIN-100200526",
+    "description": "Agricultural produce supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Kadawatha Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0112003571",
+        "address": "No. 34, Kandy Road, Kadawatha",
+        "coordinates": "7.001289, 79.950142",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Pradeep Herath",
+      "phone": "0761906221",
+      "email": "pradeep.herath.002.updated@example.com",
+      "address": "No. 39, Kandy Road, Kadawatha",
+      "description": "Updated agricultural produce supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0112906133",
+        "address": "No. 44, Kandy Road, Kadawatha",
+        "coordinates": "7.002210, 79.951063"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_003",
+    "supplierCode": "SUP-LK-003",
+    "supplierName": "Serendib Spice Traders (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Tharindu Gunawardena",
+    "phone": "0741015838",
+    "email": "tharindu.gunawardena.003@example.com",
+    "address": "No. 48, Chilaw Road, Negombo",
+    "registrationNo": "PV-200411",
+    "taxNo": "TIN-100200639",
+    "description": "Spices and seasoning supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Negombo Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0312007142",
+        "address": "No. 53, Chilaw Road, Negombo",
+        "coordinates": "7.208300, 79.835800",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Sanjaya Dissanayake",
+      "phone": "0771912442",
+      "email": "sanjaya.dissanayake.003.updated@example.com",
+      "address": "No. 58, Chilaw Road, Negombo",
+      "description": "Updated spices and seasoning supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0312912266",
+        "address": "No. 63, Chilaw Road, Negombo",
+        "coordinates": "7.209221, 79.836721"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_004",
+    "supplierCode": "SUP-LK-004",
+    "supplierName": "Lakpura Spice Traders (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Dinesh Senanayake",
+    "phone": "0751023757",
+    "email": "dinesh.senanayake.004@example.com",
+    "address": "No. 67, Galle Road, Kalutara South",
+    "registrationNo": "PV-200548",
+    "taxNo": "TIN-100200752",
+    "description": "Spices and seasoning supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Kalutara Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0342010713",
+        "address": "No. 72, Galle Road, Kalutara South",
+        "coordinates": "6.585400, 79.960700",
+        "status": true
+      },
+      {
+        "facilityName": "Jaffna Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0213012459",
+        "address": "No. 88, Kankesanthurai Road, Jaffna",
+        "coordinates": "9.661500, 80.025500",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Anushka Samarasinghe",
+      "phone": "0781918663",
+      "email": "anushka.samarasinghe.004.updated@example.com",
+      "address": "No. 77, Galle Road, Kalutara South",
+      "description": "Updated spices and seasoning supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0342918399",
+        "address": "No. 82, Galle Road, Kalutara South",
+        "coordinates": "6.586321, 79.961621"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_005",
+    "supplierCode": "SUP-LK-005",
+    "supplierName": "Greenfield Tea Exports (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Ruwan Ekanayake",
+    "phone": "0761031676",
+    "email": "ruwan.ekanayake.005@example.com",
+    "address": "No. 86, Peradeniya Road, Kandy",
+    "registrationNo": "PV-200685",
+    "taxNo": "TIN-100200865",
+    "description": "Tea and value-added tea supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Kandy Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0812014284",
+        "address": "No. 91, Peradeniya Road, Kandy",
+        "coordinates": "7.290600, 80.633700",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Dilshan Pathirana",
+      "phone": "0711924884",
+      "email": "dilshan.pathirana.005.updated@example.com",
+      "address": "No. 96, Peradeniya Road, Kandy",
+      "description": "Updated tea and value-added tea supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0812924532",
+        "address": "No. 101, Peradeniya Road, Kandy",
+        "coordinates": "7.291521, 80.634621"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_006",
+    "supplierCode": "SUP-LK-006",
+    "supplierName": "AgroLink Tea Exports (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Chaminda Rajapaksha",
+    "phone": "0771039595",
+    "email": "chaminda.rajapaksha.006@example.com",
+    "address": "No. 105, Dambulla Road, Matale",
+    "registrationNo": "PV-200822",
+    "taxNo": "TIN-100200978",
+    "description": "Tea and value-added tea supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Matale Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0662017855",
+        "address": "No. 110, Dambulla Road, Matale",
+        "coordinates": "7.467500, 80.623400",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Harsha Perera",
+      "phone": "0721931105",
+      "email": "harsha.perera.006.updated@example.com",
+      "address": "No. 115, Dambulla Road, Matale",
+      "description": "Updated tea and value-added tea supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0662930665",
+        "address": "No. 120, Dambulla Road, Matale",
+        "coordinates": "7.468421, 80.624321"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_007",
+    "supplierCode": "SUP-LK-007",
+    "supplierName": "Harvest Coconut Products (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Isuru Madushanka",
+    "phone": "0781047514",
+    "email": "isuru.madushanka.007@example.com",
+    "address": "No. 124, Kandy Road, Nuwara Eliya",
+    "registrationNo": "PV-200959",
+    "taxNo": "TIN-100201091",
+    "description": "Coconut and coconut-based products supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Nuwara Eliya Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0522021426",
+        "address": "No. 129, Kandy Road, Nuwara Eliya",
+        "coordinates": "6.949700, 80.789100",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Roshan Bandara",
+      "phone": "0741937326",
+      "email": "roshan.bandara.007.updated@example.com",
+      "address": "No. 134, Kandy Road, Nuwara Eliya",
+      "description": "Updated coconut and coconut-based products supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0522936798",
+        "address": "No. 139, Kandy Road, Nuwara Eliya",
+        "coordinates": "6.950621, 80.790021"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_008",
+    "supplierCode": "SUP-LK-008",
+    "supplierName": "Island Coconut Products (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Lahiru Fernando",
+    "phone": "0711055433",
+    "email": "lahiru.fernando.008@example.com",
+    "address": "No. 143, Matara Road, Galle",
+    "registrationNo": "PV-201096",
+    "taxNo": "TIN-100201204",
+    "description": "Coconut and coconut-based products supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Galle Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0912024997",
+        "address": "No. 148, Matara Road, Galle",
+        "coordinates": "6.032900, 80.216800",
+        "status": true
+      },
+      {
+        "facilityName": "Trincomalee Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0263029071",
+        "address": "No. 164, Kandy Road, Trincomalee",
+        "coordinates": "8.587400, 81.215200",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Supun Gunawardena",
+      "phone": "0751943547",
+      "email": "supun.gunawardena.008.updated@example.com",
+      "address": "No. 153, Matara Road, Galle",
+      "description": "Updated coconut and coconut-based products supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0912942931",
+        "address": "No. 158, Matara Road, Galle",
+        "coordinates": "6.033821, 80.217721"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_009",
+    "supplierCode": "SUP-LK-009",
+    "supplierName": "Tropical Fresh Foods (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Pradeep Jayasinghe",
+    "phone": "0721063352",
+    "email": "pradeep.jayasinghe.009@example.com",
+    "address": "No. 162, Akuressa Road, Matara",
+    "registrationNo": "PV-201233",
+    "taxNo": "TIN-100201317",
+    "description": "Fresh fruit and vegetable supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Matara Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0412028568",
+        "address": "No. 167, Akuressa Road, Matara",
+        "coordinates": "5.954900, 80.555000",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Malith Senanayake",
+      "phone": "0761949768",
+      "email": "malith.senanayake.009.updated@example.com",
+      "address": "No. 172, Akuressa Road, Matara",
+      "description": "Updated fresh fruit and vegetable supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0412949064",
+        "address": "No. 177, Akuressa Road, Matara",
+        "coordinates": "5.955821, 80.555921"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_010",
+    "supplierCode": "SUP-LK-010",
+    "supplierName": "Highland Fresh Foods (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Sanjaya Ranasinghe",
+    "phone": "0741071271",
+    "email": "sanjaya.ranasinghe.010@example.com",
+    "address": "No. 181, Tissamaharama Road, Hambantota",
+    "registrationNo": "PV-201370",
+    "taxNo": "TIN-100201430",
+    "description": "Fresh fruit and vegetable supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Hambantota Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0472032139",
+        "address": "No. 186, Tissamaharama Road, Hambantota",
+        "coordinates": "6.124100, 81.118500",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Gayan Ekanayake",
+      "phone": "0771955989",
+      "email": "gayan.ekanayake.010.updated@example.com",
+      "address": "No. 191, Tissamaharama Road, Hambantota",
+      "description": "Updated fresh fruit and vegetable supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0472955197",
+        "address": "No. 196, Tissamaharama Road, Hambantota",
+        "coordinates": "6.125021, 81.119421"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_011",
+    "supplierCode": "SUP-LK-011",
+    "supplierName": "Golden Grain Rice Mills (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Anushka Karunaratne",
+    "phone": "0751079190",
+    "email": "anushka.karunaratne.011@example.com",
+    "address": "No. 10, Kankesanthurai Road, Jaffna",
+    "registrationNo": "PV-201507",
+    "taxNo": "TIN-100201543",
+    "description": "Rice and grain supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Jaffna Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0212035710",
+        "address": "No. 15, Kankesanthurai Road, Jaffna",
+        "coordinates": "9.661500, 80.025500",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Janaka Rajapaksha",
+      "phone": "0781962210",
+      "email": "janaka.rajapaksha.011.updated@example.com",
+      "address": "No. 20, Kankesanthurai Road, Jaffna",
+      "description": "Updated rice and grain supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0212961330",
+        "address": "No. 25, Kankesanthurai Road, Jaffna",
+        "coordinates": "9.662421, 80.026421"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_012",
+    "supplierCode": "SUP-LK-012",
+    "supplierName": "Sunrise Rice Mills (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Dilshan Abeysekara",
+    "phone": "0761087109",
+    "email": "dilshan.abeysekara.012@example.com",
+    "address": "No. 29, Kandy Road, Vavuniya",
+    "registrationNo": "PV-201644",
+    "taxNo": "TIN-100201656",
+    "description": "Rice and grain supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Vavuniya Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0242039281",
+        "address": "No. 34, Kandy Road, Vavuniya",
+        "coordinates": "8.751400, 80.497100",
+        "status": true
+      },
+      {
+        "facilityName": "Polonnaruwa Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0273045683",
+        "address": "No. 50, Batticaloa Road, Polonnaruwa",
+        "coordinates": "7.940300, 81.018800",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Kavindu Madushanka",
+      "phone": "0711968431",
+      "email": "kavindu.madushanka.012.updated@example.com",
+      "address": "No. 39, Kandy Road, Vavuniya",
+      "description": "Updated rice and grain supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0242967463",
+        "address": "No. 44, Kandy Road, Vavuniya",
+        "coordinates": "8.752321, 80.498021"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_013",
+    "supplierCode": "SUP-LK-013",
+    "supplierName": "Evergreen Dairy Supplies (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Harsha Weerasinghe",
+    "phone": "0771095028",
+    "email": "harsha.weerasinghe.013@example.com",
+    "address": "No. 48, Trincomalee Road, Batticaloa",
+    "registrationNo": "PV-201781",
+    "taxNo": "TIN-100201769",
+    "description": "Dairy products and ingredients supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Batticaloa Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0652042852",
+        "address": "No. 53, Trincomalee Road, Batticaloa",
+        "coordinates": "7.717000, 81.700000",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Asanka Fernando",
+      "phone": "0721974652",
+      "email": "asanka.fernando.013.updated@example.com",
+      "address": "No. 58, Trincomalee Road, Batticaloa",
+      "description": "Updated dairy products and ingredients supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0652973596",
+        "address": "No. 63, Trincomalee Road, Batticaloa",
+        "coordinates": "7.717921, 81.700921"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_014",
+    "supplierCode": "SUP-LK-014",
+    "supplierName": "NatureFresh Dairy Supplies (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Roshan Priyadarshana",
+    "phone": "0781102947",
+    "email": "roshan.priyadarshana.014@example.com",
+    "address": "No. 67, D. S. Senanayake Road, Ampara",
+    "registrationNo": "PV-201918",
+    "taxNo": "TIN-100201882",
+    "description": "Dairy products and ingredients supplier",
+    "active": false,
+    "locations": [
+      {
+        "facilityName": "Ampara Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0632046423",
+        "address": "No. 72, D. S. Senanayake Road, Ampara",
+        "coordinates": "7.291200, 81.672400",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Nadeesha Jayasinghe",
+      "phone": "0741980873",
+      "email": "nadeesha.jayasinghe.014.updated@example.com",
+      "address": "No. 77, D. S. Senanayake Road, Ampara",
+      "description": "Updated dairy products and ingredients supplier",
+      "active": true,
+      "location": {
+        "phoneNumber": "0632979729",
+        "address": "No. 82, D. S. Senanayake Road, Ampara",
+        "coordinates": "7.292121, 81.673321"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_015",
+    "supplierCode": "SUP-LK-015",
+    "supplierName": "Rural Roots Herbal Products (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Supun Silva",
+    "phone": "0711110866",
+    "email": "supun.silva.015@example.com",
+    "address": "No. 86, Kandy Road, Trincomalee",
+    "registrationNo": "PV-202055",
+    "taxNo": "TIN-100201995",
+    "description": "Herbs and natural products supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Trincomalee Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0262049994",
+        "address": "No. 91, Kandy Road, Trincomalee",
+        "coordinates": "8.587400, 81.215200",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Ishara Ranasinghe",
+      "phone": "0751987094",
+      "email": "ishara.ranasinghe.015.updated@example.com",
+      "address": "No. 96, Kandy Road, Trincomalee",
+      "description": "Updated herbs and natural products supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0262985862",
+        "address": "No. 101, Kandy Road, Trincomalee",
+        "coordinates": "8.588321, 81.216121"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_016",
+    "supplierCode": "SUP-LK-016",
+    "supplierName": "Southern Herbal Products (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Malith Wijesinghe",
+    "phone": "0721118785",
+    "email": "malith.wijesinghe.016@example.com",
+    "address": "No. 105, Dambulla Road, Kurunegala",
+    "registrationNo": "PV-202192",
+    "taxNo": "TIN-100202108",
+    "description": "Herbs and natural products supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Kurunegala Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0372053565",
+        "address": "No. 110, Dambulla Road, Kurunegala",
+        "coordinates": "7.486300, 80.362300",
+        "status": true
+      },
+      {
+        "facilityName": "Kegalle Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0353062295",
+        "address": "No. 126, Colombo-Kandy Road, Kegalle",
+        "coordinates": "7.251300, 80.346400",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Sachini Karunaratne",
+      "phone": "0761993315",
+      "email": "sachini.karunaratne.016.updated@example.com",
+      "address": "No. 115, Dambulla Road, Kurunegala",
+      "description": "Updated herbs and natural products supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0372991995",
+        "address": "No. 120, Dambulla Road, Kurunegala",
+        "coordinates": "7.487221, 80.363221"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_017",
+    "supplierCode": "SUP-LK-017",
+    "supplierName": "Northern Food Ingredients (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Gayan Herath",
+    "phone": "0741126704",
+    "email": "gayan.herath.017@example.com",
+    "address": "No. 124, Anuradhapura Road, Puttalam",
+    "registrationNo": "PV-202329",
+    "taxNo": "TIN-100202221",
+    "description": "Food ingredients and additives supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Puttalam Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0322057136",
+        "address": "No. 129, Anuradhapura Road, Puttalam",
+        "coordinates": "8.040800, 79.839400",
+        "status": false
+      }
+    ],
+    "updates": {
+      "contactPerson": "Thilini Abeysekara",
+      "phone": "0771999536",
+      "email": "thilini.abeysekara.017.updated@example.com",
+      "address": "No. 134, Anuradhapura Road, Puttalam",
+      "description": "Updated food ingredients and additives supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0322998128",
+        "address": "No. 139, Anuradhapura Road, Puttalam",
+        "coordinates": "8.041721, 79.840321"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_018",
+    "supplierCode": "SUP-LK-018",
+    "supplierName": "Eastern Food Ingredients (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Janaka Dissanayake",
+    "phone": "0751134623",
+    "email": "janaka.dissanayake.018@example.com",
+    "address": "No. 143, New Town Road, Anuradhapura",
+    "registrationNo": "PV-202466",
+    "taxNo": "TIN-100202334",
+    "description": "Food ingredients and additives supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Anuradhapura Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0252060707",
+        "address": "No. 148, New Town Road, Anuradhapura",
+        "coordinates": "8.311400, 80.403700",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Dinusha Weerasinghe",
+      "phone": "0782005757",
+      "email": "dinusha.weerasinghe.018.updated@example.com",
+      "address": "No. 153, New Town Road, Anuradhapura",
+      "description": "Updated food ingredients and additives supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0253004261",
+        "address": "No. 158, New Town Road, Anuradhapura",
+        "coordinates": "8.312321, 80.404621"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_019",
+    "supplierCode": "SUP-LK-019",
+    "supplierName": "Central Packaging Solutions (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Kavindu Samarasinghe",
+    "phone": "0761142542",
+    "email": "kavindu.samarasinghe.019@example.com",
+    "address": "No. 162, Batticaloa Road, Polonnaruwa",
+    "registrationNo": "PV-202603",
+    "taxNo": "TIN-100202447",
+    "description": "Food-grade packaging materials supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Polonnaruwa Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0272064278",
+        "address": "No. 167, Batticaloa Road, Polonnaruwa",
+        "coordinates": "7.940300, 81.018800",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Shalini Priyadarshana",
+      "phone": "0712011978",
+      "email": "shalini.priyadarshana.019.updated@example.com",
+      "address": "No. 172, Batticaloa Road, Polonnaruwa",
+      "description": "Updated food-grade packaging materials supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0273010394",
+        "address": "No. 177, Batticaloa Road, Polonnaruwa",
+        "coordinates": "7.941221, 81.019721"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_020",
+    "supplierCode": "SUP-LK-020",
+    "supplierName": "Uva Packaging Solutions (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Asanka Pathirana",
+    "phone": "0771150461",
+    "email": "asanka.pathirana.020@example.com",
+    "address": "No. 181, Bandarawela Road, Badulla",
+    "registrationNo": "PV-202740",
+    "taxNo": "TIN-100202560",
+    "description": "Food-grade packaging materials supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Badulla Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0552067849",
+        "address": "No. 186, Bandarawela Road, Badulla",
+        "coordinates": "6.993400, 81.055000",
+        "status": true
+      },
+      {
+        "facilityName": "Kadawatha Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0113078907",
+        "address": "No. 202, Kandy Road, Kadawatha",
+        "coordinates": "7.001289, 79.950142",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Pavithra Silva",
+      "phone": "0722018199",
+      "email": "pavithra.silva.020.updated@example.com",
+      "address": "No. 191, Bandarawela Road, Badulla",
+      "description": "Updated food-grade packaging materials supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0553016527",
+        "address": "No. 196, Bandarawela Road, Badulla",
+        "coordinates": "6.994321, 81.055921"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_021",
+    "supplierCode": "SUP-LK-021",
+    "supplierName": "Lanka Agri Produce (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Nadeesha Perera",
+    "phone": "0781158380",
+    "email": "nadeesha.perera.021@example.com",
+    "address": "No. 10, Wellawaya Road, Monaragala",
+    "registrationNo": "PV-202877",
+    "taxNo": "TIN-100202673",
+    "description": "Agricultural produce supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Monaragala Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0552071420",
+        "address": "No. 15, Wellawaya Road, Monaragala",
+        "coordinates": "6.872800, 81.350700",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Nirosha Wijesinghe",
+      "phone": "0742024420",
+      "email": "nirosha.wijesinghe.021.updated@example.com",
+      "address": "No. 20, Wellawaya Road, Monaragala",
+      "description": "Updated agricultural produce supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0553022660",
+        "address": "No. 25, Wellawaya Road, Monaragala",
+        "coordinates": "6.873721, 81.351621"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_022",
+    "supplierCode": "SUP-LK-022",
+    "supplierName": "Ceylon Agri Produce (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Ishara Bandara",
+    "phone": "0711166299",
+    "email": "ishara.bandara.022@example.com",
+    "address": "No. 29, Panadura Road, Ratnapura",
+    "registrationNo": "PV-203014",
+    "taxNo": "TIN-100202786",
+    "description": "Agricultural produce supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Ratnapura Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0452074991",
+        "address": "No. 34, Panadura Road, Ratnapura",
+        "coordinates": "6.682800, 80.399200",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Gayani Herath",
+      "phone": "0752030641",
+      "email": "gayani.herath.022.updated@example.com",
+      "address": "No. 39, Panadura Road, Ratnapura",
+      "description": "Updated agricultural produce supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0453028793",
+        "address": "No. 44, Panadura Road, Ratnapura",
+        "coordinates": "6.683721, 80.400121"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_023",
+    "supplierCode": "SUP-LK-023",
+    "supplierName": "Serendib Spice Traders (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Sachini Gunawardena",
+    "phone": "0721174218",
+    "email": "sachini.gunawardena.023@example.com",
+    "address": "No. 48, Colombo-Kandy Road, Kegalle",
+    "registrationNo": "PV-203151",
+    "taxNo": "TIN-100202899",
+    "description": "Spices and seasoning supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Kegalle Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0352078562",
+        "address": "No. 53, Colombo-Kandy Road, Kegalle",
+        "coordinates": "7.251300, 80.346400",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Imesha Dissanayake",
+      "phone": "0762036862",
+      "email": "imesha.dissanayake.023.updated@example.com",
+      "address": "No. 58, Colombo-Kandy Road, Kegalle",
+      "description": "Updated spices and seasoning supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0353034926",
+        "address": "No. 63, Colombo-Kandy Road, Kegalle",
+        "coordinates": "7.252221, 80.347321"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_024",
+    "supplierCode": "SUP-LK-024",
+    "supplierName": "Lakpura Spice Traders (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Thilini Senanayake",
+    "phone": "0741182137",
+    "email": "thilini.senanayake.024@example.com",
+    "address": "No. 67, Matale Road, Dambulla",
+    "registrationNo": "PV-203288",
+    "taxNo": "TIN-100203012",
+    "description": "Spices and seasoning supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Dambulla Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0662082133",
+        "address": "No. 72, Matale Road, Dambulla",
+        "coordinates": "7.874200, 80.651100",
+        "status": true
+      },
+      {
+        "facilityName": "Matale Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0663095519",
+        "address": "No. 88, Dambulla Road, Matale",
+        "coordinates": "7.467500, 80.623400",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Nimal Samarasinghe",
+      "phone": "0772043083",
+      "email": "nimal.samarasinghe.024.updated@example.com",
+      "address": "No. 77, Matale Road, Dambulla",
+      "description": "Updated spices and seasoning supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0663041059",
+        "address": "No. 82, Matale Road, Dambulla",
+        "coordinates": "7.875121, 80.652021"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_025",
+    "supplierCode": "SUP-LK-025",
+    "supplierName": "Greenfield Tea Exports (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Dinusha Ekanayake",
+    "phone": "0751190056",
+    "email": "dinusha.ekanayake.025@example.com",
+    "address": "No. 86, Nonagama Road, Embilipitiya",
+    "registrationNo": "PV-203425",
+    "taxNo": "TIN-100203125",
+    "description": "Tea and value-added tea supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Embilipitiya Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0472085704",
+        "address": "No. 91, Nonagama Road, Embilipitiya",
+        "coordinates": "6.343900, 80.848900",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Kasun Pathirana",
+      "phone": "0782049304",
+      "email": "kasun.pathirana.025.updated@example.com",
+      "address": "No. 96, Nonagama Road, Embilipitiya",
+      "description": "Updated tea and value-added tea supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0473047192",
+        "address": "No. 101, Nonagama Road, Embilipitiya",
+        "coordinates": "6.344821, 80.849821"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_026",
+    "supplierCode": "SUP-LK-026",
+    "supplierName": "AgroLink Tea Exports (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Shalini Rajapaksha",
+    "phone": "0761197975",
+    "email": "shalini.rajapaksha.026@example.com",
+    "address": "No. 105, Union Place, Colombo 02",
+    "registrationNo": "PV-203562",
+    "taxNo": "TIN-100203238",
+    "description": "Tea and value-added tea supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Colombo Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0112089275",
+        "address": "No. 110, Union Place, Colombo 02",
+        "coordinates": "6.927079, 79.861244",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Tharindu Perera",
+      "phone": "0712055525",
+      "email": "tharindu.perera.026.updated@example.com",
+      "address": "No. 115, Union Place, Colombo 02",
+      "description": "Updated tea and value-added tea supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0113053325",
+        "address": "No. 120, Union Place, Colombo 02",
+        "coordinates": "6.928000, 79.862165"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_027",
+    "supplierCode": "SUP-LK-027",
+    "supplierName": "Harvest Coconut Products (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Pavithra Madushanka",
+    "phone": "0771205894",
+    "email": "pavithra.madushanka.027@example.com",
+    "address": "No. 124, Kandy Road, Kadawatha",
+    "registrationNo": "PV-203699",
+    "taxNo": "TIN-100203351",
+    "description": "Coconut and coconut-based products supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Kadawatha Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0112092846",
+        "address": "No. 129, Kandy Road, Kadawatha",
+        "coordinates": "7.001289, 79.950142",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Dinesh Bandara",
+      "phone": "0722061746",
+      "email": "dinesh.bandara.027.updated@example.com",
+      "address": "No. 134, Kandy Road, Kadawatha",
+      "description": "Updated coconut and coconut-based products supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0113059458",
+        "address": "No. 139, Kandy Road, Kadawatha",
+        "coordinates": "7.002210, 79.951063"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_028",
+    "supplierCode": "SUP-LK-028",
+    "supplierName": "Island Coconut Products (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Nirosha Fernando",
+    "phone": "0781213813",
+    "email": "nirosha.fernando.028@example.com",
+    "address": "No. 143, Chilaw Road, Negombo",
+    "registrationNo": "PV-203836",
+    "taxNo": "TIN-100203464",
+    "description": "Coconut and coconut-based products supplier",
+    "active": false,
+    "locations": [
+      {
+        "facilityName": "Negombo Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0312096417",
+        "address": "No. 148, Chilaw Road, Negombo",
+        "coordinates": "7.208300, 79.835800",
+        "status": true
+      },
+      {
+        "facilityName": "Hambantota Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0473112131",
+        "address": "No. 164, Tissamaharama Road, Hambantota",
+        "coordinates": "6.124100, 81.118500",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Ruwan Gunawardena",
+      "phone": "0742067967",
+      "email": "ruwan.gunawardena.028.updated@example.com",
+      "address": "No. 153, Chilaw Road, Negombo",
+      "description": "Updated coconut and coconut-based products supplier",
+      "active": true,
+      "location": {
+        "phoneNumber": "0313065591",
+        "address": "No. 158, Chilaw Road, Negombo",
+        "coordinates": "7.209221, 79.836721"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_029",
+    "supplierCode": "SUP-LK-029",
+    "supplierName": "Tropical Fresh Foods (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Gayani Jayasinghe",
+    "phone": "0711221732",
+    "email": "gayani.jayasinghe.029@example.com",
+    "address": "No. 162, Galle Road, Kalutara South",
+    "registrationNo": "PV-203973",
+    "taxNo": "TIN-100203577",
+    "description": "Fresh fruit and vegetable supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Kalutara Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0342099988",
+        "address": "No. 167, Galle Road, Kalutara South",
+        "coordinates": "6.585400, 79.960700",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Chaminda Senanayake",
+      "phone": "0752074188",
+      "email": "chaminda.senanayake.029.updated@example.com",
+      "address": "No. 172, Galle Road, Kalutara South",
+      "description": "Updated fresh fruit and vegetable supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0343071724",
+        "address": "No. 177, Galle Road, Kalutara South",
+        "coordinates": "6.586321, 79.961621"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_030",
+    "supplierCode": "SUP-LK-030",
+    "supplierName": "Highland Fresh Foods (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Imesha Ranasinghe",
+    "phone": "0721229651",
+    "email": "imesha.ranasinghe.030@example.com",
+    "address": "No. 181, Peradeniya Road, Kandy",
+    "registrationNo": "PV-204110",
+    "taxNo": "TIN-100203690",
+    "description": "Fresh fruit and vegetable supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Kandy Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0812103559",
+        "address": "No. 186, Peradeniya Road, Kandy",
+        "coordinates": "7.290600, 80.633700",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Isuru Ekanayake",
+      "phone": "0762080409",
+      "email": "isuru.ekanayake.030.updated@example.com",
+      "address": "No. 191, Peradeniya Road, Kandy",
+      "description": "Updated fresh fruit and vegetable supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0813077857",
+        "address": "No. 196, Peradeniya Road, Kandy",
+        "coordinates": "7.291521, 80.634621"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_031",
+    "supplierCode": "SUP-LK-031",
+    "supplierName": "Golden Grain Rice Mills (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Nimal Karunaratne",
+    "phone": "0741237570",
+    "email": "nimal.karunaratne.031@example.com",
+    "address": "No. 10, Dambulla Road, Matale",
+    "registrationNo": "PV-204247",
+    "taxNo": "TIN-100203803",
+    "description": "Rice and grain supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Matale Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0662107130",
+        "address": "No. 15, Dambulla Road, Matale",
+        "coordinates": "7.467500, 80.623400",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Lahiru Rajapaksha",
+      "phone": "0772086630",
+      "email": "lahiru.rajapaksha.031.updated@example.com",
+      "address": "No. 20, Dambulla Road, Matale",
+      "description": "Updated rice and grain supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0663083990",
+        "address": "No. 25, Dambulla Road, Matale",
+        "coordinates": "7.468421, 80.624321"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_032",
+    "supplierCode": "SUP-LK-032",
+    "supplierName": "Sunrise Rice Mills (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Kasun Abeysekara",
+    "phone": "0751245489",
+    "email": "kasun.abeysekara.032@example.com",
+    "address": "No. 29, Kandy Road, Nuwara Eliya",
+    "registrationNo": "PV-204384",
+    "taxNo": "TIN-100203916",
+    "description": "Rice and grain supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Nuwara Eliya Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0522110701",
+        "address": "No. 34, Kandy Road, Nuwara Eliya",
+        "coordinates": "6.949700, 80.789100",
+        "status": true
+      },
+      {
+        "facilityName": "Ampara Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0633128743",
+        "address": "No. 50, D. S. Senanayake Road, Ampara",
+        "coordinates": "7.291200, 81.672400",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Pradeep Madushanka",
+      "phone": "0782092851",
+      "email": "pradeep.madushanka.032.updated@example.com",
+      "address": "No. 39, Kandy Road, Nuwara Eliya",
+      "description": "Updated rice and grain supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0523090123",
+        "address": "No. 44, Kandy Road, Nuwara Eliya",
+        "coordinates": "6.950621, 80.790021"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_033",
+    "supplierCode": "SUP-LK-033",
+    "supplierName": "Evergreen Dairy Supplies (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Tharindu Weerasinghe",
+    "phone": "0761253408",
+    "email": "tharindu.weerasinghe.033@example.com",
+    "address": "No. 48, Matara Road, Galle",
+    "registrationNo": "PV-204521",
+    "taxNo": "TIN-100204029",
+    "description": "Dairy products and ingredients supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Galle Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0912114272",
+        "address": "No. 53, Matara Road, Galle",
+        "coordinates": "6.032900, 80.216800",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Sanjaya Fernando",
+      "phone": "0712099072",
+      "email": "sanjaya.fernando.033.updated@example.com",
+      "address": "No. 58, Matara Road, Galle",
+      "description": "Updated dairy products and ingredients supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0913096256",
+        "address": "No. 63, Matara Road, Galle",
+        "coordinates": "6.033821, 80.217721"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_034",
+    "supplierCode": "SUP-LK-034",
+    "supplierName": "NatureFresh Dairy Supplies (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Dinesh Priyadarshana",
+    "phone": "0771261327",
+    "email": "dinesh.priyadarshana.034@example.com",
+    "address": "No. 67, Akuressa Road, Matara",
+    "registrationNo": "PV-204658",
+    "taxNo": "TIN-100204142",
+    "description": "Dairy products and ingredients supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Matara Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0412117843",
+        "address": "No. 72, Akuressa Road, Matara",
+        "coordinates": "5.954900, 80.555000",
+        "status": false
+      }
+    ],
+    "updates": {
+      "contactPerson": "Anushka Jayasinghe",
+      "phone": "0722105293",
+      "email": "anushka.jayasinghe.034.updated@example.com",
+      "address": "No. 77, Akuressa Road, Matara",
+      "description": "Updated dairy products and ingredients supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0413102389",
+        "address": "No. 82, Akuressa Road, Matara",
+        "coordinates": "5.955821, 80.555921"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_035",
+    "supplierCode": "SUP-LK-035",
+    "supplierName": "Rural Roots Herbal Products (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Ruwan Silva",
+    "phone": "0781269246",
+    "email": "ruwan.silva.035@example.com",
+    "address": "No. 86, Tissamaharama Road, Hambantota",
+    "registrationNo": "PV-204795",
+    "taxNo": "TIN-100204255",
+    "description": "Herbs and natural products supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Hambantota Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0472121414",
+        "address": "No. 91, Tissamaharama Road, Hambantota",
+        "coordinates": "6.124100, 81.118500",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Dilshan Ranasinghe",
+      "phone": "0742111514",
+      "email": "dilshan.ranasinghe.035.updated@example.com",
+      "address": "No. 96, Tissamaharama Road, Hambantota",
+      "description": "Updated herbs and natural products supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0473108522",
+        "address": "No. 101, Tissamaharama Road, Hambantota",
+        "coordinates": "6.125021, 81.119421"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_036",
+    "supplierCode": "SUP-LK-036",
+    "supplierName": "Southern Herbal Products (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Chaminda Wijesinghe",
+    "phone": "0711277165",
+    "email": "chaminda.wijesinghe.036@example.com",
+    "address": "No. 105, Kankesanthurai Road, Jaffna",
+    "registrationNo": "PV-204932",
+    "taxNo": "TIN-100204368",
+    "description": "Herbs and natural products supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Jaffna Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0212124985",
+        "address": "No. 110, Kankesanthurai Road, Jaffna",
+        "coordinates": "9.661500, 80.025500",
+        "status": true
+      },
+      {
+        "facilityName": "Anuradhapura Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0253145355",
+        "address": "No. 126, New Town Road, Anuradhapura",
+        "coordinates": "8.311400, 80.403700",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Harsha Karunaratne",
+      "phone": "0752117735",
+      "email": "harsha.karunaratne.036.updated@example.com",
+      "address": "No. 115, Kankesanthurai Road, Jaffna",
+      "description": "Updated herbs and natural products supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0213114655",
+        "address": "No. 120, Kankesanthurai Road, Jaffna",
+        "coordinates": "9.662421, 80.026421"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_037",
+    "supplierCode": "SUP-LK-037",
+    "supplierName": "Northern Food Ingredients (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Isuru Herath",
+    "phone": "0721285084",
+    "email": "isuru.herath.037@example.com",
+    "address": "No. 124, Kandy Road, Vavuniya",
+    "registrationNo": "PV-205069",
+    "taxNo": "TIN-100204481",
+    "description": "Food ingredients and additives supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Vavuniya Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0242128556",
+        "address": "No. 129, Kandy Road, Vavuniya",
+        "coordinates": "8.751400, 80.497100",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Roshan Abeysekara",
+      "phone": "0762123956",
+      "email": "roshan.abeysekara.037.updated@example.com",
+      "address": "No. 134, Kandy Road, Vavuniya",
+      "description": "Updated food ingredients and additives supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0243120788",
+        "address": "No. 139, Kandy Road, Vavuniya",
+        "coordinates": "8.752321, 80.498021"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_038",
+    "supplierCode": "SUP-LK-038",
+    "supplierName": "Eastern Food Ingredients (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Lahiru Dissanayake",
+    "phone": "0741293003",
+    "email": "lahiru.dissanayake.038@example.com",
+    "address": "No. 143, Trincomalee Road, Batticaloa",
+    "registrationNo": "PV-205206",
+    "taxNo": "TIN-100204594",
+    "description": "Food ingredients and additives supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Batticaloa Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0652132127",
+        "address": "No. 148, Trincomalee Road, Batticaloa",
+        "coordinates": "7.717000, 81.700000",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Supun Weerasinghe",
+      "phone": "0772130177",
+      "email": "supun.weerasinghe.038.updated@example.com",
+      "address": "No. 153, Trincomalee Road, Batticaloa",
+      "description": "Updated food ingredients and additives supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0653126921",
+        "address": "No. 158, Trincomalee Road, Batticaloa",
+        "coordinates": "7.717921, 81.700921"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_039",
+    "supplierCode": "SUP-LK-039",
+    "supplierName": "Central Packaging Solutions (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Pradeep Samarasinghe",
+    "phone": "0751300922",
+    "email": "pradeep.samarasinghe.039@example.com",
+    "address": "No. 162, D. S. Senanayake Road, Ampara",
+    "registrationNo": "PV-205343",
+    "taxNo": "TIN-100204707",
+    "description": "Food-grade packaging materials supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Ampara Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0632135698",
+        "address": "No. 167, D. S. Senanayake Road, Ampara",
+        "coordinates": "7.291200, 81.672400",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Malith Priyadarshana",
+      "phone": "0782136398",
+      "email": "malith.priyadarshana.039.updated@example.com",
+      "address": "No. 172, D. S. Senanayake Road, Ampara",
+      "description": "Updated food-grade packaging materials supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0633133054",
+        "address": "No. 177, D. S. Senanayake Road, Ampara",
+        "coordinates": "7.292121, 81.673321"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_040",
+    "supplierCode": "SUP-LK-040",
+    "supplierName": "Uva Packaging Solutions (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Sanjaya Pathirana",
+    "phone": "0761308841",
+    "email": "sanjaya.pathirana.040@example.com",
+    "address": "No. 181, Kandy Road, Trincomalee",
+    "registrationNo": "PV-205480",
+    "taxNo": "TIN-100204820",
+    "description": "Food-grade packaging materials supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Trincomalee Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0262139269",
+        "address": "No. 186, Kandy Road, Trincomalee",
+        "coordinates": "8.587400, 81.215200",
+        "status": true
+      },
+      {
+        "facilityName": "Ratnapura Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0453161967",
+        "address": "No. 202, Panadura Road, Ratnapura",
+        "coordinates": "6.682800, 80.399200",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Gayan Silva",
+      "phone": "0712142619",
+      "email": "gayan.silva.040.updated@example.com",
+      "address": "No. 191, Kandy Road, Trincomalee",
+      "description": "Updated food-grade packaging materials supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0263139187",
+        "address": "No. 196, Kandy Road, Trincomalee",
+        "coordinates": "8.588321, 81.216121"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_041",
+    "supplierCode": "SUP-LK-041",
+    "supplierName": "Lanka Agri Produce (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Anushka Perera",
+    "phone": "0771316760",
+    "email": "anushka.perera.041@example.com",
+    "address": "No. 10, Dambulla Road, Kurunegala",
+    "registrationNo": "PV-205617",
+    "taxNo": "TIN-100204933",
+    "description": "Agricultural produce supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Kurunegala Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0372142840",
+        "address": "No. 15, Dambulla Road, Kurunegala",
+        "coordinates": "7.486300, 80.362300",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Janaka Wijesinghe",
+      "phone": "0722148840",
+      "email": "janaka.wijesinghe.041.updated@example.com",
+      "address": "No. 20, Dambulla Road, Kurunegala",
+      "description": "Updated agricultural produce supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0373145320",
+        "address": "No. 25, Dambulla Road, Kurunegala",
+        "coordinates": "7.487221, 80.363221"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_042",
+    "supplierCode": "SUP-LK-042",
+    "supplierName": "Ceylon Agri Produce (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Dilshan Bandara",
+    "phone": "0781324679",
+    "email": "dilshan.bandara.042@example.com",
+    "address": "No. 29, Anuradhapura Road, Puttalam",
+    "registrationNo": "PV-205754",
+    "taxNo": "TIN-100205046",
+    "description": "Agricultural produce supplier",
+    "active": false,
+    "locations": [
+      {
+        "facilityName": "Puttalam Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0322146411",
+        "address": "No. 34, Anuradhapura Road, Puttalam",
+        "coordinates": "8.040800, 79.839400",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Kavindu Herath",
+      "phone": "0742155061",
+      "email": "kavindu.herath.042.updated@example.com",
+      "address": "No. 39, Anuradhapura Road, Puttalam",
+      "description": "Updated agricultural produce supplier",
+      "active": true,
+      "location": {
+        "phoneNumber": "0323151453",
+        "address": "No. 44, Anuradhapura Road, Puttalam",
+        "coordinates": "8.041721, 79.840321"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_043",
+    "supplierCode": "SUP-LK-043",
+    "supplierName": "Serendib Spice Traders (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Harsha Gunawardena",
+    "phone": "0711332598",
+    "email": "harsha.gunawardena.043@example.com",
+    "address": "No. 48, New Town Road, Anuradhapura",
+    "registrationNo": "PV-205891",
+    "taxNo": "TIN-100205159",
+    "description": "Spices and seasoning supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Anuradhapura Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0252149982",
+        "address": "No. 53, New Town Road, Anuradhapura",
+        "coordinates": "8.311400, 80.403700",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Asanka Dissanayake",
+      "phone": "0752161282",
+      "email": "asanka.dissanayake.043.updated@example.com",
+      "address": "No. 58, New Town Road, Anuradhapura",
+      "description": "Updated spices and seasoning supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0253157586",
+        "address": "No. 63, New Town Road, Anuradhapura",
+        "coordinates": "8.312321, 80.404621"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_044",
+    "supplierCode": "SUP-LK-044",
+    "supplierName": "Lakpura Spice Traders (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Roshan Senanayake",
+    "phone": "0721340517",
+    "email": "roshan.senanayake.044@example.com",
+    "address": "No. 67, Batticaloa Road, Polonnaruwa",
+    "registrationNo": "PV-206028",
+    "taxNo": "TIN-100205272",
+    "description": "Spices and seasoning supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Polonnaruwa Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0272153553",
+        "address": "No. 72, Batticaloa Road, Polonnaruwa",
+        "coordinates": "7.940300, 81.018800",
+        "status": true
+      },
+      {
+        "facilityName": "Colombo Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0113178579",
+        "address": "No. 88, Union Place, Colombo 02",
+        "coordinates": "6.927079, 79.861244",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Nadeesha Samarasinghe",
+      "phone": "0762167503",
+      "email": "nadeesha.samarasinghe.044.updated@example.com",
+      "address": "No. 77, Batticaloa Road, Polonnaruwa",
+      "description": "Updated spices and seasoning supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0273163719",
+        "address": "No. 82, Batticaloa Road, Polonnaruwa",
+        "coordinates": "7.941221, 81.019721"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_045",
+    "supplierCode": "SUP-LK-045",
+    "supplierName": "Greenfield Tea Exports (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Supun Ekanayake",
+    "phone": "0741348436",
+    "email": "supun.ekanayake.045@example.com",
+    "address": "No. 86, Bandarawela Road, Badulla",
+    "registrationNo": "PV-206165",
+    "taxNo": "TIN-100205385",
+    "description": "Tea and value-added tea supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Badulla Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0552157124",
+        "address": "No. 91, Bandarawela Road, Badulla",
+        "coordinates": "6.993400, 81.055000",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Ishara Pathirana",
+      "phone": "0772173724",
+      "email": "ishara.pathirana.045.updated@example.com",
+      "address": "No. 96, Bandarawela Road, Badulla",
+      "description": "Updated tea and value-added tea supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0553169852",
+        "address": "No. 101, Bandarawela Road, Badulla",
+        "coordinates": "6.994321, 81.055921"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_046",
+    "supplierCode": "SUP-LK-046",
+    "supplierName": "AgroLink Tea Exports (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Malith Rajapaksha",
+    "phone": "0751356355",
+    "email": "malith.rajapaksha.046@example.com",
+    "address": "No. 105, Wellawaya Road, Monaragala",
+    "registrationNo": "PV-206302",
+    "taxNo": "TIN-100205498",
+    "description": "Tea and value-added tea supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Monaragala Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0552160695",
+        "address": "No. 110, Wellawaya Road, Monaragala",
+        "coordinates": "6.872800, 81.350700",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Sachini Perera",
+      "phone": "0782179945",
+      "email": "sachini.perera.046.updated@example.com",
+      "address": "No. 115, Wellawaya Road, Monaragala",
+      "description": "Updated tea and value-added tea supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0553175985",
+        "address": "No. 120, Wellawaya Road, Monaragala",
+        "coordinates": "6.873721, 81.351621"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_047",
+    "supplierCode": "SUP-LK-047",
+    "supplierName": "Harvest Coconut Products (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Gayan Madushanka",
+    "phone": "0761364274",
+    "email": "gayan.madushanka.047@example.com",
+    "address": "No. 124, Panadura Road, Ratnapura",
+    "registrationNo": "PV-206439",
+    "taxNo": "TIN-100205611",
+    "description": "Coconut and coconut-based products supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Ratnapura Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0452164266",
+        "address": "No. 129, Panadura Road, Ratnapura",
+        "coordinates": "6.682800, 80.399200",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Thilini Bandara",
+      "phone": "0712186166",
+      "email": "thilini.bandara.047.updated@example.com",
+      "address": "No. 134, Panadura Road, Ratnapura",
+      "description": "Updated coconut and coconut-based products supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0453182118",
+        "address": "No. 139, Panadura Road, Ratnapura",
+        "coordinates": "6.683721, 80.400121"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_048",
+    "supplierCode": "SUP-LK-048",
+    "supplierName": "Island Coconut Products (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Janaka Fernando",
+    "phone": "0771372193",
+    "email": "janaka.fernando.048@example.com",
+    "address": "No. 143, Colombo-Kandy Road, Kegalle",
+    "registrationNo": "PV-206576",
+    "taxNo": "TIN-100205724",
+    "description": "Coconut and coconut-based products supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Kegalle Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0352167837",
+        "address": "No. 148, Colombo-Kandy Road, Kegalle",
+        "coordinates": "7.251300, 80.346400",
+        "status": true
+      },
+      {
+        "facilityName": "Kandy Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0813195191",
+        "address": "No. 164, Peradeniya Road, Kandy",
+        "coordinates": "7.290600, 80.633700",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Dinusha Gunawardena",
+      "phone": "0722192387",
+      "email": "dinusha.gunawardena.048.updated@example.com",
+      "address": "No. 153, Colombo-Kandy Road, Kegalle",
+      "description": "Updated coconut and coconut-based products supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0353188251",
+        "address": "No. 158, Colombo-Kandy Road, Kegalle",
+        "coordinates": "7.252221, 80.347321"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_049",
+    "supplierCode": "SUP-LK-049",
+    "supplierName": "Tropical Fresh Foods (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Kavindu Jayasinghe",
+    "phone": "0781380112",
+    "email": "kavindu.jayasinghe.049@example.com",
+    "address": "No. 162, Matale Road, Dambulla",
+    "registrationNo": "PV-206713",
+    "taxNo": "TIN-100205837",
+    "description": "Fresh fruit and vegetable supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Dambulla Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0662171408",
+        "address": "No. 167, Matale Road, Dambulla",
+        "coordinates": "7.874200, 80.651100",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Shalini Senanayake",
+      "phone": "0742198608",
+      "email": "shalini.senanayake.049.updated@example.com",
+      "address": "No. 172, Matale Road, Dambulla",
+      "description": "Updated fresh fruit and vegetable supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0663194384",
+        "address": "No. 177, Matale Road, Dambulla",
+        "coordinates": "7.875121, 80.652021"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_050",
+    "supplierCode": "SUP-LK-050",
+    "supplierName": "Highland Fresh Foods (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Asanka Ranasinghe",
+    "phone": "0711388031",
+    "email": "asanka.ranasinghe.050@example.com",
+    "address": "No. 181, Nonagama Road, Embilipitiya",
+    "registrationNo": "PV-206850",
+    "taxNo": "TIN-100205950",
+    "description": "Fresh fruit and vegetable supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Embilipitiya Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0472174979",
+        "address": "No. 186, Nonagama Road, Embilipitiya",
+        "coordinates": "6.343900, 80.848900",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Pavithra Ekanayake",
+      "phone": "0752204829",
+      "email": "pavithra.ekanayake.050.updated@example.com",
+      "address": "No. 191, Nonagama Road, Embilipitiya",
+      "description": "Updated fresh fruit and vegetable supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0473200517",
+        "address": "No. 196, Nonagama Road, Embilipitiya",
+        "coordinates": "6.344821, 80.849821"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_051",
+    "supplierCode": "SUP-LK-051",
+    "supplierName": "Golden Grain Rice Mills (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Nadeesha Karunaratne",
+    "phone": "0721395950",
+    "email": "nadeesha.karunaratne.051@example.com",
+    "address": "No. 10, Union Place, Colombo 02",
+    "registrationNo": "PV-206987",
+    "taxNo": "TIN-100206063",
+    "description": "Rice and grain supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Colombo Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0112178550",
+        "address": "No. 15, Union Place, Colombo 02",
+        "coordinates": "6.927079, 79.861244",
+        "status": false
+      }
+    ],
+    "updates": {
+      "contactPerson": "Nirosha Rajapaksha",
+      "phone": "0762211050",
+      "email": "nirosha.rajapaksha.051.updated@example.com",
+      "address": "No. 20, Union Place, Colombo 02",
+      "description": "Updated rice and grain supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0113206650",
+        "address": "No. 25, Union Place, Colombo 02",
+        "coordinates": "6.928000, 79.862165"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_052",
+    "supplierCode": "SUP-LK-052",
+    "supplierName": "Sunrise Rice Mills (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Ishara Abeysekara",
+    "phone": "0741403869",
+    "email": "ishara.abeysekara.052@example.com",
+    "address": "No. 29, Kandy Road, Kadawatha",
+    "registrationNo": "PV-207124",
+    "taxNo": "TIN-100206176",
+    "description": "Rice and grain supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Kadawatha Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0112182121",
+        "address": "No. 34, Kandy Road, Kadawatha",
+        "coordinates": "7.001289, 79.950142",
+        "status": true
+      },
+      {
+        "facilityName": "Matara Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0413211803",
+        "address": "No. 50, Akuressa Road, Matara",
+        "coordinates": "5.954900, 80.555000",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Gayani Madushanka",
+      "phone": "0772217271",
+      "email": "gayani.madushanka.052.updated@example.com",
+      "address": "No. 39, Kandy Road, Kadawatha",
+      "description": "Updated rice and grain supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0113212783",
+        "address": "No. 44, Kandy Road, Kadawatha",
+        "coordinates": "7.002210, 79.951063"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_053",
+    "supplierCode": "SUP-LK-053",
+    "supplierName": "Evergreen Dairy Supplies (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Sachini Weerasinghe",
+    "phone": "0751411788",
+    "email": "sachini.weerasinghe.053@example.com",
+    "address": "No. 48, Chilaw Road, Negombo",
+    "registrationNo": "PV-207261",
+    "taxNo": "TIN-100206289",
+    "description": "Dairy products and ingredients supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Negombo Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0312185692",
+        "address": "No. 53, Chilaw Road, Negombo",
+        "coordinates": "7.208300, 79.835800",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Imesha Fernando",
+      "phone": "0782223492",
+      "email": "imesha.fernando.053.updated@example.com",
+      "address": "No. 58, Chilaw Road, Negombo",
+      "description": "Updated dairy products and ingredients supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0313218916",
+        "address": "No. 63, Chilaw Road, Negombo",
+        "coordinates": "7.209221, 79.836721"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_054",
+    "supplierCode": "SUP-LK-054",
+    "supplierName": "NatureFresh Dairy Supplies (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Thilini Priyadarshana",
+    "phone": "0761419707",
+    "email": "thilini.priyadarshana.054@example.com",
+    "address": "No. 67, Galle Road, Kalutara South",
+    "registrationNo": "PV-207398",
+    "taxNo": "TIN-100206402",
+    "description": "Dairy products and ingredients supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Kalutara Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0342189263",
+        "address": "No. 72, Galle Road, Kalutara South",
+        "coordinates": "6.585400, 79.960700",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Nimal Jayasinghe",
+      "phone": "0712229713",
+      "email": "nimal.jayasinghe.054.updated@example.com",
+      "address": "No. 77, Galle Road, Kalutara South",
+      "description": "Updated dairy products and ingredients supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0343225049",
+        "address": "No. 82, Galle Road, Kalutara South",
+        "coordinates": "6.586321, 79.961621"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_055",
+    "supplierCode": "SUP-LK-055",
+    "supplierName": "Rural Roots Herbal Products (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Dinusha Silva",
+    "phone": "0771427626",
+    "email": "dinusha.silva.055@example.com",
+    "address": "No. 86, Peradeniya Road, Kandy",
+    "registrationNo": "PV-207535",
+    "taxNo": "TIN-100206515",
+    "description": "Herbs and natural products supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Kandy Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0812192834",
+        "address": "No. 91, Peradeniya Road, Kandy",
+        "coordinates": "7.290600, 80.633700",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Kasun Ranasinghe",
+      "phone": "0722235934",
+      "email": "kasun.ranasinghe.055.updated@example.com",
+      "address": "No. 96, Peradeniya Road, Kandy",
+      "description": "Updated herbs and natural products supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0813231182",
+        "address": "No. 101, Peradeniya Road, Kandy",
+        "coordinates": "7.291521, 80.634621"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_056",
+    "supplierCode": "SUP-LK-056",
+    "supplierName": "Southern Herbal Products (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Shalini Wijesinghe",
+    "phone": "0781435545",
+    "email": "shalini.wijesinghe.056@example.com",
+    "address": "No. 105, Dambulla Road, Matale",
+    "registrationNo": "PV-207672",
+    "taxNo": "TIN-100206628",
+    "description": "Herbs and natural products supplier",
+    "active": false,
+    "locations": [
+      {
+        "facilityName": "Matale Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0662196405",
+        "address": "No. 110, Dambulla Road, Matale",
+        "coordinates": "7.467500, 80.623400",
+        "status": true
+      },
+      {
+        "facilityName": "Batticaloa Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0653228415",
+        "address": "No. 126, Trincomalee Road, Batticaloa",
+        "coordinates": "7.717000, 81.700000",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Tharindu Karunaratne",
+      "phone": "0742242155",
+      "email": "tharindu.karunaratne.056.updated@example.com",
+      "address": "No. 115, Dambulla Road, Matale",
+      "description": "Updated herbs and natural products supplier",
+      "active": true,
+      "location": {
+        "phoneNumber": "0663237315",
+        "address": "No. 120, Dambulla Road, Matale",
+        "coordinates": "7.468421, 80.624321"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_057",
+    "supplierCode": "SUP-LK-057",
+    "supplierName": "Northern Food Ingredients (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Pavithra Herath",
+    "phone": "0711443464",
+    "email": "pavithra.herath.057@example.com",
+    "address": "No. 124, Kandy Road, Nuwara Eliya",
+    "registrationNo": "PV-207809",
+    "taxNo": "TIN-100206741",
+    "description": "Food ingredients and additives supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Nuwara Eliya Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0522199976",
+        "address": "No. 129, Kandy Road, Nuwara Eliya",
+        "coordinates": "6.949700, 80.789100",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Dinesh Abeysekara",
+      "phone": "0752248376",
+      "email": "dinesh.abeysekara.057.updated@example.com",
+      "address": "No. 134, Kandy Road, Nuwara Eliya",
+      "description": "Updated food ingredients and additives supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0523243448",
+        "address": "No. 139, Kandy Road, Nuwara Eliya",
+        "coordinates": "6.950621, 80.790021"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_058",
+    "supplierCode": "SUP-LK-058",
+    "supplierName": "Eastern Food Ingredients (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Nirosha Dissanayake",
+    "phone": "0721451383",
+    "email": "nirosha.dissanayake.058@example.com",
+    "address": "No. 143, Matara Road, Galle",
+    "registrationNo": "PV-207946",
+    "taxNo": "TIN-100206854",
+    "description": "Food ingredients and additives supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Galle Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0912203547",
+        "address": "No. 148, Matara Road, Galle",
+        "coordinates": "6.032900, 80.216800",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Ruwan Weerasinghe",
+      "phone": "0762254597",
+      "email": "ruwan.weerasinghe.058.updated@example.com",
+      "address": "No. 153, Matara Road, Galle",
+      "description": "Updated food ingredients and additives supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0913249581",
+        "address": "No. 158, Matara Road, Galle",
+        "coordinates": "6.033821, 80.217721"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_059",
+    "supplierCode": "SUP-LK-059",
+    "supplierName": "Central Packaging Solutions (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Gayani Samarasinghe",
+    "phone": "0741459302",
+    "email": "gayani.samarasinghe.059@example.com",
+    "address": "No. 162, Akuressa Road, Matara",
+    "registrationNo": "PV-208083",
+    "taxNo": "TIN-100206967",
+    "description": "Food-grade packaging materials supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Matara Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0412207118",
+        "address": "No. 167, Akuressa Road, Matara",
+        "coordinates": "5.954900, 80.555000",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Chaminda Priyadarshana",
+      "phone": "0772260818",
+      "email": "chaminda.priyadarshana.059.updated@example.com",
+      "address": "No. 172, Akuressa Road, Matara",
+      "description": "Updated food-grade packaging materials supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0413255714",
+        "address": "No. 177, Akuressa Road, Matara",
+        "coordinates": "5.955821, 80.555921"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_060",
+    "supplierCode": "SUP-LK-060",
+    "supplierName": "Uva Packaging Solutions (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Imesha Pathirana",
+    "phone": "0751467221",
+    "email": "imesha.pathirana.060@example.com",
+    "address": "No. 181, Tissamaharama Road, Hambantota",
+    "registrationNo": "PV-208220",
+    "taxNo": "TIN-100207080",
+    "description": "Food-grade packaging materials supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Hambantota Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0472210689",
+        "address": "No. 186, Tissamaharama Road, Hambantota",
+        "coordinates": "6.124100, 81.118500",
+        "status": true
+      },
+      {
+        "facilityName": "Puttalam Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0323245027",
+        "address": "No. 202, Anuradhapura Road, Puttalam",
+        "coordinates": "8.040800, 79.839400",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Isuru Silva",
+      "phone": "0782267039",
+      "email": "isuru.silva.060.updated@example.com",
+      "address": "No. 191, Tissamaharama Road, Hambantota",
+      "description": "Updated food-grade packaging materials supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0473261847",
+        "address": "No. 196, Tissamaharama Road, Hambantota",
+        "coordinates": "6.125021, 81.119421"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_061",
+    "supplierCode": "SUP-LK-061",
+    "supplierName": "Lanka Agri Produce (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Nimal Perera",
+    "phone": "0761475140",
+    "email": "nimal.perera.061@example.com",
+    "address": "No. 10, Kankesanthurai Road, Jaffna",
+    "registrationNo": "PV-208357",
+    "taxNo": "TIN-100207193",
+    "description": "Agricultural produce supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Jaffna Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0212214260",
+        "address": "No. 15, Kankesanthurai Road, Jaffna",
+        "coordinates": "9.661500, 80.025500",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Lahiru Wijesinghe",
+      "phone": "0712273260",
+      "email": "lahiru.wijesinghe.061.updated@example.com",
+      "address": "No. 20, Kankesanthurai Road, Jaffna",
+      "description": "Updated agricultural produce supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0213267980",
+        "address": "No. 25, Kankesanthurai Road, Jaffna",
+        "coordinates": "9.662421, 80.026421"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_062",
+    "supplierCode": "SUP-LK-062",
+    "supplierName": "Ceylon Agri Produce (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Kasun Bandara",
+    "phone": "0771483059",
+    "email": "kasun.bandara.062@example.com",
+    "address": "No. 29, Kandy Road, Vavuniya",
+    "registrationNo": "PV-208494",
+    "taxNo": "TIN-100207306",
+    "description": "Agricultural produce supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Vavuniya Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0242217831",
+        "address": "No. 34, Kandy Road, Vavuniya",
+        "coordinates": "8.751400, 80.497100",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Pradeep Herath",
+      "phone": "0722279481",
+      "email": "pradeep.herath.062.updated@example.com",
+      "address": "No. 39, Kandy Road, Vavuniya",
+      "description": "Updated agricultural produce supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0243274113",
+        "address": "No. 44, Kandy Road, Vavuniya",
+        "coordinates": "8.752321, 80.498021"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_063",
+    "supplierCode": "SUP-LK-063",
+    "supplierName": "Serendib Spice Traders (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Tharindu Gunawardena",
+    "phone": "0781490978",
+    "email": "tharindu.gunawardena.063@example.com",
+    "address": "No. 48, Trincomalee Road, Batticaloa",
+    "registrationNo": "PV-208631",
+    "taxNo": "TIN-100207419",
+    "description": "Spices and seasoning supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Batticaloa Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0652221402",
+        "address": "No. 53, Trincomalee Road, Batticaloa",
+        "coordinates": "7.717000, 81.700000",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Sanjaya Dissanayake",
+      "phone": "0742285702",
+      "email": "sanjaya.dissanayake.063.updated@example.com",
+      "address": "No. 58, Trincomalee Road, Batticaloa",
+      "description": "Updated spices and seasoning supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0653280246",
+        "address": "No. 63, Trincomalee Road, Batticaloa",
+        "coordinates": "7.717921, 81.700921"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_064",
+    "supplierCode": "SUP-LK-064",
+    "supplierName": "Lakpura Spice Traders (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Dinesh Senanayake",
+    "phone": "0711498897",
+    "email": "dinesh.senanayake.064@example.com",
+    "address": "No. 67, D. S. Senanayake Road, Ampara",
+    "registrationNo": "PV-208768",
+    "taxNo": "TIN-100207532",
+    "description": "Spices and seasoning supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Ampara Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0632224973",
+        "address": "No. 72, D. S. Senanayake Road, Ampara",
+        "coordinates": "7.291200, 81.672400",
+        "status": true
+      },
+      {
+        "facilityName": "Monaragala Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0553261639",
+        "address": "No. 88, Wellawaya Road, Monaragala",
+        "coordinates": "6.872800, 81.350700",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Anushka Samarasinghe",
+      "phone": "0752291923",
+      "email": "anushka.samarasinghe.064.updated@example.com",
+      "address": "No. 77, D. S. Senanayake Road, Ampara",
+      "description": "Updated spices and seasoning supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0633286379",
+        "address": "No. 82, D. S. Senanayake Road, Ampara",
+        "coordinates": "7.292121, 81.673321"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_065",
+    "supplierCode": "SUP-LK-065",
+    "supplierName": "Greenfield Tea Exports (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Ruwan Ekanayake",
+    "phone": "0721506816",
+    "email": "ruwan.ekanayake.065@example.com",
+    "address": "No. 86, Kandy Road, Trincomalee",
+    "registrationNo": "PV-208905",
+    "taxNo": "TIN-100207645",
+    "description": "Tea and value-added tea supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Trincomalee Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0262228544",
+        "address": "No. 91, Kandy Road, Trincomalee",
+        "coordinates": "8.587400, 81.215200",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Dilshan Pathirana",
+      "phone": "0762298144",
+      "email": "dilshan.pathirana.065.updated@example.com",
+      "address": "No. 96, Kandy Road, Trincomalee",
+      "description": "Updated tea and value-added tea supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0263292512",
+        "address": "No. 101, Kandy Road, Trincomalee",
+        "coordinates": "8.588321, 81.216121"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_066",
+    "supplierCode": "SUP-LK-066",
+    "supplierName": "AgroLink Tea Exports (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Chaminda Rajapaksha",
+    "phone": "0741514735",
+    "email": "chaminda.rajapaksha.066@example.com",
+    "address": "No. 105, Dambulla Road, Kurunegala",
+    "registrationNo": "PV-209042",
+    "taxNo": "TIN-100207758",
+    "description": "Tea and value-added tea supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Kurunegala Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0372232115",
+        "address": "No. 110, Dambulla Road, Kurunegala",
+        "coordinates": "7.486300, 80.362300",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Harsha Perera",
+      "phone": "0772304365",
+      "email": "harsha.perera.066.updated@example.com",
+      "address": "No. 115, Dambulla Road, Kurunegala",
+      "description": "Updated tea and value-added tea supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0373298645",
+        "address": "No. 120, Dambulla Road, Kurunegala",
+        "coordinates": "7.487221, 80.363221"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_067",
+    "supplierCode": "SUP-LK-067",
+    "supplierName": "Harvest Coconut Products (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Isuru Madushanka",
+    "phone": "0751522654",
+    "email": "isuru.madushanka.067@example.com",
+    "address": "No. 124, Anuradhapura Road, Puttalam",
+    "registrationNo": "PV-209179",
+    "taxNo": "TIN-100207871",
+    "description": "Coconut and coconut-based products supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Puttalam Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0322235686",
+        "address": "No. 129, Anuradhapura Road, Puttalam",
+        "coordinates": "8.040800, 79.839400",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Roshan Bandara",
+      "phone": "0782310586",
+      "email": "roshan.bandara.067.updated@example.com",
+      "address": "No. 134, Anuradhapura Road, Puttalam",
+      "description": "Updated coconut and coconut-based products supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0323304778",
+        "address": "No. 139, Anuradhapura Road, Puttalam",
+        "coordinates": "8.041721, 79.840321"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_068",
+    "supplierCode": "SUP-LK-068",
+    "supplierName": "Island Coconut Products (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Lahiru Fernando",
+    "phone": "0761530573",
+    "email": "lahiru.fernando.068@example.com",
+    "address": "No. 143, New Town Road, Anuradhapura",
+    "registrationNo": "PV-209316",
+    "taxNo": "TIN-100207984",
+    "description": "Coconut and coconut-based products supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Anuradhapura Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0252239257",
+        "address": "No. 148, New Town Road, Anuradhapura",
+        "coordinates": "8.311400, 80.403700",
+        "status": false
+      },
+      {
+        "facilityName": "Embilipitiya Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0473278251",
+        "address": "No. 164, Nonagama Road, Embilipitiya",
+        "coordinates": "6.343900, 80.848900",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Supun Gunawardena",
+      "phone": "0712316807",
+      "email": "supun.gunawardena.068.updated@example.com",
+      "address": "No. 153, New Town Road, Anuradhapura",
+      "description": "Updated coconut and coconut-based products supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0253310911",
+        "address": "No. 158, New Town Road, Anuradhapura",
+        "coordinates": "8.312321, 80.404621"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_069",
+    "supplierCode": "SUP-LK-069",
+    "supplierName": "Tropical Fresh Foods (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Pradeep Jayasinghe",
+    "phone": "0771538492",
+    "email": "pradeep.jayasinghe.069@example.com",
+    "address": "No. 162, Batticaloa Road, Polonnaruwa",
+    "registrationNo": "PV-209453",
+    "taxNo": "TIN-100208097",
+    "description": "Fresh fruit and vegetable supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Polonnaruwa Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0272242828",
+        "address": "No. 167, Batticaloa Road, Polonnaruwa",
+        "coordinates": "7.940300, 81.018800",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Malith Senanayake",
+      "phone": "0722323028",
+      "email": "malith.senanayake.069.updated@example.com",
+      "address": "No. 172, Batticaloa Road, Polonnaruwa",
+      "description": "Updated fresh fruit and vegetable supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0273317044",
+        "address": "No. 177, Batticaloa Road, Polonnaruwa",
+        "coordinates": "7.941221, 81.019721"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_070",
+    "supplierCode": "SUP-LK-070",
+    "supplierName": "Highland Fresh Foods (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Sanjaya Ranasinghe",
+    "phone": "0781546411",
+    "email": "sanjaya.ranasinghe.070@example.com",
+    "address": "No. 181, Bandarawela Road, Badulla",
+    "registrationNo": "PV-209590",
+    "taxNo": "TIN-100208210",
+    "description": "Fresh fruit and vegetable supplier",
+    "active": false,
+    "locations": [
+      {
+        "facilityName": "Badulla Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0552246399",
+        "address": "No. 186, Bandarawela Road, Badulla",
+        "coordinates": "6.993400, 81.055000",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Gayan Ekanayake",
+      "phone": "0742329249",
+      "email": "gayan.ekanayake.070.updated@example.com",
+      "address": "No. 191, Bandarawela Road, Badulla",
+      "description": "Updated fresh fruit and vegetable supplier",
+      "active": true,
+      "location": {
+        "phoneNumber": "0553323177",
+        "address": "No. 196, Bandarawela Road, Badulla",
+        "coordinates": "6.994321, 81.055921"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_071",
+    "supplierCode": "SUP-LK-071",
+    "supplierName": "Golden Grain Rice Mills (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Anushka Karunaratne",
+    "phone": "0711554330",
+    "email": "anushka.karunaratne.071@example.com",
+    "address": "No. 10, Wellawaya Road, Monaragala",
+    "registrationNo": "PV-209727",
+    "taxNo": "TIN-100208323",
+    "description": "Rice and grain supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Monaragala Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0552249970",
+        "address": "No. 15, Wellawaya Road, Monaragala",
+        "coordinates": "6.872800, 81.350700",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Janaka Rajapaksha",
+      "phone": "0752335470",
+      "email": "janaka.rajapaksha.071.updated@example.com",
+      "address": "No. 20, Wellawaya Road, Monaragala",
+      "description": "Updated rice and grain supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0553329310",
+        "address": "No. 25, Wellawaya Road, Monaragala",
+        "coordinates": "6.873721, 81.351621"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_072",
+    "supplierCode": "SUP-LK-072",
+    "supplierName": "Sunrise Rice Mills (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Dilshan Abeysekara",
+    "phone": "0721562249",
+    "email": "dilshan.abeysekara.072@example.com",
+    "address": "No. 29, Panadura Road, Ratnapura",
+    "registrationNo": "PV-209864",
+    "taxNo": "TIN-100208436",
+    "description": "Rice and grain supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Ratnapura Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0452253541",
+        "address": "No. 34, Panadura Road, Ratnapura",
+        "coordinates": "6.682800, 80.399200",
+        "status": true
+      },
+      {
+        "facilityName": "Kalutara Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0343294863",
+        "address": "No. 50, Galle Road, Kalutara South",
+        "coordinates": "6.585400, 79.960700",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Kavindu Madushanka",
+      "phone": "0762341691",
+      "email": "kavindu.madushanka.072.updated@example.com",
+      "address": "No. 39, Panadura Road, Ratnapura",
+      "description": "Updated rice and grain supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0453335443",
+        "address": "No. 44, Panadura Road, Ratnapura",
+        "coordinates": "6.683721, 80.400121"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_073",
+    "supplierCode": "SUP-LK-073",
+    "supplierName": "Evergreen Dairy Supplies (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Harsha Weerasinghe",
+    "phone": "0741570168",
+    "email": "harsha.weerasinghe.073@example.com",
+    "address": "No. 48, Colombo-Kandy Road, Kegalle",
+    "registrationNo": "PV-210001",
+    "taxNo": "TIN-100208549",
+    "description": "Dairy products and ingredients supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Kegalle Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0352257112",
+        "address": "No. 53, Colombo-Kandy Road, Kegalle",
+        "coordinates": "7.251300, 80.346400",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Asanka Fernando",
+      "phone": "0772347912",
+      "email": "asanka.fernando.073.updated@example.com",
+      "address": "No. 58, Colombo-Kandy Road, Kegalle",
+      "description": "Updated dairy products and ingredients supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0353341576",
+        "address": "No. 63, Colombo-Kandy Road, Kegalle",
+        "coordinates": "7.252221, 80.347321"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_074",
+    "supplierCode": "SUP-LK-074",
+    "supplierName": "NatureFresh Dairy Supplies (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Roshan Priyadarshana",
+    "phone": "0751578087",
+    "email": "roshan.priyadarshana.074@example.com",
+    "address": "No. 67, Matale Road, Dambulla",
+    "registrationNo": "PV-210138",
+    "taxNo": "TIN-100208662",
+    "description": "Dairy products and ingredients supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Dambulla Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0662260683",
+        "address": "No. 72, Matale Road, Dambulla",
+        "coordinates": "7.874200, 80.651100",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Nadeesha Jayasinghe",
+      "phone": "0782354133",
+      "email": "nadeesha.jayasinghe.074.updated@example.com",
+      "address": "No. 77, Matale Road, Dambulla",
+      "description": "Updated dairy products and ingredients supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0663347709",
+        "address": "No. 82, Matale Road, Dambulla",
+        "coordinates": "7.875121, 80.652021"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_075",
+    "supplierCode": "SUP-LK-075",
+    "supplierName": "Rural Roots Herbal Products (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Supun Silva",
+    "phone": "0761586006",
+    "email": "supun.silva.075@example.com",
+    "address": "No. 86, Nonagama Road, Embilipitiya",
+    "registrationNo": "PV-210275",
+    "taxNo": "TIN-100208775",
+    "description": "Herbs and natural products supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Embilipitiya Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0472264254",
+        "address": "No. 91, Nonagama Road, Embilipitiya",
+        "coordinates": "6.343900, 80.848900",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Ishara Ranasinghe",
+      "phone": "0712360354",
+      "email": "ishara.ranasinghe.075.updated@example.com",
+      "address": "No. 96, Nonagama Road, Embilipitiya",
+      "description": "Updated herbs and natural products supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0473353842",
+        "address": "No. 101, Nonagama Road, Embilipitiya",
+        "coordinates": "6.344821, 80.849821"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_076",
+    "supplierCode": "SUP-LK-076",
+    "supplierName": "Southern Herbal Products (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Malith Wijesinghe",
+    "phone": "0771593925",
+    "email": "malith.wijesinghe.076@example.com",
+    "address": "No. 105, Union Place, Colombo 02",
+    "registrationNo": "PV-210412",
+    "taxNo": "TIN-100208888",
+    "description": "Herbs and natural products supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Colombo Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0112267825",
+        "address": "No. 110, Union Place, Colombo 02",
+        "coordinates": "6.927079, 79.861244",
+        "status": true
+      },
+      {
+        "facilityName": "Galle Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0913311475",
+        "address": "No. 126, Matara Road, Galle",
+        "coordinates": "6.032900, 80.216800",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Sachini Karunaratne",
+      "phone": "0722366575",
+      "email": "sachini.karunaratne.076.updated@example.com",
+      "address": "No. 115, Union Place, Colombo 02",
+      "description": "Updated herbs and natural products supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0113359975",
+        "address": "No. 120, Union Place, Colombo 02",
+        "coordinates": "6.928000, 79.862165"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_077",
+    "supplierCode": "SUP-LK-077",
+    "supplierName": "Northern Food Ingredients (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Gayan Herath",
+    "phone": "0781601844",
+    "email": "gayan.herath.077@example.com",
+    "address": "No. 124, Kandy Road, Kadawatha",
+    "registrationNo": "PV-210549",
+    "taxNo": "TIN-100209001",
+    "description": "Food ingredients and additives supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Kadawatha Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0112271396",
+        "address": "No. 129, Kandy Road, Kadawatha",
+        "coordinates": "7.001289, 79.950142",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Thilini Abeysekara",
+      "phone": "0742372796",
+      "email": "thilini.abeysekara.077.updated@example.com",
+      "address": "No. 134, Kandy Road, Kadawatha",
+      "description": "Updated food ingredients and additives supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0113366108",
+        "address": "No. 139, Kandy Road, Kadawatha",
+        "coordinates": "7.002210, 79.951063"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_078",
+    "supplierCode": "SUP-LK-078",
+    "supplierName": "Eastern Food Ingredients (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Janaka Dissanayake",
+    "phone": "0711609763",
+    "email": "janaka.dissanayake.078@example.com",
+    "address": "No. 143, Chilaw Road, Negombo",
+    "registrationNo": "PV-210686",
+    "taxNo": "TIN-100209114",
+    "description": "Food ingredients and additives supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Negombo Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0312274967",
+        "address": "No. 148, Chilaw Road, Negombo",
+        "coordinates": "7.208300, 79.835800",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Dinusha Weerasinghe",
+      "phone": "0752379017",
+      "email": "dinusha.weerasinghe.078.updated@example.com",
+      "address": "No. 153, Chilaw Road, Negombo",
+      "description": "Updated food ingredients and additives supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0313372241",
+        "address": "No. 158, Chilaw Road, Negombo",
+        "coordinates": "7.209221, 79.836721"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_079",
+    "supplierCode": "SUP-LK-079",
+    "supplierName": "Central Packaging Solutions (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Kavindu Samarasinghe",
+    "phone": "0721617682",
+    "email": "kavindu.samarasinghe.079@example.com",
+    "address": "No. 162, Galle Road, Kalutara South",
+    "registrationNo": "PV-210823",
+    "taxNo": "TIN-100209227",
+    "description": "Food-grade packaging materials supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Kalutara Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0342278538",
+        "address": "No. 167, Galle Road, Kalutara South",
+        "coordinates": "6.585400, 79.960700",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Shalini Priyadarshana",
+      "phone": "0762385238",
+      "email": "shalini.priyadarshana.079.updated@example.com",
+      "address": "No. 172, Galle Road, Kalutara South",
+      "description": "Updated food-grade packaging materials supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0343378374",
+        "address": "No. 177, Galle Road, Kalutara South",
+        "coordinates": "6.586321, 79.961621"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_080",
+    "supplierCode": "SUP-LK-080",
+    "supplierName": "Uva Packaging Solutions (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Asanka Pathirana",
+    "phone": "0741625601",
+    "email": "asanka.pathirana.080@example.com",
+    "address": "No. 181, Peradeniya Road, Kandy",
+    "registrationNo": "PV-210960",
+    "taxNo": "TIN-100209340",
+    "description": "Food-grade packaging materials supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Kandy Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0812282109",
+        "address": "No. 186, Peradeniya Road, Kandy",
+        "coordinates": "7.290600, 80.633700",
+        "status": true
+      },
+      {
+        "facilityName": "Vavuniya Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0243328087",
+        "address": "No. 202, Kandy Road, Vavuniya",
+        "coordinates": "8.751400, 80.497100",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Pavithra Silva",
+      "phone": "0772391459",
+      "email": "pavithra.silva.080.updated@example.com",
+      "address": "No. 191, Peradeniya Road, Kandy",
+      "description": "Updated food-grade packaging materials supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0813384507",
+        "address": "No. 196, Peradeniya Road, Kandy",
+        "coordinates": "7.291521, 80.634621"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_081",
+    "supplierCode": "SUP-LK-081",
+    "supplierName": "Lanka Agri Produce (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Nadeesha Perera",
+    "phone": "0751633520",
+    "email": "nadeesha.perera.081@example.com",
+    "address": "No. 10, Dambulla Road, Matale",
+    "registrationNo": "PV-211097",
+    "taxNo": "TIN-100209453",
+    "description": "Agricultural produce supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Matale Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0662285680",
+        "address": "No. 15, Dambulla Road, Matale",
+        "coordinates": "7.467500, 80.623400",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Nirosha Wijesinghe",
+      "phone": "0782397680",
+      "email": "nirosha.wijesinghe.081.updated@example.com",
+      "address": "No. 20, Dambulla Road, Matale",
+      "description": "Updated agricultural produce supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0663390640",
+        "address": "No. 25, Dambulla Road, Matale",
+        "coordinates": "7.468421, 80.624321"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_082",
+    "supplierCode": "SUP-LK-082",
+    "supplierName": "Ceylon Agri Produce (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Ishara Bandara",
+    "phone": "0761641439",
+    "email": "ishara.bandara.082@example.com",
+    "address": "No. 29, Kandy Road, Nuwara Eliya",
+    "registrationNo": "PV-211234",
+    "taxNo": "TIN-100209566",
+    "description": "Agricultural produce supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Nuwara Eliya Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0522289251",
+        "address": "No. 34, Kandy Road, Nuwara Eliya",
+        "coordinates": "6.949700, 80.789100",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Gayani Herath",
+      "phone": "0712403901",
+      "email": "gayani.herath.082.updated@example.com",
+      "address": "No. 39, Kandy Road, Nuwara Eliya",
+      "description": "Updated agricultural produce supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0523396773",
+        "address": "No. 44, Kandy Road, Nuwara Eliya",
+        "coordinates": "6.950621, 80.790021"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_083",
+    "supplierCode": "SUP-LK-083",
+    "supplierName": "Serendib Spice Traders (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Sachini Gunawardena",
+    "phone": "0771649358",
+    "email": "sachini.gunawardena.083@example.com",
+    "address": "No. 48, Matara Road, Galle",
+    "registrationNo": "PV-211371",
+    "taxNo": "TIN-100209679",
+    "description": "Spices and seasoning supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Galle Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0912292822",
+        "address": "No. 53, Matara Road, Galle",
+        "coordinates": "6.032900, 80.216800",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Imesha Dissanayake",
+      "phone": "0722410122",
+      "email": "imesha.dissanayake.083.updated@example.com",
+      "address": "No. 58, Matara Road, Galle",
+      "description": "Updated spices and seasoning supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0913402906",
+        "address": "No. 63, Matara Road, Galle",
+        "coordinates": "6.033821, 80.217721"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_084",
+    "supplierCode": "SUP-LK-084",
+    "supplierName": "Lakpura Spice Traders (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Thilini Senanayake",
+    "phone": "0781657277",
+    "email": "thilini.senanayake.084@example.com",
+    "address": "No. 67, Akuressa Road, Matara",
+    "registrationNo": "PV-211508",
+    "taxNo": "TIN-100209792",
+    "description": "Spices and seasoning supplier",
+    "active": false,
+    "locations": [
+      {
+        "facilityName": "Matara Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0412296393",
+        "address": "No. 72, Akuressa Road, Matara",
+        "coordinates": "5.954900, 80.555000",
+        "status": true
+      },
+      {
+        "facilityName": "Kurunegala Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0373344699",
+        "address": "No. 88, Dambulla Road, Kurunegala",
+        "coordinates": "7.486300, 80.362300",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Nimal Samarasinghe",
+      "phone": "0742416343",
+      "email": "nimal.samarasinghe.084.updated@example.com",
+      "address": "No. 77, Akuressa Road, Matara",
+      "description": "Updated spices and seasoning supplier",
+      "active": true,
+      "location": {
+        "phoneNumber": "0413409039",
+        "address": "No. 82, Akuressa Road, Matara",
+        "coordinates": "5.955821, 80.555921"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_085",
+    "supplierCode": "SUP-LK-085",
+    "supplierName": "Greenfield Tea Exports (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Dinusha Ekanayake",
+    "phone": "0711665196",
+    "email": "dinusha.ekanayake.085@example.com",
+    "address": "No. 86, Tissamaharama Road, Hambantota",
+    "registrationNo": "PV-211645",
+    "taxNo": "TIN-100209905",
+    "description": "Tea and value-added tea supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Hambantota Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0472299964",
+        "address": "No. 91, Tissamaharama Road, Hambantota",
+        "coordinates": "6.124100, 81.118500",
+        "status": false
+      }
+    ],
+    "updates": {
+      "contactPerson": "Kasun Pathirana",
+      "phone": "0752422564",
+      "email": "kasun.pathirana.085.updated@example.com",
+      "address": "No. 96, Tissamaharama Road, Hambantota",
+      "description": "Updated tea and value-added tea supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0473415172",
+        "address": "No. 101, Tissamaharama Road, Hambantota",
+        "coordinates": "6.125021, 81.119421"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_086",
+    "supplierCode": "SUP-LK-086",
+    "supplierName": "AgroLink Tea Exports (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Shalini Rajapaksha",
+    "phone": "0721673115",
+    "email": "shalini.rajapaksha.086@example.com",
+    "address": "No. 105, Kankesanthurai Road, Jaffna",
+    "registrationNo": "PV-211782",
+    "taxNo": "TIN-100210018",
+    "description": "Tea and value-added tea supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Jaffna Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0212303535",
+        "address": "No. 110, Kankesanthurai Road, Jaffna",
+        "coordinates": "9.661500, 80.025500",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Tharindu Perera",
+      "phone": "0762428785",
+      "email": "tharindu.perera.086.updated@example.com",
+      "address": "No. 115, Kankesanthurai Road, Jaffna",
+      "description": "Updated tea and value-added tea supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0213421305",
+        "address": "No. 120, Kankesanthurai Road, Jaffna",
+        "coordinates": "9.662421, 80.026421"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_087",
+    "supplierCode": "SUP-LK-087",
+    "supplierName": "Harvest Coconut Products (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Pavithra Madushanka",
+    "phone": "0741681034",
+    "email": "pavithra.madushanka.087@example.com",
+    "address": "No. 124, Kandy Road, Vavuniya",
+    "registrationNo": "PV-211919",
+    "taxNo": "TIN-100210131",
+    "description": "Coconut and coconut-based products supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Vavuniya Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0242307106",
+        "address": "No. 129, Kandy Road, Vavuniya",
+        "coordinates": "8.751400, 80.497100",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Dinesh Bandara",
+      "phone": "0772435006",
+      "email": "dinesh.bandara.087.updated@example.com",
+      "address": "No. 134, Kandy Road, Vavuniya",
+      "description": "Updated coconut and coconut-based products supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0243427438",
+        "address": "No. 139, Kandy Road, Vavuniya",
+        "coordinates": "8.752321, 80.498021"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_088",
+    "supplierCode": "SUP-LK-088",
+    "supplierName": "Island Coconut Products (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Nirosha Fernando",
+    "phone": "0751688953",
+    "email": "nirosha.fernando.088@example.com",
+    "address": "No. 143, Trincomalee Road, Batticaloa",
+    "registrationNo": "PV-212056",
+    "taxNo": "TIN-100210244",
+    "description": "Coconut and coconut-based products supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Batticaloa Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0652310677",
+        "address": "No. 148, Trincomalee Road, Batticaloa",
+        "coordinates": "7.717000, 81.700000",
+        "status": true
+      },
+      {
+        "facilityName": "Badulla Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0553361311",
+        "address": "No. 164, Bandarawela Road, Badulla",
+        "coordinates": "6.993400, 81.055000",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Ruwan Gunawardena",
+      "phone": "0782441227",
+      "email": "ruwan.gunawardena.088.updated@example.com",
+      "address": "No. 153, Trincomalee Road, Batticaloa",
+      "description": "Updated coconut and coconut-based products supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0653433571",
+        "address": "No. 158, Trincomalee Road, Batticaloa",
+        "coordinates": "7.717921, 81.700921"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_089",
+    "supplierCode": "SUP-LK-089",
+    "supplierName": "Tropical Fresh Foods (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Gayani Jayasinghe",
+    "phone": "0761696872",
+    "email": "gayani.jayasinghe.089@example.com",
+    "address": "No. 162, D. S. Senanayake Road, Ampara",
+    "registrationNo": "PV-212193",
+    "taxNo": "TIN-100210357",
+    "description": "Fresh fruit and vegetable supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Ampara Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0632314248",
+        "address": "No. 167, D. S. Senanayake Road, Ampara",
+        "coordinates": "7.291200, 81.672400",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Chaminda Senanayake",
+      "phone": "0712447448",
+      "email": "chaminda.senanayake.089.updated@example.com",
+      "address": "No. 172, D. S. Senanayake Road, Ampara",
+      "description": "Updated fresh fruit and vegetable supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0633439704",
+        "address": "No. 177, D. S. Senanayake Road, Ampara",
+        "coordinates": "7.292121, 81.673321"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_090",
+    "supplierCode": "SUP-LK-090",
+    "supplierName": "Highland Fresh Foods (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Imesha Ranasinghe",
+    "phone": "0771704791",
+    "email": "imesha.ranasinghe.090@example.com",
+    "address": "No. 181, Kandy Road, Trincomalee",
+    "registrationNo": "PV-212330",
+    "taxNo": "TIN-100210470",
+    "description": "Fresh fruit and vegetable supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Trincomalee Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0262317819",
+        "address": "No. 186, Kandy Road, Trincomalee",
+        "coordinates": "8.587400, 81.215200",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Isuru Ekanayake",
+      "phone": "0722453669",
+      "email": "isuru.ekanayake.090.updated@example.com",
+      "address": "No. 191, Kandy Road, Trincomalee",
+      "description": "Updated fresh fruit and vegetable supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0263445837",
+        "address": "No. 196, Kandy Road, Trincomalee",
+        "coordinates": "8.588321, 81.216121"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_091",
+    "supplierCode": "SUP-LK-091",
+    "supplierName": "Golden Grain Rice Mills (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Nimal Karunaratne",
+    "phone": "0781712710",
+    "email": "nimal.karunaratne.091@example.com",
+    "address": "No. 10, Dambulla Road, Kurunegala",
+    "registrationNo": "PV-212467",
+    "taxNo": "TIN-100210583",
+    "description": "Rice and grain supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Kurunegala Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0372321390",
+        "address": "No. 15, Dambulla Road, Kurunegala",
+        "coordinates": "7.486300, 80.362300",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Lahiru Rajapaksha",
+      "phone": "0742459890",
+      "email": "lahiru.rajapaksha.091.updated@example.com",
+      "address": "No. 20, Dambulla Road, Kurunegala",
+      "description": "Updated rice and grain supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0373451970",
+        "address": "No. 25, Dambulla Road, Kurunegala",
+        "coordinates": "7.487221, 80.363221"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_092",
+    "supplierCode": "SUP-LK-092",
+    "supplierName": "Sunrise Rice Mills (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Kasun Abeysekara",
+    "phone": "0711720629",
+    "email": "kasun.abeysekara.092@example.com",
+    "address": "No. 29, Anuradhapura Road, Puttalam",
+    "registrationNo": "PV-212604",
+    "taxNo": "TIN-100210696",
+    "description": "Rice and grain supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Puttalam Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0322324961",
+        "address": "No. 34, Anuradhapura Road, Puttalam",
+        "coordinates": "8.040800, 79.839400",
+        "status": true
+      },
+      {
+        "facilityName": "Dambulla Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0663377923",
+        "address": "No. 50, Matale Road, Dambulla",
+        "coordinates": "7.874200, 80.651100",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Pradeep Madushanka",
+      "phone": "0752466111",
+      "email": "pradeep.madushanka.092.updated@example.com",
+      "address": "No. 39, Anuradhapura Road, Puttalam",
+      "description": "Updated rice and grain supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0323458103",
+        "address": "No. 44, Anuradhapura Road, Puttalam",
+        "coordinates": "8.041721, 79.840321"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_093",
+    "supplierCode": "SUP-LK-093",
+    "supplierName": "Evergreen Dairy Supplies (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Tharindu Weerasinghe",
+    "phone": "0721728548",
+    "email": "tharindu.weerasinghe.093@example.com",
+    "address": "No. 48, New Town Road, Anuradhapura",
+    "registrationNo": "PV-212741",
+    "taxNo": "TIN-100210809",
+    "description": "Dairy products and ingredients supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Anuradhapura Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0252328532",
+        "address": "No. 53, New Town Road, Anuradhapura",
+        "coordinates": "8.311400, 80.403700",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Sanjaya Fernando",
+      "phone": "0762472332",
+      "email": "sanjaya.fernando.093.updated@example.com",
+      "address": "No. 58, New Town Road, Anuradhapura",
+      "description": "Updated dairy products and ingredients supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0253464236",
+        "address": "No. 63, New Town Road, Anuradhapura",
+        "coordinates": "8.312321, 80.404621"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_094",
+    "supplierCode": "SUP-LK-094",
+    "supplierName": "NatureFresh Dairy Supplies (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Dinesh Priyadarshana",
+    "phone": "0741736467",
+    "email": "dinesh.priyadarshana.094@example.com",
+    "address": "No. 67, Batticaloa Road, Polonnaruwa",
+    "registrationNo": "PV-212878",
+    "taxNo": "TIN-100210922",
+    "description": "Dairy products and ingredients supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Polonnaruwa Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0272332103",
+        "address": "No. 72, Batticaloa Road, Polonnaruwa",
+        "coordinates": "7.940300, 81.018800",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Anushka Jayasinghe",
+      "phone": "0772478553",
+      "email": "anushka.jayasinghe.094.updated@example.com",
+      "address": "No. 77, Batticaloa Road, Polonnaruwa",
+      "description": "Updated dairy products and ingredients supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0273470369",
+        "address": "No. 82, Batticaloa Road, Polonnaruwa",
+        "coordinates": "7.941221, 81.019721"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_095",
+    "supplierCode": "SUP-LK-095",
+    "supplierName": "Rural Roots Herbal Products (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Ruwan Silva",
+    "phone": "0751744386",
+    "email": "ruwan.silva.095@example.com",
+    "address": "No. 86, Bandarawela Road, Badulla",
+    "registrationNo": "PV-213015",
+    "taxNo": "TIN-100211035",
+    "description": "Herbs and natural products supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Badulla Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0552335674",
+        "address": "No. 91, Bandarawela Road, Badulla",
+        "coordinates": "6.993400, 81.055000",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Dilshan Ranasinghe",
+      "phone": "0782484774",
+      "email": "dilshan.ranasinghe.095.updated@example.com",
+      "address": "No. 96, Bandarawela Road, Badulla",
+      "description": "Updated herbs and natural products supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0553476502",
+        "address": "No. 101, Bandarawela Road, Badulla",
+        "coordinates": "6.994321, 81.055921"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_096",
+    "supplierCode": "SUP-LK-096",
+    "supplierName": "Southern Herbal Products (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Chaminda Wijesinghe",
+    "phone": "0761752305",
+    "email": "chaminda.wijesinghe.096@example.com",
+    "address": "No. 105, Wellawaya Road, Monaragala",
+    "registrationNo": "PV-213152",
+    "taxNo": "TIN-100211148",
+    "description": "Herbs and natural products supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Monaragala Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0552339245",
+        "address": "No. 110, Wellawaya Road, Monaragala",
+        "coordinates": "6.872800, 81.350700",
+        "status": true
+      },
+      {
+        "facilityName": "Negombo Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0313394535",
+        "address": "No. 126, Chilaw Road, Negombo",
+        "coordinates": "7.208300, 79.835800",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Harsha Karunaratne",
+      "phone": "0712490995",
+      "email": "harsha.karunaratne.096.updated@example.com",
+      "address": "No. 115, Wellawaya Road, Monaragala",
+      "description": "Updated herbs and natural products supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0553482635",
+        "address": "No. 120, Wellawaya Road, Monaragala",
+        "coordinates": "6.873721, 81.351621"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_097",
+    "supplierCode": "SUP-LK-097",
+    "supplierName": "Northern Food Ingredients (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Isuru Herath",
+    "phone": "0771760224",
+    "email": "isuru.herath.097@example.com",
+    "address": "No. 124, Panadura Road, Ratnapura",
+    "registrationNo": "PV-213289",
+    "taxNo": "TIN-100211261",
+    "description": "Food ingredients and additives supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Ratnapura Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0452342816",
+        "address": "No. 129, Panadura Road, Ratnapura",
+        "coordinates": "6.682800, 80.399200",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Roshan Abeysekara",
+      "phone": "0722497216",
+      "email": "roshan.abeysekara.097.updated@example.com",
+      "address": "No. 134, Panadura Road, Ratnapura",
+      "description": "Updated food ingredients and additives supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0453488768",
+        "address": "No. 139, Panadura Road, Ratnapura",
+        "coordinates": "6.683721, 80.400121"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_098",
+    "supplierCode": "SUP-LK-098",
+    "supplierName": "Eastern Food Ingredients (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Lahiru Dissanayake",
+    "phone": "0781768143",
+    "email": "lahiru.dissanayake.098@example.com",
+    "address": "No. 143, Colombo-Kandy Road, Kegalle",
+    "registrationNo": "PV-213426",
+    "taxNo": "TIN-100211374",
+    "description": "Food ingredients and additives supplier",
+    "active": false,
+    "locations": [
+      {
+        "facilityName": "Kegalle Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0352346387",
+        "address": "No. 148, Colombo-Kandy Road, Kegalle",
+        "coordinates": "7.251300, 80.346400",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Supun Weerasinghe",
+      "phone": "0742503437",
+      "email": "supun.weerasinghe.098.updated@example.com",
+      "address": "No. 153, Colombo-Kandy Road, Kegalle",
+      "description": "Updated food ingredients and additives supplier",
+      "active": true,
+      "location": {
+        "phoneNumber": "0353494901",
+        "address": "No. 158, Colombo-Kandy Road, Kegalle",
+        "coordinates": "7.252221, 80.347321"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_099",
+    "supplierCode": "SUP-LK-099",
+    "supplierName": "Central Packaging Solutions (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Pradeep Samarasinghe",
+    "phone": "0711776062",
+    "email": "pradeep.samarasinghe.099@example.com",
+    "address": "No. 162, Matale Road, Dambulla",
+    "registrationNo": "PV-213563",
+    "taxNo": "TIN-100211487",
+    "description": "Food-grade packaging materials supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Dambulla Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0662349958",
+        "address": "No. 167, Matale Road, Dambulla",
+        "coordinates": "7.874200, 80.651100",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Malith Priyadarshana",
+      "phone": "0752509658",
+      "email": "malith.priyadarshana.099.updated@example.com",
+      "address": "No. 172, Matale Road, Dambulla",
+      "description": "Updated food-grade packaging materials supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0663501034",
+        "address": "No. 177, Matale Road, Dambulla",
+        "coordinates": "7.875121, 80.652021"
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_100",
+    "supplierCode": "SUP-LK-100",
+    "supplierName": "Uva Packaging Solutions (Pvt) Ltd",
+    "country": "Sri Lanka",
+    "contactPerson": "Sanjaya Pathirana",
+    "phone": "0721783981",
+    "email": "sanjaya.pathirana.100@example.com",
+    "address": "No. 181, Nonagama Road, Embilipitiya",
+    "registrationNo": "PV-213700",
+    "taxNo": "TIN-100211600",
+    "description": "Food-grade packaging materials supplier",
+    "active": true,
+    "locations": [
+      {
+        "facilityName": "Embilipitiya Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0472353529",
+        "address": "No. 186, Nonagama Road, Embilipitiya",
+        "coordinates": "6.343900, 80.848900",
+        "status": true
+      },
+      {
+        "facilityName": "Nuwara Eliya Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0523411147",
+        "address": "No. 202, Kandy Road, Nuwara Eliya",
+        "coordinates": "6.949700, 80.789100",
+        "status": true
+      }
+    ],
+    "updates": {
+      "contactPerson": "Gayan Silva",
+      "phone": "0762515879",
+      "email": "gayan.silva.100.updated@example.com",
+      "address": "No. 191, Nonagama Road, Embilipitiya",
+      "description": "Updated food-grade packaging materials supplier",
+      "active": false,
+      "location": {
+        "phoneNumber": "0473507167",
+        "address": "No. 196, Nonagama Road, Embilipitiya",
+        "coordinates": "6.344821, 80.849821"
+      }
+    }
+  }
+]

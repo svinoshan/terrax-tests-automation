@@ -1,0 +1,1302 @@
+[
+  {
+    "testCaseId": "LOCATION_001",
+    "facilityName": "Colombo North Production Factory",
+    "locationType": "FACTORY",
+    "phoneNumber": "0112000000",
+    "address": "No. 12, Union Place, Colombo 02",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0112900000",
+      "address": "No. 18, Union Place, Colombo 02",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_002",
+    "facilityName": "Kadawatha North Regional Warehouse",
+    "locationType": "WAREHOUSE",
+    "phoneNumber": "0112007919",
+    "address": "No. 29, Kandy Road, Kadawatha",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0112906151",
+      "address": "No. 35, Kandy Road, Kadawatha",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_003",
+    "facilityName": "Negombo North Collection Centre",
+    "locationType": "COLLECTION_CENTER",
+    "phoneNumber": "0312015838",
+    "address": "No. 46, Chilaw Road, Negombo",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0312912302",
+      "address": "No. 52, Chilaw Road, Negombo",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_004",
+    "facilityName": "Kalutara North Drying Centre",
+    "locationType": "DRYING_CENTER",
+    "phoneNumber": "0342023757",
+    "address": "No. 63, Galle Road, Kalutara South",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0342918453",
+      "address": "No. 69, Galle Road, Kalutara South",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_005",
+    "facilityName": "Kandy North Processing Centre",
+    "locationType": "PROCESSING_CENTER",
+    "phoneNumber": "0812031676",
+    "address": "No. 80, Peradeniya Road, Kandy",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0812924604",
+      "address": "No. 86, Peradeniya Road, Kandy",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_006",
+    "facilityName": "Matale North Production Factory",
+    "locationType": "FACTORY",
+    "phoneNumber": "0662039595",
+    "address": "No. 97, Dambulla Road, Matale",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0662930755",
+      "address": "No. 103, Dambulla Road, Matale",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_007",
+    "facilityName": "Nuwara Eliya North Regional Warehouse",
+    "locationType": "WAREHOUSE",
+    "phoneNumber": "0522047514",
+    "address": "No. 114, Kandy Road, Nuwara Eliya",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0522936906",
+      "address": "No. 120, Kandy Road, Nuwara Eliya",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_008",
+    "facilityName": "Galle North Collection Centre",
+    "locationType": "COLLECTION_CENTER",
+    "phoneNumber": "0912055433",
+    "address": "No. 131, Matara Road, Galle",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0912943057",
+      "address": "No. 137, Matara Road, Galle",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_009",
+    "facilityName": "Matara North Drying Centre",
+    "locationType": "DRYING_CENTER",
+    "phoneNumber": "0412063352",
+    "address": "No. 148, Akuressa Road, Matara",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0412949208",
+      "address": "No. 154, Akuressa Road, Matara",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_010",
+    "facilityName": "Hambantota North Processing Centre",
+    "locationType": "PROCESSING_CENTER",
+    "phoneNumber": "0472071271",
+    "address": "No. 165, Tissamaharama Road, Hambantota",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0472955359",
+      "address": "No. 171, Tissamaharama Road, Hambantota",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_011",
+    "facilityName": "Jaffna North Production Factory",
+    "locationType": "FACTORY",
+    "phoneNumber": "0212079190",
+    "address": "No. 182, Kankesanthurai Road, Jaffna",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0212961510",
+      "address": "No. 188, Kankesanthurai Road, Jaffna",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_012",
+    "facilityName": "Vavuniya North Regional Warehouse",
+    "locationType": "WAREHOUSE",
+    "phoneNumber": "0242087109",
+    "address": "No. 199, Kandy Road, Vavuniya",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0242967661",
+      "address": "No. 205, Kandy Road, Vavuniya",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_013",
+    "facilityName": "Batticaloa North Collection Centre",
+    "locationType": "COLLECTION_CENTER",
+    "phoneNumber": "0652095028",
+    "address": "No. 28, Trincomalee Road, Batticaloa",
+    "status": false,
+    "updates": {
+      "phoneNumber": "0652973812",
+      "address": "No. 34, Trincomalee Road, Batticaloa",
+      "status": true
+    }
+  },
+  {
+    "testCaseId": "LOCATION_014",
+    "facilityName": "Ampara North Drying Centre",
+    "locationType": "DRYING_CENTER",
+    "phoneNumber": "0632102947",
+    "address": "No. 45, D. S. Senanayake Road, Ampara",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0632979963",
+      "address": "No. 51, D. S. Senanayake Road, Ampara",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_015",
+    "facilityName": "Trincomalee North Processing Centre",
+    "locationType": "PROCESSING_CENTER",
+    "phoneNumber": "0262110866",
+    "address": "No. 62, Kandy Road, Trincomalee",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0262986114",
+      "address": "No. 68, Kandy Road, Trincomalee",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_016",
+    "facilityName": "Kurunegala North Production Factory",
+    "locationType": "FACTORY",
+    "phoneNumber": "0372118785",
+    "address": "No. 79, Dambulla Road, Kurunegala",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0372992265",
+      "address": "No. 85, Dambulla Road, Kurunegala",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_017",
+    "facilityName": "Puttalam North Regional Warehouse",
+    "locationType": "WAREHOUSE",
+    "phoneNumber": "0322126704",
+    "address": "No. 96, Anuradhapura Road, Puttalam",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0322998416",
+      "address": "No. 102, Anuradhapura Road, Puttalam",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_018",
+    "facilityName": "Anuradhapura North Collection Centre",
+    "locationType": "COLLECTION_CENTER",
+    "phoneNumber": "0252134623",
+    "address": "No. 113, New Town Road, Anuradhapura",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0253004567",
+      "address": "No. 119, New Town Road, Anuradhapura",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_019",
+    "facilityName": "Polonnaruwa North Drying Centre",
+    "locationType": "DRYING_CENTER",
+    "phoneNumber": "0272142542",
+    "address": "No. 130, Batticaloa Road, Polonnaruwa",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0273010718",
+      "address": "No. 136, Batticaloa Road, Polonnaruwa",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_020",
+    "facilityName": "Badulla North Processing Centre",
+    "locationType": "PROCESSING_CENTER",
+    "phoneNumber": "0552150461",
+    "address": "No. 147, Bandarawela Road, Badulla",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0553016869",
+      "address": "No. 153, Bandarawela Road, Badulla",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_021",
+    "facilityName": "Monaragala North Production Factory",
+    "locationType": "FACTORY",
+    "phoneNumber": "0552158380",
+    "address": "No. 164, Wellawaya Road, Monaragala",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0553023020",
+      "address": "No. 170, Wellawaya Road, Monaragala",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_022",
+    "facilityName": "Ratnapura North Regional Warehouse",
+    "locationType": "WAREHOUSE",
+    "phoneNumber": "0452166299",
+    "address": "No. 181, Panadura Road, Ratnapura",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0453029171",
+      "address": "No. 187, Panadura Road, Ratnapura",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_023",
+    "facilityName": "Kegalle North Collection Centre",
+    "locationType": "COLLECTION_CENTER",
+    "phoneNumber": "0352174218",
+    "address": "No. 198, Colombo-Kandy Road, Kegalle",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0353035322",
+      "address": "No. 204, Colombo-Kandy Road, Kegalle",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_024",
+    "facilityName": "Dambulla North Drying Centre",
+    "locationType": "DRYING_CENTER",
+    "phoneNumber": "0662182137",
+    "address": "No. 27, Matale Road, Dambulla",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0663041473",
+      "address": "No. 33, Matale Road, Dambulla",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_025",
+    "facilityName": "Embilipitiya North Processing Centre",
+    "locationType": "PROCESSING_CENTER",
+    "phoneNumber": "0472190056",
+    "address": "No. 44, Nonagama Road, Embilipitiya",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0473047624",
+      "address": "No. 50, Nonagama Road, Embilipitiya",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_026",
+    "facilityName": "Colombo South Production Factory",
+    "locationType": "FACTORY",
+    "phoneNumber": "0112197975",
+    "address": "No. 61, Union Place, Colombo 02",
+    "status": false,
+    "updates": {
+      "phoneNumber": "0113053775",
+      "address": "No. 67, Union Place, Colombo 02",
+      "status": true
+    }
+  },
+  {
+    "testCaseId": "LOCATION_027",
+    "facilityName": "Kadawatha South Regional Warehouse",
+    "locationType": "WAREHOUSE",
+    "phoneNumber": "0112205894",
+    "address": "No. 78, Kandy Road, Kadawatha",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0113059926",
+      "address": "No. 84, Kandy Road, Kadawatha",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_028",
+    "facilityName": "Negombo South Collection Centre",
+    "locationType": "COLLECTION_CENTER",
+    "phoneNumber": "0312213813",
+    "address": "No. 95, Chilaw Road, Negombo",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0313066077",
+      "address": "No. 101, Chilaw Road, Negombo",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_029",
+    "facilityName": "Kalutara South Drying Centre",
+    "locationType": "DRYING_CENTER",
+    "phoneNumber": "0342221732",
+    "address": "No. 112, Galle Road, Kalutara South",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0343072228",
+      "address": "No. 118, Galle Road, Kalutara South",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_030",
+    "facilityName": "Kandy South Processing Centre",
+    "locationType": "PROCESSING_CENTER",
+    "phoneNumber": "0812229651",
+    "address": "No. 129, Peradeniya Road, Kandy",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0813078379",
+      "address": "No. 135, Peradeniya Road, Kandy",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_031",
+    "facilityName": "Matale South Production Factory",
+    "locationType": "FACTORY",
+    "phoneNumber": "0662237570",
+    "address": "No. 146, Dambulla Road, Matale",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0663084530",
+      "address": "No. 152, Dambulla Road, Matale",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_032",
+    "facilityName": "Nuwara Eliya South Regional Warehouse",
+    "locationType": "WAREHOUSE",
+    "phoneNumber": "0522245489",
+    "address": "No. 163, Kandy Road, Nuwara Eliya",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0523090681",
+      "address": "No. 169, Kandy Road, Nuwara Eliya",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_033",
+    "facilityName": "Galle South Collection Centre",
+    "locationType": "COLLECTION_CENTER",
+    "phoneNumber": "0912253408",
+    "address": "No. 180, Matara Road, Galle",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0913096832",
+      "address": "No. 186, Matara Road, Galle",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_034",
+    "facilityName": "Matara South Drying Centre",
+    "locationType": "DRYING_CENTER",
+    "phoneNumber": "0412261327",
+    "address": "No. 197, Akuressa Road, Matara",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0413102983",
+      "address": "No. 203, Akuressa Road, Matara",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_035",
+    "facilityName": "Hambantota South Processing Centre",
+    "locationType": "PROCESSING_CENTER",
+    "phoneNumber": "0472269246",
+    "address": "No. 26, Tissamaharama Road, Hambantota",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0473109134",
+      "address": "No. 32, Tissamaharama Road, Hambantota",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_036",
+    "facilityName": "Jaffna South Production Factory",
+    "locationType": "FACTORY",
+    "phoneNumber": "0212277165",
+    "address": "No. 43, Kankesanthurai Road, Jaffna",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0213115285",
+      "address": "No. 49, Kankesanthurai Road, Jaffna",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_037",
+    "facilityName": "Vavuniya South Regional Warehouse",
+    "locationType": "WAREHOUSE",
+    "phoneNumber": "0242285084",
+    "address": "No. 60, Kandy Road, Vavuniya",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0243121436",
+      "address": "No. 66, Kandy Road, Vavuniya",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_038",
+    "facilityName": "Batticaloa South Collection Centre",
+    "locationType": "COLLECTION_CENTER",
+    "phoneNumber": "0652293003",
+    "address": "No. 77, Trincomalee Road, Batticaloa",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0653127587",
+      "address": "No. 83, Trincomalee Road, Batticaloa",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_039",
+    "facilityName": "Ampara South Drying Centre",
+    "locationType": "DRYING_CENTER",
+    "phoneNumber": "0632300922",
+    "address": "No. 94, D. S. Senanayake Road, Ampara",
+    "status": false,
+    "updates": {
+      "phoneNumber": "0633133738",
+      "address": "No. 100, D. S. Senanayake Road, Ampara",
+      "status": true
+    }
+  },
+  {
+    "testCaseId": "LOCATION_040",
+    "facilityName": "Trincomalee South Processing Centre",
+    "locationType": "PROCESSING_CENTER",
+    "phoneNumber": "0262308841",
+    "address": "No. 111, Kandy Road, Trincomalee",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0263139889",
+      "address": "No. 117, Kandy Road, Trincomalee",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_041",
+    "facilityName": "Kurunegala South Production Factory",
+    "locationType": "FACTORY",
+    "phoneNumber": "0372316760",
+    "address": "No. 128, Dambulla Road, Kurunegala",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0373146040",
+      "address": "No. 134, Dambulla Road, Kurunegala",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_042",
+    "facilityName": "Puttalam South Regional Warehouse",
+    "locationType": "WAREHOUSE",
+    "phoneNumber": "0322324679",
+    "address": "No. 145, Anuradhapura Road, Puttalam",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0323152191",
+      "address": "No. 151, Anuradhapura Road, Puttalam",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_043",
+    "facilityName": "Anuradhapura South Collection Centre",
+    "locationType": "COLLECTION_CENTER",
+    "phoneNumber": "0252332598",
+    "address": "No. 162, New Town Road, Anuradhapura",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0253158342",
+      "address": "No. 168, New Town Road, Anuradhapura",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_044",
+    "facilityName": "Polonnaruwa South Drying Centre",
+    "locationType": "DRYING_CENTER",
+    "phoneNumber": "0272340517",
+    "address": "No. 179, Batticaloa Road, Polonnaruwa",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0273164493",
+      "address": "No. 185, Batticaloa Road, Polonnaruwa",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_045",
+    "facilityName": "Badulla South Processing Centre",
+    "locationType": "PROCESSING_CENTER",
+    "phoneNumber": "0552348436",
+    "address": "No. 196, Bandarawela Road, Badulla",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0553170644",
+      "address": "No. 202, Bandarawela Road, Badulla",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_046",
+    "facilityName": "Monaragala South Production Factory",
+    "locationType": "FACTORY",
+    "phoneNumber": "0552356355",
+    "address": "No. 25, Wellawaya Road, Monaragala",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0553176795",
+      "address": "No. 31, Wellawaya Road, Monaragala",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_047",
+    "facilityName": "Ratnapura South Regional Warehouse",
+    "locationType": "WAREHOUSE",
+    "phoneNumber": "0452364274",
+    "address": "No. 42, Panadura Road, Ratnapura",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0453182946",
+      "address": "No. 48, Panadura Road, Ratnapura",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_048",
+    "facilityName": "Kegalle South Collection Centre",
+    "locationType": "COLLECTION_CENTER",
+    "phoneNumber": "0352372193",
+    "address": "No. 59, Colombo-Kandy Road, Kegalle",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0353189097",
+      "address": "No. 65, Colombo-Kandy Road, Kegalle",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_049",
+    "facilityName": "Dambulla South Drying Centre",
+    "locationType": "DRYING_CENTER",
+    "phoneNumber": "0662380112",
+    "address": "No. 76, Matale Road, Dambulla",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0663195248",
+      "address": "No. 82, Matale Road, Dambulla",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_050",
+    "facilityName": "Embilipitiya South Processing Centre",
+    "locationType": "PROCESSING_CENTER",
+    "phoneNumber": "0472388031",
+    "address": "No. 93, Nonagama Road, Embilipitiya",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0473201399",
+      "address": "No. 99, Nonagama Road, Embilipitiya",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_051",
+    "facilityName": "Colombo Central Production Factory",
+    "locationType": "FACTORY",
+    "phoneNumber": "0112395950",
+    "address": "No. 110, Union Place, Colombo 02",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0113207550",
+      "address": "No. 116, Union Place, Colombo 02",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_052",
+    "facilityName": "Kadawatha Central Regional Warehouse",
+    "locationType": "WAREHOUSE",
+    "phoneNumber": "0112403869",
+    "address": "No. 127, Kandy Road, Kadawatha",
+    "status": false,
+    "updates": {
+      "phoneNumber": "0113213701",
+      "address": "No. 133, Kandy Road, Kadawatha",
+      "status": true
+    }
+  },
+  {
+    "testCaseId": "LOCATION_053",
+    "facilityName": "Negombo Central Collection Centre",
+    "locationType": "COLLECTION_CENTER",
+    "phoneNumber": "0312411788",
+    "address": "No. 144, Chilaw Road, Negombo",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0313219852",
+      "address": "No. 150, Chilaw Road, Negombo",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_054",
+    "facilityName": "Kalutara Central Drying Centre",
+    "locationType": "DRYING_CENTER",
+    "phoneNumber": "0342419707",
+    "address": "No. 161, Galle Road, Kalutara South",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0343226003",
+      "address": "No. 167, Galle Road, Kalutara South",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_055",
+    "facilityName": "Kandy Central Processing Centre",
+    "locationType": "PROCESSING_CENTER",
+    "phoneNumber": "0812427626",
+    "address": "No. 178, Peradeniya Road, Kandy",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0813232154",
+      "address": "No. 184, Peradeniya Road, Kandy",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_056",
+    "facilityName": "Matale Central Production Factory",
+    "locationType": "FACTORY",
+    "phoneNumber": "0662435545",
+    "address": "No. 195, Dambulla Road, Matale",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0663238305",
+      "address": "No. 201, Dambulla Road, Matale",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_057",
+    "facilityName": "Nuwara Eliya Central Regional Warehouse",
+    "locationType": "WAREHOUSE",
+    "phoneNumber": "0522443464",
+    "address": "No. 24, Kandy Road, Nuwara Eliya",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0523244456",
+      "address": "No. 30, Kandy Road, Nuwara Eliya",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_058",
+    "facilityName": "Galle Central Collection Centre",
+    "locationType": "COLLECTION_CENTER",
+    "phoneNumber": "0912451383",
+    "address": "No. 41, Matara Road, Galle",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0913250607",
+      "address": "No. 47, Matara Road, Galle",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_059",
+    "facilityName": "Matara Central Drying Centre",
+    "locationType": "DRYING_CENTER",
+    "phoneNumber": "0412459302",
+    "address": "No. 58, Akuressa Road, Matara",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0413256758",
+      "address": "No. 64, Akuressa Road, Matara",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_060",
+    "facilityName": "Hambantota Central Processing Centre",
+    "locationType": "PROCESSING_CENTER",
+    "phoneNumber": "0472467221",
+    "address": "No. 75, Tissamaharama Road, Hambantota",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0473262909",
+      "address": "No. 81, Tissamaharama Road, Hambantota",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_061",
+    "facilityName": "Jaffna Central Production Factory",
+    "locationType": "FACTORY",
+    "phoneNumber": "0212475140",
+    "address": "No. 92, Kankesanthurai Road, Jaffna",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0213269060",
+      "address": "No. 98, Kankesanthurai Road, Jaffna",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_062",
+    "facilityName": "Vavuniya Central Regional Warehouse",
+    "locationType": "WAREHOUSE",
+    "phoneNumber": "0242483059",
+    "address": "No. 109, Kandy Road, Vavuniya",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0243275211",
+      "address": "No. 115, Kandy Road, Vavuniya",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_063",
+    "facilityName": "Batticaloa Central Collection Centre",
+    "locationType": "COLLECTION_CENTER",
+    "phoneNumber": "0652490978",
+    "address": "No. 126, Trincomalee Road, Batticaloa",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0653281362",
+      "address": "No. 132, Trincomalee Road, Batticaloa",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_064",
+    "facilityName": "Ampara Central Drying Centre",
+    "locationType": "DRYING_CENTER",
+    "phoneNumber": "0632498897",
+    "address": "No. 143, D. S. Senanayake Road, Ampara",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0633287513",
+      "address": "No. 149, D. S. Senanayake Road, Ampara",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_065",
+    "facilityName": "Trincomalee Central Processing Centre",
+    "locationType": "PROCESSING_CENTER",
+    "phoneNumber": "0262506816",
+    "address": "No. 160, Kandy Road, Trincomalee",
+    "status": false,
+    "updates": {
+      "phoneNumber": "0263293664",
+      "address": "No. 166, Kandy Road, Trincomalee",
+      "status": true
+    }
+  },
+  {
+    "testCaseId": "LOCATION_066",
+    "facilityName": "Kurunegala Central Production Factory",
+    "locationType": "FACTORY",
+    "phoneNumber": "0372514735",
+    "address": "No. 177, Dambulla Road, Kurunegala",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0373299815",
+      "address": "No. 183, Dambulla Road, Kurunegala",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_067",
+    "facilityName": "Puttalam Central Regional Warehouse",
+    "locationType": "WAREHOUSE",
+    "phoneNumber": "0322522654",
+    "address": "No. 194, Anuradhapura Road, Puttalam",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0323305966",
+      "address": "No. 200, Anuradhapura Road, Puttalam",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_068",
+    "facilityName": "Anuradhapura Central Collection Centre",
+    "locationType": "COLLECTION_CENTER",
+    "phoneNumber": "0252530573",
+    "address": "No. 23, New Town Road, Anuradhapura",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0253312117",
+      "address": "No. 29, New Town Road, Anuradhapura",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_069",
+    "facilityName": "Polonnaruwa Central Drying Centre",
+    "locationType": "DRYING_CENTER",
+    "phoneNumber": "0272538492",
+    "address": "No. 40, Batticaloa Road, Polonnaruwa",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0273318268",
+      "address": "No. 46, Batticaloa Road, Polonnaruwa",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_070",
+    "facilityName": "Badulla Central Processing Centre",
+    "locationType": "PROCESSING_CENTER",
+    "phoneNumber": "0552546411",
+    "address": "No. 57, Bandarawela Road, Badulla",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0553324419",
+      "address": "No. 63, Bandarawela Road, Badulla",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_071",
+    "facilityName": "Monaragala Central Production Factory",
+    "locationType": "FACTORY",
+    "phoneNumber": "0552554330",
+    "address": "No. 74, Wellawaya Road, Monaragala",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0553330570",
+      "address": "No. 80, Wellawaya Road, Monaragala",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_072",
+    "facilityName": "Ratnapura Central Regional Warehouse",
+    "locationType": "WAREHOUSE",
+    "phoneNumber": "0452562249",
+    "address": "No. 91, Panadura Road, Ratnapura",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0453336721",
+      "address": "No. 97, Panadura Road, Ratnapura",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_073",
+    "facilityName": "Kegalle Central Collection Centre",
+    "locationType": "COLLECTION_CENTER",
+    "phoneNumber": "0352570168",
+    "address": "No. 108, Colombo-Kandy Road, Kegalle",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0353342872",
+      "address": "No. 114, Colombo-Kandy Road, Kegalle",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_074",
+    "facilityName": "Dambulla Central Drying Centre",
+    "locationType": "DRYING_CENTER",
+    "phoneNumber": "0662578087",
+    "address": "No. 125, Matale Road, Dambulla",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0663349023",
+      "address": "No. 131, Matale Road, Dambulla",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_075",
+    "facilityName": "Embilipitiya Central Processing Centre",
+    "locationType": "PROCESSING_CENTER",
+    "phoneNumber": "0472586006",
+    "address": "No. 142, Nonagama Road, Embilipitiya",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0473355174",
+      "address": "No. 148, Nonagama Road, Embilipitiya",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_076",
+    "facilityName": "Colombo East Production Factory",
+    "locationType": "FACTORY",
+    "phoneNumber": "0112593925",
+    "address": "No. 159, Union Place, Colombo 02",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0113361325",
+      "address": "No. 165, Union Place, Colombo 02",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_077",
+    "facilityName": "Kadawatha East Regional Warehouse",
+    "locationType": "WAREHOUSE",
+    "phoneNumber": "0112601844",
+    "address": "No. 176, Kandy Road, Kadawatha",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0113367476",
+      "address": "No. 182, Kandy Road, Kadawatha",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_078",
+    "facilityName": "Negombo East Collection Centre",
+    "locationType": "COLLECTION_CENTER",
+    "phoneNumber": "0312609763",
+    "address": "No. 193, Chilaw Road, Negombo",
+    "status": false,
+    "updates": {
+      "phoneNumber": "0313373627",
+      "address": "No. 199, Chilaw Road, Negombo",
+      "status": true
+    }
+  },
+  {
+    "testCaseId": "LOCATION_079",
+    "facilityName": "Kalutara East Drying Centre",
+    "locationType": "DRYING_CENTER",
+    "phoneNumber": "0342617682",
+    "address": "No. 22, Galle Road, Kalutara South",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0343379778",
+      "address": "No. 28, Galle Road, Kalutara South",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_080",
+    "facilityName": "Kandy East Processing Centre",
+    "locationType": "PROCESSING_CENTER",
+    "phoneNumber": "0812625601",
+    "address": "No. 39, Peradeniya Road, Kandy",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0813385929",
+      "address": "No. 45, Peradeniya Road, Kandy",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_081",
+    "facilityName": "Matale East Production Factory",
+    "locationType": "FACTORY",
+    "phoneNumber": "0662633520",
+    "address": "No. 56, Dambulla Road, Matale",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0663392080",
+      "address": "No. 62, Dambulla Road, Matale",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_082",
+    "facilityName": "Nuwara Eliya East Regional Warehouse",
+    "locationType": "WAREHOUSE",
+    "phoneNumber": "0522641439",
+    "address": "No. 73, Kandy Road, Nuwara Eliya",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0523398231",
+      "address": "No. 79, Kandy Road, Nuwara Eliya",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_083",
+    "facilityName": "Galle East Collection Centre",
+    "locationType": "COLLECTION_CENTER",
+    "phoneNumber": "0912649358",
+    "address": "No. 90, Matara Road, Galle",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0913404382",
+      "address": "No. 96, Matara Road, Galle",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_084",
+    "facilityName": "Matara East Drying Centre",
+    "locationType": "DRYING_CENTER",
+    "phoneNumber": "0412657277",
+    "address": "No. 107, Akuressa Road, Matara",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0413410533",
+      "address": "No. 113, Akuressa Road, Matara",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_085",
+    "facilityName": "Hambantota East Processing Centre",
+    "locationType": "PROCESSING_CENTER",
+    "phoneNumber": "0472665196",
+    "address": "No. 124, Tissamaharama Road, Hambantota",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0473416684",
+      "address": "No. 130, Tissamaharama Road, Hambantota",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_086",
+    "facilityName": "Jaffna East Production Factory",
+    "locationType": "FACTORY",
+    "phoneNumber": "0212673115",
+    "address": "No. 141, Kankesanthurai Road, Jaffna",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0213422835",
+      "address": "No. 147, Kankesanthurai Road, Jaffna",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_087",
+    "facilityName": "Vavuniya East Regional Warehouse",
+    "locationType": "WAREHOUSE",
+    "phoneNumber": "0242681034",
+    "address": "No. 158, Kandy Road, Vavuniya",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0243428986",
+      "address": "No. 164, Kandy Road, Vavuniya",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_088",
+    "facilityName": "Batticaloa East Collection Centre",
+    "locationType": "COLLECTION_CENTER",
+    "phoneNumber": "0652688953",
+    "address": "No. 175, Trincomalee Road, Batticaloa",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0653435137",
+      "address": "No. 181, Trincomalee Road, Batticaloa",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_089",
+    "facilityName": "Ampara East Drying Centre",
+    "locationType": "DRYING_CENTER",
+    "phoneNumber": "0632696872",
+    "address": "No. 192, D. S. Senanayake Road, Ampara",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0633441288",
+      "address": "No. 198, D. S. Senanayake Road, Ampara",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_090",
+    "facilityName": "Trincomalee East Processing Centre",
+    "locationType": "PROCESSING_CENTER",
+    "phoneNumber": "0262704791",
+    "address": "No. 21, Kandy Road, Trincomalee",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0263447439",
+      "address": "No. 27, Kandy Road, Trincomalee",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_091",
+    "facilityName": "Kurunegala East Production Factory",
+    "locationType": "FACTORY",
+    "phoneNumber": "0372712710",
+    "address": "No. 38, Dambulla Road, Kurunegala",
+    "status": false,
+    "updates": {
+      "phoneNumber": "0373453590",
+      "address": "No. 44, Dambulla Road, Kurunegala",
+      "status": true
+    }
+  },
+  {
+    "testCaseId": "LOCATION_092",
+    "facilityName": "Puttalam East Regional Warehouse",
+    "locationType": "WAREHOUSE",
+    "phoneNumber": "0322720629",
+    "address": "No. 55, Anuradhapura Road, Puttalam",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0323459741",
+      "address": "No. 61, Anuradhapura Road, Puttalam",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_093",
+    "facilityName": "Anuradhapura East Collection Centre",
+    "locationType": "COLLECTION_CENTER",
+    "phoneNumber": "0252728548",
+    "address": "No. 72, New Town Road, Anuradhapura",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0253465892",
+      "address": "No. 78, New Town Road, Anuradhapura",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_094",
+    "facilityName": "Polonnaruwa East Drying Centre",
+    "locationType": "DRYING_CENTER",
+    "phoneNumber": "0272736467",
+    "address": "No. 89, Batticaloa Road, Polonnaruwa",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0273472043",
+      "address": "No. 95, Batticaloa Road, Polonnaruwa",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_095",
+    "facilityName": "Badulla East Processing Centre",
+    "locationType": "PROCESSING_CENTER",
+    "phoneNumber": "0552744386",
+    "address": "No. 106, Bandarawela Road, Badulla",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0553478194",
+      "address": "No. 112, Bandarawela Road, Badulla",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_096",
+    "facilityName": "Monaragala East Production Factory",
+    "locationType": "FACTORY",
+    "phoneNumber": "0552752305",
+    "address": "No. 123, Wellawaya Road, Monaragala",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0553484345",
+      "address": "No. 129, Wellawaya Road, Monaragala",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_097",
+    "facilityName": "Ratnapura East Regional Warehouse",
+    "locationType": "WAREHOUSE",
+    "phoneNumber": "0452760224",
+    "address": "No. 140, Panadura Road, Ratnapura",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0453490496",
+      "address": "No. 146, Panadura Road, Ratnapura",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_098",
+    "facilityName": "Kegalle East Collection Centre",
+    "locationType": "COLLECTION_CENTER",
+    "phoneNumber": "0352768143",
+    "address": "No. 157, Colombo-Kandy Road, Kegalle",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0353496647",
+      "address": "No. 163, Colombo-Kandy Road, Kegalle",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_099",
+    "facilityName": "Dambulla East Drying Centre",
+    "locationType": "DRYING_CENTER",
+    "phoneNumber": "0662776062",
+    "address": "No. 174, Matale Road, Dambulla",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0663502798",
+      "address": "No. 180, Matale Road, Dambulla",
+      "status": false
+    }
+  },
+  {
+    "testCaseId": "LOCATION_100",
+    "facilityName": "Embilipitiya East Processing Centre",
+    "locationType": "PROCESSING_CENTER",
+    "phoneNumber": "0472783981",
+    "address": "No. 191, Nonagama Road, Embilipitiya",
+    "status": true,
+    "updates": {
+      "phoneNumber": "0473508949",
+      "address": "No. 197, Nonagama Road, Embilipitiya",
+      "status": false
+    }
+  }
+]

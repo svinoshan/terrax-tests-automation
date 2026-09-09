@@ -1,0 +1,930 @@
+[
+  {
+    "testCaseId": "SUPPLIER_NEG_001",
+    "scenario": "missing-supplier-code",
+    "expectedSource": "inline",
+    "expectedMessage": "Supplier code Is required",
+    "expectedField": "supplierCode",
+    "data": {
+      "testCaseId": "SUPPLIER_001",
+      "supplierCode": "",
+      "supplierName": "Lanka Agri Produce (Pvt) Ltd",
+      "country": "Sri Lanka",
+      "contactPerson": "Nimal Perera",
+      "phone": "0711000000",
+      "email": "nimal.perera.001@example.com",
+      "address": "No. 10, Union Place, Colombo 02",
+      "registrationNo": "PV-200137",
+      "taxNo": "TIN-100200413",
+      "description": "Agricultural produce supplier",
+      "active": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112000000",
+          "address": "No. 15, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "contactPerson": "Lahiru Wijesinghe",
+        "phone": "0751900000",
+        "email": "lahiru.wijesinghe.001.updated@example.com",
+        "address": "No. 20, Union Place, Colombo 02",
+        "description": "Updated agricultural produce supplier",
+        "active": false,
+        "location": {
+          "phoneNumber": "0112900000",
+          "address": "No. 25, Union Place, Colombo 02",
+          "coordinates": "6.928000, 79.862165"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_NEG_002",
+    "scenario": "supplier-code-too-long",
+    "expectedSource": "inline",
+    "expectedMessage": "Supplier code must not exceed 50 characters",
+    "expectedField": "supplierCode",
+    "data": {
+      "testCaseId": "SUPPLIER_001",
+      "supplierCode": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "supplierName": "Lanka Agri Produce (Pvt) Ltd",
+      "country": "Sri Lanka",
+      "contactPerson": "Nimal Perera",
+      "phone": "0711000000",
+      "email": "nimal.perera.001@example.com",
+      "address": "No. 10, Union Place, Colombo 02",
+      "registrationNo": "PV-200137",
+      "taxNo": "TIN-100200413",
+      "description": "Agricultural produce supplier",
+      "active": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112000000",
+          "address": "No. 15, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "contactPerson": "Lahiru Wijesinghe",
+        "phone": "0751900000",
+        "email": "lahiru.wijesinghe.001.updated@example.com",
+        "address": "No. 20, Union Place, Colombo 02",
+        "description": "Updated agricultural produce supplier",
+        "active": false,
+        "location": {
+          "phoneNumber": "0112900000",
+          "address": "No. 25, Union Place, Colombo 02",
+          "coordinates": "6.928000, 79.862165"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_NEG_003",
+    "scenario": "supplier-code-unsafe-characters",
+    "expectedSource": "control-invalid",
+    "expectedField": "supplierCode",
+    "data": {
+      "testCaseId": "SUPPLIER_001",
+      "supplierCode": "SUP-<001>",
+      "supplierName": "Lanka Agri Produce (Pvt) Ltd",
+      "country": "Sri Lanka",
+      "contactPerson": "Nimal Perera",
+      "phone": "0711000000",
+      "email": "nimal.perera.001@example.com",
+      "address": "No. 10, Union Place, Colombo 02",
+      "registrationNo": "PV-200137",
+      "taxNo": "TIN-100200413",
+      "description": "Agricultural produce supplier",
+      "active": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112000000",
+          "address": "No. 15, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "contactPerson": "Lahiru Wijesinghe",
+        "phone": "0751900000",
+        "email": "lahiru.wijesinghe.001.updated@example.com",
+        "address": "No. 20, Union Place, Colombo 02",
+        "description": "Updated agricultural produce supplier",
+        "active": false,
+        "location": {
+          "phoneNumber": "0112900000",
+          "address": "No. 25, Union Place, Colombo 02",
+          "coordinates": "6.928000, 79.862165"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_NEG_004",
+    "scenario": "missing-supplier-name",
+    "expectedSource": "inline",
+    "expectedMessage": "Supplier name Is required",
+    "expectedField": "supplierName",
+    "data": {
+      "testCaseId": "SUPPLIER_001",
+      "supplierCode": "SUP-LK-001",
+      "supplierName": "",
+      "country": "Sri Lanka",
+      "contactPerson": "Nimal Perera",
+      "phone": "0711000000",
+      "email": "nimal.perera.001@example.com",
+      "address": "No. 10, Union Place, Colombo 02",
+      "registrationNo": "PV-200137",
+      "taxNo": "TIN-100200413",
+      "description": "Agricultural produce supplier",
+      "active": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112000000",
+          "address": "No. 15, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "contactPerson": "Lahiru Wijesinghe",
+        "phone": "0751900000",
+        "email": "lahiru.wijesinghe.001.updated@example.com",
+        "address": "No. 20, Union Place, Colombo 02",
+        "description": "Updated agricultural produce supplier",
+        "active": false,
+        "location": {
+          "phoneNumber": "0112900000",
+          "address": "No. 25, Union Place, Colombo 02",
+          "coordinates": "6.928000, 79.862165"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_NEG_005",
+    "scenario": "missing-country",
+    "expectedSource": "inline",
+    "expectedMessage": "Country Is required",
+    "expectedField": "country",
+    "data": {
+      "testCaseId": "SUPPLIER_001",
+      "supplierCode": "SUP-LK-001",
+      "supplierName": "Lanka Agri Produce (Pvt) Ltd",
+      "country": null,
+      "contactPerson": "Nimal Perera",
+      "phone": "0711000000",
+      "email": "nimal.perera.001@example.com",
+      "address": "No. 10, Union Place, Colombo 02",
+      "registrationNo": "PV-200137",
+      "taxNo": "TIN-100200413",
+      "description": "Agricultural produce supplier",
+      "active": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112000000",
+          "address": "No. 15, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "contactPerson": "Lahiru Wijesinghe",
+        "phone": "0751900000",
+        "email": "lahiru.wijesinghe.001.updated@example.com",
+        "address": "No. 20, Union Place, Colombo 02",
+        "description": "Updated agricultural produce supplier",
+        "active": false,
+        "location": {
+          "phoneNumber": "0112900000",
+          "address": "No. 25, Union Place, Colombo 02",
+          "coordinates": "6.928000, 79.862165"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_NEG_006",
+    "scenario": "missing-contact-person",
+    "expectedSource": "inline",
+    "expectedMessage": "Contact person Is required",
+    "expectedField": "contactPerson",
+    "data": {
+      "testCaseId": "SUPPLIER_001",
+      "supplierCode": "SUP-LK-001",
+      "supplierName": "Lanka Agri Produce (Pvt) Ltd",
+      "country": "Sri Lanka",
+      "contactPerson": "",
+      "phone": "0711000000",
+      "email": "nimal.perera.001@example.com",
+      "address": "No. 10, Union Place, Colombo 02",
+      "registrationNo": "PV-200137",
+      "taxNo": "TIN-100200413",
+      "description": "Agricultural produce supplier",
+      "active": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112000000",
+          "address": "No. 15, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "contactPerson": "Lahiru Wijesinghe",
+        "phone": "0751900000",
+        "email": "lahiru.wijesinghe.001.updated@example.com",
+        "address": "No. 20, Union Place, Colombo 02",
+        "description": "Updated agricultural produce supplier",
+        "active": false,
+        "location": {
+          "phoneNumber": "0112900000",
+          "address": "No. 25, Union Place, Colombo 02",
+          "coordinates": "6.928000, 79.862165"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_NEG_007",
+    "scenario": "contact-person-whitespace-only",
+    "expectedSource": "validation-dialog",
+    "expectedMessage": "Contact person is required",
+    "expectedField": "contactPerson",
+    "data": {
+      "testCaseId": "SUPPLIER_001",
+      "supplierCode": "SUP-LK-001",
+      "supplierName": "Lanka Agri Produce (Pvt) Ltd",
+      "country": "Sri Lanka",
+      "contactPerson": "   ",
+      "phone": "0711000000",
+      "email": "nimal.perera.001@example.com",
+      "address": "No. 10, Union Place, Colombo 02",
+      "registrationNo": "PV-200137",
+      "taxNo": "TIN-100200413",
+      "description": "Agricultural produce supplier",
+      "active": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112000000",
+          "address": "No. 15, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "contactPerson": "Lahiru Wijesinghe",
+        "phone": "0751900000",
+        "email": "lahiru.wijesinghe.001.updated@example.com",
+        "address": "No. 20, Union Place, Colombo 02",
+        "description": "Updated agricultural produce supplier",
+        "active": false,
+        "location": {
+          "phoneNumber": "0112900000",
+          "address": "No. 25, Union Place, Colombo 02",
+          "coordinates": "6.928000, 79.862165"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_NEG_008",
+    "scenario": "missing-phone-number",
+    "expectedSource": "inline",
+    "expectedMessage": "Phone number Is required",
+    "expectedField": "phone",
+    "data": {
+      "testCaseId": "SUPPLIER_001",
+      "supplierCode": "SUP-LK-001",
+      "supplierName": "Lanka Agri Produce (Pvt) Ltd",
+      "country": "Sri Lanka",
+      "contactPerson": "Nimal Perera",
+      "phone": "",
+      "email": "nimal.perera.001@example.com",
+      "address": "No. 10, Union Place, Colombo 02",
+      "registrationNo": "PV-200137",
+      "taxNo": "TIN-100200413",
+      "description": "Agricultural produce supplier",
+      "active": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112000000",
+          "address": "No. 15, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "contactPerson": "Lahiru Wijesinghe",
+        "phone": "0751900000",
+        "email": "lahiru.wijesinghe.001.updated@example.com",
+        "address": "No. 20, Union Place, Colombo 02",
+        "description": "Updated agricultural produce supplier",
+        "active": false,
+        "location": {
+          "phoneNumber": "0112900000",
+          "address": "No. 25, Union Place, Colombo 02",
+          "coordinates": "6.928000, 79.862165"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_NEG_009",
+    "scenario": "phone-number-whitespace-only",
+    "expectedSource": "validation-dialog",
+    "expectedMessage": "Phone number is required",
+    "expectedField": "phone",
+    "data": {
+      "testCaseId": "SUPPLIER_001",
+      "supplierCode": "SUP-LK-001",
+      "supplierName": "Lanka Agri Produce (Pvt) Ltd",
+      "country": "Sri Lanka",
+      "contactPerson": "Nimal Perera",
+      "phone": "   ",
+      "email": "nimal.perera.001@example.com",
+      "address": "No. 10, Union Place, Colombo 02",
+      "registrationNo": "PV-200137",
+      "taxNo": "TIN-100200413",
+      "description": "Agricultural produce supplier",
+      "active": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112000000",
+          "address": "No. 15, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "contactPerson": "Lahiru Wijesinghe",
+        "phone": "0751900000",
+        "email": "lahiru.wijesinghe.001.updated@example.com",
+        "address": "No. 20, Union Place, Colombo 02",
+        "description": "Updated agricultural produce supplier",
+        "active": false,
+        "location": {
+          "phoneNumber": "0112900000",
+          "address": "No. 25, Union Place, Colombo 02",
+          "coordinates": "6.928000, 79.862165"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_NEG_010",
+    "scenario": "invalid-email",
+    "expectedSource": "control-invalid",
+    "expectedField": "email",
+    "data": {
+      "testCaseId": "SUPPLIER_001",
+      "supplierCode": "SUP-LK-001",
+      "supplierName": "Lanka Agri Produce (Pvt) Ltd",
+      "country": "Sri Lanka",
+      "contactPerson": "Nimal Perera",
+      "phone": "0711000000",
+      "email": "invalid-email",
+      "address": "No. 10, Union Place, Colombo 02",
+      "registrationNo": "PV-200137",
+      "taxNo": "TIN-100200413",
+      "description": "Agricultural produce supplier",
+      "active": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112000000",
+          "address": "No. 15, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "contactPerson": "Lahiru Wijesinghe",
+        "phone": "0751900000",
+        "email": "lahiru.wijesinghe.001.updated@example.com",
+        "address": "No. 20, Union Place, Colombo 02",
+        "description": "Updated agricultural produce supplier",
+        "active": false,
+        "location": {
+          "phoneNumber": "0112900000",
+          "address": "No. 25, Union Place, Colombo 02",
+          "coordinates": "6.928000, 79.862165"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_NEG_011",
+    "scenario": "missing-address",
+    "expectedSource": "inline",
+    "expectedMessage": "Address Is required",
+    "expectedField": "address",
+    "data": {
+      "testCaseId": "SUPPLIER_001",
+      "supplierCode": "SUP-LK-001",
+      "supplierName": "Lanka Agri Produce (Pvt) Ltd",
+      "country": "Sri Lanka",
+      "contactPerson": "Nimal Perera",
+      "phone": "0711000000",
+      "email": "nimal.perera.001@example.com",
+      "address": "",
+      "registrationNo": "PV-200137",
+      "taxNo": "TIN-100200413",
+      "description": "Agricultural produce supplier",
+      "active": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112000000",
+          "address": "No. 15, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "contactPerson": "Lahiru Wijesinghe",
+        "phone": "0751900000",
+        "email": "lahiru.wijesinghe.001.updated@example.com",
+        "address": "No. 20, Union Place, Colombo 02",
+        "description": "Updated agricultural produce supplier",
+        "active": false,
+        "location": {
+          "phoneNumber": "0112900000",
+          "address": "No. 25, Union Place, Colombo 02",
+          "coordinates": "6.928000, 79.862165"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_NEG_012",
+    "scenario": "address-whitespace-only",
+    "expectedSource": "validation-dialog",
+    "expectedMessage": "Address is required",
+    "expectedField": "address",
+    "data": {
+      "testCaseId": "SUPPLIER_001",
+      "supplierCode": "SUP-LK-001",
+      "supplierName": "Lanka Agri Produce (Pvt) Ltd",
+      "country": "Sri Lanka",
+      "contactPerson": "Nimal Perera",
+      "phone": "0711000000",
+      "email": "nimal.perera.001@example.com",
+      "address": "   ",
+      "registrationNo": "PV-200137",
+      "taxNo": "TIN-100200413",
+      "description": "Agricultural produce supplier",
+      "active": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112000000",
+          "address": "No. 15, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "contactPerson": "Lahiru Wijesinghe",
+        "phone": "0751900000",
+        "email": "lahiru.wijesinghe.001.updated@example.com",
+        "address": "No. 20, Union Place, Colombo 02",
+        "description": "Updated agricultural produce supplier",
+        "active": false,
+        "location": {
+          "phoneNumber": "0112900000",
+          "address": "No. 25, Union Place, Colombo 02",
+          "coordinates": "6.928000, 79.862165"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_NEG_013",
+    "scenario": "missing-registration-number",
+    "expectedSource": "inline",
+    "expectedMessage": "Registration number Is required",
+    "expectedField": "registrationNo",
+    "data": {
+      "testCaseId": "SUPPLIER_001",
+      "supplierCode": "SUP-LK-001",
+      "supplierName": "Lanka Agri Produce (Pvt) Ltd",
+      "country": "Sri Lanka",
+      "contactPerson": "Nimal Perera",
+      "phone": "0711000000",
+      "email": "nimal.perera.001@example.com",
+      "address": "No. 10, Union Place, Colombo 02",
+      "registrationNo": "",
+      "taxNo": "TIN-100200413",
+      "description": "Agricultural produce supplier",
+      "active": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112000000",
+          "address": "No. 15, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "contactPerson": "Lahiru Wijesinghe",
+        "phone": "0751900000",
+        "email": "lahiru.wijesinghe.001.updated@example.com",
+        "address": "No. 20, Union Place, Colombo 02",
+        "description": "Updated agricultural produce supplier",
+        "active": false,
+        "location": {
+          "phoneNumber": "0112900000",
+          "address": "No. 25, Union Place, Colombo 02",
+          "coordinates": "6.928000, 79.862165"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_NEG_014",
+    "scenario": "registration-number-whitespace-only",
+    "expectedSource": "validation-dialog",
+    "expectedMessage": "Registration number is required",
+    "expectedField": "registrationNo",
+    "data": {
+      "testCaseId": "SUPPLIER_001",
+      "supplierCode": "SUP-LK-001",
+      "supplierName": "Lanka Agri Produce (Pvt) Ltd",
+      "country": "Sri Lanka",
+      "contactPerson": "Nimal Perera",
+      "phone": "0711000000",
+      "email": "nimal.perera.001@example.com",
+      "address": "No. 10, Union Place, Colombo 02",
+      "registrationNo": "   ",
+      "taxNo": "TIN-100200413",
+      "description": "Agricultural produce supplier",
+      "active": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112000000",
+          "address": "No. 15, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "contactPerson": "Lahiru Wijesinghe",
+        "phone": "0751900000",
+        "email": "lahiru.wijesinghe.001.updated@example.com",
+        "address": "No. 20, Union Place, Colombo 02",
+        "description": "Updated agricultural produce supplier",
+        "active": false,
+        "location": {
+          "phoneNumber": "0112900000",
+          "address": "No. 25, Union Place, Colombo 02",
+          "coordinates": "6.928000, 79.862165"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_NEG_015",
+    "scenario": "missing-tax-number",
+    "expectedSource": "inline",
+    "expectedMessage": "Tax number Is required",
+    "expectedField": "taxNo",
+    "data": {
+      "testCaseId": "SUPPLIER_001",
+      "supplierCode": "SUP-LK-001",
+      "supplierName": "Lanka Agri Produce (Pvt) Ltd",
+      "country": "Sri Lanka",
+      "contactPerson": "Nimal Perera",
+      "phone": "0711000000",
+      "email": "nimal.perera.001@example.com",
+      "address": "No. 10, Union Place, Colombo 02",
+      "registrationNo": "PV-200137",
+      "taxNo": "",
+      "description": "Agricultural produce supplier",
+      "active": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112000000",
+          "address": "No. 15, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "contactPerson": "Lahiru Wijesinghe",
+        "phone": "0751900000",
+        "email": "lahiru.wijesinghe.001.updated@example.com",
+        "address": "No. 20, Union Place, Colombo 02",
+        "description": "Updated agricultural produce supplier",
+        "active": false,
+        "location": {
+          "phoneNumber": "0112900000",
+          "address": "No. 25, Union Place, Colombo 02",
+          "coordinates": "6.928000, 79.862165"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_NEG_016",
+    "scenario": "tax-number-whitespace-only",
+    "expectedSource": "validation-dialog",
+    "expectedMessage": "Tax number is required",
+    "expectedField": "taxNo",
+    "data": {
+      "testCaseId": "SUPPLIER_001",
+      "supplierCode": "SUP-LK-001",
+      "supplierName": "Lanka Agri Produce (Pvt) Ltd",
+      "country": "Sri Lanka",
+      "contactPerson": "Nimal Perera",
+      "phone": "0711000000",
+      "email": "nimal.perera.001@example.com",
+      "address": "No. 10, Union Place, Colombo 02",
+      "registrationNo": "PV-200137",
+      "taxNo": "   ",
+      "description": "Agricultural produce supplier",
+      "active": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112000000",
+          "address": "No. 15, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "contactPerson": "Lahiru Wijesinghe",
+        "phone": "0751900000",
+        "email": "lahiru.wijesinghe.001.updated@example.com",
+        "address": "No. 20, Union Place, Colombo 02",
+        "description": "Updated agricultural produce supplier",
+        "active": false,
+        "location": {
+          "phoneNumber": "0112900000",
+          "address": "No. 25, Union Place, Colombo 02",
+          "coordinates": "6.928000, 79.862165"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_NEG_017",
+    "scenario": "missing-location",
+    "expectedSource": "inline",
+    "expectedMessage": "At least one location is required",
+    "expectedField": "locations",
+    "data": {
+      "testCaseId": "SUPPLIER_001",
+      "supplierCode": "SUP-LK-001",
+      "supplierName": "Lanka Agri Produce (Pvt) Ltd",
+      "country": "Sri Lanka",
+      "contactPerson": "Nimal Perera",
+      "phone": "0711000000",
+      "email": "nimal.perera.001@example.com",
+      "address": "No. 10, Union Place, Colombo 02",
+      "registrationNo": "PV-200137",
+      "taxNo": "TIN-100200413",
+      "description": "Agricultural produce supplier",
+      "active": true,
+      "locations": [],
+      "updates": {
+        "contactPerson": "Lahiru Wijesinghe",
+        "phone": "0751900000",
+        "email": "lahiru.wijesinghe.001.updated@example.com",
+        "address": "No. 20, Union Place, Colombo 02",
+        "description": "Updated agricultural produce supplier",
+        "active": false,
+        "location": {
+          "phoneNumber": "0112900000",
+          "address": "No. 25, Union Place, Colombo 02",
+          "coordinates": "6.928000, 79.862165"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_NEG_018",
+    "scenario": "location-invalid-coordinates",
+    "expectedSource": "inline",
+    "expectedMessage": "Enter valid latitude and longitude values (e.g. 6.927079, 79.861244).",
+    "expectedField": "locations.0.coordinates",
+    "data": {
+      "testCaseId": "SUPPLIER_001",
+      "supplierCode": "SUP-LK-001",
+      "supplierName": "Lanka Agri Produce (Pvt) Ltd",
+      "country": "Sri Lanka",
+      "contactPerson": "Nimal Perera",
+      "phone": "0711000000",
+      "email": "nimal.perera.001@example.com",
+      "address": "No. 10, Union Place, Colombo 02",
+      "registrationNo": "PV-200137",
+      "taxNo": "TIN-100200413",
+      "description": "Agricultural produce supplier",
+      "active": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112000000",
+          "address": "No. 15, Union Place, Colombo 02",
+          "coordinates": "invalid coordinates",
+          "status": true
+        }
+      ],
+      "updates": {
+        "contactPerson": "Lahiru Wijesinghe",
+        "phone": "0751900000",
+        "email": "lahiru.wijesinghe.001.updated@example.com",
+        "address": "No. 20, Union Place, Colombo 02",
+        "description": "Updated agricultural produce supplier",
+        "active": false,
+        "location": {
+          "phoneNumber": "0112900000",
+          "address": "No. 25, Union Place, Colombo 02",
+          "coordinates": "6.928000, 79.862165"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_NEG_019",
+    "scenario": "duplicate-supplier-code",
+    "expectedSource": "error-dialog",
+    "expectedMessage": "Supplier Code already exists: SUP-LK-001",
+    "expectedField": "supplierCode",
+    "duplicateField": "supplierCode",
+    "secondAttemptOverrides": {
+      "supplierName": "Lanka Agri Produce (Pvt) Ltd Duplicate Code",
+      "taxNo": "TIN-100200413-DC"
+    },
+    "data": {
+      "testCaseId": "SUPPLIER_001",
+      "supplierCode": "SUP-LK-001",
+      "supplierName": "Lanka Agri Produce (Pvt) Ltd",
+      "country": "Sri Lanka",
+      "contactPerson": "Nimal Perera",
+      "phone": "0711000000",
+      "email": "nimal.perera.001@example.com",
+      "address": "No. 10, Union Place, Colombo 02",
+      "registrationNo": "PV-200137",
+      "taxNo": "TIN-100200413",
+      "description": "Agricultural produce supplier",
+      "active": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112000000",
+          "address": "No. 15, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "contactPerson": "Lahiru Wijesinghe",
+        "phone": "0751900000",
+        "email": "lahiru.wijesinghe.001.updated@example.com",
+        "address": "No. 20, Union Place, Colombo 02",
+        "description": "Updated agricultural produce supplier",
+        "active": false,
+        "location": {
+          "phoneNumber": "0112900000",
+          "address": "No. 25, Union Place, Colombo 02",
+          "coordinates": "6.928000, 79.862165"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_NEG_020",
+    "scenario": "duplicate-tax-number",
+    "expectedSource": "error-dialog",
+    "expectedMessage": "Tax No already exists: TIN-100200413",
+    "expectedField": "taxNo",
+    "duplicateField": "taxNo",
+    "secondAttemptOverrides": {
+      "supplierCode": "SUP-LK-001-DT",
+      "supplierName": "Lanka Agri Produce (Pvt) Ltd Duplicate Tax"
+    },
+    "data": {
+      "testCaseId": "SUPPLIER_001",
+      "supplierCode": "SUP-LK-001",
+      "supplierName": "Lanka Agri Produce (Pvt) Ltd",
+      "country": "Sri Lanka",
+      "contactPerson": "Nimal Perera",
+      "phone": "0711000000",
+      "email": "nimal.perera.001@example.com",
+      "address": "No. 10, Union Place, Colombo 02",
+      "registrationNo": "PV-200137",
+      "taxNo": "TIN-100200413",
+      "description": "Agricultural produce supplier",
+      "active": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112000000",
+          "address": "No. 15, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "contactPerson": "Lahiru Wijesinghe",
+        "phone": "0751900000",
+        "email": "lahiru.wijesinghe.001.updated@example.com",
+        "address": "No. 20, Union Place, Colombo 02",
+        "description": "Updated agricultural produce supplier",
+        "active": false,
+        "location": {
+          "phoneNumber": "0112900000",
+          "address": "No. 25, Union Place, Colombo 02",
+          "coordinates": "6.928000, 79.862165"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "SUPPLIER_NEG_021",
+    "scenario": "duplicate-supplier-name-and-country",
+    "expectedSource": "error-dialog",
+    "expectedField": "supplierName",
+    "duplicateField": "supplierName,country",
+    "expectedMessagePattern": "^Supplier name 'Lanka Agri Produce \\(Pvt\\) Ltd' already exists in country '\\d+'$",
+    "secondAttemptOverrides": {
+      "supplierCode": "SUP-LK-001-DN",
+      "taxNo": "TIN-100200413-DN"
+    },
+    "data": {
+      "testCaseId": "SUPPLIER_001",
+      "supplierCode": "SUP-LK-001",
+      "supplierName": "Lanka Agri Produce (Pvt) Ltd",
+      "country": "Sri Lanka",
+      "contactPerson": "Nimal Perera",
+      "phone": "0711000000",
+      "email": "nimal.perera.001@example.com",
+      "address": "No. 10, Union Place, Colombo 02",
+      "registrationNo": "PV-200137",
+      "taxNo": "TIN-100200413",
+      "description": "Agricultural produce supplier",
+      "active": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112000000",
+          "address": "No. 15, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "contactPerson": "Lahiru Wijesinghe",
+        "phone": "0751900000",
+        "email": "lahiru.wijesinghe.001.updated@example.com",
+        "address": "No. 20, Union Place, Colombo 02",
+        "description": "Updated agricultural produce supplier",
+        "active": false,
+        "location": {
+          "phoneNumber": "0112900000",
+          "address": "No. 25, Union Place, Colombo 02",
+          "coordinates": "6.928000, 79.862165"
+        }
+      }
+    }
+  }
+]

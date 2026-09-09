@@ -1,0 +1,583 @@
+[
+  {
+    "testCaseId": "BUYER_NEG_001",
+    "scenario": "missing-location",
+    "expectedSource": "inline",
+    "expectedMessage": "At least one location is required",
+    "expectedField": "locations",
+    "data": {
+      "testCaseId": "BUYER_001",
+      "name": "Lanka Retail Distribution",
+      "address": "No. 10, Union Place, Colombo 02",
+      "phoneNo": "0112000000",
+      "status": true,
+      "locations": [],
+      "updates": {
+        "address": "No. 20, Union Place, Colombo 02",
+        "phoneNo": "0112900000",
+        "status": false,
+        "location": {
+          "address": "No. 28, Union Place, Colombo 02",
+          "coordinates": "6.927856, 79.862021"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_NEG_002",
+    "scenario": "missing-name",
+    "expectedSource": "inline",
+    "expectedMessage": "Buyer name Is required",
+    "expectedField": "name",
+    "data": {
+      "testCaseId": "BUYER_001",
+      "name": "",
+      "address": "No. 10, Union Place, Colombo 02",
+      "phoneNo": "0112000000",
+      "status": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Buyer Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112100000",
+          "address": "No. 18, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "address": "No. 20, Union Place, Colombo 02",
+        "phoneNo": "0112900000",
+        "status": false,
+        "location": {
+          "address": "No. 28, Union Place, Colombo 02",
+          "coordinates": "6.927856, 79.862021"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_NEG_003",
+    "scenario": "name-whitespace-only",
+    "expectedSource": "validation-dialog",
+    "expectedMessage": "Buyer name is required",
+    "expectedField": "name",
+    "data": {
+      "testCaseId": "BUYER_001",
+      "name": "   ",
+      "address": "No. 10, Union Place, Colombo 02",
+      "phoneNo": "0112000000",
+      "status": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Buyer Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112100000",
+          "address": "No. 18, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "address": "No. 20, Union Place, Colombo 02",
+        "phoneNo": "0112900000",
+        "status": false,
+        "location": {
+          "address": "No. 28, Union Place, Colombo 02",
+          "coordinates": "6.927856, 79.862021"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_NEG_004",
+    "scenario": "name-too-long",
+    "expectedSource": "control-invalid",
+    "expectedField": "name",
+    "data": {
+      "testCaseId": "BUYER_001",
+      "name": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+      "address": "No. 10, Union Place, Colombo 02",
+      "phoneNo": "0112000000",
+      "status": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Buyer Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112100000",
+          "address": "No. 18, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "address": "No. 20, Union Place, Colombo 02",
+        "phoneNo": "0112900000",
+        "status": false,
+        "location": {
+          "address": "No. 28, Union Place, Colombo 02",
+          "coordinates": "6.927856, 79.862021"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_NEG_005",
+    "scenario": "missing-address",
+    "expectedSource": "inline",
+    "expectedMessage": "Address Is required",
+    "expectedField": "address",
+    "data": {
+      "testCaseId": "BUYER_001",
+      "name": "Lanka Retail Distribution",
+      "address": "",
+      "phoneNo": "0112000000",
+      "status": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Buyer Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112100000",
+          "address": "No. 18, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "address": "No. 20, Union Place, Colombo 02",
+        "phoneNo": "0112900000",
+        "status": false,
+        "location": {
+          "address": "No. 28, Union Place, Colombo 02",
+          "coordinates": "6.927856, 79.862021"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_NEG_006",
+    "scenario": "address-whitespace-only",
+    "expectedSource": "validation-dialog",
+    "expectedMessage": "Address is required",
+    "expectedField": "address",
+    "data": {
+      "testCaseId": "BUYER_001",
+      "name": "Lanka Retail Distribution",
+      "address": "   ",
+      "phoneNo": "0112000000",
+      "status": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Buyer Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112100000",
+          "address": "No. 18, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "address": "No. 20, Union Place, Colombo 02",
+        "phoneNo": "0112900000",
+        "status": false,
+        "location": {
+          "address": "No. 28, Union Place, Colombo 02",
+          "coordinates": "6.927856, 79.862021"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_NEG_007",
+    "scenario": "address-too-long",
+    "expectedSource": "control-invalid",
+    "expectedField": "address",
+    "data": {
+      "testCaseId": "BUYER_001",
+      "name": "Lanka Retail Distribution",
+      "address": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "phoneNo": "0112000000",
+      "status": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Buyer Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112100000",
+          "address": "No. 18, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "address": "No. 20, Union Place, Colombo 02",
+        "phoneNo": "0112900000",
+        "status": false,
+        "location": {
+          "address": "No. 28, Union Place, Colombo 02",
+          "coordinates": "6.927856, 79.862021"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_NEG_008",
+    "scenario": "missing-phone-number",
+    "expectedSource": "inline",
+    "expectedMessage": "Phone number Is required",
+    "expectedField": "phoneNo",
+    "data": {
+      "testCaseId": "BUYER_001",
+      "name": "Lanka Retail Distribution",
+      "address": "No. 10, Union Place, Colombo 02",
+      "phoneNo": "",
+      "status": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Buyer Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112100000",
+          "address": "No. 18, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "address": "No. 20, Union Place, Colombo 02",
+        "phoneNo": "0112900000",
+        "status": false,
+        "location": {
+          "address": "No. 28, Union Place, Colombo 02",
+          "coordinates": "6.927856, 79.862021"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_NEG_009",
+    "scenario": "phone-number-whitespace-only",
+    "expectedSource": "validation-dialog",
+    "expectedMessage": "Phone number is required",
+    "expectedField": "phoneNo",
+    "data": {
+      "testCaseId": "BUYER_001",
+      "name": "Lanka Retail Distribution",
+      "address": "No. 10, Union Place, Colombo 02",
+      "phoneNo": "   ",
+      "status": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Buyer Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112100000",
+          "address": "No. 18, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "address": "No. 20, Union Place, Colombo 02",
+        "phoneNo": "0112900000",
+        "status": false,
+        "location": {
+          "address": "No. 28, Union Place, Colombo 02",
+          "coordinates": "6.927856, 79.862021"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_NEG_010",
+    "scenario": "phone-number-too-long",
+    "expectedSource": "control-invalid",
+    "expectedField": "phoneNo",
+    "data": {
+      "testCaseId": "BUYER_001",
+      "name": "Lanka Retail Distribution",
+      "address": "No. 10, Union Place, Colombo 02",
+      "phoneNo": "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+      "status": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Buyer Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112100000",
+          "address": "No. 18, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "address": "No. 20, Union Place, Colombo 02",
+        "phoneNo": "0112900000",
+        "status": false,
+        "location": {
+          "address": "No. 28, Union Place, Colombo 02",
+          "coordinates": "6.927856, 79.862021"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_NEG_011",
+    "scenario": "name-unsafe-characters",
+    "expectedSource": "control-invalid",
+    "expectedField": "name",
+    "data": {
+      "testCaseId": "BUYER_001",
+      "name": "Buyer <script>",
+      "address": "No. 10, Union Place, Colombo 02",
+      "phoneNo": "0112000000",
+      "status": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Buyer Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112100000",
+          "address": "No. 18, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "address": "No. 20, Union Place, Colombo 02",
+        "phoneNo": "0112900000",
+        "status": false,
+        "location": {
+          "address": "No. 28, Union Place, Colombo 02",
+          "coordinates": "6.927856, 79.862021"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_NEG_012",
+    "scenario": "location-missing-facility-name",
+    "expectedSource": "inline",
+    "expectedMessage": "Facility name Is required",
+    "expectedField": "locations.0.facilityName",
+    "data": {
+      "testCaseId": "BUYER_001",
+      "name": "Lanka Retail Distribution",
+      "address": "No. 10, Union Place, Colombo 02",
+      "phoneNo": "0112000000",
+      "status": true,
+      "locations": [
+        {
+          "facilityName": "",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112100000",
+          "address": "No. 18, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "address": "No. 20, Union Place, Colombo 02",
+        "phoneNo": "0112900000",
+        "status": false,
+        "location": {
+          "address": "No. 28, Union Place, Colombo 02",
+          "coordinates": "6.927856, 79.862021"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_NEG_013",
+    "scenario": "location-missing-type",
+    "expectedSource": "inline",
+    "expectedMessage": "Location type Is required",
+    "expectedField": "locations.0.locationType",
+    "data": {
+      "testCaseId": "BUYER_001",
+      "name": "Lanka Retail Distribution",
+      "address": "No. 10, Union Place, Colombo 02",
+      "phoneNo": "0112000000",
+      "status": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Buyer Production Factory",
+          "locationType": null,
+          "phoneNumber": "0112100000",
+          "address": "No. 18, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "address": "No. 20, Union Place, Colombo 02",
+        "phoneNo": "0112900000",
+        "status": false,
+        "location": {
+          "address": "No. 28, Union Place, Colombo 02",
+          "coordinates": "6.927856, 79.862021"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_NEG_014",
+    "scenario": "location-missing-phone-number",
+    "expectedSource": "inline",
+    "expectedMessage": "Phone number Is required",
+    "expectedField": "locations.0.phoneNumber",
+    "data": {
+      "testCaseId": "BUYER_001",
+      "name": "Lanka Retail Distribution",
+      "address": "No. 10, Union Place, Colombo 02",
+      "phoneNo": "0112000000",
+      "status": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Buyer Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "",
+          "address": "No. 18, Union Place, Colombo 02",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "address": "No. 20, Union Place, Colombo 02",
+        "phoneNo": "0112900000",
+        "status": false,
+        "location": {
+          "address": "No. 28, Union Place, Colombo 02",
+          "coordinates": "6.927856, 79.862021"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_NEG_015",
+    "scenario": "location-missing-address",
+    "expectedSource": "inline",
+    "expectedMessage": "Address Is required",
+    "expectedField": "locations.0.address",
+    "data": {
+      "testCaseId": "BUYER_001",
+      "name": "Lanka Retail Distribution",
+      "address": "No. 10, Union Place, Colombo 02",
+      "phoneNo": "0112000000",
+      "status": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Buyer Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112100000",
+          "address": "",
+          "coordinates": "6.927079, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "address": "No. 20, Union Place, Colombo 02",
+        "phoneNo": "0112900000",
+        "status": false,
+        "location": {
+          "address": "No. 28, Union Place, Colombo 02",
+          "coordinates": "6.927856, 79.862021"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_NEG_016",
+    "scenario": "location-invalid-coordinates",
+    "expectedSource": "inline",
+    "expectedMessage": "Enter valid latitude and longitude values (e.g. 6.927079, 79.861244).",
+    "expectedField": "locations.0.coordinates",
+    "data": {
+      "testCaseId": "BUYER_001",
+      "name": "Lanka Retail Distribution",
+      "address": "No. 10, Union Place, Colombo 02",
+      "phoneNo": "0112000000",
+      "status": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Buyer Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112100000",
+          "address": "No. 18, Union Place, Colombo 02",
+          "coordinates": "6.927079|79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "address": "No. 20, Union Place, Colombo 02",
+        "phoneNo": "0112900000",
+        "status": false,
+        "location": {
+          "address": "No. 28, Union Place, Colombo 02",
+          "coordinates": "6.927856, 79.862021"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_NEG_017",
+    "scenario": "location-latitude-out-of-range",
+    "expectedSource": "inline",
+    "expectedMessage": "Enter valid latitude and longitude values (e.g. 6.927079, 79.861244).",
+    "expectedField": "locations.0.coordinates",
+    "data": {
+      "testCaseId": "BUYER_001",
+      "name": "Lanka Retail Distribution",
+      "address": "No. 10, Union Place, Colombo 02",
+      "phoneNo": "0112000000",
+      "status": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Buyer Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112100000",
+          "address": "No. 18, Union Place, Colombo 02",
+          "coordinates": "91.000000, 79.861244",
+          "status": true
+        }
+      ],
+      "updates": {
+        "address": "No. 20, Union Place, Colombo 02",
+        "phoneNo": "0112900000",
+        "status": false,
+        "location": {
+          "address": "No. 28, Union Place, Colombo 02",
+          "coordinates": "6.927856, 79.862021"
+        }
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_NEG_018",
+    "scenario": "location-longitude-out-of-range",
+    "expectedSource": "inline",
+    "expectedMessage": "Enter valid latitude and longitude values (e.g. 6.927079, 79.861244).",
+    "expectedField": "locations.0.coordinates",
+    "data": {
+      "testCaseId": "BUYER_001",
+      "name": "Lanka Retail Distribution",
+      "address": "No. 10, Union Place, Colombo 02",
+      "phoneNo": "0112000000",
+      "status": true,
+      "locations": [
+        {
+          "facilityName": "Colombo Buyer Production Factory",
+          "locationType": "FACTORY",
+          "phoneNumber": "0112100000",
+          "address": "No. 18, Union Place, Colombo 02",
+          "coordinates": "6.927079, 181.000000",
+          "status": true
+        }
+      ],
+      "updates": {
+        "address": "No. 20, Union Place, Colombo 02",
+        "phoneNo": "0112900000",
+        "status": false,
+        "location": {
+          "address": "No. 28, Union Place, Colombo 02",
+          "coordinates": "6.927856, 79.862021"
+        }
+      }
+    }
+  }
+]

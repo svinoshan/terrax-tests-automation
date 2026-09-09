@@ -1,0 +1,2602 @@
+[
+  {
+    "testCaseId": "BUYER_001",
+    "name": "Lanka Retail Distribution",
+    "address": "No. 10, Union Place, Colombo 02",
+    "phoneNo": "0112000000",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Colombo Buyer Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0112100000",
+        "address": "No. 18, Union Place, Colombo 02",
+        "coordinates": "6.927079, 79.861244",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 20, Union Place, Colombo 02",
+      "phoneNo": "0112900000",
+      "status": false,
+      "location": {
+        "address": "No. 28, Union Place, Colombo 02",
+        "coordinates": "6.927856, 79.862021"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_002",
+    "name": "Ceylon Retail Distribution",
+    "address": "No. 33, Kandy Road, Kadawatha",
+    "phoneNo": "0112007919",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Kadawatha Buyer Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0112104567",
+        "address": "No. 41, Kandy Road, Kadawatha",
+        "coordinates": "7.001289, 79.950142",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 43, Kandy Road, Kadawatha",
+      "phoneNo": "0112906151",
+      "status": false,
+      "location": {
+        "address": "No. 51, Kandy Road, Kadawatha",
+        "coordinates": "7.002066, 79.950919"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_003",
+    "name": "Serendib Retail Distribution",
+    "address": "No. 56, Chilaw Road, Negombo",
+    "phoneNo": "0312015838",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Negombo Buyer Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0312109134",
+        "address": "No. 64, Chilaw Road, Negombo",
+        "coordinates": "7.208300, 79.835800",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 66, Chilaw Road, Negombo",
+      "phoneNo": "0312912302",
+      "status": false,
+      "location": {
+        "address": "No. 74, Chilaw Road, Negombo",
+        "coordinates": "7.209077, 79.836577"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_004",
+    "name": "Lakpura Retail Distribution",
+    "address": "No. 79, Galle Road, Kalutara South",
+    "phoneNo": "0342023757",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Kalutara Buyer Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0342113701",
+        "address": "No. 87, Galle Road, Kalutara South",
+        "coordinates": "6.585400, 79.960700",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 89, Galle Road, Kalutara South",
+      "phoneNo": "0342918453",
+      "status": false,
+      "location": {
+        "address": "No. 97, Galle Road, Kalutara South",
+        "coordinates": "6.586177, 79.961477"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_005",
+    "name": "Greenfield Retail Distribution",
+    "address": "No. 102, Peradeniya Road, Kandy",
+    "phoneNo": "0812031676",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Kandy Buyer Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0812118268",
+        "address": "No. 110, Peradeniya Road, Kandy",
+        "coordinates": "7.290600, 80.633700",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 112, Peradeniya Road, Kandy",
+      "phoneNo": "0812924604",
+      "status": false,
+      "location": {
+        "address": "No. 120, Peradeniya Road, Kandy",
+        "coordinates": "7.291377, 80.634477"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_006",
+    "name": "AgroLink Retail Distribution",
+    "address": "No. 125, Dambulla Road, Matale",
+    "phoneNo": "0662039595",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Matale Buyer Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0662122835",
+        "address": "No. 133, Dambulla Road, Matale",
+        "coordinates": "7.467500, 80.623400",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 135, Dambulla Road, Matale",
+      "phoneNo": "0662930755",
+      "status": false,
+      "location": {
+        "address": "No. 143, Dambulla Road, Matale",
+        "coordinates": "7.468277, 80.624177"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_007",
+    "name": "Harvest Retail Distribution",
+    "address": "No. 148, Kandy Road, Nuwara Eliya",
+    "phoneNo": "0522047514",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Nuwara Eliya Buyer Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0522127402",
+        "address": "No. 156, Kandy Road, Nuwara Eliya",
+        "coordinates": "6.949700, 80.789100",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 158, Kandy Road, Nuwara Eliya",
+      "phoneNo": "0522936906",
+      "status": false,
+      "location": {
+        "address": "No. 166, Kandy Road, Nuwara Eliya",
+        "coordinates": "6.950477, 80.789877"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_008",
+    "name": "Island Retail Distribution",
+    "address": "No. 171, Matara Road, Galle",
+    "phoneNo": "0912055433",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Galle Buyer Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0912131969",
+        "address": "No. 179, Matara Road, Galle",
+        "coordinates": "6.032900, 80.216800",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 181, Matara Road, Galle",
+      "phoneNo": "0912943057",
+      "status": false,
+      "location": {
+        "address": "No. 189, Matara Road, Galle",
+        "coordinates": "6.033677, 80.217577"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_009",
+    "name": "Tropical Retail Distribution",
+    "address": "No. 194, Akuressa Road, Matara",
+    "phoneNo": "0412063352",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Matara Buyer Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0412136536",
+        "address": "No. 202, Akuressa Road, Matara",
+        "coordinates": "5.954900, 80.555000",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 204, Akuressa Road, Matara",
+      "phoneNo": "0412949208",
+      "status": false,
+      "location": {
+        "address": "No. 212, Akuressa Road, Matara",
+        "coordinates": "5.955677, 80.555777"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_010",
+    "name": "Highland Retail Distribution",
+    "address": "No. 32, Tissamaharama Road, Hambantota",
+    "phoneNo": "0472071271",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Hambantota Buyer Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0472141103",
+        "address": "No. 40, Tissamaharama Road, Hambantota",
+        "coordinates": "6.124100, 81.118500",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 42, Tissamaharama Road, Hambantota",
+      "phoneNo": "0472955359",
+      "status": false,
+      "location": {
+        "address": "No. 50, Tissamaharama Road, Hambantota",
+        "coordinates": "6.124877, 81.119277"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_011",
+    "name": "Golden Grain Retail Distribution",
+    "address": "No. 55, Kankesanthurai Road, Jaffna",
+    "phoneNo": "0212079190",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Jaffna Buyer Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0212145670",
+        "address": "No. 63, Kankesanthurai Road, Jaffna",
+        "coordinates": "9.661500, 80.025500",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 65, Kankesanthurai Road, Jaffna",
+      "phoneNo": "0212961510",
+      "status": false,
+      "location": {
+        "address": "No. 73, Kankesanthurai Road, Jaffna",
+        "coordinates": "9.662277, 80.026277"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_012",
+    "name": "Sunrise Retail Distribution",
+    "address": "No. 78, Kandy Road, Vavuniya",
+    "phoneNo": "0242087109",
+    "status": false,
+    "locations": [
+      {
+        "facilityName": "Vavuniya Buyer Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0242150237",
+        "address": "No. 86, Kandy Road, Vavuniya",
+        "coordinates": "8.751400, 80.497100",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 88, Kandy Road, Vavuniya",
+      "phoneNo": "0242967661",
+      "status": true,
+      "location": {
+        "address": "No. 96, Kandy Road, Vavuniya",
+        "coordinates": "8.752177, 80.497877"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_013",
+    "name": "Evergreen Retail Distribution",
+    "address": "No. 101, Trincomalee Road, Batticaloa",
+    "phoneNo": "0652095028",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Batticaloa Buyer Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0652154804",
+        "address": "No. 109, Trincomalee Road, Batticaloa",
+        "coordinates": "7.717000, 81.700000",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 111, Trincomalee Road, Batticaloa",
+      "phoneNo": "0652973812",
+      "status": false,
+      "location": {
+        "address": "No. 119, Trincomalee Road, Batticaloa",
+        "coordinates": "7.717777, 81.700777"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_014",
+    "name": "NatureFresh Retail Distribution",
+    "address": "No. 124, D. S. Senanayake Road, Ampara",
+    "phoneNo": "0632102947",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Ampara Buyer Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0632159371",
+        "address": "No. 132, D. S. Senanayake Road, Ampara",
+        "coordinates": "7.291200, 81.672400",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 134, D. S. Senanayake Road, Ampara",
+      "phoneNo": "0632979963",
+      "status": false,
+      "location": {
+        "address": "No. 142, D. S. Senanayake Road, Ampara",
+        "coordinates": "7.291977, 81.673177"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_015",
+    "name": "Rural Roots Retail Distribution",
+    "address": "No. 147, Kandy Road, Trincomalee",
+    "phoneNo": "0262110866",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Trincomalee Buyer Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0262163938",
+        "address": "No. 155, Kandy Road, Trincomalee",
+        "coordinates": "8.587400, 81.215200",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 157, Kandy Road, Trincomalee",
+      "phoneNo": "0262986114",
+      "status": false,
+      "location": {
+        "address": "No. 165, Kandy Road, Trincomalee",
+        "coordinates": "8.588177, 81.215977"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_016",
+    "name": "Southern Retail Distribution",
+    "address": "No. 170, Dambulla Road, Kurunegala",
+    "phoneNo": "0372118785",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Kurunegala Buyer Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0372168505",
+        "address": "No. 178, Dambulla Road, Kurunegala",
+        "coordinates": "7.486300, 80.362300",
+        "status": false
+      }
+    ],
+    "updates": {
+      "address": "No. 180, Dambulla Road, Kurunegala",
+      "phoneNo": "0372992265",
+      "status": false,
+      "location": {
+        "address": "No. 188, Dambulla Road, Kurunegala",
+        "coordinates": "7.487077, 80.363077"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_017",
+    "name": "Northern Retail Distribution",
+    "address": "No. 193, Anuradhapura Road, Puttalam",
+    "phoneNo": "0322126704",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Puttalam Buyer Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0322173072",
+        "address": "No. 201, Anuradhapura Road, Puttalam",
+        "coordinates": "8.040800, 79.839400",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 203, Anuradhapura Road, Puttalam",
+      "phoneNo": "0322998416",
+      "status": false,
+      "location": {
+        "address": "No. 211, Anuradhapura Road, Puttalam",
+        "coordinates": "8.041577, 79.840177"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_018",
+    "name": "Eastern Retail Distribution",
+    "address": "No. 31, New Town Road, Anuradhapura",
+    "phoneNo": "0252134623",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Anuradhapura Buyer Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0252177639",
+        "address": "No. 39, New Town Road, Anuradhapura",
+        "coordinates": "8.311400, 80.403700",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 41, New Town Road, Anuradhapura",
+      "phoneNo": "0253004567",
+      "status": false,
+      "location": {
+        "address": "No. 49, New Town Road, Anuradhapura",
+        "coordinates": "8.312177, 80.404477"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_019",
+    "name": "Central Retail Distribution",
+    "address": "No. 54, Batticaloa Road, Polonnaruwa",
+    "phoneNo": "0272142542",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Polonnaruwa Buyer Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0272182206",
+        "address": "No. 62, Batticaloa Road, Polonnaruwa",
+        "coordinates": "7.940300, 81.018800",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 64, Batticaloa Road, Polonnaruwa",
+      "phoneNo": "0273010718",
+      "status": false,
+      "location": {
+        "address": "No. 72, Batticaloa Road, Polonnaruwa",
+        "coordinates": "7.941077, 81.019577"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_020",
+    "name": "Uva Retail Distribution",
+    "address": "No. 77, Bandarawela Road, Badulla",
+    "phoneNo": "0552150461",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Badulla Buyer Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0552186773",
+        "address": "No. 85, Bandarawela Road, Badulla",
+        "coordinates": "6.993400, 81.055000",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 87, Bandarawela Road, Badulla",
+      "phoneNo": "0553016869",
+      "status": false,
+      "location": {
+        "address": "No. 95, Bandarawela Road, Badulla",
+        "coordinates": "6.994177, 81.055777"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_021",
+    "name": "Lanka Food Distributors",
+    "address": "No. 100, Wellawaya Road, Monaragala",
+    "phoneNo": "0552158380",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Monaragala Buyer Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0552191340",
+        "address": "No. 108, Wellawaya Road, Monaragala",
+        "coordinates": "6.872800, 81.350700",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 110, Wellawaya Road, Monaragala",
+      "phoneNo": "0553023020",
+      "status": false,
+      "location": {
+        "address": "No. 118, Wellawaya Road, Monaragala",
+        "coordinates": "6.873577, 81.351477"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_022",
+    "name": "Ceylon Food Distributors",
+    "address": "No. 123, Panadura Road, Ratnapura",
+    "phoneNo": "0452166299",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Ratnapura Buyer Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0452195907",
+        "address": "No. 131, Panadura Road, Ratnapura",
+        "coordinates": "6.682800, 80.399200",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 133, Panadura Road, Ratnapura",
+      "phoneNo": "0453029171",
+      "status": false,
+      "location": {
+        "address": "No. 141, Panadura Road, Ratnapura",
+        "coordinates": "6.683577, 80.399977"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_023",
+    "name": "Serendib Food Distributors",
+    "address": "No. 146, Colombo-Kandy Road, Kegalle",
+    "phoneNo": "0352174218",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Kegalle Buyer Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0352200474",
+        "address": "No. 154, Colombo-Kandy Road, Kegalle",
+        "coordinates": "7.251300, 80.346400",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 156, Colombo-Kandy Road, Kegalle",
+      "phoneNo": "0353035322",
+      "status": false,
+      "location": {
+        "address": "No. 164, Colombo-Kandy Road, Kegalle",
+        "coordinates": "7.252077, 80.347177"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_024",
+    "name": "Lakpura Food Distributors",
+    "address": "No. 169, Matale Road, Dambulla",
+    "phoneNo": "0662182137",
+    "status": false,
+    "locations": [
+      {
+        "facilityName": "Dambulla Buyer Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0662205041",
+        "address": "No. 177, Matale Road, Dambulla",
+        "coordinates": "7.874200, 80.651100",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 179, Matale Road, Dambulla",
+      "phoneNo": "0663041473",
+      "status": true,
+      "location": {
+        "address": "No. 187, Matale Road, Dambulla",
+        "coordinates": "7.874977, 80.651877"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_025",
+    "name": "Greenfield Food Distributors",
+    "address": "No. 192, Nonagama Road, Embilipitiya",
+    "phoneNo": "0472190056",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Embilipitiya Buyer Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0472209608",
+        "address": "No. 200, Nonagama Road, Embilipitiya",
+        "coordinates": "6.343900, 80.848900",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 202, Nonagama Road, Embilipitiya",
+      "phoneNo": "0473047624",
+      "status": false,
+      "location": {
+        "address": "No. 210, Nonagama Road, Embilipitiya",
+        "coordinates": "6.344677, 80.849677"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_026",
+    "name": "AgroLink Food Distributors",
+    "address": "No. 30, Union Place, Colombo 02",
+    "phoneNo": "0112197975",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Colombo Buyer Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0112214175",
+        "address": "No. 38, Union Place, Colombo 02",
+        "coordinates": "6.927079, 79.861244",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 40, Union Place, Colombo 02",
+      "phoneNo": "0113053775",
+      "status": false,
+      "location": {
+        "address": "No. 48, Union Place, Colombo 02",
+        "coordinates": "6.927856, 79.862021"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_027",
+    "name": "Harvest Food Distributors",
+    "address": "No. 53, Kandy Road, Kadawatha",
+    "phoneNo": "0112205894",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Kadawatha Buyer Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0112218742",
+        "address": "No. 61, Kandy Road, Kadawatha",
+        "coordinates": "7.001289, 79.950142",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 63, Kandy Road, Kadawatha",
+      "phoneNo": "0113059926",
+      "status": false,
+      "location": {
+        "address": "No. 71, Kandy Road, Kadawatha",
+        "coordinates": "7.002066, 79.950919"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_028",
+    "name": "Island Food Distributors",
+    "address": "No. 76, Chilaw Road, Negombo",
+    "phoneNo": "0312213813",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Negombo Buyer Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0312223309",
+        "address": "No. 84, Chilaw Road, Negombo",
+        "coordinates": "7.208300, 79.835800",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 86, Chilaw Road, Negombo",
+      "phoneNo": "0313066077",
+      "status": false,
+      "location": {
+        "address": "No. 94, Chilaw Road, Negombo",
+        "coordinates": "7.209077, 79.836577"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_029",
+    "name": "Tropical Food Distributors",
+    "address": "No. 99, Galle Road, Kalutara South",
+    "phoneNo": "0342221732",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Kalutara Buyer Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0342227876",
+        "address": "No. 107, Galle Road, Kalutara South",
+        "coordinates": "6.585400, 79.960700",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 109, Galle Road, Kalutara South",
+      "phoneNo": "0343072228",
+      "status": false,
+      "location": {
+        "address": "No. 117, Galle Road, Kalutara South",
+        "coordinates": "6.586177, 79.961477"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_030",
+    "name": "Highland Food Distributors",
+    "address": "No. 122, Peradeniya Road, Kandy",
+    "phoneNo": "0812229651",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Kandy Buyer Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0812232443",
+        "address": "No. 130, Peradeniya Road, Kandy",
+        "coordinates": "7.290600, 80.633700",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 132, Peradeniya Road, Kandy",
+      "phoneNo": "0813078379",
+      "status": false,
+      "location": {
+        "address": "No. 140, Peradeniya Road, Kandy",
+        "coordinates": "7.291377, 80.634477"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_031",
+    "name": "Golden Grain Food Distributors",
+    "address": "No. 145, Dambulla Road, Matale",
+    "phoneNo": "0662237570",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Matale Buyer Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0662237010",
+        "address": "No. 153, Dambulla Road, Matale",
+        "coordinates": "7.467500, 80.623400",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 155, Dambulla Road, Matale",
+      "phoneNo": "0663084530",
+      "status": false,
+      "location": {
+        "address": "No. 163, Dambulla Road, Matale",
+        "coordinates": "7.468277, 80.624177"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_032",
+    "name": "Sunrise Food Distributors",
+    "address": "No. 168, Kandy Road, Nuwara Eliya",
+    "phoneNo": "0522245489",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Nuwara Eliya Buyer Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0522241577",
+        "address": "No. 176, Kandy Road, Nuwara Eliya",
+        "coordinates": "6.949700, 80.789100",
+        "status": false
+      }
+    ],
+    "updates": {
+      "address": "No. 178, Kandy Road, Nuwara Eliya",
+      "phoneNo": "0523090681",
+      "status": false,
+      "location": {
+        "address": "No. 186, Kandy Road, Nuwara Eliya",
+        "coordinates": "6.950477, 80.789877"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_033",
+    "name": "Evergreen Food Distributors",
+    "address": "No. 191, Matara Road, Galle",
+    "phoneNo": "0912253408",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Galle Buyer Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0912246144",
+        "address": "No. 199, Matara Road, Galle",
+        "coordinates": "6.032900, 80.216800",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 201, Matara Road, Galle",
+      "phoneNo": "0913096832",
+      "status": false,
+      "location": {
+        "address": "No. 209, Matara Road, Galle",
+        "coordinates": "6.033677, 80.217577"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_034",
+    "name": "NatureFresh Food Distributors",
+    "address": "No. 29, Akuressa Road, Matara",
+    "phoneNo": "0412261327",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Matara Buyer Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0412250711",
+        "address": "No. 37, Akuressa Road, Matara",
+        "coordinates": "5.954900, 80.555000",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 39, Akuressa Road, Matara",
+      "phoneNo": "0413102983",
+      "status": false,
+      "location": {
+        "address": "No. 47, Akuressa Road, Matara",
+        "coordinates": "5.955677, 80.555777"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_035",
+    "name": "Rural Roots Food Distributors",
+    "address": "No. 52, Tissamaharama Road, Hambantota",
+    "phoneNo": "0472269246",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Hambantota Buyer Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0472255278",
+        "address": "No. 60, Tissamaharama Road, Hambantota",
+        "coordinates": "6.124100, 81.118500",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 62, Tissamaharama Road, Hambantota",
+      "phoneNo": "0473109134",
+      "status": false,
+      "location": {
+        "address": "No. 70, Tissamaharama Road, Hambantota",
+        "coordinates": "6.124877, 81.119277"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_036",
+    "name": "Southern Food Distributors",
+    "address": "No. 75, Kankesanthurai Road, Jaffna",
+    "phoneNo": "0212277165",
+    "status": false,
+    "locations": [
+      {
+        "facilityName": "Jaffna Buyer Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0212259845",
+        "address": "No. 83, Kankesanthurai Road, Jaffna",
+        "coordinates": "9.661500, 80.025500",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 85, Kankesanthurai Road, Jaffna",
+      "phoneNo": "0213115285",
+      "status": true,
+      "location": {
+        "address": "No. 93, Kankesanthurai Road, Jaffna",
+        "coordinates": "9.662277, 80.026277"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_037",
+    "name": "Northern Food Distributors",
+    "address": "No. 98, Kandy Road, Vavuniya",
+    "phoneNo": "0242285084",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Vavuniya Buyer Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0242264412",
+        "address": "No. 106, Kandy Road, Vavuniya",
+        "coordinates": "8.751400, 80.497100",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 108, Kandy Road, Vavuniya",
+      "phoneNo": "0243121436",
+      "status": false,
+      "location": {
+        "address": "No. 116, Kandy Road, Vavuniya",
+        "coordinates": "8.752177, 80.497877"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_038",
+    "name": "Eastern Food Distributors",
+    "address": "No. 121, Trincomalee Road, Batticaloa",
+    "phoneNo": "0652293003",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Batticaloa Buyer Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0652268979",
+        "address": "No. 129, Trincomalee Road, Batticaloa",
+        "coordinates": "7.717000, 81.700000",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 131, Trincomalee Road, Batticaloa",
+      "phoneNo": "0653127587",
+      "status": false,
+      "location": {
+        "address": "No. 139, Trincomalee Road, Batticaloa",
+        "coordinates": "7.717777, 81.700777"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_039",
+    "name": "Central Food Distributors",
+    "address": "No. 144, D. S. Senanayake Road, Ampara",
+    "phoneNo": "0632300922",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Ampara Buyer Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0632273546",
+        "address": "No. 152, D. S. Senanayake Road, Ampara",
+        "coordinates": "7.291200, 81.672400",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 154, D. S. Senanayake Road, Ampara",
+      "phoneNo": "0633133738",
+      "status": false,
+      "location": {
+        "address": "No. 162, D. S. Senanayake Road, Ampara",
+        "coordinates": "7.291977, 81.673177"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_040",
+    "name": "Uva Food Distributors",
+    "address": "No. 167, Kandy Road, Trincomalee",
+    "phoneNo": "0262308841",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Trincomalee Buyer Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0262278113",
+        "address": "No. 175, Kandy Road, Trincomalee",
+        "coordinates": "8.587400, 81.215200",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 177, Kandy Road, Trincomalee",
+      "phoneNo": "0263139889",
+      "status": false,
+      "location": {
+        "address": "No. 185, Kandy Road, Trincomalee",
+        "coordinates": "8.588177, 81.215977"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_041",
+    "name": "Lanka Wholesale Traders",
+    "address": "No. 190, Dambulla Road, Kurunegala",
+    "phoneNo": "0372316760",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Kurunegala Buyer Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0372282680",
+        "address": "No. 198, Dambulla Road, Kurunegala",
+        "coordinates": "7.486300, 80.362300",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 200, Dambulla Road, Kurunegala",
+      "phoneNo": "0373146040",
+      "status": false,
+      "location": {
+        "address": "No. 208, Dambulla Road, Kurunegala",
+        "coordinates": "7.487077, 80.363077"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_042",
+    "name": "Ceylon Wholesale Traders",
+    "address": "No. 28, Anuradhapura Road, Puttalam",
+    "phoneNo": "0322324679",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Puttalam Buyer Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0322287247",
+        "address": "No. 36, Anuradhapura Road, Puttalam",
+        "coordinates": "8.040800, 79.839400",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 38, Anuradhapura Road, Puttalam",
+      "phoneNo": "0323152191",
+      "status": false,
+      "location": {
+        "address": "No. 46, Anuradhapura Road, Puttalam",
+        "coordinates": "8.041577, 79.840177"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_043",
+    "name": "Serendib Wholesale Traders",
+    "address": "No. 51, New Town Road, Anuradhapura",
+    "phoneNo": "0252332598",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Anuradhapura Buyer Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0252291814",
+        "address": "No. 59, New Town Road, Anuradhapura",
+        "coordinates": "8.311400, 80.403700",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 61, New Town Road, Anuradhapura",
+      "phoneNo": "0253158342",
+      "status": false,
+      "location": {
+        "address": "No. 69, New Town Road, Anuradhapura",
+        "coordinates": "8.312177, 80.404477"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_044",
+    "name": "Lakpura Wholesale Traders",
+    "address": "No. 74, Batticaloa Road, Polonnaruwa",
+    "phoneNo": "0272340517",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Polonnaruwa Buyer Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0272296381",
+        "address": "No. 82, Batticaloa Road, Polonnaruwa",
+        "coordinates": "7.940300, 81.018800",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 84, Batticaloa Road, Polonnaruwa",
+      "phoneNo": "0273164493",
+      "status": false,
+      "location": {
+        "address": "No. 92, Batticaloa Road, Polonnaruwa",
+        "coordinates": "7.941077, 81.019577"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_045",
+    "name": "Greenfield Wholesale Traders",
+    "address": "No. 97, Bandarawela Road, Badulla",
+    "phoneNo": "0552348436",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Badulla Buyer Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0552300948",
+        "address": "No. 105, Bandarawela Road, Badulla",
+        "coordinates": "6.993400, 81.055000",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 107, Bandarawela Road, Badulla",
+      "phoneNo": "0553170644",
+      "status": false,
+      "location": {
+        "address": "No. 115, Bandarawela Road, Badulla",
+        "coordinates": "6.994177, 81.055777"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_046",
+    "name": "AgroLink Wholesale Traders",
+    "address": "No. 120, Wellawaya Road, Monaragala",
+    "phoneNo": "0552356355",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Monaragala Buyer Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0552305515",
+        "address": "No. 128, Wellawaya Road, Monaragala",
+        "coordinates": "6.872800, 81.350700",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 130, Wellawaya Road, Monaragala",
+      "phoneNo": "0553176795",
+      "status": false,
+      "location": {
+        "address": "No. 138, Wellawaya Road, Monaragala",
+        "coordinates": "6.873577, 81.351477"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_047",
+    "name": "Harvest Wholesale Traders",
+    "address": "No. 143, Panadura Road, Ratnapura",
+    "phoneNo": "0452364274",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Ratnapura Buyer Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0452310082",
+        "address": "No. 151, Panadura Road, Ratnapura",
+        "coordinates": "6.682800, 80.399200",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 153, Panadura Road, Ratnapura",
+      "phoneNo": "0453182946",
+      "status": false,
+      "location": {
+        "address": "No. 161, Panadura Road, Ratnapura",
+        "coordinates": "6.683577, 80.399977"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_048",
+    "name": "Island Wholesale Traders",
+    "address": "No. 166, Colombo-Kandy Road, Kegalle",
+    "phoneNo": "0352372193",
+    "status": false,
+    "locations": [
+      {
+        "facilityName": "Kegalle Buyer Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0352314649",
+        "address": "No. 174, Colombo-Kandy Road, Kegalle",
+        "coordinates": "7.251300, 80.346400",
+        "status": false
+      }
+    ],
+    "updates": {
+      "address": "No. 176, Colombo-Kandy Road, Kegalle",
+      "phoneNo": "0353189097",
+      "status": true,
+      "location": {
+        "address": "No. 184, Colombo-Kandy Road, Kegalle",
+        "coordinates": "7.252077, 80.347177"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_049",
+    "name": "Tropical Wholesale Traders",
+    "address": "No. 189, Matale Road, Dambulla",
+    "phoneNo": "0662380112",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Dambulla Buyer Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0662319216",
+        "address": "No. 197, Matale Road, Dambulla",
+        "coordinates": "7.874200, 80.651100",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 199, Matale Road, Dambulla",
+      "phoneNo": "0663195248",
+      "status": false,
+      "location": {
+        "address": "No. 207, Matale Road, Dambulla",
+        "coordinates": "7.874977, 80.651877"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_050",
+    "name": "Highland Wholesale Traders",
+    "address": "No. 27, Nonagama Road, Embilipitiya",
+    "phoneNo": "0472388031",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Embilipitiya Buyer Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0472323783",
+        "address": "No. 35, Nonagama Road, Embilipitiya",
+        "coordinates": "6.343900, 80.848900",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 37, Nonagama Road, Embilipitiya",
+      "phoneNo": "0473201399",
+      "status": false,
+      "location": {
+        "address": "No. 45, Nonagama Road, Embilipitiya",
+        "coordinates": "6.344677, 80.849677"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_051",
+    "name": "Golden Grain Wholesale Traders",
+    "address": "No. 50, Union Place, Colombo 02",
+    "phoneNo": "0112395950",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Colombo Buyer Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0112328350",
+        "address": "No. 58, Union Place, Colombo 02",
+        "coordinates": "6.927079, 79.861244",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 60, Union Place, Colombo 02",
+      "phoneNo": "0113207550",
+      "status": false,
+      "location": {
+        "address": "No. 68, Union Place, Colombo 02",
+        "coordinates": "6.927856, 79.862021"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_052",
+    "name": "Sunrise Wholesale Traders",
+    "address": "No. 73, Kandy Road, Kadawatha",
+    "phoneNo": "0112403869",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Kadawatha Buyer Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0112332917",
+        "address": "No. 81, Kandy Road, Kadawatha",
+        "coordinates": "7.001289, 79.950142",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 83, Kandy Road, Kadawatha",
+      "phoneNo": "0113213701",
+      "status": false,
+      "location": {
+        "address": "No. 91, Kandy Road, Kadawatha",
+        "coordinates": "7.002066, 79.950919"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_053",
+    "name": "Evergreen Wholesale Traders",
+    "address": "No. 96, Chilaw Road, Negombo",
+    "phoneNo": "0312411788",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Negombo Buyer Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0312337484",
+        "address": "No. 104, Chilaw Road, Negombo",
+        "coordinates": "7.208300, 79.835800",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 106, Chilaw Road, Negombo",
+      "phoneNo": "0313219852",
+      "status": false,
+      "location": {
+        "address": "No. 114, Chilaw Road, Negombo",
+        "coordinates": "7.209077, 79.836577"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_054",
+    "name": "NatureFresh Wholesale Traders",
+    "address": "No. 119, Galle Road, Kalutara South",
+    "phoneNo": "0342419707",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Kalutara Buyer Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0342342051",
+        "address": "No. 127, Galle Road, Kalutara South",
+        "coordinates": "6.585400, 79.960700",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 129, Galle Road, Kalutara South",
+      "phoneNo": "0343226003",
+      "status": false,
+      "location": {
+        "address": "No. 137, Galle Road, Kalutara South",
+        "coordinates": "6.586177, 79.961477"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_055",
+    "name": "Rural Roots Wholesale Traders",
+    "address": "No. 142, Peradeniya Road, Kandy",
+    "phoneNo": "0812427626",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Kandy Buyer Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0812346618",
+        "address": "No. 150, Peradeniya Road, Kandy",
+        "coordinates": "7.290600, 80.633700",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 152, Peradeniya Road, Kandy",
+      "phoneNo": "0813232154",
+      "status": false,
+      "location": {
+        "address": "No. 160, Peradeniya Road, Kandy",
+        "coordinates": "7.291377, 80.634477"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_056",
+    "name": "Southern Wholesale Traders",
+    "address": "No. 165, Dambulla Road, Matale",
+    "phoneNo": "0662435545",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Matale Buyer Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0662351185",
+        "address": "No. 173, Dambulla Road, Matale",
+        "coordinates": "7.467500, 80.623400",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 175, Dambulla Road, Matale",
+      "phoneNo": "0663238305",
+      "status": false,
+      "location": {
+        "address": "No. 183, Dambulla Road, Matale",
+        "coordinates": "7.468277, 80.624177"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_057",
+    "name": "Northern Wholesale Traders",
+    "address": "No. 188, Kandy Road, Nuwara Eliya",
+    "phoneNo": "0522443464",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Nuwara Eliya Buyer Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0522355752",
+        "address": "No. 196, Kandy Road, Nuwara Eliya",
+        "coordinates": "6.949700, 80.789100",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 198, Kandy Road, Nuwara Eliya",
+      "phoneNo": "0523244456",
+      "status": false,
+      "location": {
+        "address": "No. 206, Kandy Road, Nuwara Eliya",
+        "coordinates": "6.950477, 80.789877"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_058",
+    "name": "Eastern Wholesale Traders",
+    "address": "No. 26, Matara Road, Galle",
+    "phoneNo": "0912451383",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Galle Buyer Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0912360319",
+        "address": "No. 34, Matara Road, Galle",
+        "coordinates": "6.032900, 80.216800",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 36, Matara Road, Galle",
+      "phoneNo": "0913250607",
+      "status": false,
+      "location": {
+        "address": "No. 44, Matara Road, Galle",
+        "coordinates": "6.033677, 80.217577"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_059",
+    "name": "Central Wholesale Traders",
+    "address": "No. 49, Akuressa Road, Matara",
+    "phoneNo": "0412459302",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Matara Buyer Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0412364886",
+        "address": "No. 57, Akuressa Road, Matara",
+        "coordinates": "5.954900, 80.555000",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 59, Akuressa Road, Matara",
+      "phoneNo": "0413256758",
+      "status": false,
+      "location": {
+        "address": "No. 67, Akuressa Road, Matara",
+        "coordinates": "5.955677, 80.555777"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_060",
+    "name": "Uva Wholesale Traders",
+    "address": "No. 72, Tissamaharama Road, Hambantota",
+    "phoneNo": "0472467221",
+    "status": false,
+    "locations": [
+      {
+        "facilityName": "Hambantota Buyer Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0472369453",
+        "address": "No. 80, Tissamaharama Road, Hambantota",
+        "coordinates": "6.124100, 81.118500",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 82, Tissamaharama Road, Hambantota",
+      "phoneNo": "0473262909",
+      "status": true,
+      "location": {
+        "address": "No. 90, Tissamaharama Road, Hambantota",
+        "coordinates": "6.124877, 81.119277"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_061",
+    "name": "Lanka Supermarket Supplies",
+    "address": "No. 95, Kankesanthurai Road, Jaffna",
+    "phoneNo": "0212475140",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Jaffna Buyer Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0212374020",
+        "address": "No. 103, Kankesanthurai Road, Jaffna",
+        "coordinates": "9.661500, 80.025500",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 105, Kankesanthurai Road, Jaffna",
+      "phoneNo": "0213269060",
+      "status": false,
+      "location": {
+        "address": "No. 113, Kankesanthurai Road, Jaffna",
+        "coordinates": "9.662277, 80.026277"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_062",
+    "name": "Ceylon Supermarket Supplies",
+    "address": "No. 118, Kandy Road, Vavuniya",
+    "phoneNo": "0242483059",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Vavuniya Buyer Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0242378587",
+        "address": "No. 126, Kandy Road, Vavuniya",
+        "coordinates": "8.751400, 80.497100",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 128, Kandy Road, Vavuniya",
+      "phoneNo": "0243275211",
+      "status": false,
+      "location": {
+        "address": "No. 136, Kandy Road, Vavuniya",
+        "coordinates": "8.752177, 80.497877"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_063",
+    "name": "Serendib Supermarket Supplies",
+    "address": "No. 141, Trincomalee Road, Batticaloa",
+    "phoneNo": "0652490978",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Batticaloa Buyer Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0652383154",
+        "address": "No. 149, Trincomalee Road, Batticaloa",
+        "coordinates": "7.717000, 81.700000",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 151, Trincomalee Road, Batticaloa",
+      "phoneNo": "0653281362",
+      "status": false,
+      "location": {
+        "address": "No. 159, Trincomalee Road, Batticaloa",
+        "coordinates": "7.717777, 81.700777"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_064",
+    "name": "Lakpura Supermarket Supplies",
+    "address": "No. 164, D. S. Senanayake Road, Ampara",
+    "phoneNo": "0632498897",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Ampara Buyer Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0632387721",
+        "address": "No. 172, D. S. Senanayake Road, Ampara",
+        "coordinates": "7.291200, 81.672400",
+        "status": false
+      }
+    ],
+    "updates": {
+      "address": "No. 174, D. S. Senanayake Road, Ampara",
+      "phoneNo": "0633287513",
+      "status": false,
+      "location": {
+        "address": "No. 182, D. S. Senanayake Road, Ampara",
+        "coordinates": "7.291977, 81.673177"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_065",
+    "name": "Greenfield Supermarket Supplies",
+    "address": "No. 187, Kandy Road, Trincomalee",
+    "phoneNo": "0262506816",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Trincomalee Buyer Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0262392288",
+        "address": "No. 195, Kandy Road, Trincomalee",
+        "coordinates": "8.587400, 81.215200",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 197, Kandy Road, Trincomalee",
+      "phoneNo": "0263293664",
+      "status": false,
+      "location": {
+        "address": "No. 205, Kandy Road, Trincomalee",
+        "coordinates": "8.588177, 81.215977"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_066",
+    "name": "AgroLink Supermarket Supplies",
+    "address": "No. 25, Dambulla Road, Kurunegala",
+    "phoneNo": "0372514735",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Kurunegala Buyer Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0372396855",
+        "address": "No. 33, Dambulla Road, Kurunegala",
+        "coordinates": "7.486300, 80.362300",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 35, Dambulla Road, Kurunegala",
+      "phoneNo": "0373299815",
+      "status": false,
+      "location": {
+        "address": "No. 43, Dambulla Road, Kurunegala",
+        "coordinates": "7.487077, 80.363077"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_067",
+    "name": "Harvest Supermarket Supplies",
+    "address": "No. 48, Anuradhapura Road, Puttalam",
+    "phoneNo": "0322522654",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Puttalam Buyer Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0322401422",
+        "address": "No. 56, Anuradhapura Road, Puttalam",
+        "coordinates": "8.040800, 79.839400",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 58, Anuradhapura Road, Puttalam",
+      "phoneNo": "0323305966",
+      "status": false,
+      "location": {
+        "address": "No. 66, Anuradhapura Road, Puttalam",
+        "coordinates": "8.041577, 79.840177"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_068",
+    "name": "Island Supermarket Supplies",
+    "address": "No. 71, New Town Road, Anuradhapura",
+    "phoneNo": "0252530573",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Anuradhapura Buyer Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0252405989",
+        "address": "No. 79, New Town Road, Anuradhapura",
+        "coordinates": "8.311400, 80.403700",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 81, New Town Road, Anuradhapura",
+      "phoneNo": "0253312117",
+      "status": false,
+      "location": {
+        "address": "No. 89, New Town Road, Anuradhapura",
+        "coordinates": "8.312177, 80.404477"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_069",
+    "name": "Tropical Supermarket Supplies",
+    "address": "No. 94, Batticaloa Road, Polonnaruwa",
+    "phoneNo": "0272538492",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Polonnaruwa Buyer Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0272410556",
+        "address": "No. 102, Batticaloa Road, Polonnaruwa",
+        "coordinates": "7.940300, 81.018800",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 104, Batticaloa Road, Polonnaruwa",
+      "phoneNo": "0273318268",
+      "status": false,
+      "location": {
+        "address": "No. 112, Batticaloa Road, Polonnaruwa",
+        "coordinates": "7.941077, 81.019577"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_070",
+    "name": "Highland Supermarket Supplies",
+    "address": "No. 117, Bandarawela Road, Badulla",
+    "phoneNo": "0552546411",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Badulla Buyer Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0552415123",
+        "address": "No. 125, Bandarawela Road, Badulla",
+        "coordinates": "6.993400, 81.055000",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 127, Bandarawela Road, Badulla",
+      "phoneNo": "0553324419",
+      "status": false,
+      "location": {
+        "address": "No. 135, Bandarawela Road, Badulla",
+        "coordinates": "6.994177, 81.055777"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_071",
+    "name": "Golden Grain Supermarket Supplies",
+    "address": "No. 140, Wellawaya Road, Monaragala",
+    "phoneNo": "0552554330",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Monaragala Buyer Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0552419690",
+        "address": "No. 148, Wellawaya Road, Monaragala",
+        "coordinates": "6.872800, 81.350700",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 150, Wellawaya Road, Monaragala",
+      "phoneNo": "0553330570",
+      "status": false,
+      "location": {
+        "address": "No. 158, Wellawaya Road, Monaragala",
+        "coordinates": "6.873577, 81.351477"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_072",
+    "name": "Sunrise Supermarket Supplies",
+    "address": "No. 163, Panadura Road, Ratnapura",
+    "phoneNo": "0452562249",
+    "status": false,
+    "locations": [
+      {
+        "facilityName": "Ratnapura Buyer Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0452424257",
+        "address": "No. 171, Panadura Road, Ratnapura",
+        "coordinates": "6.682800, 80.399200",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 173, Panadura Road, Ratnapura",
+      "phoneNo": "0453336721",
+      "status": true,
+      "location": {
+        "address": "No. 181, Panadura Road, Ratnapura",
+        "coordinates": "6.683577, 80.399977"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_073",
+    "name": "Evergreen Supermarket Supplies",
+    "address": "No. 186, Colombo-Kandy Road, Kegalle",
+    "phoneNo": "0352570168",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Kegalle Buyer Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0352428824",
+        "address": "No. 194, Colombo-Kandy Road, Kegalle",
+        "coordinates": "7.251300, 80.346400",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 196, Colombo-Kandy Road, Kegalle",
+      "phoneNo": "0353342872",
+      "status": false,
+      "location": {
+        "address": "No. 204, Colombo-Kandy Road, Kegalle",
+        "coordinates": "7.252077, 80.347177"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_074",
+    "name": "NatureFresh Supermarket Supplies",
+    "address": "No. 24, Matale Road, Dambulla",
+    "phoneNo": "0662578087",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Dambulla Buyer Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0662433391",
+        "address": "No. 32, Matale Road, Dambulla",
+        "coordinates": "7.874200, 80.651100",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 34, Matale Road, Dambulla",
+      "phoneNo": "0663349023",
+      "status": false,
+      "location": {
+        "address": "No. 42, Matale Road, Dambulla",
+        "coordinates": "7.874977, 80.651877"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_075",
+    "name": "Rural Roots Supermarket Supplies",
+    "address": "No. 47, Nonagama Road, Embilipitiya",
+    "phoneNo": "0472586006",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Embilipitiya Buyer Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0472437958",
+        "address": "No. 55, Nonagama Road, Embilipitiya",
+        "coordinates": "6.343900, 80.848900",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 57, Nonagama Road, Embilipitiya",
+      "phoneNo": "0473355174",
+      "status": false,
+      "location": {
+        "address": "No. 65, Nonagama Road, Embilipitiya",
+        "coordinates": "6.344677, 80.849677"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_076",
+    "name": "Southern Supermarket Supplies",
+    "address": "No. 70, Union Place, Colombo 02",
+    "phoneNo": "0112593925",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Colombo Buyer Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0112442525",
+        "address": "No. 78, Union Place, Colombo 02",
+        "coordinates": "6.927079, 79.861244",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 80, Union Place, Colombo 02",
+      "phoneNo": "0113361325",
+      "status": false,
+      "location": {
+        "address": "No. 88, Union Place, Colombo 02",
+        "coordinates": "6.927856, 79.862021"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_077",
+    "name": "Northern Supermarket Supplies",
+    "address": "No. 93, Kandy Road, Kadawatha",
+    "phoneNo": "0112601844",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Kadawatha Buyer Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0112447092",
+        "address": "No. 101, Kandy Road, Kadawatha",
+        "coordinates": "7.001289, 79.950142",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 103, Kandy Road, Kadawatha",
+      "phoneNo": "0113367476",
+      "status": false,
+      "location": {
+        "address": "No. 111, Kandy Road, Kadawatha",
+        "coordinates": "7.002066, 79.950919"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_078",
+    "name": "Eastern Supermarket Supplies",
+    "address": "No. 116, Chilaw Road, Negombo",
+    "phoneNo": "0312609763",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Negombo Buyer Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0312451659",
+        "address": "No. 124, Chilaw Road, Negombo",
+        "coordinates": "7.208300, 79.835800",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 126, Chilaw Road, Negombo",
+      "phoneNo": "0313373627",
+      "status": false,
+      "location": {
+        "address": "No. 134, Chilaw Road, Negombo",
+        "coordinates": "7.209077, 79.836577"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_079",
+    "name": "Central Supermarket Supplies",
+    "address": "No. 139, Galle Road, Kalutara South",
+    "phoneNo": "0342617682",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Kalutara Buyer Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0342456226",
+        "address": "No. 147, Galle Road, Kalutara South",
+        "coordinates": "6.585400, 79.960700",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 149, Galle Road, Kalutara South",
+      "phoneNo": "0343379778",
+      "status": false,
+      "location": {
+        "address": "No. 157, Galle Road, Kalutara South",
+        "coordinates": "6.586177, 79.961477"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_080",
+    "name": "Uva Supermarket Supplies",
+    "address": "No. 162, Peradeniya Road, Kandy",
+    "phoneNo": "0812625601",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Kandy Buyer Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0812460793",
+        "address": "No. 170, Peradeniya Road, Kandy",
+        "coordinates": "7.290600, 80.633700",
+        "status": false
+      }
+    ],
+    "updates": {
+      "address": "No. 172, Peradeniya Road, Kandy",
+      "phoneNo": "0813385929",
+      "status": false,
+      "location": {
+        "address": "No. 180, Peradeniya Road, Kandy",
+        "coordinates": "7.291377, 80.634477"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_081",
+    "name": "Lanka Hospitality Procurement",
+    "address": "No. 185, Dambulla Road, Matale",
+    "phoneNo": "0662633520",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Matale Buyer Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0662465360",
+        "address": "No. 193, Dambulla Road, Matale",
+        "coordinates": "7.467500, 80.623400",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 195, Dambulla Road, Matale",
+      "phoneNo": "0663392080",
+      "status": false,
+      "location": {
+        "address": "No. 203, Dambulla Road, Matale",
+        "coordinates": "7.468277, 80.624177"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_082",
+    "name": "Ceylon Hospitality Procurement",
+    "address": "No. 23, Kandy Road, Nuwara Eliya",
+    "phoneNo": "0522641439",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Nuwara Eliya Buyer Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0522469927",
+        "address": "No. 31, Kandy Road, Nuwara Eliya",
+        "coordinates": "6.949700, 80.789100",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 33, Kandy Road, Nuwara Eliya",
+      "phoneNo": "0523398231",
+      "status": false,
+      "location": {
+        "address": "No. 41, Kandy Road, Nuwara Eliya",
+        "coordinates": "6.950477, 80.789877"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_083",
+    "name": "Serendib Hospitality Procurement",
+    "address": "No. 46, Matara Road, Galle",
+    "phoneNo": "0912649358",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Galle Buyer Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0912474494",
+        "address": "No. 54, Matara Road, Galle",
+        "coordinates": "6.032900, 80.216800",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 56, Matara Road, Galle",
+      "phoneNo": "0913404382",
+      "status": false,
+      "location": {
+        "address": "No. 64, Matara Road, Galle",
+        "coordinates": "6.033677, 80.217577"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_084",
+    "name": "Lakpura Hospitality Procurement",
+    "address": "No. 69, Akuressa Road, Matara",
+    "phoneNo": "0412657277",
+    "status": false,
+    "locations": [
+      {
+        "facilityName": "Matara Buyer Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0412479061",
+        "address": "No. 77, Akuressa Road, Matara",
+        "coordinates": "5.954900, 80.555000",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 79, Akuressa Road, Matara",
+      "phoneNo": "0413410533",
+      "status": true,
+      "location": {
+        "address": "No. 87, Akuressa Road, Matara",
+        "coordinates": "5.955677, 80.555777"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_085",
+    "name": "Greenfield Hospitality Procurement",
+    "address": "No. 92, Tissamaharama Road, Hambantota",
+    "phoneNo": "0472665196",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Hambantota Buyer Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0472483628",
+        "address": "No. 100, Tissamaharama Road, Hambantota",
+        "coordinates": "6.124100, 81.118500",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 102, Tissamaharama Road, Hambantota",
+      "phoneNo": "0473416684",
+      "status": false,
+      "location": {
+        "address": "No. 110, Tissamaharama Road, Hambantota",
+        "coordinates": "6.124877, 81.119277"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_086",
+    "name": "AgroLink Hospitality Procurement",
+    "address": "No. 115, Kankesanthurai Road, Jaffna",
+    "phoneNo": "0212673115",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Jaffna Buyer Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0212488195",
+        "address": "No. 123, Kankesanthurai Road, Jaffna",
+        "coordinates": "9.661500, 80.025500",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 125, Kankesanthurai Road, Jaffna",
+      "phoneNo": "0213422835",
+      "status": false,
+      "location": {
+        "address": "No. 133, Kankesanthurai Road, Jaffna",
+        "coordinates": "9.662277, 80.026277"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_087",
+    "name": "Harvest Hospitality Procurement",
+    "address": "No. 138, Kandy Road, Vavuniya",
+    "phoneNo": "0242681034",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Vavuniya Buyer Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0242492762",
+        "address": "No. 146, Kandy Road, Vavuniya",
+        "coordinates": "8.751400, 80.497100",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 148, Kandy Road, Vavuniya",
+      "phoneNo": "0243428986",
+      "status": false,
+      "location": {
+        "address": "No. 156, Kandy Road, Vavuniya",
+        "coordinates": "8.752177, 80.497877"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_088",
+    "name": "Island Hospitality Procurement",
+    "address": "No. 161, Trincomalee Road, Batticaloa",
+    "phoneNo": "0652688953",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Batticaloa Buyer Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0652497329",
+        "address": "No. 169, Trincomalee Road, Batticaloa",
+        "coordinates": "7.717000, 81.700000",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 171, Trincomalee Road, Batticaloa",
+      "phoneNo": "0653435137",
+      "status": false,
+      "location": {
+        "address": "No. 179, Trincomalee Road, Batticaloa",
+        "coordinates": "7.717777, 81.700777"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_089",
+    "name": "Tropical Hospitality Procurement",
+    "address": "No. 184, D. S. Senanayake Road, Ampara",
+    "phoneNo": "0632696872",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Ampara Buyer Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0632501896",
+        "address": "No. 192, D. S. Senanayake Road, Ampara",
+        "coordinates": "7.291200, 81.672400",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 194, D. S. Senanayake Road, Ampara",
+      "phoneNo": "0633441288",
+      "status": false,
+      "location": {
+        "address": "No. 202, D. S. Senanayake Road, Ampara",
+        "coordinates": "7.291977, 81.673177"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_090",
+    "name": "Highland Hospitality Procurement",
+    "address": "No. 22, Kandy Road, Trincomalee",
+    "phoneNo": "0262704791",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Trincomalee Buyer Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0262506463",
+        "address": "No. 30, Kandy Road, Trincomalee",
+        "coordinates": "8.587400, 81.215200",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 32, Kandy Road, Trincomalee",
+      "phoneNo": "0263447439",
+      "status": false,
+      "location": {
+        "address": "No. 40, Kandy Road, Trincomalee",
+        "coordinates": "8.588177, 81.215977"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_091",
+    "name": "Golden Grain Hospitality Procurement",
+    "address": "No. 45, Dambulla Road, Kurunegala",
+    "phoneNo": "0372712710",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Kurunegala Buyer Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0372511030",
+        "address": "No. 53, Dambulla Road, Kurunegala",
+        "coordinates": "7.486300, 80.362300",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 55, Dambulla Road, Kurunegala",
+      "phoneNo": "0373453590",
+      "status": false,
+      "location": {
+        "address": "No. 63, Dambulla Road, Kurunegala",
+        "coordinates": "7.487077, 80.363077"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_092",
+    "name": "Sunrise Hospitality Procurement",
+    "address": "No. 68, Anuradhapura Road, Puttalam",
+    "phoneNo": "0322720629",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Puttalam Buyer Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0322515597",
+        "address": "No. 76, Anuradhapura Road, Puttalam",
+        "coordinates": "8.040800, 79.839400",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 78, Anuradhapura Road, Puttalam",
+      "phoneNo": "0323459741",
+      "status": false,
+      "location": {
+        "address": "No. 86, Anuradhapura Road, Puttalam",
+        "coordinates": "8.041577, 79.840177"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_093",
+    "name": "Evergreen Hospitality Procurement",
+    "address": "No. 91, New Town Road, Anuradhapura",
+    "phoneNo": "0252728548",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Anuradhapura Buyer Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0252520164",
+        "address": "No. 99, New Town Road, Anuradhapura",
+        "coordinates": "8.311400, 80.403700",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 101, New Town Road, Anuradhapura",
+      "phoneNo": "0253465892",
+      "status": false,
+      "location": {
+        "address": "No. 109, New Town Road, Anuradhapura",
+        "coordinates": "8.312177, 80.404477"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_094",
+    "name": "NatureFresh Hospitality Procurement",
+    "address": "No. 114, Batticaloa Road, Polonnaruwa",
+    "phoneNo": "0272736467",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Polonnaruwa Buyer Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0272524731",
+        "address": "No. 122, Batticaloa Road, Polonnaruwa",
+        "coordinates": "7.940300, 81.018800",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 124, Batticaloa Road, Polonnaruwa",
+      "phoneNo": "0273472043",
+      "status": false,
+      "location": {
+        "address": "No. 132, Batticaloa Road, Polonnaruwa",
+        "coordinates": "7.941077, 81.019577"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_095",
+    "name": "Rural Roots Hospitality Procurement",
+    "address": "No. 137, Bandarawela Road, Badulla",
+    "phoneNo": "0552744386",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Badulla Buyer Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0552529298",
+        "address": "No. 145, Bandarawela Road, Badulla",
+        "coordinates": "6.993400, 81.055000",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 147, Bandarawela Road, Badulla",
+      "phoneNo": "0553478194",
+      "status": false,
+      "location": {
+        "address": "No. 155, Bandarawela Road, Badulla",
+        "coordinates": "6.994177, 81.055777"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_096",
+    "name": "Southern Hospitality Procurement",
+    "address": "No. 160, Wellawaya Road, Monaragala",
+    "phoneNo": "0552752305",
+    "status": false,
+    "locations": [
+      {
+        "facilityName": "Monaragala Buyer Production Factory",
+        "locationType": "FACTORY",
+        "phoneNumber": "0552533865",
+        "address": "No. 168, Wellawaya Road, Monaragala",
+        "coordinates": "6.872800, 81.350700",
+        "status": false
+      }
+    ],
+    "updates": {
+      "address": "No. 170, Wellawaya Road, Monaragala",
+      "phoneNo": "0553484345",
+      "status": true,
+      "location": {
+        "address": "No. 178, Wellawaya Road, Monaragala",
+        "coordinates": "6.873577, 81.351477"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_097",
+    "name": "Northern Hospitality Procurement",
+    "address": "No. 183, Panadura Road, Ratnapura",
+    "phoneNo": "0452760224",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Ratnapura Buyer Regional Warehouse",
+        "locationType": "WAREHOUSE",
+        "phoneNumber": "0452538432",
+        "address": "No. 191, Panadura Road, Ratnapura",
+        "coordinates": "6.682800, 80.399200",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 193, Panadura Road, Ratnapura",
+      "phoneNo": "0453490496",
+      "status": false,
+      "location": {
+        "address": "No. 201, Panadura Road, Ratnapura",
+        "coordinates": "6.683577, 80.399977"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_098",
+    "name": "Eastern Hospitality Procurement",
+    "address": "No. 21, Colombo-Kandy Road, Kegalle",
+    "phoneNo": "0352768143",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Kegalle Buyer Collection Centre",
+        "locationType": "COLLECTION_CENTER",
+        "phoneNumber": "0352542999",
+        "address": "No. 29, Colombo-Kandy Road, Kegalle",
+        "coordinates": "7.251300, 80.346400",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 31, Colombo-Kandy Road, Kegalle",
+      "phoneNo": "0353496647",
+      "status": false,
+      "location": {
+        "address": "No. 39, Colombo-Kandy Road, Kegalle",
+        "coordinates": "7.252077, 80.347177"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_099",
+    "name": "Central Hospitality Procurement",
+    "address": "No. 44, Matale Road, Dambulla",
+    "phoneNo": "0662776062",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Dambulla Buyer Drying Centre",
+        "locationType": "DRYING_CENTER",
+        "phoneNumber": "0662547566",
+        "address": "No. 52, Matale Road, Dambulla",
+        "coordinates": "7.874200, 80.651100",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 54, Matale Road, Dambulla",
+      "phoneNo": "0663502798",
+      "status": false,
+      "location": {
+        "address": "No. 62, Matale Road, Dambulla",
+        "coordinates": "7.874977, 80.651877"
+      }
+    }
+  },
+  {
+    "testCaseId": "BUYER_100",
+    "name": "Uva Hospitality Procurement",
+    "address": "No. 67, Nonagama Road, Embilipitiya",
+    "phoneNo": "0472783981",
+    "status": true,
+    "locations": [
+      {
+        "facilityName": "Embilipitiya Buyer Processing Centre",
+        "locationType": "PROCESSING_CENTER",
+        "phoneNumber": "0472552133",
+        "address": "No. 75, Nonagama Road, Embilipitiya",
+        "coordinates": "6.343900, 80.848900",
+        "status": true
+      }
+    ],
+    "updates": {
+      "address": "No. 77, Nonagama Road, Embilipitiya",
+      "phoneNo": "0473508949",
+      "status": false,
+      "location": {
+        "address": "No. 85, Nonagama Road, Embilipitiya",
+        "coordinates": "6.344677, 80.849677"
+      }
+    }
+  }
+]
