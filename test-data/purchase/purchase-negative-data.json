@@ -1,0 +1,95 @@
+[
+  {
+    "testCaseId": "PURCHASE_VAL_001",
+    "scenario": "Purchase type required",
+    "field": "purchaseType",
+    "value": ""
+  },
+  {
+    "testCaseId": "PURCHASE_VAL_002",
+    "scenario": "Receiving location required",
+    "field": "location",
+    "value": ""
+  },
+  {
+    "testCaseId": "PURCHASE_VAL_003",
+    "scenario": "Purchasing officer required",
+    "field": "user",
+    "value": ""
+  },
+  {
+    "testCaseId": "PURCHASE_VAL_004",
+    "scenario": "Purchase date required",
+    "field": "date",
+    "value": ""
+  },
+  {
+    "testCaseId": "PURCHASE_VAL_005",
+    "scenario": "Farmer required",
+    "field": "farmer",
+    "value": "",
+    "purchaseType": "FARMER_GROUP"
+  },
+  {
+    "testCaseId": "PURCHASE_VAL_006",
+    "scenario": "Plot required",
+    "field": "land",
+    "value": "",
+    "purchaseType": "FARMER_GROUP"
+  },
+  {
+    "testCaseId": "PURCHASE_VAL_007",
+    "scenario": "Supplier required",
+    "field": "supplier",
+    "value": "",
+    "purchaseType": "SUPPLIER"
+  },
+  {
+    "testCaseId": "PURCHASE_VAL_008",
+    "scenario": "Quantity zero rejected",
+    "field": "qty",
+    "value": "0",
+    "line": true
+  },
+  {
+    "testCaseId": "PURCHASE_VAL_009",
+    "scenario": "Negative quantity rejected",
+    "field": "qty",
+    "value": "-1",
+    "line": true
+  },
+  {
+    "testCaseId": "PURCHASE_VAL_010",
+    "scenario": "Quantity below UI minimum rejected",
+    "field": "qty",
+    "value": "0.001",
+    "line": true
+  },
+  {
+    "testCaseId": "PURCHASE_VAL_011",
+    "scenario": "Negative price rejected",
+    "field": "unitPrice",
+    "value": "-1",
+    "line": true
+  },
+  {
+    "testCaseId": "PURCHASE_VAL_012",
+    "scenario": "Empty quantity rejected",
+    "field": "qty",
+    "value": "",
+    "line": true
+  },
+  {
+    "testCaseId": "PURCHASE_VAL_013",
+    "scenario": "Empty unit price rejected",
+    "field": "unitPrice",
+    "value": "",
+    "line": true
+  },
+  {
+    "testCaseId": "PURCHASE_VAL_014",
+    "scenario": "HTML-like note rejected",
+    "field": "note",
+    "value": "<script>test</script>"
+  }
+]

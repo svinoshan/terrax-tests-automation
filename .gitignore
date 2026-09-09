@@ -13,6 +13,7 @@ node_modules/
 cmd.txt
 html/
 logs/
+docs/screenshots/
 
 # Playwright artifacts
 test-results/
