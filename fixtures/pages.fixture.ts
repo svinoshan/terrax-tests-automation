@@ -33,6 +33,9 @@ import { UserManagementListPage } from "@pages/user-management/UserManagementLis
 import { UserManagementFormPage } from "@pages/user-management/UserManagementFormPage";
 import { RiskAnalysisPage } from "@pages/farmer/RiskAnalysisPage";
 import { RiskAnalysisTemplatePage } from "@pages/farmer/RiskAnalysisTemplatePage";
+import { LocationsPage } from '@pages/locations/LocationsPage';
+import { BuyersPage } from '@pages/buyers/BuyersPage';
+import { SuppliersPage } from '@pages/suppliers/SuppliersPage';
 
 type PageFixtures = {
   loginPage: LoginPage;
@@ -69,6 +72,9 @@ type PageFixtures = {
   userManagementFormPage: UserManagementFormPage;
   riskAnalysisPage: RiskAnalysisPage;
   riskAnalysisTemplatePage: RiskAnalysisTemplatePage;
+  locationsPage: LocationsPage;
+  buyersPage: BuyersPage;
+  suppliersPage: SuppliersPage;
 };
 
 export const test = base.extend<PageFixtures>({
@@ -206,6 +212,15 @@ export const test = base.extend<PageFixtures>({
 
   riskAnalysisTemplatePage: async ({ page }, use) => {
     await use(new RiskAnalysisTemplatePage(page));
+  },
+  locationsPage: async ({ page }, use) => {
+    await use(new LocationsPage(page));
+  },
+  buyersPage: async ({ page }, use) => {
+    await use(new BuyersPage(page));
+  },
+  suppliersPage: async ({ page }, use) => {
+    await use(new SuppliersPage(page));
   },
 });
 

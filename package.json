@@ -43,6 +43,25 @@
     "test:user-management": "playwright test tests/user-management --project=chromium --workers=1",
     "test:user-management:headed": "playwright test tests/user-management --project=chromium --headed --workers=1",
     "test:user-management:log": "playwright test tests/user-management --project=chromium --workers=1 2>&1 | tee logs/user-management.log"
+    ,"test:locations": "playwright test tests/locations --project=chromium --headed --workers=1"
+    ,"test:locations:create": "playwright test tests/locations/location-create.spec.ts --project=chromium --headed --workers=1"
+    ,"test:locations:update": "playwright test tests/locations/location-update.spec.ts --project=chromium --headed --workers=1"
+    ,"test:locations:smoke": "playwright test tests/locations/location-smoke.spec.ts --project=chromium --headed --workers=1"
+    ,"test:locations:validation": "playwright test tests/locations/location-validation.spec.ts --project=chromium --headed --workers=1"
+    ,"test:locations:delete": "playwright test tests/locations/location-delete.spec.ts --project=chromium --headed --workers=1"
+    ,"test:buyers": "playwright test tests/buyers --project=chromium --headed --workers=1"
+    ,"test:buyers:create": "playwright test tests/buyers/buyer-create.spec.ts --project=chromium --headed --workers=1"
+    ,"test:buyers:update": "playwright test tests/buyers/buyer-update.spec.ts --project=chromium --headed --workers=1"
+    ,"test:buyers:smoke": "playwright test tests/buyers/buyer-smoke.spec.ts --project=chromium --headed --workers=1"
+    ,"test:buyers:validation": "playwright test tests/buyers/buyer-validation.spec.ts --project=chromium --headed --workers=1"
+    ,"test:buyers:delete": "playwright test tests/buyers/buyer-delete.spec.ts --project=chromium --headed --workers=1"
+    ,"test:suppliers": "playwright test tests/suppliers --project=chromium --headed --workers=1"
+    ,"test:suppliers:create": "playwright test tests/suppliers/supplier-create.spec.ts --project=chromium --headed --workers=1"
+    ,"test:suppliers:update": "playwright test tests/suppliers/supplier-update.spec.ts --project=chromium --headed --workers=1"
+    ,"test:suppliers:smoke": "playwright test tests/suppliers/supplier-smoke.spec.ts --project=chromium --headed --workers=1"
+    ,"test:suppliers:validation": "playwright test tests/suppliers/supplier-validation.spec.ts tests/suppliers/supplier-duplicate.spec.ts --project=chromium --headed --workers=1"
+    ,"test:suppliers:delete": "playwright test tests/suppliers/supplier-delete.spec.ts --project=chromium --headed --workers=1"
+    ,"test:locations-buyers-suppliers": "playwright test tests/locations tests/buyers tests/suppliers --project=chromium --headed --workers=1"
   },
   "keywords": [],
   "author": "",

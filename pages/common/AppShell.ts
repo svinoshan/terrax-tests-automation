@@ -8,8 +8,10 @@ export class AppShell {
   readonly dispatchMenu: Locator;
   readonly auditMenu: Locator;
   readonly customersMenu: Locator;
+  readonly locationsMenu: Locator;
+  readonly buyersMenu: Locator;
+  readonly suppliersMenu: Locator;
   readonly unitInfoMenu: Locator;
-  readonly locationAccessOkButton: Locator;
 
   constructor(private readonly page: Page) {
     this.dashboardLink = this.page.getByText(/Dashboard/i).first();
@@ -19,12 +21,11 @@ export class AppShell {
     this.dispatchMenu = this.page.getByText(/^Dispatch$/i).first();
     this.auditMenu = this.page.getByText(/^Audit$/i).first();
     this.customersMenu = this.page.getByText(/^Customers$/i).first();
+    this.locationsMenu = this.page.getByText(/^Locations?$/i).first();
+    this.buyersMenu = this.page.getByText(/^Buyers?$/i).first();
+    this.suppliersMenu = this.page.getByText(/^Suppliers?$/i).first();
     this.unitInfoMenu = this.page.getByText(/^Unit Info$/i).first();
 
-    this.locationAccessOkButton = this.page
-      .getByRole("button", { name: /^(Ok|common\.ok)$/i })
-      .or(this.page.locator("button").filter({ hasText: /^(Ok|common\.ok)$/i }))
-      .first();
   }
 
   async expectLoaded(): Promise<void> {
@@ -35,16 +36,32 @@ export class AppShell {
     const popupText = this.page.getByText(
       /To enable location access, go to your browser settings and allow location for this site/i,
     );
+    const genericErrorText = this.page.getByText(
+      /^Something went wrong !?$/i,
+    );
+    const locationDialog = this.page
+      .locator('.confirm-dialog-panel')
+      .filter({ has: popupText });
 
     try {
       await popupText.waitFor({ state: "visible", timeout: 3000 });
-      // await expect(this.locationAccessOkButton).toBeVisible({
-      //   timeout: 3000,
-      // });
-      await this.locationAccessOkButton.click();
+      await locationDialog.getByRole('button', { name: /^(Ok|common\.ok)$/i }).click();
       await expect(popupText).toBeHidden({ timeout: 5000 });
     } catch {
-      // Popup did not appear. Continue test.
+      // Only tolerate the generic popup immediately after dashboard login. On
+      // module pages it may represent a real API failure that tests must expose.
+      if (!/\/home\/dashboard/i.test(this.page.url())) return;
+
+      const genericDialog = this.page
+        .locator('.confirm-dialog-panel')
+        .filter({ has: genericErrorText });
+      try {
+        await genericErrorText.waitFor({ state: "visible", timeout: 1000 });
+        await genericDialog.getByRole('button', { name: /^(Ok|common\.ok)$/i }).click();
+        await expect(genericErrorText).toBeHidden({ timeout: 5000 });
+      } catch {
+        // Location popup did not appear. Continue test.
+      }
     }
   }
 
@@ -146,6 +163,21 @@ export class AppShell {
   async openCustomers(): Promise<void> {
     await this.dismissLocationAccessPopupIfVisible();
     await this.customersMenu.click();
+  }
+
+  async openLocations(): Promise<void> {
+    await this.dismissLocationAccessPopupIfVisible();
+    await this.locationsMenu.click();
+  }
+
+  async openBuyers(): Promise<void> {
+    await this.dismissLocationAccessPopupIfVisible();
+    await this.buyersMenu.click();
+  }
+
+  async openSuppliers(): Promise<void> {
+    await this.dismissLocationAccessPopupIfVisible();
+    await this.suppliersMenu.click();
   }
 
   async openMainUnit(): Promise<void> {

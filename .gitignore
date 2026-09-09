@@ -9,7 +9,6 @@ node_modules/
 
 # Environment files
 .env
-.env.*
 
 cmd.txt
 html/
